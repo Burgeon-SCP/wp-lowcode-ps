@@ -57,7 +57,7 @@ function parallaxsome_setup() {
 	 * @since 1.0.0
 	 */
 	add_image_size( 'parallaxsome_project_thumb', 450, 422, true );
-	add_image_size( 'parallaxsome_services_thumb', 393, 384, true );	
+	add_image_size( 'parallaxsome_services_thumb', 393, 384, true );
 	add_image_size( 'parallaxsome_team_thumb', 230, 316, true );
 	add_image_size( 'parallaxsome_single_thumb', 820, 421, true );
 
@@ -187,4 +187,4 @@ require trailingslashit( get_template_directory() ) . '/inc/metaboxes/metabox.ph
 /**
  * Load Welcome Page
  */
-require trailingslashit( get_template_directory() ) . '/welcome/welcome.php';
+#require trailingslashit( get_template_directory() ) . '/welcome/welcome.php';
