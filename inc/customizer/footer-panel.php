@@ -22,13 +22,13 @@ if( ! function_exists( 'parallaxsome_footer_panel_register' ) ):
 		 * @since 1.0.0
 		 */
 		$wp_customize->add_panel(
-	        'parallaxsome_footer_settings_panel', 
+	        'parallaxsome_footer_settings_panel',
 	        	array(
 	        		'priority'       => 30,
 	            	'capability'     => 'edit_theme_options',
 	            	'theme_supports' => '',
 	            	'title'          => esc_html__( 'Footer Settings', 'parallaxsome' ),
-	            ) 
+	            )
 	    );
 
 /*--------------------------------------------------------------------------------------------------------------*/
@@ -57,7 +57,7 @@ if( ! function_exists( 'parallaxsome_footer_panel_register' ) ):
 	            'default'           => 'column_three',
 	            'sanitize_callback' => 'sanitize_key',
 	        )
-	    );	    
+	    );
 	    $wp_customize->add_control( new Parallaxsome_Customize_Control_Radio_Image(
 	        $wp_customize,
 	        'ps_footer_widget_layout',
@@ -108,9 +108,9 @@ if( ! function_exists( 'parallaxsome_footer_panel_register' ) ):
 	     * @since 1.0.0
 	     */
 	    $wp_customize->add_setting(
-	        'ps_copyright_text', 
+	        'ps_copyright_text',
 	            array(
-	                'default' => esc_html__( '2016 ParallaxSome', 'parallaxsome' ),
+	                'default' => esc_html__( '2018 BurgeonEnv', 'parallaxsome' ),
 	                'sanitize_callback' => 'wp_kses_post',
 	                'transport' => 'postMessage'
 		       	)
@@ -125,7 +125,7 @@ if( ! function_exists( 'parallaxsome_footer_panel_register' ) ):
 	            )
 	    );
 
-	} //close fucntion
+	} //close function
 endif;
 
 add_action( 'customize_register', 'parallaxsome_footer_panel_register' );

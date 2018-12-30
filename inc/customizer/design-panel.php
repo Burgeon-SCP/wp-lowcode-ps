@@ -15,7 +15,7 @@
 
 if( ! function_exists( 'parallaxsome_design_panel_register' ) ):
 	function parallaxsome_design_panel_register( $wp_customize ) {
-		
+
 		// Register the radio image control class as a JS control type.
     	$wp_customize->register_control_type( 'Parallaxsome_Customize_Control_Radio_Image' );
 
@@ -25,13 +25,13 @@ if( ! function_exists( 'parallaxsome_design_panel_register' ) ):
 		 * @since 1.0.0
 		 */
 		$wp_customize->add_panel(
-	        'parallaxsome_design_settings_panel', 
+	        'parallaxsome_design_settings_panel',
 	        	array(
 	        		'priority'       => 20,
 	            	'capability'     => 'edit_theme_options',
 	            	'theme_supports' => '',
 	            	'title'          => esc_html__( 'Design Settings', 'parallaxsome' ),
-	            ) 
+	            )
 	    );
 /*--------------------------------------------------------------------------------------------------------------*/
 		/**
@@ -46,7 +46,7 @@ if( ! function_exists( 'parallaxsome_design_panel_register' ) ):
 	            'panel'     => 'parallaxsome_design_settings_panel',
 	            'priority'  => 5,
 	        )
-	    );	    
+	    );
 
 	    /**
 	     * Field for Image Radio
@@ -56,10 +56,10 @@ if( ! function_exists( 'parallaxsome_design_panel_register' ) ):
 	    $wp_customize->add_setting(
 	        'ps_archive_sidebar_layout',
 	        array(
-	            'default'           => 'right_sidebar',
+	            'default'           => 'no_sidebar_center',
 	            'sanitize_callback' => 'sanitize_key',
 	        )
-	    );	    
+	    );
 	    $wp_customize->add_control( new Parallaxsome_Customize_Control_Radio_Image(
 	        $wp_customize,
 	        'ps_archive_sidebar_layout',
@@ -68,14 +68,6 @@ if( ! function_exists( 'parallaxsome_design_panel_register' ) ):
 	                'description' => esc_html__( 'Choose sidebar from available layouts', 'parallaxsome' ),
 	                'section'  => 'archive_settings_section',
 	                'choices'  => array(
-		                    'left_sidebar' => array(
-		                        'label' => esc_html__( 'Left Sidebar', 'parallaxsome' ),
-		                        'url'   => '%s/assets/images/left-sidebar.png'
-		                    ),
-		                    'right_sidebar' => array(
-		                        'label' => esc_html__( 'Right Sidebar', 'parallaxsome' ),
-		                        'url'   => '%s/assets/images/right-sidebar.png'
-		                    ),
 		                    'no_sidebar' => array(
 		                        'label' => esc_html__( 'No Sidebar', 'parallaxsome' ),
 		                        'url'   => '%s/assets/images/no-sidebar.png'
@@ -89,13 +81,23 @@ if( ! function_exists( 'parallaxsome_design_panel_register' ) ):
 	            )
 	        )
 	    );
+			// 'left_sidebar' => array(
+			//     'label' => esc_html__( 'Left Sidebar', 'parallaxsome' ),
+			//     'url'   => '%s/assets/images/left-sidebar.png'
+			// ),
+			// 'right_sidebar' => array(
+			//     'label' => esc_html__( 'Right Sidebar', 'parallaxsome' ),
+			//     'url'   => '%s/assets/images/right-sidebar.png'
+			// ),
+
+
 
 	    /**
 	     * Field for Archive read more button text
 	     *
 	     * @since 1.0.0
 	     */
-	    
+
 /*--------------------------------------------------------------------------------------------------------------*/
 		/**
 		 * Page Settings
@@ -109,7 +111,7 @@ if( ! function_exists( 'parallaxsome_design_panel_register' ) ):
 	            'panel'     => 'parallaxsome_design_settings_panel',
 	            'priority'  => 10,
 	        )
-	    );	    
+	    );
 
 	    /**
 	     * Field for sidebar Image Radio
@@ -119,10 +121,10 @@ if( ! function_exists( 'parallaxsome_design_panel_register' ) ):
 	    $wp_customize->add_setting(
 	        'ps_default_page_sidebar',
 	        array(
-	            'default'           => 'right_sidebar',
+	            'default'           => 'no_sidebar_center',
 	            'sanitize_callback' => 'sanitize_key',
 	        )
-	    );	    
+	    );
 	    $wp_customize->add_control( new Parallaxsome_Customize_Control_Radio_Image(
 	        $wp_customize,
 	        'ps_default_page_sidebar',
@@ -131,14 +133,6 @@ if( ! function_exists( 'parallaxsome_design_panel_register' ) ):
 	                'description' => esc_html__( 'Choose sidebar from available layouts', 'parallaxsome' ),
 	                'section'  => 'page_settings_section',
 	                'choices'  => array(
-		                    'left_sidebar' => array(
-		                        'label' => esc_html__( 'Left Sidebar', 'parallaxsome' ),
-		                        'url'   => '%s/assets/images/left-sidebar.png'
-		                    ),
-		                    'right_sidebar' => array(
-		                        'label' => esc_html__( 'Right Sidebar', 'parallaxsome' ),
-		                        'url'   => '%s/assets/images/right-sidebar.png'
-		                    ),
 		                    'no_sidebar' => array(
 		                        'label' => esc_html__( 'No Sidebar', 'parallaxsome' ),
 		                        'url'   => '%s/assets/images/no-sidebar.png'
@@ -152,12 +146,24 @@ if( ! function_exists( 'parallaxsome_design_panel_register' ) ):
 	            )
 	        )
 	    );
+			// 'left_sidebar' => array(
+			// 		'label' => esc_html__( 'Left Sidebar', 'parallaxsome' ),
+			// 		'url'   => '%s/assets/images/left-sidebar.png'
+			// ),
+			// 'right_sidebar' => array(
+			// 		'label' => esc_html__( 'Right Sidebar', 'parallaxsome' ),
+			// 		'url'   => '%s/assets/images/right-sidebar.png'
+			// ),
+
+
+
 /*--------------------------------------------------------------------------------------------------------------*/
-		/**
+		/*
 		 * Post Settings
 		 *
 		 * @since 1.0.0
 		 */
+		 /*
 		$wp_customize->add_section(
 	        'post_settings_section',
 	        array(
@@ -165,20 +171,22 @@ if( ! function_exists( 'parallaxsome_design_panel_register' ) ):
 	            'panel'     => 'parallaxsome_design_settings_panel',
 	            'priority'  => 15,
 	        )
-	    );	    
+	    );
+			*/
 
-	    /**
+			/*
 	     * Field for sidebar Image Radio
 	     *
 	     * @since 1.0.0
 	     */
+			 /*
 	    $wp_customize->add_setting(
 	        'ps_default_post_sidebar',
 	        array(
 	            'default'           => 'right_sidebar',
 	            'sanitize_callback' => 'sanitize_key',
 	        )
-	    );	    
+	    );
 	    $wp_customize->add_control( new Parallaxsome_Customize_Control_Radio_Image(
 	        $wp_customize,
 	        'ps_default_post_sidebar',
@@ -208,7 +216,8 @@ if( ! function_exists( 'parallaxsome_design_panel_register' ) ):
 	            )
 	        )
 	    );
+			*/
 
-	} //close fucntion
+	} //close function
 endif;
 add_action( 'customize_register', 'parallaxsome_design_panel_register' );
