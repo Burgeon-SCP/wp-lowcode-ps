@@ -542,6 +542,7 @@ a:active {
 ## Menus
 --------------------------------------------------------------*/
 
+/*
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -609,6 +610,8 @@ a:active {
 .post-navigation a:hover:before {
     color:#e23815;
 }
+*/
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -646,12 +649,12 @@ a:active {
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
+/* .comment-content:before,
+.comment-content:after, */
 .clearfix:before,
 .clearfix:after,
 .entry-content:before,
 .entry-content:after,
-.comment-content:before,
-.comment-content:after,
 .site-header:before,
 .site-header:after,
 .site-content:before,
@@ -689,7 +692,7 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-## Posts and pages
+## Pages
 --------------------------------------------------------------*/
 .sticky {
     display: block;
@@ -699,6 +702,7 @@ a:active {
     margin: 0 0 1.5em;
 }
 
+/*
 .byline,
 .updated:not(.published) {
     display: none;
@@ -708,6 +712,7 @@ a:active {
 .group-blog .byline {
     display: inline;
 }
+*/
 
 .page-content,
 .entry-content,
@@ -731,6 +736,7 @@ a:active {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+/*
 .comment-content a {
     word-wrap: break-word;
 }
@@ -738,12 +744,13 @@ a:active {
 .bypostauthor {
     display: block;
 }
+*/
 
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+/* .infinite-scroll .posts-navigation, */ /* Older / Newer Posts Navigation (always hidden) */
 .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
     display: none;
 }

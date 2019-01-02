@@ -16,7 +16,7 @@
  */
 	$parallaxsome_theme_details = wp_get_theme();
 	$parallaxsome_theme_version = $parallaxsome_theme_details->Version;
-	
+
 
 /*------------------------------------------------------------------------------------------------------------------*/
 /**
@@ -26,7 +26,7 @@
  */
 function parallaxsome_scripts() {
 	global $parallaxsome_theme_version;
-	
+
 	$parallaxsome_font_args = array(
         'family' => 'Open+Sans:400,600,700,800,300|PT+Sans:400,700|Lato:400,700,300|BenchNine:300|Roboto+Slab:300|Source+Sans+Pro:400,300,600,700|Raleway:400,500,600,700,800,300',
     );
@@ -50,9 +50,9 @@ function parallaxsome_scripts() {
 	wp_enqueue_script( 'wow', get_template_directory_uri() . '/assets/js/wow.min.js', array( 'jquery' ), '1.1.2', true );
 	wp_enqueue_script( 'parallaxsome-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js', array( 'jquery' ), $parallaxsome_theme_version, true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+	// 	wp_enqueue_script( 'comment-reply' );
+	// }
 
 	$ps_header_sticky_option = get_theme_mod( 'sticky_header_option', 'enable' );
 	if( $ps_header_sticky_option != 'disable' ) {
@@ -88,45 +88,45 @@ add_action( 'admin_enqueue_scripts', 'parallaxsome_admin_scripts' );
  * @since 1.0.0
  */
 $parallaxsome_single_menu_fields = array(
-		'slider' =>  array( 
-						'default'=> esc_html__( 'Main', 'parallaxsome' ), 
-						'label'=>  esc_html__( 'Top Section', 'parallaxsome' ) 
+		'slider' =>  array(
+						'default'=> esc_html__( 'Main', 'parallaxsome' ),
+						'label'=>  esc_html__( 'Top Section', 'parallaxsome' )
 					),
-		'about' =>  array( 
-						'default'=> esc_html__( 'About', 'parallaxsome' ), 
-						'label'=>  esc_html__( 'About Us', 'parallaxsome' ) 
+		// 'about' =>  array(
+		// 				'default'=> esc_html__( 'About', 'parallaxsome' ),
+		// 				'label'=>  esc_html__( 'About Us', 'parallaxsome' )
+		// 			),
+		// 'team' =>  array(
+		// 				'default'=> esc_html( '', 'parallaxsome' ),
+		// 				'label'=>  esc_html__( 'Our Team', 'parallaxsome' )
+		// 			),
+		// 'services' =>  array(
+		// 				'default'=> esc_html__( 'Services', 'parallaxsome' ),
+		// 				'label'=>  esc_html__( 'Our Services', 'parallaxsome' )
+		// 			),
+		// 'testimonials' =>  array(
+		// 				'default'=> esc_html( '', 'parallaxsome' ),
+		// 				'label'=>  esc_html__( 'Client Says', 'parallaxsome' )
+		// 			),
+		// 'fact' =>  array(
+		// 				'default'=> esc_html( '', 'parallaxsome' ),
+		// 				'label'=>  esc_html__( 'Fact Us', 'parallaxsome' )
+		// 			),
+		// 'portfolio' =>  array(
+		// 				'default'=> esc_html__( 'Portfolio', 'parallaxsome' ),
+		// 				'label'=>  esc_html__( 'Portfolio', 'parallaxsome' )
+		// 			),
+		// 'blog' =>  array(
+		// 				'default'=> esc_html__( 'Blog', 'parallaxsome' ),
+		// 				'label'=>  esc_html__( 'Our Blog', 'parallaxsome' )
+		// 			),
+		'clients' =>  array(
+						'default'=> esc_html( '', 'parallaxsome' ),
+						'label'=>  esc_html__( 'Our Clients', 'parallaxsome' )
 					),
-		'team' =>  array( 
-						'default'=> esc_html( '', 'parallaxsome' ), 
-						'label'=>  esc_html__( 'Our Team', 'parallaxsome' ) 
-					),
-		'services' =>  array( 
-						'default'=> esc_html__( 'Services', 'parallaxsome' ), 
-						'label'=>  esc_html__( 'Our Services', 'parallaxsome' ) 
-					),
-		'testimonials' =>  array( 
-						'default'=> esc_html( '', 'parallaxsome' ), 
-						'label'=>  esc_html__( 'Client Says', 'parallaxsome' ) 
-					),
-		'fact' =>  array( 
-						'default'=> esc_html( '', 'parallaxsome' ), 
-						'label'=>  esc_html__( 'Fact Us', 'parallaxsome' ) 
-					),
-		'portfolio' =>  array( 
-						'default'=> esc_html__( 'Portfolio', 'parallaxsome' ), 
-						'label'=>  esc_html__( 'Portfolio', 'parallaxsome' ) 
-					),
-		'blog' =>  array( 
-						'default'=> esc_html__( 'Blog', 'parallaxsome' ), 
-						'label'=>  esc_html__( 'Our Blog', 'parallaxsome' ) 
-					),
-		'clients' =>  array( 
-						'default'=> esc_html( '', 'parallaxsome' ), 
-						'label'=>  esc_html__( 'Our Clients', 'parallaxsome' ) 
-					),
-		'contact' =>  array( 
-						'default'=> esc_html__( 'Contact', 'parallaxsome' ), 
-						'label'=>  esc_html__( 'Contact Us', 'parallaxsome' ) 
+		'contact' =>  array(
+						'default'=> esc_html__( 'Contact', 'parallaxsome' ),
+						'label'=>  esc_html__( 'Contact Us', 'parallaxsome' )
 					)
 	);
 
@@ -164,7 +164,7 @@ if( ! function_exists( 'parallaxsome_parallax_menu_cb' ) ):
                 	<a href="<?php echo esc_url( home_url() . '/#section-' . esc_attr($section_id) ); ?>"><?php echo esc_html( $parallaxsome_menu_title ); ?></a>
                 	<?php
                 	endif;
-                }                
+                }
                 ?>
                 </li>
                 <?php
@@ -210,11 +210,11 @@ if( ! function_exists( 'parallaxsome_main_menu_hook' ) ) :
 						</ul>
 					</div>
 				<?php }
-                } ?> 
+                } ?>
 			</div><!-- .nav-wrapper -->
 		</nav><!-- #site-navigation -->
 		<div class="ps-head-search">
-			<?php 
+			<?php
 				$ps_search_option = get_theme_mod( 'primary_menu_search_option', 'show' );
 				if( $ps_search_option != 'hide' ) {
 			?>
@@ -222,15 +222,15 @@ if( ! function_exists( 'parallaxsome_main_menu_hook' ) ) :
 					<div class="search-form"><?php get_search_form(); ?></div>
 			<?php } ?>
 		</div><!-- .ps-head-search -->
-<?php 
+<?php
 	}
 endif;
 
 add_action( 'parallaxsome_main_menu', 'parallaxsome_main_menu_hook', 10, 2 );
 /*------------------------------------------------------------------------------------------------------------------*/
 /**
- * Define function for fontawewome icons 
- * 
+ * Define function for fontawewome icons
+ *
  * @param null
  * @return array
  * @since 1.0.0
@@ -276,7 +276,7 @@ function parallaxsome_homepage_slider_hook() {
 									<h2 class="slider-title"><?php the_title(); ?></h2>
 									<div class="slider-desc"><?php the_excerpt(); ?></div>
 									<span class="slide-button">
-										<a href="<?php the_permalink(); ?>"><?php esc_html_e( 'Learn More', 'parallaxsome' ); ?></a>										
+										<a href="<?php the_permalink(); ?>"><?php esc_html_e( 'Learn More', 'parallaxsome' ); ?></a>
 									</span>
 								</div>
 							</div><!-- .slider-info -->
@@ -288,7 +288,7 @@ function parallaxsome_homepage_slider_hook() {
 				}
                 wp_reset_postdata();
 			?>
-			
+
 		</div><!-- .ps-front-slider-wrapper -->
 <?php
 	}
@@ -306,7 +306,7 @@ add_action( 'parallaxsome_homepage_slider', 'parallaxsome_homepage_slider_hook',
 
 if( ! function_exists( 'parallaxsome_innerpage_header_hook' ) ):
 	function parallaxsome_innerpage_header_hook() {
-		
+
 ?>
  	<div class="ps-innerpages-header-wrapper" style="background-image: url(<?php header_image(); ?>);">
  		<div class="ps-container">
@@ -333,7 +333,7 @@ if( ! function_exists( 'parallaxsome_innerpage_header_hook' ) ):
 						</header><!-- .page-header -->
 				<?php
 					}
-					
+
 					parallaxsome_breadcrumbs();
 				?>
 			</header><!-- .entry-header -->
@@ -353,7 +353,7 @@ add_action( 'parallaxsome_innerpage_header', 'parallaxsome_innerpage_header_hook
 if( !function_exists( 'parallaxsome_social_icons' ) ):
 	function parallaxsome_social_icons() {
 		$fb_link = get_theme_mod( 'fb_link', '' );
-		$tw_link = get_theme_mod( 'tw_link', '' );		
+		$tw_link = get_theme_mod( 'tw_link', '' );
 		$ln_link = get_theme_mod( 'ln_link', '' );
 		$pin_link = get_theme_mod( 'pin_link', '' );
 		$gp_link = get_theme_mod( 'gp_link', '' );
@@ -404,11 +404,11 @@ if( ! function_exists( 'parallaxsome_section_header' ) ) {
 	function parallaxsome_section_header( $title, $sub_title, $description ) {
 ?>
 		<header class="section-header">
-			
+
 			<span class="section-sub-title"><?php echo esc_html( $sub_title ); ?></span>
 			<h2 class="section-title"><?php echo esc_html( $title ); ?></h2>
 			<p class="section-description"><?php echo esc_html( $description ); ?></p>
-			
+
 		</header><!-- .entry-header -->
 <?php
 	}
@@ -453,20 +453,20 @@ function parallaxsome_get_sidebar() {
     if( 'page' === get_post_type() ) {
     	$sidebar_meta_option = get_post_meta( $post->ID, 'ps_post_sidebar_layout', true );
     }
-     
+
     if( is_home() ) {
         $set_id = get_option( 'page_for_posts' );
 		$sidebar_meta_option = get_post_meta( $set_id, 'ps_post_sidebar_layout', true );
     }
-    
+
     if( empty( $sidebar_meta_option ) || is_archive() || is_search() ) {
         $sidebar_meta_option = 'default_sidebar_layout';
     }
-    
+
     $archive_sidebar      = get_theme_mod( 'ps_archive_sidebar_layout', 'right_sidebar' );
     $post_default_sidebar = get_theme_mod( 'ps_default_post_sidebar', 'right_sidebar' );
     $page_default_sidebar = get_theme_mod( 'ps_default_page_sidebar', 'right_sidebar' );
-    
+
     if( $sidebar_meta_option == 'default_sidebar_layout' ) {
         if( is_single() ) {
             if( $post_default_sidebar == 'right_sidebar' ) {

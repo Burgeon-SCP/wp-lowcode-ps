@@ -11,36 +11,6 @@
  */
 
 function parallaxsome_widgets_init() {
-	
-	/**
-	 * Register Right Sidebar
-	 *
-	 * @since 1.0.0
-	 */
-	register_sidebar( array(
-		'name'          => esc_html__( 'Right Sidebar', 'parallaxsome' ),
-		'id'            => 'parallaxsome_right_sidebar',
-		'description'   => esc_html__( 'Added widgets are display at Right Sidebar section in every posts/pages/archive.', 'parallaxsome' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-
-	/**
-	 * Register Left Sidebar
-	 *
-	 * @since 1.0.0
-	 */
-	register_sidebar( array(
-		'name'          => esc_html__( 'Left Sidebar', 'parallaxsome' ),
-		'id'            => 'parallaxsome_left_sidebar',
-		'description'   => esc_html__( 'Added widgets are display at Left Sidebar section in every posts/pages/archive.', 'parallaxsome' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
 
 	/**
 	 * Register Home Contact Map widget area
@@ -73,7 +43,7 @@ function parallaxsome_widgets_init() {
 	) );
 
 	/**
-	 * Register 4 different Footer Area 
+	 * Register 4 different Footer Area
 	 *
 	 * @since 1.0.0
 	 */

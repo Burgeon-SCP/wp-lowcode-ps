@@ -12,7 +12,7 @@ add_action( 'customize_register', 'parallaxsome_typo_customize_register', 15 );
 function parallaxsome_typo_customize_register( $wp_customize ) {
 
 	require get_template_directory() . '/inc/typography/customize/control-typography.php';
-	
+
 	// Register typography control JS template.
 	$wp_customize->register_control_type( 'Parallaxsome_Typo_Control_Typography' );
 
@@ -20,7 +20,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 	$wp_customize->add_panel( 'typography', array( 'priority' => 21, 'title' => esc_html__( 'Typography Settings', 'parallaxsome' ) ) );
 
 	// Add the `<p>` typography section.
-	$wp_customize->add_section( 'p_typography', 
+	$wp_customize->add_section( 'p_typography',
 		array( 'panel' => 'typography', 'title' => esc_html__( 'Body', 'parallaxsome' ) )
 	);
 	$wp_customize->add_setting( 'p_font_family', array( 'default' => 'Lato',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -54,7 +54,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 	);
 
 	// Add the `<h1>` typography section.
-	$wp_customize->add_section( 'h1_typography', 
+	$wp_customize->add_section( 'h1_typography',
 		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H1)', 'parallaxsome' ) )
 	);
 	$wp_customize->add_setting( 'h1_font_family', array( 'default' => 'Lato',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -88,7 +88,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 	);
 
 	// Add the `<h2>` typography section.
-	$wp_customize->add_section( 'h2_typography', 
+	$wp_customize->add_section( 'h2_typography',
 		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H2)', 'parallaxsome' ) )
 	);
 	$wp_customize->add_setting( 'h2_font_family', array( 'default' => 'Open Sans',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -122,7 +122,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 	);
 
 	// Add the `<h3>` typography section.
-	$wp_customize->add_section( 'h3_typography', 
+	$wp_customize->add_section( 'h3_typography',
 		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H3)', 'parallaxsome' ) )
 	);
 	$wp_customize->add_setting( 'h3_font_family', array( 'default' => 'Lato',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -157,7 +157,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 
 
 	// Add the `<h4>` typography section.
-	$wp_customize->add_section( 'h4_typography', 
+	$wp_customize->add_section( 'h4_typography',
 		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H4)', 'parallaxsome' ) )
 	);
 	$wp_customize->add_setting( 'h4_font_family', array( 'default' => 'Lato',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -191,7 +191,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 	);
 
 	// Add the `<h5>` typography section.
-	$wp_customize->add_section( 'h5_typography', 
+	$wp_customize->add_section( 'h5_typography',
 		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H5)', 'parallaxsome' ) )
 	);
 	$wp_customize->add_setting( 'h5_font_family', array( 'default' => 'Lato',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -225,7 +225,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 	);
 
 	// Add the `<h6>` typography section.
-	$wp_customize->add_section( 'h6_typography', 
+	$wp_customize->add_section( 'h6_typography',
 		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H6)', 'parallaxsome' ) )
 	);
 	$wp_customize->add_setting( 'h6_font_family', array( 'default' => 'Lato',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -259,7 +259,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 	);
 
 	// Add the Home Section Title typography section.
-	$wp_customize->add_section( 'hm_sec_title_typography', 
+	$wp_customize->add_section( 'hm_sec_title_typography',
 		array( 'panel' => 'typography', 'title' => esc_html__( 'Home Section Title Typography', 'parallaxsome' ) )
 	);
 	$wp_customize->add_setting( 'hm_sec_title_font_family', array( 'default' => 'BenchNine',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -293,7 +293,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 	);
 
 	// Add the Home Section Sub Title typography section.
-	$wp_customize->add_section( 'hm_sec_subtitle_typography', 
+	$wp_customize->add_section( 'hm_sec_subtitle_typography',
 		array( 'panel' => 'typography', 'title' => esc_html__( 'Home Section Sub-Title Typography', 'parallaxsome' ) )
 	);
 	$wp_customize->add_setting( 'hm_sec_subtitle_font_family', array( 'default' => 'Open Sans',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -325,7 +325,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 			)
 		)
 	);
-} 
+}
 
 if (!function_exists('parallaxsome_search_key')) {
   function parallaxsome_search_key($array, $key, $value){
@@ -355,9 +355,11 @@ function parallaxsome_pro_customize_controls_register_scripts() {
 	wp_enqueue_script( 'parallaxsome-customize-controls', get_template_directory_uri() .'/inc/typography/js/customize-controls.js', array( 'customize-controls' ) );
 	wp_enqueue_script( 'parallaxsome-ajax_script_function', get_template_directory_uri() .'/inc/typography/js/typo-ajax.js', array('jquery')  );
     wp_localize_script( 'parallaxsome-ajax_script_function', 'ajax_script', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
-	
-	wp_enqueue_style( 'parallaxsome-pro-customize-controls', get_template_directory_uri() .'/inc/typography/css/customize-controls.css' );
+
+	// wp_enqueue_style( 'parallaxsome-pro-customize-controls', get_template_directory_uri() .'/inc/typography/css/customize-controls.css' );
 	wp_enqueue_style( 'jquery-ui-controls', '//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css' );
+	wp_enqueue_script( 'webfont', 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js' , array('jquery'));
+	wp_enqueue_script( 'parallaxsome-pro-customize-preview', get_template_directory_uri().'/inc/typography/js/customize-previews.js', array( 'jquery', 'customize-preview', 'webfont') );
 }
 /**
  * Load preview scripts/styles.
@@ -366,12 +368,13 @@ function parallaxsome_pro_customize_controls_register_scripts() {
  * @access public
  * @return void
  */
-add_action( 'customize_preview_init', 'parallaxsome_pro_customize_preview_enqueue_scripts' );
-function parallaxsome_pro_customize_preview_enqueue_scripts() {
-	wp_enqueue_script( 'webfont', 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js' , array('jquery'));
-	wp_enqueue_script( 'parallaxsome-pro-customize-preview', get_template_directory_uri().'/inc/typography/js/customize-previews.js', array( 'jquery', 'customize-preview', 'webfont') );
-}
-/**
+add_action( 'customize_preview_init');
+// add_action( 'customize_preview_init', 'parallaxsome_pro_customize_preview_enqueue_scripts' );
+// function parallaxsome_pro_customize_preview_enqueue_scripts() {
+// 	wp_enqueue_script( 'webfont', 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js' , array('jquery'));
+// 	wp_enqueue_script( 'parallaxsome-pro-customize-preview', get_template_directory_uri().'/inc/typography/js/customize-previews.js', array( 'jquery', 'customize-preview', 'webfont') );
+// }
+/*
  * Add custom body class to give some more weight to our styles.
  *
  * @since  1.0.0
@@ -379,7 +382,7 @@ function parallaxsome_pro_customize_preview_enqueue_scripts() {
  * @param  array  $classes
  * @return array
  */
-function parallaxsome_pro_body_class( $classes ) {
-	return array_merge( $classes, array( 'parallaxsome' ) );
-}
-add_filter( 'body_class', 'parallaxsome_pro_body_class' );
+// function parallaxsome_pro_body_class( $classes ) {
+// 	return array_merge( $classes, array( 'parallaxsome' ) );
+// }
+// add_filter( 'body_class', 'parallaxsome_pro_body_class' );

@@ -19,8 +19,11 @@
 		<?php get_sidebar( 'footer' ); ?>
 		<div class="site-info">
 			<div class="ps-section-container">
-				<?php echo wp_kses_post( get_theme_mod( 'ps_copyright_text', __('&copy; 2016 ParallaxSome', 'parallaxsome')));?>
-				<?php /* translators: %s : theme page link */ printf( wp_kses(__( 'WordPress Theme : <a href="%s">Parallaxsome</a> by Accesspress Themes', 'parallaxsome' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( 'https://accesspressthemes.com/wordpress-themes/parallaxsome/' ) ); ?>
+				<?php echo wp_kses_post(
+					 get_theme_mod( 'ps_copyright_text',
+					  							__('&copy; 2019 LoCoPaS', 'parallaxsome')
+												)
+											);?>
 			</div><!-- ps-section-container -->
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
