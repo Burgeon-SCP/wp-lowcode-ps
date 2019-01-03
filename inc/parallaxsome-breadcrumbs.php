@@ -53,7 +53,7 @@ function parallaxsome_breadcrumbs(){
 			}
 			echo $before . sprintf($text['tax'], single_cat_title('', false)) . $after;
 
-		}elseif ( is_search() ) {
+		} elseif ( is_search() ) {
 			echo $before . sprintf($text['search'], get_search_query()) . $after;
 		} elseif ( is_day() ) {
 			echo sprintf($link, get_year_link(get_the_time('Y')), get_the_time('Y')) . $delimiter;
@@ -70,15 +70,15 @@ function parallaxsome_breadcrumbs(){
 		// 		$slug = $post_type->rewrite;
 		// 		printf($link, $homeLink . '/' . $slug['slug'] . '/', $post_type->labels->singular_name);
 		// 		if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
-			} else {
-				$cat = get_the_category(); $cat = $cat[0];
-				$cats = get_category_parents($cat, TRUE, $delimiter);
-				if ($showCurrent == 0) $cats = preg_replace("#^(.+)$delimiter$#", "$1", $cats);
-				$cats = str_replace('<a', $linkBefore . '<a' . $linkAttr, $cats);
-				$cats = str_replace('</a>', '</a>' . $linkAfter, $cats);
-				echo $cats;
-				if ($showCurrent == 1) echo $before . get_the_title() . $after;
-			}
+		// 	} else {
+		// 		$cat = get_the_category(); $cat = $cat[0];
+		// 		$cats = get_category_parents($cat, TRUE, $delimiter);
+		// 		if ($showCurrent == 0) $cats = preg_replace("#^(.+)$delimiter$#", "$1", $cats);
+		// 		$cats = str_replace('<a', $linkBefore . '<a' . $linkAttr, $cats);
+		// 		$cats = str_replace('</a>', '</a>' . $linkAfter, $cats);
+		// 		echo $cats;
+		// 		if ($showCurrent == 1) echo $before . get_the_title() . $after;
+		// 	}
 		} elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
 			$post_type = get_post_type_object(get_post_type());
 			echo $before . $post_type->labels->singular_name . $after;
