@@ -37,7 +37,7 @@ function parallaxsome_setup() {
 	load_theme_textdomain( 'parallaxsome', trailingslashit( get_template_directory() ) . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+	// add_theme_support( 'automatic-feed-links' );
 
 	/*
 	 * Let WordPress manage the document title.
@@ -56,10 +56,10 @@ function parallaxsome_setup() {
 	add_theme_support( 'custom-logo', array( 'size' => 'parallaxsome-site-logo' ) );
 
 	// Woocommerce Compatibility
-	add_theme_support( 'woocommerce' );
-	add_theme_support( 'wc-product-gallery-zoom' );
-	add_theme_support( 'wc-product-gallery-lightbox' );
-	add_theme_support( 'wc-product-gallery-slider' );
+	// add_theme_support( 'woocommerce' );
+	// add_theme_support( 'wc-product-gallery-zoom' );
+	// add_theme_support( 'wc-product-gallery-lightbox' );
+	// add_theme_support( 'wc-product-gallery-slider' );
 
 	/**
 	 * Define custom thumbnail size
@@ -69,7 +69,6 @@ function parallaxsome_setup() {
 	add_image_size( 'parallaxsome_project_thumb', 450, 422, true );
 	add_image_size( 'parallaxsome_services_thumb', 393, 384, true );
 	add_image_size( 'parallaxsome_team_thumb', 230, 316, true );
-	add_image_size( 'parallaxsome_single_thumb', 820, 421, true );
 
 
 	/*
@@ -77,7 +76,7 @@ function parallaxsome_setup() {
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
-	add_theme_support( 'post-thumbnails' );
+	// add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -98,19 +97,19 @@ function parallaxsome_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'parallaxsome_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+	// add_theme_support( 'custom-background', apply_filters( 'parallaxsome_custom_background_args', array(
+	// 	'default-color' => 'ffffff',
+	// 	'default-image' => '',
+	// ) ) );
 
 	/**
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, icons, and column width.
 	 */
-	add_editor_style( 'assets/css/editor-style.css' );
+	// add_editor_style( 'assets/css/editor-style.css' );
 }
 endif;
-// add_action( 'after_setup_theme', 'parallaxsome_setup' );
+add_action( 'after_setup_theme', 'parallaxsome_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
