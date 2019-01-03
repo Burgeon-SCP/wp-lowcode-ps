@@ -170,7 +170,7 @@ require trailingslashit( get_template_directory() ) . '/inc/customizer/homepage-
 require trailingslashit( get_template_directory() ) . '/inc/customizer/design-panel.php';
 require trailingslashit( get_template_directory() ) . '/inc/customizer/additional-panel.php';
 require trailingslashit( get_template_directory() ) . '/inc/customizer/footer-panel.php';
-require trailingslashit( get_template_directory() ) . '/assets/css/dynamic-styles.php';
+// require trailingslashit( get_template_directory() ) . '/assets/css/dynamic-styles.php';
 
 /**
  * Required files for customizer

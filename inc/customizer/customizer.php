@@ -22,8 +22,9 @@ function parallaxsome_customize_register( $wp_customize ) {
 		 * Upgrade to Uncode Pro
 		*/
 		// Register custom section types.
-		$wp_customize->register_section_type( 'Parallaxsome_Customize_Section_Pro' );
+		// $wp_customize->register_section_type( 'Parallaxsome_Customize_Section_Pro' );
 
+		/*
 		// Register sections.
 		$wp_customize->add_section(
 		    new Parallaxsome_Customize_Section_Pro(
@@ -51,19 +52,20 @@ function parallaxsome_customize_register( $wp_customize ) {
 				'section' => 'parallaxsome-pro'
 			)
 		);
+		*/
 
 		/** Dynamic Color Options **/
 		$wp_customize->add_setting( 'parallaxsome_tpl_color', array( 'default' => '#e23815', 'sanitize_callback' => 'sanitize_hex_color' ));
 
-		$wp_customize->add_control( 
-			new WP_Customize_Color_Control( 
-			$wp_customize, 
-			'parallaxsome_tpl_color', 
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+			$wp_customize,
+			'parallaxsome_tpl_color',
 			array(
 				'label'      => esc_html__( 'Template Color', 'parallaxsome' ),
 				'section'    => 'colors',
 				'settings'   => 'parallaxsome_tpl_color',
-			) ) 
+			) )
 		);
 }
 add_action( 'customize_register', 'parallaxsome_customize_register' );
