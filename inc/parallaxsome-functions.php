@@ -92,34 +92,34 @@ $parallaxsome_single_menu_fields = array(
 						'default'=> esc_html__( 'Main', 'parallaxsome' ),
 						'label'=>  esc_html__( 'Top Section', 'parallaxsome' )
 					),
-		// 'about' =>  array(
-		// 				'default'=> esc_html__( 'About', 'parallaxsome' ),
-		// 				'label'=>  esc_html__( 'About Us', 'parallaxsome' )
-		// 			),
-		// 'team' =>  array(
-		// 				'default'=> esc_html( '', 'parallaxsome' ),
-		// 				'label'=>  esc_html__( 'Our Team', 'parallaxsome' )
-		// 			),
-		// 'services' =>  array(
-		// 				'default'=> esc_html__( 'Services', 'parallaxsome' ),
-		// 				'label'=>  esc_html__( 'Our Services', 'parallaxsome' )
-		// 			),
-		// 'testimonials' =>  array(
-		// 				'default'=> esc_html( '', 'parallaxsome' ),
-		// 				'label'=>  esc_html__( 'Client Says', 'parallaxsome' )
-		// 			),
-		// 'fact' =>  array(
-		// 				'default'=> esc_html( '', 'parallaxsome' ),
-		// 				'label'=>  esc_html__( 'Fact Us', 'parallaxsome' )
-		// 			),
-		// 'portfolio' =>  array(
-		// 				'default'=> esc_html__( 'Portfolio', 'parallaxsome' ),
-		// 				'label'=>  esc_html__( 'Portfolio', 'parallaxsome' )
-		// 			),
-		// 'blog' =>  array(
-		// 				'default'=> esc_html__( 'Blog', 'parallaxsome' ),
-		// 				'label'=>  esc_html__( 'Our Blog', 'parallaxsome' )
-		// 			),
+		'about' =>  array(
+						'default'=> esc_html__( 'About', 'parallaxsome' ),
+						'label'=>  esc_html__( 'About Us', 'parallaxsome' )
+					),
+		'team' =>  array(
+						'default'=> esc_html( '', 'parallaxsome' ),
+						'label'=>  esc_html__( 'Our Team', 'parallaxsome' )
+					),
+		'services' =>  array(
+						'default'=> esc_html__( 'Services', 'parallaxsome' ),
+						'label'=>  esc_html__( 'Our Services', 'parallaxsome' )
+					),
+		'testimonials' =>  array(
+						'default'=> esc_html( '', 'parallaxsome' ),
+						'label'=>  esc_html__( 'Client Says', 'parallaxsome' )
+					),
+		'fact' =>  array(
+						'default'=> esc_html( '', 'parallaxsome' ),
+						'label'=>  esc_html__( 'Fact Us', 'parallaxsome' )
+					),
+		'portfolio' =>  array(
+						'default'=> esc_html__( 'Portfolio', 'parallaxsome' ),
+						'label'=>  esc_html__( 'Portfolio', 'parallaxsome' )
+					),
+		'blog' =>  array(
+						'default'=> esc_html__( 'Blog', 'parallaxsome' ),
+						'label'=>  esc_html__( 'Our Blog', 'parallaxsome' )
+					),
 		'clients' =>  array(
 						'default'=> esc_html( '', 'parallaxsome' ),
 						'label'=>  esc_html__( 'Our Clients', 'parallaxsome' )
