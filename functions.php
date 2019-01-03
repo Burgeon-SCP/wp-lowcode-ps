@@ -124,12 +124,12 @@ function parallaxsome_content_width() {
 }
 add_action( 'after_setup_theme', 'parallaxsome_content_width', 0 );
 
-function parallaxsome_pingback_header() {
-	if ( is_singular() && pings_open() ) {
-		printf( '<link rel="pingback" href="%s">' . "\n", esc_url(get_bloginfo( 'pingback_url', 'display' )) );
-	}
-}
-add_action( 'wp_head', 'parallaxsome_pingback_header' );
+// function parallaxsome_pingback_header() {
+// 	if ( is_singular() && pings_open() ) {
+// 		printf( '<link rel="pingback" href="%s">' . "\n", esc_url(get_bloginfo( 'pingback_url', 'display' )) );
+// 	}
+// }
+// add_action( 'wp_head', 'parallaxsome_pingback_header' );
 
 /**
  * Load ParallaxSome Custom Functions file
@@ -192,7 +192,7 @@ require trailingslashit(get_template_directory()).'/inc/typography/typography.ph
 /**
  * Load metaboxes file
  */
-require trailingslashit( get_template_directory() ) . '/inc/metaboxes/metabox.php';
+// require trailingslashit( get_template_directory() ) . '/inc/metaboxes/metabox.php';
 
 /**
  * Load Welcome Page
