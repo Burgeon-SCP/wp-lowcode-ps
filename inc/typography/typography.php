@@ -354,14 +354,14 @@ add_action( 'customize_controls_enqueue_scripts', 'parallaxsome_pro_customize_co
 function parallaxsome_pro_customize_controls_register_scripts() {
 	wp_enqueue_script( 'parallaxsome-customize-controls', get_template_directory_uri() .'/inc/typography/js/customize-controls.js', array( 'customize-controls' ) );
 	wp_enqueue_script( 'parallaxsome-ajax_script_function', get_template_directory_uri() .'/inc/typography/js/typo-ajax.js', array('jquery')  );
-    wp_localize_script( 'parallaxsome-ajax_script_function', 'ajax_script', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+  wp_localize_script( 'parallaxsome-ajax_script_function', 'ajax_script', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 
-	// wp_enqueue_style( 'parallaxsome-pro-customize-controls', get_template_directory_uri() .'/inc/typography/css/customize-controls.css' );
 	wp_enqueue_style( 'jquery-ui-controls', '//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css' );
 	wp_enqueue_script( 'webfont', 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js' , array('jquery'));
 	wp_enqueue_script( 'parallaxsome-pro-customize-preview', get_template_directory_uri().'/inc/typography/js/customize-previews.js', array( 'jquery', 'customize-preview', 'webfont') );
+	// wp_enqueue_style( 'parallaxsome-pro-customize-controls', get_template_directory_uri() .'/inc/typography/css/customize-controls.css' );
 }
-/**
+/*
  * Load preview scripts/styles.
  *
  * @since  1.0.0

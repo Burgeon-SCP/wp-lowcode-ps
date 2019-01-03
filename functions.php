@@ -110,7 +110,7 @@ function parallaxsome_setup() {
 	add_editor_style( 'assets/css/editor-style.css' );
 }
 endif;
-add_action( 'after_setup_theme', 'parallaxsome_setup' );
+// add_action( 'after_setup_theme', 'parallaxsome_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
