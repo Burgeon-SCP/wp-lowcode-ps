@@ -368,7 +368,7 @@ function parallaxsome_pro_customize_controls_register_scripts() {
  * @access public
  * @return void
  */
-add_action( 'customize_preview_init');
+
 // add_action( 'customize_preview_init', 'parallaxsome_pro_customize_preview_enqueue_scripts' );
 // function parallaxsome_pro_customize_preview_enqueue_scripts() {
 // 	wp_enqueue_script( 'webfont', 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js' , array('jquery'));
