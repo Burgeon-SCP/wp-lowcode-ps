@@ -1,7 +1,7 @@
 <?php
-	if(!class_exists('Parallaxsome_Welcome')) :
+	if(!class_exists('Locopas_Welcome')) :
 
-		class Parallaxsome_Welcome {
+		class Locopas_Welcome {
 
 			public $tab_sections = array();
 
@@ -532,7 +532,7 @@
 
 		}
 
-		new Parallaxsome_Welcome();
+		new Locopas_Welcome();
 
 	endif;
 
@@ -542,7 +542,7 @@
 
 		$demoimporter->demos = array(
 			'locopas' => array(
-				'title' => __('Parallaxsome Demo', 'locopas'),
+				'title' => __('Locopas Demo', 'locopas'),
 				'name' => 'locopas',
 				'screenshot' => get_template_directory_uri().'/welcome/demos/locopas/screen.png',
 				'home_page' => 'home',

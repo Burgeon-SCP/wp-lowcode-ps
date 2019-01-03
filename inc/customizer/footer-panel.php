@@ -58,7 +58,7 @@ if( ! function_exists( 'locopas_footer_panel_register' ) ):
 	            'sanitize_callback' => 'sanitize_key',
 	        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Control_Radio_Image(
+	    $wp_customize->add_control( new Locopas_Customize_Control_Radio_Image(
 	        $wp_customize,
 	        'ps_footer_widget_layout',
 	            array(

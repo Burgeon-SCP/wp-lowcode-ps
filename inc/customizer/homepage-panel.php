@@ -56,7 +56,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		            'sanitize_callback' => 'locopas_sanitize_switch_option',
 		        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
 	        $wp_customize, 
             'homepage_slider_option', 
 	            array(
@@ -86,7 +86,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		            'sanitize_callback' => 'absint'
 		        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Category_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Category_Control(
 	        $wp_customize,
 	        'slider_cat_id', 
 		        array(
@@ -112,12 +112,12 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		        )
 	    );
 
-	    $wp_customize->add_control( new locopas_Info_Control(
+	    $wp_customize->add_control( new Locopas_Info_Control(
 	        $wp_customize,
 	        'slider_upgrade_info',
 		        array(
 		            'section' => 'locopas_slider_section',
-		            'description' => __('Want to add Revolution slider for the homepage <a target="__blank" href="https://themeforest.net/item/locopas-pro-multipurpose-wordpress-theme/20033554">Upgrade to</a> the Parallaxsome Pro', 'locopas')
+		            'description' => __('Want to add Revolution slider for the homepage <a target="__blank" href="https://themeforest.net/item/locopas-pro-multipurpose-wordpress-theme/20033554">Upgrade to</a> the Locopas Pro', 'locopas')
 		        )
 		    )
 	    );
@@ -150,7 +150,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		            'sanitize_callback' => 'locopas_sanitize_switch_option',
 		        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
 	        $wp_customize, 
 	            'homepage_about_option', 
 	            array(
@@ -290,7 +290,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		            'sanitize_callback' => 'locopas_sanitize_switch_option',
 		        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
 	        $wp_customize, 
 	            'homepage_team_option', 
 	            array(
@@ -389,7 +389,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		            'sanitize_callback' => 'absint'
 		        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Category_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Category_Control(
 	        $wp_customize,
 	        'team_cat_id', 
 		        array(
@@ -433,12 +433,12 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		        )
 	    );
 
-	    $wp_customize->add_control( new locopas_Info_Control(
+	    $wp_customize->add_control( new Locopas_Info_Control(
 	        $wp_customize,
 	        'skill_section_upgrade_info',
 		        array(
 		            'section' => 'locopas_team_section',
-		            'description' => __('Want to have Skill Section in home page, <a target="__blank" href="https://themeforest.net/item/locopas-pro-multipurpose-wordpress-theme/20033554">Upgrade to</a> the Parallaxsome Pro', 'locopas'),
+		            'description' => __('Want to have Skill Section in home page, <a target="__blank" href="https://themeforest.net/item/locopas-pro-multipurpose-wordpress-theme/20033554">Upgrade to</a> the Locopas Pro', 'locopas'),
 		            'priority' => 35
 		        )
 		    )
@@ -471,7 +471,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		            'sanitize_callback' => 'locopas_sanitize_switch_option',
 		        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
 	        $wp_customize, 
 	            'homepage_service_option', 
 	            array(
@@ -600,7 +600,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		            'sanitize_callback' => 'sanitize_text_field',
 		        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Section_Separator(
+	    $wp_customize->add_control( new Locopas_Customize_Section_Separator(
 	        $wp_customize, 
 	            'service_icon_sec_separator_'.$icon_key, 
 	            array(
@@ -625,7 +625,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		            'sanitize_callback' => 'sanitize_text_field',
 		        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Icons_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Icons_Control(
 	        $wp_customize, 
 	        'service_icon_'.$icon_key, 
 	            array(
@@ -693,7 +693,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		            'sanitize_callback' => 'locopas_sanitize_switch_option',
 		        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
 	        $wp_customize, 
 	        'homepage_testimonials_option', 
 	            array(
@@ -769,7 +769,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		            'sanitize_callback' => 'absint'
 		        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Category_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Category_Control(
 	        $wp_customize,
 	        'testimonials_cat_id', 
 		        array(
@@ -808,7 +808,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		            'sanitize_callback' => 'locopas_sanitize_switch_option',
 		        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
 	        $wp_customize, 
 	            'homepage_fact_option', 
 	            array(
@@ -939,7 +939,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		            'sanitize_callback' => 'sanitize_text_field',
 		        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Section_Separator(
+	    $wp_customize->add_control( new Locopas_Customize_Section_Separator(
 	        $wp_customize, 
 	            'fact_icon_sec_separator_'.$icon_key, 
 	            array(
@@ -966,7 +966,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		            'transport' => 'postMessage'
 		        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Icons_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Icons_Control(
 	        $wp_customize, 
 	            'fact_icon_'.$icon_key, 
 	            array(
@@ -1054,7 +1054,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		            'sanitize_callback' => 'locopas_sanitize_switch_option',
 		        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
 	        $wp_customize, 
 	        'homepage_portfolio_option', 
 	            array(
@@ -1153,7 +1153,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	            'sanitize_callback' => 'absint'
 	        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Category_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Category_Control(
 	        $wp_customize,
 	        'portfolio_cat_id', 
 		        array(
@@ -1192,7 +1192,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	            'sanitize_callback' => 'locopas_sanitize_switch_option',
 	            )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
 	        $wp_customize, 
 	            'homepage_blog_option', 
 	            array(
@@ -1269,7 +1269,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		        )
 	    );
 
-	    $wp_customize->add_control( new Parallaxsome_Customize_Control_Checkbox_Multiple(
+	    $wp_customize->add_control( new Locopas_Customize_Control_Checkbox_Multiple(
 	        $wp_customize,
 	        'ps_blog_categories',
 	            array(
@@ -1377,7 +1377,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		            'sanitize_callback' => 'locopas_sanitize_switch_option',
 	            )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
 	        $wp_customize, 
 	            'homepage_clients_option', 
 	            array(
@@ -1453,7 +1453,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		            'sanitize_callback' => 'absint'
 		        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Category_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Category_Control(
 	        $wp_customize,
 	        'clients_cat_id',
 		        array(
@@ -1517,7 +1517,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		            'sanitize_callback' => 'locopas_sanitize_switch_option',
 	            )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
 	        $wp_customize, 
 	            'homepage_contact_option', 
 	            array(
@@ -1685,12 +1685,12 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		        )
 	    );
 
-	    $wp_customize->add_control( new locopas_Info_Control(
+	    $wp_customize->add_control( new Locopas_Info_Control(
 	        $wp_customize,
 	        'section_reorder_upgrade_info',
 		        array(
 		            'section' => 'locopas_contact_section',
-		            'description' => __('Want to have Section Reorder option for the site, <a target="__blank" href="https://themeforest.net/item/locopas-pro-multipurpose-wordpress-theme/20033554">Upgrade to</a> the Parallaxsome Pro', 'locopas'),
+		            'description' => __('Want to have Section Reorder option for the site, <a target="__blank" href="https://themeforest.net/item/locopas-pro-multipurpose-wordpress-theme/20033554">Upgrade to</a> the Locopas Pro', 'locopas'),
 		            'priority' => 35
 		        )
 		    )

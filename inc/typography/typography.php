@@ -14,7 +14,7 @@ function locopas_typo_customize_register( $wp_customize ) {
 	require get_template_directory() . '/inc/typography/customize/control-typography.php';
 
 	// Register typography control JS template.
-	$wp_customize->register_control_type( 'Parallaxsome_Typo_Control_Typography' );
+	$wp_customize->register_control_type( 'Locopas_Typo_Control_Typography' );
 
 	// Add the typography panel.
 	$wp_customize->add_panel( 'typography', array( 'priority' => 21, 'title' => esc_html__( 'Typography Settings', 'locopas' ) ) );
@@ -32,7 +32,7 @@ function locopas_typo_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'p_color', array( 'default' => '#666666',     'sanitize_callback' => 'sanitize_hex_color', 'transport' => 'postMessage' ) );
 
 	$wp_customize->add_control(
-		new Parallaxsome_Typo_Control_Typography(
+		new Locopas_Typo_Control_Typography(
 			$wp_customize,
 			'p_typography',
 			array(
@@ -66,7 +66,7 @@ function locopas_typo_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'h1_color', array( 'default' => '#666666', 'sanitize_callback' => 'sanitize_hex_color','transport' => 'postMessage' ) );
 
 	$wp_customize->add_control(
-		new Parallaxsome_Typo_Control_Typography(
+		new Locopas_Typo_Control_Typography(
 			$wp_customize,
 			'h1_typography',
 			array(
@@ -100,7 +100,7 @@ function locopas_typo_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'h2_color', array( 'default' => '#666666', 'sanitize_callback' => 'sanitize_hex_color','transport' => 'postMessage' ) );
 
 	$wp_customize->add_control(
-		new Parallaxsome_Typo_Control_Typography(
+		new Locopas_Typo_Control_Typography(
 			$wp_customize,
 			'h2_typography',
 			array(
@@ -134,7 +134,7 @@ function locopas_typo_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'h3_color', array( 'default' => '#000000', 'sanitize_callback' => 'sanitize_hex_color','transport' => 'postMessage' ) );
 
 	$wp_customize->add_control(
-		new Parallaxsome_Typo_Control_Typography(
+		new Locopas_Typo_Control_Typography(
 			$wp_customize,
 			'h3_typography',
 			array(
@@ -169,7 +169,7 @@ function locopas_typo_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'h4_color', array( 'default' => '#666666', 'sanitize_callback' => 'sanitize_hex_color','transport' => 'postMessage' ) );
 
 	$wp_customize->add_control(
-		new Parallaxsome_Typo_Control_Typography(
+		new Locopas_Typo_Control_Typography(
 			$wp_customize,
 			'h4_typography',
 			array(
@@ -203,7 +203,7 @@ function locopas_typo_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'h5_color', array( 'default' => '#666666', 'sanitize_callback' => 'sanitize_hex_color','transport' => 'postMessage' ) );
 
 	$wp_customize->add_control(
-		new Parallaxsome_Typo_Control_Typography(
+		new Locopas_Typo_Control_Typography(
 			$wp_customize,
 			'h5_typography',
 			array(
@@ -237,7 +237,7 @@ function locopas_typo_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'h6_color', array( 'default' => '#666666', 'sanitize_callback' => 'sanitize_hex_color','transport' => 'postMessage' ) );
 
 	$wp_customize->add_control(
-		new Parallaxsome_Typo_Control_Typography(
+		new Locopas_Typo_Control_Typography(
 			$wp_customize,
 			'h6_typography',
 			array(
@@ -271,7 +271,7 @@ function locopas_typo_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'hm_sec_title_color', array( 'default' => '#666666', 'sanitize_callback' => 'sanitize_hex_color','transport' => 'postMessage' ) );
 
 	$wp_customize->add_control(
-		new Parallaxsome_Typo_Control_Typography(
+		new Locopas_Typo_Control_Typography(
 			$wp_customize,
 			'hm_sec_title_typography',
 			array(
@@ -305,7 +305,7 @@ function locopas_typo_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'hm_sec_subtitle_color', array( 'default' => '#666666', 'sanitize_callback' => 'sanitize_hex_color','transport' => 'postMessage' ) );
 
 	$wp_customize->add_control(
-		new Parallaxsome_Typo_Control_Typography(
+		new Locopas_Typo_Control_Typography(
 			$wp_customize,
 			'hm_sec_subtitle_typography',
 			array(

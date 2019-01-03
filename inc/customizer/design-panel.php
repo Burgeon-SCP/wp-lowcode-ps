@@ -17,7 +17,7 @@ if( ! function_exists( 'locopas_design_panel_register' ) ):
 	function locopas_design_panel_register( $wp_customize ) {
 
 		// Register the radio image control class as a JS control type.
-    	$wp_customize->register_control_type( 'Parallaxsome_Customize_Control_Radio_Image' );
+    	$wp_customize->register_control_type( 'Locopas_Customize_Control_Radio_Image' );
 
 		/**
 		 * Design Settings Panel on customizer
@@ -60,7 +60,7 @@ if( ! function_exists( 'locopas_design_panel_register' ) ):
 	            'sanitize_callback' => 'sanitize_key',
 	        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Control_Radio_Image(
+	    $wp_customize->add_control( new Locopas_Customize_Control_Radio_Image(
 	        $wp_customize,
 	        'ps_archive_sidebar_layout',
 	            array(
@@ -125,7 +125,7 @@ if( ! function_exists( 'locopas_design_panel_register' ) ):
 	            'sanitize_callback' => 'sanitize_key',
 	        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Control_Radio_Image(
+	    $wp_customize->add_control( new Locopas_Customize_Control_Radio_Image(
 	        $wp_customize,
 	        'ps_default_page_sidebar',
 	            array(
@@ -187,7 +187,7 @@ if( ! function_exists( 'locopas_design_panel_register' ) ):
 	            'sanitize_callback' => 'sanitize_key',
 	        )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Control_Radio_Image(
+	    $wp_customize->add_control( new Locopas_Customize_Control_Radio_Image(
 	        $wp_customize,
 	        'ps_default_post_sidebar',
 	            array(

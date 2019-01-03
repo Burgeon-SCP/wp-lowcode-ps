@@ -22,12 +22,12 @@ function locopas_customize_register( $wp_customize ) {
 		 * Upgrade to Uncode Pro
 		*/
 		// Register custom section types.
-		// $wp_customize->register_section_type( 'Parallaxsome_Customize_Section_Pro' );
+		// $wp_customize->register_section_type( 'Locopas_Customize_Section_Pro' );
 
 		/*
 		// Register sections.
 		$wp_customize->add_section(
-		    new Parallaxsome_Customize_Section_Pro(
+		    new Locopas_Customize_Section_Pro(
 		        $wp_customize,
 		        'locopas-pro',
 		        array(

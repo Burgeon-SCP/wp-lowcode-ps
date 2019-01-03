@@ -346,7 +346,7 @@ endif;
 add_action( 'locopas_innerpage_header', 'locopas_innerpage_header_hook' );
 /*------------------------------------------------------------------------------------------------------------------*/
 /**
- * Parallaxsome Social Icons
+ * Locopas Social Icons
  *
  * @since 1.0.0
  */

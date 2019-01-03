@@ -1,7 +1,7 @@
 <?php
 /**
  * Define some custom classes for locopas.
- * 
+ *
  * https://codex.wordpress.org/Class_Reference/WP_Customize_Control
  *
  * @package AccessPress Themes
@@ -17,7 +17,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
      * @since 1.0.0
      * @access public
      */
-    class Parallaxsome_Customize_Switch_Control extends WP_Customize_Control {
+    class Locopas_Customize_Switch_Control extends WP_Customize_Control {
 
     	/**
 	     * The type of customize control being rendered.
@@ -41,7 +41,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 				<div class="description customize-control-description"><?php echo esc_html( $this->description ); ?></div>
 		        <div class="switch_options">
-		        	<?php 
+		        	<?php
 		        		$show_choices = $this->choices;
 		        		foreach ( $show_choices as $key => $value ) {
 		        			echo '<span class="switch_part '.esc_attr($key).'" data-switch="'.esc_attr($key).'">'. esc_attr($value).'</span>';
@@ -60,8 +60,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @since 1.0.0
 	 * @access public
 	 */
-	class Parallaxsome_Customize_Category_Control extends WP_Customize_Control {
-		
+	class Locopas_Customize_Category_Control extends WP_Customize_Control {
+
 		/**
 		 * Render the control's content.
 		 *
@@ -97,7 +97,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @since 1.0.0
 	 * @access public
 	 */
-	class Parallaxsome_Customize_Icons_Control extends WP_Customize_Control {
+	class Locopas_Customize_Icons_Control extends WP_Customize_Control {
 
 		/**
 	     * The type of customize control being rendered.
@@ -125,7 +125,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 				<div class="ap-customize-icons">
 					<div class="selected-icon-preview"><?php if( !empty( $saved_icon_value ) ) { echo '<i class="fa '. esc_attr($saved_icon_value) .'"></i>'; } ?></div>
 					<ul class="icons-list-wrapper">
-						<?php 
+						<?php
 							$locopas_icons_list = locopas_icons_array();
 							foreach ( $locopas_icons_list as $key => $icon_value ) {
 								if( $saved_icon_value == $icon_value ) {
@@ -145,11 +145,11 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	}
 
 	/**
-	 * A class to create a option separator in customizer section 
+	 * A class to create a option separator in customizer section
 	 *
 	 *@since 1.0.0
 	 */
-	class Parallaxsome_Customize_Section_Separator extends WP_Customize_Control {
+	class Locopas_Customize_Section_Separator extends WP_Customize_Control {
 		/**
 	     * The type of customize control being rendered.
 	     *
@@ -183,7 +183,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @since  1.0.0
 	 * @access public
 	 */
-	class Parallaxsome_Customize_Control_Checkbox_Multiple extends WP_Customize_Control {
+	class Locopas_Customize_Control_Checkbox_Multiple extends WP_Customize_Control {
 
 	    /**
 	     * The type of customize control being rendered.
@@ -221,7 +221,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 
 	                <li>
 	                    <label>
-	                        <input type="checkbox" value="<?php echo esc_attr( $value ); ?>" <?php checked( in_array( $value, $multi_values ) ); ?> /> 
+	                        <input type="checkbox" value="<?php echo esc_attr( $value ); ?>" <?php checked( in_array( $value, $multi_values ) ); ?> />
 	                        <?php echo esc_html( $label ); ?>
 	                    </label>
 	                </li>
@@ -239,7 +239,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @access public
 	 * @since 1.0.0
 	 */
-	class Parallaxsome_Text_Editor_Custom_Control extends WP_Customize_Control {
+	class Locopas_Text_Editor_Custom_Control extends WP_Customize_Control {
 	    /**
 	     * The type of customize control being rendered.
 	     *
@@ -257,7 +257,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	     * @return void
 	     */
 		public function render_content() { ?>
-			
+
 			<label>
 				<span class="customize-control-title">
 					<?php echo esc_attr( $this->label ); ?>
@@ -282,7 +282,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @since  1.0.0
 	 * @access public
 	 */
-	class Parallaxsome_Customize_Control_Radio_Image extends WP_Customize_Control {
+	class Locopas_Customize_Control_Radio_Image extends WP_Customize_Control {
 	    /**
 	     * The type of customize control being rendered.
 	     *
@@ -345,7 +345,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 
 	            <# for ( key in data.choices ) { #>
 
-	                <input type="radio" value="{{ key }}" name="_customize-{{ data.type }}-{{ data.id }}" id="{{ data.id }}-{{ key }}" {{{ data.link }}} <# if ( key === data.value ) { #> checked="checked" <# } #> /> 
+	                <input type="radio" value="{{ key }}" name="_customize-{{ data.type }}-{{ data.id }}" id="{{ data.id }}-{{ key }}" {{{ data.link }}} <# if ( key === data.value ) { #> checked="checked" <# } #> />
 
 	                <label for="{{ data.id }}-{{ key }}">
 	                    <span class="screen-reader-text">{{ data.choices[ key ]['label'] }}</span>
@@ -360,7 +360,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
     /**
      * Theme info
      */
-    class Parallaxsome_Info_Control extends WP_Customize_Control {
+    class Locopas_Info_Control extends WP_Customize_Control {
     	/**
          * Custom text to output.
          *
@@ -383,7 +383,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
      * @since  1.0.0
      * @access public
      */
-    class Parallaxsome_Customize_Section_Pro extends WP_Customize_Section {
+    class Locopas_Customize_Section_Pro extends WP_Customize_Section {
 
         /**
          * The type of customize section being rendered.

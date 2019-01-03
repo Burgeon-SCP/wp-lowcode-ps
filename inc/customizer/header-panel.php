@@ -64,7 +64,7 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	            'sanitize_callback' => 'locopas_sanitize_switch_option',
 	            )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
 	        $wp_customize, 
 	            'top_header_option', 
 	            array(
@@ -94,7 +94,7 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	            'sanitize_callback' => 'locopas_sanitize_switch_option',
 	            )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
 	        $wp_customize, 
 	            'top_header_social_option', 
 	            array(
@@ -137,7 +137,7 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	            'sanitize_callback' => 'locopas_sanitize_menu_switch_option',
 	            )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
 	        $wp_customize, 
 	            'primary_menu_type', 
 	            array(
@@ -166,7 +166,7 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	            'sanitize_callback' => 'locopas_sanitize_p_menu_type_switch_option',
 	            )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
 	        $wp_customize, 
 	            'parallax_menu_type', 
 	            array(
@@ -225,7 +225,7 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	            'sanitize_callback' => 'locopas_sanitize_switch_option',
 	            )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
 	        $wp_customize, 
 	            'primary_menu_search_option', 
 	            array(
@@ -254,7 +254,7 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	            'sanitize_callback' => 'locopas_sanitize_enable_switch_option',
 	            )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
 	        $wp_customize, 
 	            'sticky_header_option', 
 	            array(

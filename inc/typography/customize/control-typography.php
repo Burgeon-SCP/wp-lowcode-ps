@@ -5,7 +5,7 @@
      * @since  1.0.0
      * @access public
      */
-    class Parallaxsome_Typo_Control_Typography extends WP_Customize_Control { 
+    class Locopas_Typo_Control_Typography extends WP_Customize_Control { 
         /**
          * The type of customize control being rendered.
          *
