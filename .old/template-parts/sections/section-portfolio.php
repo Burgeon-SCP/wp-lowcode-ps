@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 ?>
@@ -13,13 +13,13 @@
 <?php
 	$section_option = get_theme_mod( 'homepage_portfolio_option', 'show' );
 	if( $section_option != 'hide' ) {
-		$section_title = get_theme_mod( 'portfolio_section_title', esc_html__( 'Portfolio', 'parallaxsome' ) );
-		$section_sub_title = get_theme_mod( 'portfolio_section_sub_title', esc_html__( 'Best Porjects', 'parallaxsome' ) );
+		$section_title = get_theme_mod( 'portfolio_section_title', esc_html__( 'Portfolio', 'locopas' ) );
+		$section_sub_title = get_theme_mod( 'portfolio_section_sub_title', esc_html__( 'Best Porjects', 'locopas' ) );
 		$section_description = get_theme_mod( 'portfolio_section_description', '' );
 ?>
 		<section class="ps-home-section" id="section-portfolio">
 			<div class="portfolio-sec-title wow fadeInDown" data-wow-duration="0.5s">
-				<?php parallaxsome_section_header( $section_title, $section_sub_title, $section_description ); ?>
+				<?php locopas_section_header( $section_title, $section_sub_title, $section_description ); ?>
 			</div>
 			<div class="section-content-wrapper wow fadeInUp" data-wow-duration="0.5s">
 				<?php
@@ -46,7 +46,7 @@
 									<div class="single-project-wrap item">
 										<?php if( has_post_thumbnail() ) { ?>
 											<div class="project-img-wrap">
-												<figure><?php the_post_thumbnail( 'parallaxsome_project_thumb' ); ?></figure>
+												<figure><?php the_post_thumbnail( 'locopas_project_thumb' ); ?></figure>
 												<span class="project-icons">
 							                         <div class="btn-holder">   
 							                            <a class="link-icon" href="<?php the_permalink();?>"><i class="fa fa-chain"></i></a>

@@ -1,16 +1,16 @@
 <?php
 /**
- * ParallaxSome custom functions and definitions for widgets
+ * LoCoPaS custom functions and definitions for widgets
  *
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  */
 
-function parallaxsome_widgets_init() {
+function locopas_widgets_init() {
 
 	/**
 	 * Register Home Contact Map widget area
@@ -18,9 +18,9 @@ function parallaxsome_widgets_init() {
 	 * @since 1.0.0
 	 */
 	register_sidebar( array(
-		'name'          => esc_html__( 'Contact Map', 'parallaxsome' ),
-		'id'            => 'parallaxsome_map_sidebar',
-		'description'   => esc_html__( 'Added widgets are display at Contact Us section at homepage.', 'parallaxsome' ),
+		'name'          => esc_html__( 'Contact Map', 'locopas' ),
+		'id'            => 'locopas_map_sidebar',
+		'description'   => esc_html__( 'Added widgets are display at Contact Us section at homepage.', 'locopas' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -33,9 +33,9 @@ function parallaxsome_widgets_init() {
 	 * @since 1.0.0
 	 */
 	register_sidebar( array(
-		'name'          => esc_html__( 'WooCommerce Sidebar', 'parallaxsome' ),
-		'id'            => 'parallaxsome_woo_sidebar',
-		'description'   => esc_html__( 'Added widgets are display at Sidebar section only in woocommerce posts/pages/archives.', 'parallaxsome' ),
+		'name'          => esc_html__( 'WooCommerce Sidebar', 'locopas' ),
+		'id'            => 'locopas_woo_sidebar',
+		'description'   => esc_html__( 'Added widgets are display at Sidebar section only in woocommerce posts/pages/archives.', 'locopas' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -49,9 +49,9 @@ function parallaxsome_widgets_init() {
 	 */
 	register_sidebars( 4 , array(
 		/* translators: %d : sidebar identifier */
-		'name'          => esc_html__( 'Footer Area %d', 'parallaxsome' ),
-		'id'            => 'parallaxsome_footer_sidebar',
-		'description'   => esc_html__( 'Added widgets are display at Footer Widget Area.', 'parallaxsome' ),
+		'name'          => esc_html__( 'Footer Area %d', 'locopas' ),
+		'id'            => 'locopas_footer_sidebar',
+		'description'   => esc_html__( 'Added widgets are display at Footer Widget Area.', 'locopas' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -59,4 +59,4 @@ function parallaxsome_widgets_init() {
 	) );
 }
 
-add_action( 'widgets_init', 'parallaxsome_widgets_init' );
+add_action( 'widgets_init', 'locopas_widgets_init' );

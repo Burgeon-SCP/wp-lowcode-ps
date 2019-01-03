@@ -54,7 +54,7 @@
     border-bottom-style: dashed;
     border-top-style: dashed;
 }
-.parallaxsome_procolumn {
+.locopas_procolumn {
     float: left;
     padding: 0 5px;
     -moz-box-sizing: border-box;
@@ -81,17 +81,17 @@
 call to action
 *******/
 
-.parallaxsome_procall_to_action.left {
+.locopas_procall_to_action.left {
     text-align: left;
 }
-.parallaxsome_procall_to_action {
+.locopas_procall_to_action {
     background: #EEE;
     border: 1px solid #DDD;
     border-radius: 3px;
     padding: 15px;
     margin: 15px 0;
 }
-.parallaxsome_procall_to_action .parallaxsome_procall_to_action_button {
+.locopas_procall_to_action .locopas_procall_to_action_button {
     background: #009de3;
     padding: 10px 20px;
     color: #FFF;
@@ -100,10 +100,10 @@ call to action
     text-decoration: none;
     margin-top: 10px;
 }
-.parallaxsome_procall_to_action.center {
+.locopas_procall_to_action.center {
     text-align: center;
 }
-.parallaxsome_procall_to_action.center {
+.locopas_procall_to_action.center {
     text-align: center;
 }
 /******
@@ -123,13 +123,13 @@ call to action
 /*******
 	team shortcodes
 *******/
-.parallaxsome_procolumn .ap-team .ap-member-image-wrapin {
+.locopas_procolumn .ap-team .ap-member-image-wrapin {
     margin-bottom: 20px;
 }
-.parallaxsome_procolumn .ap-team .ap-member-in-wrap {
+.locopas_procolumn .ap-team .ap-member-in-wrap {
     text-align: center;
 }
-.parallaxsome_procolumn .ap-team .ap-member-position {
+.locopas_procolumn .ap-team .ap-member-position {
     margin-top: 0;
 }
 .member-social-group {
@@ -170,7 +170,7 @@ call to action
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
-.parallaxsome_procolumn .ap-team,
+.locopas_procolumn .ap-team,
 .ap-slide {
     margin-bottom: 30px;
 }
@@ -229,17 +229,17 @@ shortcode slider
 /******
 	shortcode tab
 ***********/
-.vertical .parallaxsome_protab_group .tab-title.active,
-.vertical .parallaxsome_protab_group .tab-title.hover,
-.horizontal .parallaxsome_protab_group .tab-title.active,
-.horizontal .parallaxsome_protab_group .tab-title.hover {
+.vertical .locopas_protab_group .tab-title.active,
+.vertical .locopas_protab_group .tab-title.hover,
+.horizontal .locopas_protab_group .tab-title.active,
+.horizontal .locopas_protab_group .tab-title.hover {
     color: #FFF;
     background: #009ada;
 }
-.horizontal .parallaxsome_protab_group {
+.horizontal .locopas_protab_group {
     margin-bottom: 10px;
 }
-.horizontal .parallaxsome_protab_group .tab-title {
+.horizontal .locopas_protab_group .tab-title {
     background: #F6F6F6;
     float: left;
     cursor: pointer;
@@ -249,7 +249,7 @@ shortcode slider
     margin-right: 5px;
     line-height: 1.2;
 }
-.horizontal .parallaxsome_protab_content {
+.horizontal .locopas_protab_content {
     padding: 15px;
     background: #F6F6F6;
 }
@@ -262,11 +262,11 @@ shortcode slider
     line-height: 1.2;
     text-align: center;
 }
-.vertical .parallaxsome_protab_group {
+.vertical .locopas_protab_group {
     width: 20%;
     float: left;
 }
-.vertical .parallaxsome_protab_content {
+.vertical .locopas_protab_content {
     float: right;
     width: 78%;
     padding: 15px;
@@ -276,28 +276,28 @@ shortcode slider
 tagline
 ****/
 
-.parallaxsome_protagline_box.ap-all-border-box {
+.locopas_protagline_box.ap-all-border-box {
     border: 3px solid #009ada;
     padding: 20px;
     background: #F6F6F6;
 }
-.parallaxsome_protagline_box {
+.locopas_protagline_box {
     margin: 20px 0;
 }
-.parallaxsome_protagline_box.ap-top-border-box {
+.locopas_protagline_box.ap-top-border-box {
     border-top: 3px solid #009ada;
     padding: 20px;
     background: #F6F6F6;
 }
-.parallaxsome_protagline_box.ap-left-border-box {
+.locopas_protagline_box.ap-left-border-box {
     border-left: 3px solid #009ada;
     padding: 20px;
     background: #F6F6F6;
 }
-.parallaxsome_protagline_box.ap-bg-box {
+.locopas_protagline_box.ap-bg-box {
     color: #FFF;
 }
-.parallaxsome_protagline_box.ap-bg-box {
+.locopas_protagline_box.ap-bg-box {
     background: #009ada;
     padding: 20px;
 }
@@ -305,14 +305,14 @@ tagline
 toggle
 ****/
 
-.parallaxsome_protoggle .parallaxsome_protoggle_title {
+.locopas_protoggle .locopas_protoggle_title {
     cursor: pointer;
     position: relative;
     padding: 10px 0 10px 40px;
     background: #009ada;
     color: #FFF;
 }
-.parallaxsome_protoggle .parallaxsome_protoggle_title:after {
+.locopas_protoggle .locopas_protoggle_title:after {
     content: "";
     position: absolute;
     content: "\f107";
@@ -327,15 +327,15 @@ toggle
     top: 50%;
     margin-top: -10px;
 }
-.parallaxsome_protoggle .parallaxsome_protoggle_content {
+.locopas_protoggle .locopas_protoggle_content {
     padding: 10px;
     line-height: 1.5;
 }
-.parallaxsome_protoggle {
+.locopas_protoggle {
     border-left: 5px solid #009ada;
     margin-bottom: 10px;
 }
-.parallaxsome_protoggle.close .parallaxsome_protoggle_content {
+.locopas_protoggle.close .locopas_protoggle_content {
     display: none;
 }
 /*****
@@ -455,9 +455,9 @@ dropcaps
 }
 /******by ajay*****/
 
-.horizontal .parallaxsome_protab_content .parallaxsome_protab {
+.horizontal .locopas_protab_content .locopas_protab {
     display: none;
 }
-.vertical .parallaxsome_protab_content .parallaxsome_protab {
+.vertical .locopas_protab_content .locopas_protab {
     display: none;
 }

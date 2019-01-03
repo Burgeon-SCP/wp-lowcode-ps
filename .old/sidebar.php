@@ -5,14 +5,14 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 ?>
 
 <aside id="secondary" class="right-sidebar widget-area" role="complementary">
 	<?php 
-		if ( ! is_active_sidebar( 'parallaxsome_right_sidebar' ) ) { return; }
-			dynamic_sidebar( 'parallaxsome_right_sidebar' ); 
+		if ( ! is_active_sidebar( 'locopas_right_sidebar' ) ) { return; }
+			dynamic_sidebar( 'locopas_right_sidebar' ); 
 	?>
 </aside><!-- #secondary -->

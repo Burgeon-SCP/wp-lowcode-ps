@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 ?>
@@ -13,14 +13,14 @@
 <?php
 	$section_option = get_theme_mod( 'homepage_clients_option', 'show' );
 	if( $section_option != 'hide' ) {
-		$section_title = get_theme_mod( 'clients_section_title', esc_html__( 'Our Clients', 'parallaxsome' ) );
-		$section_sub_title = get_theme_mod( 'clients_section_sub_title', esc_html__( 'Latest News', 'parallaxsome' ) );
+		$section_title = get_theme_mod( 'clients_section_title', esc_html__( 'Our Clients', 'locopas' ) );
+		$section_sub_title = get_theme_mod( 'clients_section_sub_title', esc_html__( 'Latest News', 'locopas' ) );
 		$section_bg_image = get_theme_mod( 'clients_bg_image', '' );
 ?>
 		<section class="ps-home-section" id="section-clients" data-parallax="scroll" data-image-src="<?php echo esc_url( $section_bg_image ); ?>">			
 			<div class="ps-section-container">
 				<div class="client-title wow fadeInDown" data-wow-duration="0.5s">
-					<?php parallaxsome_section_header( $section_title, $section_sub_title, $section_description = null ); ?>
+					<?php locopas_section_header( $section_title, $section_sub_title, $section_description = null ); ?>
 				</div>
 				<div class="section-content-wrapper wow fadeInUp clearfix" data-wow-duration="1s">
 				<?php

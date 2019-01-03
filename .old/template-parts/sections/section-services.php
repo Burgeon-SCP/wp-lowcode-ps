@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 ?>
@@ -13,15 +13,15 @@
 <?php
 	$section_option = get_theme_mod( 'homepage_service_option', 'show' );
 	if( $section_option != 'hide' ) {
-		$section_title = get_theme_mod( 'services_section_title', esc_html__( 'Our Services', 'parallaxsome' ) );
-		$section_sub_title = get_theme_mod( 'services_section_sub_title', esc_html__( 'Our Works', 'parallaxsome' ) );
+		$section_title = get_theme_mod( 'services_section_title', esc_html__( 'Our Services', 'locopas' ) );
+		$section_sub_title = get_theme_mod( 'services_section_sub_title', esc_html__( 'Our Works', 'locopas' ) );
 		$section_description = get_theme_mod( 'services_section_description', '' );
 		$section_bg_image = get_theme_mod( 'service_bg_image', '' );
 ?>
 		<section class="ps-home-section" id="section-services" data-parallax="scroll" data-image-src="<?php echo esc_url( $section_bg_image ); ?>">
 			<div class="ps-section-container clearfix">
 				<div class="service-title wow fadeInDown" data-wow-duration="0.5s">
-					<?php parallaxsome_section_header( $section_title, $section_sub_title, $section_description ); ?>
+					<?php locopas_section_header( $section_title, $section_sub_title, $section_description ); ?>
 				</div>
 				<div class="section-content-wrapper wow fadeInUp" data-wow-duration="1s">
 					<ul class="nav service-nav-tab">
@@ -59,13 +59,13 @@
 											<div class="tab-pane" id="stab-<?php echo esc_attr( $i ).'-'.esc_attr( $service_page_id_value ); ?>">
 												<?php if( has_post_thumbnail() ) { ?>
 													<div class="content-left">
-														<?php the_post_thumbnail( 'parallaxsome_services_thumb' ); ?>
+														<?php the_post_thumbnail( 'locopas_services_thumb' ); ?>
 													</div>
 												<?php } ?>												
 												<div <?php if( has_post_thumbnail() ) { ?>class="content-right" <?php } ?>><br>
 													<?php the_excerpt(); ?>
 													<a class="button ps-btn" href="<?php the_permalink(); ?>" target="_blank">
-														<?php esc_html_e('Learn More','parallaxsome'); ?>
+														<?php esc_html_e('Learn More','locopas'); ?>
 													</a>
 												</div>
 											</div>

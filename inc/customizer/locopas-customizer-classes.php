@@ -1,11 +1,11 @@
 <?php
 /**
- * Define some custom classes for parallaxsome.
+ * Define some custom classes for locopas.
  * 
  * https://codex.wordpress.org/Class_Reference/WP_Customize_Control
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 
@@ -73,7 +73,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 					array(
 						'name'              => '_customize-dropdown-categories-' . $this->id,
 						'echo'              => 0,
-						'show_option_none'  => esc_html__( '&mdash; Select Category &mdash;', 'parallaxsome' ),
+						'show_option_none'  => esc_html__( '&mdash; Select Category &mdash;', 'locopas' ),
 						'option_none_value' => '0',
 						'selected'          => $this->value(),
 					)
@@ -106,7 +106,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	     * @access public
 	     * @var    string
 	     */
-		public $type = 'parallaxsome_icons';
+		public $type = 'locopas_icons';
 
 		/**
 	     * Displays the control content.
@@ -126,8 +126,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 					<div class="selected-icon-preview"><?php if( !empty( $saved_icon_value ) ) { echo '<i class="fa '. esc_attr($saved_icon_value) .'"></i>'; } ?></div>
 					<ul class="icons-list-wrapper">
 						<?php 
-							$parallaxsome_icons_list = parallaxsome_icons_array();
-							foreach ( $parallaxsome_icons_list as $key => $icon_value ) {
+							$locopas_icons_list = locopas_icons_array();
+							foreach ( $locopas_icons_list as $key => $icon_value ) {
 								if( $saved_icon_value == $icon_value ) {
 									echo '<li class="selected"><i class="fa '. esc_attr($icon_value) .'"></i></li>';
 								} else {
@@ -157,7 +157,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	     * @access public
 	     * @var    string
 	     */
-		public $type = 'parallaxsome_separator';
+		public $type = 'locopas_separator';
 
 		/**
 	     * Displays the control content.
@@ -247,7 +247,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	     * @access public
 	     * @var    string
 	     */
-	    public $type = 'parallaxsome-editor';
+	    public $type = 'locopas-editor';
 
 		/**
 	     * Displays the control content.
@@ -392,7 +392,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
          * @access public
          * @var    string
          */
-        public $type = 'parallaxsome-pro';
+        public $type = 'locopas-pro';
 
         /**
          * Custom button text to output.

@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 ?>
@@ -13,16 +13,16 @@
 <?php
 	$section_option = get_theme_mod( 'homepage_contact_option', 'show' );
 	if( $section_option != 'hide' ) {
-		$section_title = get_theme_mod( 'contact_section_title', esc_html__( 'Contact Us', 'parallaxsome' ) );
-		$section_sub_title = get_theme_mod( 'contact_section_sub_title', esc_html__( 'More Info', 'parallaxsome' ) );
-		$ps_section_ctn_num = get_theme_mod( 'contact_section_phone', esc_html__( '(44) 123 456 7894', 'parallaxsome' ) );		
+		$section_title = get_theme_mod( 'contact_section_title', esc_html__( 'Contact Us', 'locopas' ) );
+		$section_sub_title = get_theme_mod( 'contact_section_sub_title', esc_html__( 'More Info', 'locopas' ) );
+		$ps_section_ctn_num = get_theme_mod( 'contact_section_phone', esc_html__( '(44) 123 456 7894', 'locopas' ) );		
 		$ps_phone_num = preg_replace( "/[^0-9]/","",$ps_section_ctn_num );
-		$ps_section_ctn_address = get_theme_mod( 'contact_section_address', esc_html__( 'Alaxender Avenue, Harrow, Middlesex, UK', 'parallaxsome' ) );
-		$ps_map_caption = get_theme_mod( 'contact_map_caption', esc_html__( 'Locate Us on Map', 'parallaxsome' ) );
+		$ps_section_ctn_address = get_theme_mod( 'contact_section_address', esc_html__( 'Alaxender Avenue, Harrow, Middlesex, UK', 'locopas' ) );
+		$ps_map_caption = get_theme_mod( 'contact_map_caption', esc_html__( 'Locate Us on Map', 'locopas' ) );
 ?>
 		<section class="ps-home-section" id="section-contact">
 			<div class="ps-section-container wow fadeInDown" data-wow-duration="0.5s">
-				<?php parallaxsome_section_header( $section_title, $section_sub_title, $section_description = null ); ?>
+				<?php locopas_section_header( $section_title, $section_sub_title, $section_description = null ); ?>
 			</div><!-- .ps-section-container -->
 			<div class="section-content-wrapper wow fadeInUp" data-wow-duration="1s">
 				<div class="ps-contact-form clearfix">
@@ -39,11 +39,11 @@
 				</div><!-- .ps-contact-form -->
 				<div class="ps-contant-info clearfix">
 					<div class="ps-ctn">
-						<span class="ps-num-label"><?php esc_html_e('Call us:','parallaxsome') ?></span>
+						<span class="ps-num-label"><?php esc_html_e('Call us:','locopas') ?></span>
 						<span><a href="tel:<?php echo esc_attr( $ps_phone_num ); ?>"><?php echo esc_html( $ps_section_ctn_num ); ?></a></span>
 					</div>
 					<div class="ps-address">
-						<span class="ps-add-label"><?php esc_html_e('visit us:','parallaxsome') ?></span>
+						<span class="ps-add-label"><?php esc_html_e('visit us:','locopas') ?></span>
 						<span class="address-home"><?php echo esc_html( $ps_section_ctn_address ); ?></span>
 					</div>
 				</div><!-- .ps-contant-info -->
@@ -52,14 +52,14 @@
 				</div><!-- .ps-contant-map -->
 				<div class="ps-map-frame" style="display: none;">
 					<?php
-			        	if( is_active_sidebar( 'parallaxsome_map_sidebar' ) ) {
-			            	if ( !dynamic_sidebar( 'parallaxsome_map_sidebar' ) ):
+			        	if( is_active_sidebar( 'locopas_map_sidebar' ) ) {
+			            	if ( !dynamic_sidebar( 'locopas_map_sidebar' ) ):
 			            	endif;
 			         	}
 			        ?>
 				</div><!-- .ps-map-frame -->
 				<div class="footer-social-wrap">
-					<?php do_action( 'parallaxsome_top_social_icons' ); ?>
+					<?php do_action( 'locopas_top_social_icons' ); ?>
 				</div><!-- .footer-social-wrap -->
 			</div><!-- .section-content-wrapper -->		
 		</section>

@@ -8,12 +8,12 @@
  * @since 1.0.0
  */
 
-function parallaxsome_breadcrumbs(){
+function locopas_breadcrumbs(){
   /* === OPTIONS === */
-	$text['home']     = esc_html__( 'Home', 'parallaxsome' ); // text for the 'Home' link
+	$text['home']     = esc_html__( 'Home', 'locopas' ); // text for the 'Home' link
 	$text['category'] = '%s'; // text for a category page
 	$text['tax'] 	  = '%s'; // text for a taxonomy page
-	$text['search']   = esc_html__( 'Search Results for "%s" Query', 'parallaxsome' ); // text for a search results page
+	$text['search']   = esc_html__( 'Search Results for "%s" Query', 'locopas' ); // text for a search results page
 	$text['tag']      = '%s'; // text for a tag page
 	$text['author']   = '%s'; // text for an author page
 	$text['404']      = '404'; // text for the 404 page
@@ -118,9 +118,9 @@ function parallaxsome_breadcrumbs(){
 		}
 		if ( get_query_var('paged') ) {
 			if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
-			echo esc_html__( 'Page', 'parallaxsome' ) . ' ' . get_query_var('paged');
+			echo esc_html__( 'Page', 'locopas' ) . ' ' . get_query_var('paged');
 			if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
 		}
 		echo '</div>';
 	}
-} // end parallaxsome_breadcrumbs()
+} // end locopas_breadcrumbs()

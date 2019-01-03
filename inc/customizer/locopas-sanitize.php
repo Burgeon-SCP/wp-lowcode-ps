@@ -3,7 +3,7 @@
  * Define sanitize functions for customizer fields
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 
@@ -12,7 +12,7 @@
  *
  * @since 1.0.0
  */
-function parallaxsome_sanitize_number( $input ) {
+function locopas_sanitize_number( $input ) {
     $output = intval($input);
      return $output;
 }
@@ -22,7 +22,7 @@ function parallaxsome_sanitize_number( $input ) {
  *
  * @since 1.0.0
  */
-function parallaxsome_sanitize_checkbox( $input ) {
+function locopas_sanitize_checkbox( $input ) {
     if ( $input == 1 ) {
         return 1;
     } else {
@@ -35,10 +35,10 @@ function parallaxsome_sanitize_checkbox( $input ) {
  *
  * @since 1.0.0
  */
-function parallaxsome_sanitize_switch_option( $input ) {
+function locopas_sanitize_switch_option( $input ) {
     $valid_keys = array(
-            'show'  => esc_html__( 'Show', 'parallaxsome' ),
-            'hide'  => esc_html__( 'Hide', 'parallaxsome' )
+            'show'  => esc_html__( 'Show', 'locopas' ),
+            'hide'  => esc_html__( 'Hide', 'locopas' )
         );
     if ( array_key_exists( $input, $valid_keys ) ) {
         return $input;
@@ -52,10 +52,10 @@ function parallaxsome_sanitize_switch_option( $input ) {
  *
  * @since 1.0.0
  */
-function parallaxsome_sanitize_enable_switch_option( $input ) {
+function locopas_sanitize_enable_switch_option( $input ) {
     $valid_keys = array(
-            'enable'    => esc_html__( 'Enable', 'parallaxsome' ),
-            'disable'   => esc_html__( 'Disable', 'parallaxsome' )
+            'enable'    => esc_html__( 'Enable', 'locopas' ),
+            'disable'   => esc_html__( 'Disable', 'locopas' )
         );
     if ( array_key_exists( $input, $valid_keys ) ) {
         return $input;
@@ -69,10 +69,10 @@ function parallaxsome_sanitize_enable_switch_option( $input ) {
  *
  * @since 1.0.0
  */
-function parallaxsome_sanitize_menu_switch_option( $input ) {
+function locopas_sanitize_menu_switch_option( $input ) {
     $valid_keys = array(
-            'parallax'  => esc_html__( 'Parallax', 'parallaxsome' ),
-            'default'   => esc_html__( 'Default', 'parallaxsome' )
+            'parallax'  => esc_html__( 'Parallax', 'locopas' ),
+            'default'   => esc_html__( 'Default', 'locopas' )
         );
     if ( array_key_exists( $input, $valid_keys ) ) {
         return $input;
@@ -86,10 +86,10 @@ function parallaxsome_sanitize_menu_switch_option( $input ) {
  *
  * @since 1.0.0
  */
-function parallaxsome_sanitize_p_menu_type_switch_option( $input ) {
+function locopas_sanitize_p_menu_type_switch_option( $input ) {
     $valid_keys = array(
-            'default'   => esc_html__( 'Default', 'parallaxsome' ),
-            'float'     => esc_html__( 'Float Menu', 'parallaxsome' )
+            'default'   => esc_html__( 'Default', 'locopas' ),
+            'float'     => esc_html__( 'Float Menu', 'locopas' )
         );
     if ( array_key_exists( $input, $valid_keys ) ) {
         return $input;
@@ -103,7 +103,7 @@ function parallaxsome_sanitize_p_menu_type_switch_option( $input ) {
  *
  * @since 1.0.0
  */
-function parallaxsome_multiple_categories_sanitize( $values ) {
+function locopas_multiple_categories_sanitize( $values ) {
 
     $multi_values = !is_array( $values ) ? explode( ',', $values ) : $values;
 
@@ -113,7 +113,7 @@ function parallaxsome_multiple_categories_sanitize( $values ) {
 /**
  * Active Callback function for customizer field
  */
-function parallaxsome_primary_menu_type_callback( $control ) {
+function locopas_primary_menu_type_callback( $control ) {
     if ( $control->manager->get_setting('primary_menu_type')->value() == 'parallax' ) {
         return true;
     } else {

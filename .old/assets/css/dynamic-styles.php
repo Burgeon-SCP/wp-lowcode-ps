@@ -1,7 +1,7 @@
 <?php
-        if(!function_exists( 'parallaxsome_register_fonts' ) ) {
+        if(!function_exists( 'locopas_register_fonts' ) ) {
 
-                function parallaxsome_register_fonts () {
+                function locopas_register_fonts () {
                         $typos = array(
                             'p' => 'Roboto Slab',
                             'h1' => 'Lato',
@@ -18,21 +18,21 @@
                                 $font_family = array();
                                 $font_family[$initial] = get_theme_mod($initial.'_font_family', $default_font);
 
-                                wp_register_style( 'parallaxsome-'.esc_attr($initial).'-font', '//fonts.googleapis.com/css?family='.$font_family[$initial] );
-                                wp_enqueue_style( 'parallaxsome-'.esc_attr($initial).'-font');
+                                wp_register_style( 'locopas-'.esc_attr($initial).'-font', '//fonts.googleapis.com/css?family='.$font_family[$initial] );
+                                wp_enqueue_style( 'locopas-'.esc_attr($initial).'-font');
                         }
                 }
 
-                add_action( 'wp_head', 'parallaxsome_register_fonts' );
+                add_action( 'wp_head', 'locopas_register_fonts' );
 
         }
 
 
-        function parallaxsome_dynamic_styles() {
+        function locopas_dynamic_styles() {
 
                 /** Template Color Styles **/
-                $tpl_color = sanitize_hex_color(get_theme_mod( 'parallaxsome_tpl_color', '#e23815' ));
-                $lite_tpl_color = parallaxsome_colour_brightness($tpl_color, 0.8);
+                $tpl_color = sanitize_hex_color(get_theme_mod( 'locopas_tpl_color', '#e23815' ));
+                $lite_tpl_color = locopas_colour_brightness($tpl_color, 0.8);
                 $custom_css = "
                         .main-navigation ul.menu > li > a:after,
                         .single-slide-wrap .slider-title:before,
@@ -65,7 +65,7 @@
                                 #section-blog .ps-section-viewall a{
                                         background: {$lite_tpl_color};
                                 }";
-                        
+
 
                 $custom_css .= "
                         .ps-head-search .ps-search-icon:before,
@@ -229,7 +229,7 @@
                                 $font_size = get_theme_mod( $initial . '_font_size', $typo['font_size'] );
                                 $line_height = get_theme_mod( $initial . '_line_height', $typo['line_height'] );
                                 $color = get_theme_mod( $initial . '_color', $typo['color'] );
-                                
+
                                 $custom_css .= "
                                         {$apply_to}{
                                                 font-family: {$font_family};
@@ -243,12 +243,12 @@
                         }
 
 
-                wp_add_inline_style( 'parallaxsome-style', $custom_css );
+                wp_add_inline_style( 'locopas-style', $custom_css );
         }
 
-        add_action( 'wp_enqueue_scripts', 'parallaxsome_dynamic_styles' );
+        add_action( 'wp_enqueue_scripts', 'locopas_dynamic_styles' );
 
-        function parallaxsome_colour_brightness($hex, $percent) {
+        function locopas_colour_brightness($hex, $percent) {
             // Work out if hash given
             $hash = '';
             if (stristr($hex, '#')) {
@@ -257,7 +257,7 @@
             }
             /// HEX TO RGB
             $rgb = array(hexdec(substr($hex, 0, 2)), hexdec(substr($hex, 2, 2)), hexdec(substr($hex, 4, 2)));
-            //// CALCULATE 
+            //// CALCULATE
             for ($i = 0; $i < 3; $i++) {
                 // See if brighter or darker
                 if ($percent > 0) {

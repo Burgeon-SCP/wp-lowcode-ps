@@ -14,23 +14,23 @@ jQuery(document).ready(function ($) {
     	el.addClass('installing');
     	var plugin = $(el).attr('data-slug');
     	var plugin_file = $(el).attr('data-file');
-    	var ajaxurl = parallaxsomeWelcomeObject.ajaxurl;
+    	var ajaxurl = locopasWelcomeObject.ajaxurl;
 
 		$.ajax({
 			type: 'POST',
 			url: ajaxurl,
 			data: {
-				action: 'parallaxsome_plugin_installer',
+				action: 'locopas_plugin_installer',
 				plugin: plugin,
 				plugin_file: plugin_file,
-				nonce: parallaxsomeWelcomeObject.admin_nonce,
+				nonce: locopasWelcomeObject.admin_nonce,
 			},
 			success: function(response) {
 
 		   		if(response == 'success'){
 			   		
 				   		el.attr('class', 'installed button');
-				   		el.html(parallaxsomeWelcomeObject.installed_btn);
+				   		el.html(locopasWelcomeObject.installed_btn);
 			   			
 		   		}
 
@@ -62,7 +62,7 @@ jQuery(document).ready(function ($) {
 			type: 'POST',
 			url: ajaxurl,
 			data: {
-				action: 'parallaxsome_plugin_offline_installer',
+				action: 'locopas_plugin_offline_installer',
 				file_location: file_location,
 				file: file,
 				slug: slug,
@@ -74,7 +74,7 @@ jQuery(document).ready(function ($) {
 		   		if(response == 'success'){
 			   		
 			   		el.attr('class', 'installed button');
-			   		el.html(parallaxsomeWelcomeObject.installed_btn);
+			   		el.html(locopasWelcomeObject.installed_btn);
 			   			
 		   		}
 
@@ -94,23 +94,23 @@ jQuery(document).ready(function ($) {
 		var el = $(this);
 		var plugin = $(el).attr('data-slug');
 
-    	var ajaxurl = parallaxsomeWelcomeObject.ajaxurl;
+    	var ajaxurl = locopasWelcomeObject.ajaxurl;
     	
     	
 		$.ajax({
 	   		type: 'POST',
 	   		url: ajaxurl,
 	   		data: {
-	   			action: 'parallaxsome_plugin_activation',
+	   			action: 'locopas_plugin_activation',
 	   			plugin: plugin,
-	   			nonce: parallaxsomeWelcomeObject.activate_nonce,
+	   			nonce: locopasWelcomeObject.activate_nonce,
 	   			dataType: 'json'
 	   		},
 	   		success: function(response) {
 		   		if(response){
 			   		if(response.status === 'success'){
 				   		el.attr('class', 'installed button');
-				   		el.html(parallaxsomeWelcomeObject.installed_btn);
+				   		el.html(locopasWelcomeObject.installed_btn);
 			   		}
 		   		}
 		   		is_loading = false;
@@ -134,15 +134,15 @@ jQuery(document).ready(function ($) {
 	   		type: 'POST',
 	   		url: ajaxurl,
 	   		data: {
-	   			action: 'parallaxsome_plugin_offline_activation',
+	   			action: 'locopas_plugin_offline_activation',
 	   			plugin: plugin,
-	   			nonce: parallaxsomeWelcomeObject.activate_nonce,
+	   			nonce: locopasWelcomeObject.activate_nonce,
 	   			dataType: 'json'
 	   		},
 	   		success: function(response) {
 		   		if(response){
 			   		el.attr('class', 'installed button');
-			   		el.html(parallaxsomeWelcomeObject.installed_btn);
+			   		el.html(locopasWelcomeObject.installed_btn);
 		   		}
 		   		is_loading = false;
 		   		location.reload();

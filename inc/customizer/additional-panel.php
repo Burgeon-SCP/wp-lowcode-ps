@@ -1,9 +1,9 @@
 <?php
 /**
- * ParallaxSome Theme Customizer for Additonal Settings Panel.
+ * LoCoPaS Theme Customizer for Additonal Settings Panel.
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 
@@ -13,8 +13,8 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 
-if( ! function_exists( 'parallaxsome_additional_panel_register' ) ):
-	function parallaxsome_additional_panel_register( $wp_customize ) {
+if( ! function_exists( 'locopas_additional_panel_register' ) ):
+	function locopas_additional_panel_register( $wp_customize ) {
 
 		/**
 		 * Additional Settings Panel on customizer
@@ -22,12 +22,12 @@ if( ! function_exists( 'parallaxsome_additional_panel_register' ) ):
 		 * @since 1.0.0
 		 */
 		$wp_customize->add_panel(
-	        'parallaxsome_additional_settings_panel', 
+	        'locopas_additional_settings_panel', 
 	        	array(
 	        		'priority'       => 25,
 	            	'capability'     => 'edit_theme_options',
 	            	'theme_supports' => '',
-	            	'title'          => esc_html__( 'Additional Settings', 'parallaxsome' ),
+	            	'title'          => esc_html__( 'Additional Settings', 'locopas' ),
 	            ) 
 	    );
 /*--------------------------------------------------------------------------------------------------------------*/
@@ -39,8 +39,8 @@ if( ! function_exists( 'parallaxsome_additional_panel_register' ) ):
 		$wp_customize->add_section(
 	        'social_icons_section',
 	        array(
-	            'title'		=> esc_html__( 'Social Icons', 'parallaxsome' ),
-	            'panel'     => 'parallaxsome_additional_settings_panel',
+	            'title'		=> esc_html__( 'Social Icons', 'locopas' ),
+	            'panel'     => 'locopas_additional_settings_panel',
 	            'priority'  => 5,
 	        )
 	    );
@@ -51,12 +51,12 @@ if( ! function_exists( 'parallaxsome_additional_panel_register' ) ):
 	     * @since 1.0.0
 	     */
 	    $ap_social_icons_name = array( 
-	    							'fb_link' => esc_html__( 'Facebook', 'parallaxsome' ),
-	    							'tw_link' => esc_html__( 'Twitter', 'parallaxsome' ),
-	    							'ln_link' => esc_html__( 'Linkedin', 'parallaxsome' ),
-	    							'pin_link' => esc_html__( 'Pinterest', 'parallaxsome' ),
-	    							'gp_link' => esc_html__( 'Google Plus', 'parallaxsome' ),
-	    							'yt_link' => esc_html__( 'Youtube', 'parallaxsome' ),
+	    							'fb_link' => esc_html__( 'Facebook', 'locopas' ),
+	    							'tw_link' => esc_html__( 'Twitter', 'locopas' ),
+	    							'ln_link' => esc_html__( 'Linkedin', 'locopas' ),
+	    							'pin_link' => esc_html__( 'Pinterest', 'locopas' ),
+	    							'gp_link' => esc_html__( 'Google Plus', 'locopas' ),
+	    							'yt_link' => esc_html__( 'Youtube', 'locopas' ),
 	    						);
 	    $count = 3;
 	    foreach ( $ap_social_icons_name as $icon_key => $icon_name ) {
@@ -84,4 +84,4 @@ if( ! function_exists( 'parallaxsome_additional_panel_register' ) ):
 	} //close fucntion
 endif;
 
-add_action( 'customize_register', 'parallaxsome_additional_panel_register' );
+add_action( 'customize_register', 'locopas_additional_panel_register' );

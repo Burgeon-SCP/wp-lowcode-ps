@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
     $.ajax({
         url: ajaxurl,
         data: ({
-            'action': 'parallaxsome_get_google_font_variants',
+            'action': 'locopas_get_google_font_variants',
             'font_family': font_family,
         }),
         success: function(response) {

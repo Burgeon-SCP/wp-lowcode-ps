@@ -8,8 +8,8 @@
  * @return void
  */
 # Register our customizer panels, sections, settings, and controls.
-add_action( 'customize_register', 'parallaxsome_typo_customize_register', 15 );
-function parallaxsome_typo_customize_register( $wp_customize ) {
+add_action( 'customize_register', 'locopas_typo_customize_register', 15 );
+function locopas_typo_customize_register( $wp_customize ) {
 
 	require get_template_directory() . '/inc/typography/customize/control-typography.php';
 
@@ -17,11 +17,11 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 	$wp_customize->register_control_type( 'Parallaxsome_Typo_Control_Typography' );
 
 	// Add the typography panel.
-	$wp_customize->add_panel( 'typography', array( 'priority' => 21, 'title' => esc_html__( 'Typography Settings', 'parallaxsome' ) ) );
+	$wp_customize->add_panel( 'typography', array( 'priority' => 21, 'title' => esc_html__( 'Typography Settings', 'locopas' ) ) );
 
 	// Add the `<p>` typography section.
 	$wp_customize->add_section( 'p_typography',
-		array( 'panel' => 'typography', 'title' => esc_html__( 'Body', 'parallaxsome' ) )
+		array( 'panel' => 'typography', 'title' => esc_html__( 'Body', 'locopas' ) )
 	);
 	$wp_customize->add_setting( 'p_font_family', array( 'default' => 'Lato',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_setting( 'p_font_style',  array( 'default' => '400', 'sanitize_callback' => 'sanitize_text_field',        'transport' => 'postMessage' ) );
@@ -36,8 +36,8 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 			$wp_customize,
 			'p_typography',
 			array(
-				'label'       => esc_html__( 'Body Typography', 'parallaxsome' ),
-				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'parallaxsome' ),
+				'label'       => esc_html__( 'Body Typography', 'locopas' ),
+				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'locopas' ),
 				'section'     => 'p_typography',
 				'settings'    => array(
 					'family'      => 'p_font_family',
@@ -55,7 +55,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 
 	// Add the `<h1>` typography section.
 	$wp_customize->add_section( 'h1_typography',
-		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H1)', 'parallaxsome' ) )
+		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H1)', 'locopas' ) )
 	);
 	$wp_customize->add_setting( 'h1_font_family', array( 'default' => 'Lato',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_setting( 'h1_font_style',  array( 'default' => '700', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -70,8 +70,8 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 			$wp_customize,
 			'h1_typography',
 			array(
-				'label'       => esc_html__( 'Header1 Typography', 'parallaxsome' ),
-				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'parallaxsome' ),
+				'label'       => esc_html__( 'Header1 Typography', 'locopas' ),
+				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'locopas' ),
 				'section'     => 'h1_typography',
 				'settings'    => array(
 					'family'      => 'h1_font_family',
@@ -89,7 +89,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 
 	// Add the `<h2>` typography section.
 	$wp_customize->add_section( 'h2_typography',
-		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H2)', 'parallaxsome' ) )
+		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H2)', 'locopas' ) )
 	);
 	$wp_customize->add_setting( 'h2_font_family', array( 'default' => 'Open Sans',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_setting( 'h2_font_style',  array( 'default' => '700', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -104,8 +104,8 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 			$wp_customize,
 			'h2_typography',
 			array(
-				'label'       => esc_html__( 'Header2 Typography', 'parallaxsome' ),
-				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'parallaxsome' ),
+				'label'       => esc_html__( 'Header2 Typography', 'locopas' ),
+				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'locopas' ),
 				'section'     => 'h2_typography',
 				'settings'    => array(
 					'family'      => 'h2_font_family',
@@ -123,7 +123,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 
 	// Add the `<h3>` typography section.
 	$wp_customize->add_section( 'h3_typography',
-		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H3)', 'parallaxsome' ) )
+		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H3)', 'locopas' ) )
 	);
 	$wp_customize->add_setting( 'h3_font_family', array( 'default' => 'Lato',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_setting( 'h3_font_style',  array( 'default' => '700', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -138,8 +138,8 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 			$wp_customize,
 			'h3_typography',
 			array(
-				'label'       => esc_html__( 'Header3 Typography', 'parallaxsome' ),
-				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'parallaxsome' ),
+				'label'       => esc_html__( 'Header3 Typography', 'locopas' ),
+				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'locopas' ),
 				'section'     => 'h3_typography',
 				'settings'    => array(
 					'family'      => 'h3_font_family',
@@ -158,7 +158,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 
 	// Add the `<h4>` typography section.
 	$wp_customize->add_section( 'h4_typography',
-		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H4)', 'parallaxsome' ) )
+		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H4)', 'locopas' ) )
 	);
 	$wp_customize->add_setting( 'h4_font_family', array( 'default' => 'Lato',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_setting( 'h4_font_style',  array( 'default' => '700', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -173,8 +173,8 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 			$wp_customize,
 			'h4_typography',
 			array(
-				'label'       => esc_html__( 'Header4 Typography', 'parallaxsome' ),
-				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'parallaxsome' ),
+				'label'       => esc_html__( 'Header4 Typography', 'locopas' ),
+				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'locopas' ),
 				'section'     => 'h4_typography',
 				'settings'    => array(
 					'family'      => 'h4_font_family',
@@ -192,7 +192,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 
 	// Add the `<h5>` typography section.
 	$wp_customize->add_section( 'h5_typography',
-		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H5)', 'parallaxsome' ) )
+		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H5)', 'locopas' ) )
 	);
 	$wp_customize->add_setting( 'h5_font_family', array( 'default' => 'Lato',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_setting( 'h5_font_style',  array( 'default' => '700', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -207,8 +207,8 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 			$wp_customize,
 			'h5_typography',
 			array(
-				'label'       => esc_html__( 'Header5 Typography', 'parallaxsome' ),
-				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'parallaxsome' ),
+				'label'       => esc_html__( 'Header5 Typography', 'locopas' ),
+				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'locopas' ),
 				'section'     => 'h5_typography',
 				'settings'    => array(
 					'family'      => 'h5_font_family',
@@ -226,7 +226,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 
 	// Add the `<h6>` typography section.
 	$wp_customize->add_section( 'h6_typography',
-		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H6)', 'parallaxsome' ) )
+		array( 'panel' => 'typography', 'title' => esc_html__( 'Header (H6)', 'locopas' ) )
 	);
 	$wp_customize->add_setting( 'h6_font_family', array( 'default' => 'Lato',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_setting( 'h6_font_style',  array( 'default' => '700', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -241,8 +241,8 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 			$wp_customize,
 			'h6_typography',
 			array(
-				'label'       => esc_html__( 'Header6 Typography', 'parallaxsome' ),
-				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'parallaxsome' ),
+				'label'       => esc_html__( 'Header6 Typography', 'locopas' ),
+				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'locopas' ),
 				'section'     => 'h6_typography',
 				'settings'    => array(
 					'family'      => 'h6_font_family',
@@ -260,7 +260,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 
 	// Add the Home Section Title typography section.
 	$wp_customize->add_section( 'hm_sec_title_typography',
-		array( 'panel' => 'typography', 'title' => esc_html__( 'Home Section Title Typography', 'parallaxsome' ) )
+		array( 'panel' => 'typography', 'title' => esc_html__( 'Home Section Title Typography', 'locopas' ) )
 	);
 	$wp_customize->add_setting( 'hm_sec_title_font_family', array( 'default' => 'BenchNine',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_setting( 'hm_sec_title_font_style',  array( 'default' => '300', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -275,8 +275,8 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 			$wp_customize,
 			'hm_sec_title_typography',
 			array(
-				'label'       => esc_html__( 'Home Section Title Typography', 'parallaxsome' ),
-				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'parallaxsome' ),
+				'label'       => esc_html__( 'Home Section Title Typography', 'locopas' ),
+				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'locopas' ),
 				'section'     => 'hm_sec_title_typography',
 				'settings'    => array(
 					'family'      => 'hm_sec_title_font_family',
@@ -294,7 +294,7 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 
 	// Add the Home Section Sub Title typography section.
 	$wp_customize->add_section( 'hm_sec_subtitle_typography',
-		array( 'panel' => 'typography', 'title' => esc_html__( 'Home Section Sub-Title Typography', 'parallaxsome' ) )
+		array( 'panel' => 'typography', 'title' => esc_html__( 'Home Section Sub-Title Typography', 'locopas' ) )
 	);
 	$wp_customize->add_setting( 'hm_sec_subtitle_font_family', array( 'default' => 'Open Sans',  'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
 	$wp_customize->add_setting( 'hm_sec_subtitle_font_style',  array( 'default' => '300', 'sanitize_callback' => 'sanitize_text_field', 'transport' => 'postMessage' ) );
@@ -309,8 +309,8 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 			$wp_customize,
 			'hm_sec_subtitle_typography',
 			array(
-				'label'       => esc_html__( 'Home Section Sub-Title Typography', 'parallaxsome' ),
-				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'parallaxsome' ),
+				'label'       => esc_html__( 'Home Section Sub-Title Typography', 'locopas' ),
+				'description' => esc_html__( 'Select how you want your paragraphs to appear.', 'locopas' ),
 				'section'     => 'hm_sec_subtitle_typography',
 				'settings'    => array(
 					'family'      => 'hm_sec_subtitle_font_family',
@@ -327,15 +327,15 @@ function parallaxsome_typo_customize_register( $wp_customize ) {
 	);
 }
 
-if (!function_exists('parallaxsome_search_key')) {
-  function parallaxsome_search_key($array, $key, $value){
+if (!function_exists('locopas_search_key')) {
+  function locopas_search_key($array, $key, $value){
       $results = array();
       if (is_array($array)) {
           if (isset($array[$key]) && $array[$key] == $value) {
               $results[] = $array;
           }
           foreach ($array as $subarray) {
-              $results = array_merge($results, parallaxsome_search_key($subarray, $key, $value));
+              $results = array_merge($results, locopas_search_key($subarray, $key, $value));
           }
       }
       return $results;
@@ -350,16 +350,16 @@ if (!function_exists('parallaxsome_search_key')) {
  * @return void
  */
 # Load scripts and styles.
-add_action( 'customize_controls_enqueue_scripts', 'parallaxsome_pro_customize_controls_register_scripts' );
-function parallaxsome_pro_customize_controls_register_scripts() {
-	wp_enqueue_script( 'parallaxsome-customize-controls', get_template_directory_uri() .'/inc/typography/js/customize-controls.js', array( 'customize-controls' ) );
-	wp_enqueue_script( 'parallaxsome-ajax_script_function', get_template_directory_uri() .'/inc/typography/js/typo-ajax.js', array('jquery')  );
-  wp_localize_script( 'parallaxsome-ajax_script_function', 'ajax_script', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+add_action( 'customize_controls_enqueue_scripts', 'locopas_pro_customize_controls_register_scripts' );
+function locopas_pro_customize_controls_register_scripts() {
+	wp_enqueue_script( 'locopas-customize-controls', get_template_directory_uri() .'/inc/typography/js/customize-controls.js', array( 'customize-controls' ) );
+	wp_enqueue_script( 'locopas-ajax_script_function', get_template_directory_uri() .'/inc/typography/js/typo-ajax.js', array('jquery')  );
+  wp_localize_script( 'locopas-ajax_script_function', 'ajax_script', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 
 	wp_enqueue_style( 'jquery-ui-controls', '//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css' );
 	wp_enqueue_script( 'webfont', 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js' , array('jquery'));
-	wp_enqueue_script( 'parallaxsome-pro-customize-preview', get_template_directory_uri().'/inc/typography/js/customize-previews.js', array( 'jquery', 'customize-preview', 'webfont') );
-	// wp_enqueue_style( 'parallaxsome-pro-customize-controls', get_template_directory_uri() .'/inc/typography/css/customize-controls.css' );
+	wp_enqueue_script( 'locopas-pro-customize-preview', get_template_directory_uri().'/inc/typography/js/customize-previews.js', array( 'jquery', 'customize-preview', 'webfont') );
+	// wp_enqueue_style( 'locopas-pro-customize-controls', get_template_directory_uri() .'/inc/typography/css/customize-controls.css' );
 }
 /*
  * Load preview scripts/styles.
@@ -369,10 +369,10 @@ function parallaxsome_pro_customize_controls_register_scripts() {
  * @return void
  */
 
-// add_action( 'customize_preview_init', 'parallaxsome_pro_customize_preview_enqueue_scripts' );
-// function parallaxsome_pro_customize_preview_enqueue_scripts() {
+// add_action( 'customize_preview_init', 'locopas_pro_customize_preview_enqueue_scripts' );
+// function locopas_pro_customize_preview_enqueue_scripts() {
 // 	wp_enqueue_script( 'webfont', 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js' , array('jquery'));
-// 	wp_enqueue_script( 'parallaxsome-pro-customize-preview', get_template_directory_uri().'/inc/typography/js/customize-previews.js', array( 'jquery', 'customize-preview', 'webfont') );
+// 	wp_enqueue_script( 'locopas-pro-customize-preview', get_template_directory_uri().'/inc/typography/js/customize-previews.js', array( 'jquery', 'customize-preview', 'webfont') );
 // }
 /*
  * Add custom body class to give some more weight to our styles.
@@ -382,7 +382,7 @@ function parallaxsome_pro_customize_controls_register_scripts() {
  * @param  array  $classes
  * @return array
  */
-// function parallaxsome_pro_body_class( $classes ) {
-// 	return array_merge( $classes, array( 'parallaxsome' ) );
+// function locopas_pro_body_class( $classes ) {
+// 	return array_merge( $classes, array( 'locopas' ) );
 // }
-// add_filter( 'body_class', 'parallaxsome_pro_body_class' );
+// add_filter( 'body_class', 'locopas_pro_body_class' );

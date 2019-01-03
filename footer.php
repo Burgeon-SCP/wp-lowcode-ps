@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 ?>
@@ -21,7 +21,7 @@
 			<div class="ps-section-container">
 				<?php echo wp_kses_post(
 					 get_theme_mod( 'ps_copyright_text',
-					  							__('&copy; 2019 LoCoPaS', 'parallaxsome')
+					  							__('&copy; 2019 LoCoPaS', 'locopas')
 												)
 											);?>
 			</div><!-- ps-section-container -->

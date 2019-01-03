@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 ?>
@@ -13,15 +13,15 @@
 <?php
 	$section_option = get_theme_mod( 'homepage_fact_option', 'show' );
 	if( $section_option != 'hide' ) {
-		$section_title = get_theme_mod( 'fact_section_title', esc_html__( 'Fact About Us', 'parallaxsome' ) );
-		$section_sub_title = get_theme_mod( 'fact_section_sub_title', esc_html__( 'Our Works', 'parallaxsome' ) );
+		$section_title = get_theme_mod( 'fact_section_title', esc_html__( 'Fact About Us', 'locopas' ) );
+		$section_sub_title = get_theme_mod( 'fact_section_sub_title', esc_html__( 'Our Works', 'locopas' ) );
 		$section_description = get_theme_mod( 'fact_section_description', '' );
 		$section_bg_image = get_theme_mod( 'fact_bg_image', '' );
 ?>
 		<section class="ps-home-section" id="section-fact" data-parallax="scroll" data-image-src="<?php echo esc_url( $section_bg_image ); ?>">
 			<div class="ps-section-container">
 				<div class="fact-title wow fadeInDown" data-wow-duration="0.5s">
-					<?php parallaxsome_section_header( $section_title, $section_sub_title, $section_description ); ?>
+					<?php locopas_section_header( $section_title, $section_sub_title, $section_description ); ?>
 				</div>
 				<div class="section-content-wrapper wow fadeInUp clearfix" data-wow-duration="1s">
 					<div class="ps-fact-wrapper">

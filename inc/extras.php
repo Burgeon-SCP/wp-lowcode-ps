@@ -5,7 +5,7 @@
  * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 
@@ -16,7 +16,7 @@
  * @return array
  * @since 1.0.0
  */
-function parallaxsome_body_classes( $classes ) {
+function locopas_body_classes( $classes ) {
 
     global $post;
 
@@ -118,4 +118,4 @@ function parallaxsome_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'parallaxsome_body_classes' );
+add_filter( 'body_class', 'locopas_body_classes' );

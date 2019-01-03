@@ -1,15 +1,15 @@
 == Description ==
-ParallaxSome is a beautiful free responsive one page WordPress theme with awesome parallax scrolling effect. It is a highly customizable and flexible WP template suitable for multipurpose websites like business, agency, blog, portfolio, eCommerce etc. It is a fully responsive theme  that fits perfectly on any device. ParallaxSome theme comes with various homepage sections each beautifully designed. Each of the home page sections in your single page site can be further customized with easy to use customization options. The theme is based on WordPress Live Customizer that allows you to customize the complete theme instantly. It is clean, simple, SEO friendly, flexible, multilingual, and feature-rich theme for modern websites.
+LoCoPaS is a beautiful free responsive one page WordPress theme with awesome parallax scrolling effect. It is a highly customizable and flexible WP template suitable for multipurpose websites like business, agency, blog, portfolio, eCommerce etc. It is a fully responsive theme  that fits perfectly on any device. LoCoPaS theme comes with various homepage sections each beautifully designed. Each of the home page sections in your single page site can be further customized with easy to use customization options. The theme is based on WordPress Live Customizer that allows you to customize the complete theme instantly. It is clean, simple, SEO friendly, flexible, multilingual, and feature-rich theme for modern websites.
 
 === Tags ===
 one-column, featured-images, threaded-comments, translation-ready, flexible-header, footer-widgets, right-sidebar, left-sidebar
 
 Parallaxsome WordPress Theme, Copyright 2017 AccessPress Themes
-ParallaxSome is distributed under the terms of the GNU GPL v3
+LoCoPaS is distributed under the terms of the GNU GPL v3
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-A starter theme called ParallaxSome, or underscores.
+A starter theme called LoCoPaS, or underscores.
 
 == Installation ==
 

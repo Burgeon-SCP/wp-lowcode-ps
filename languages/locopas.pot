@@ -61,7 +61,7 @@ msgstr ""
 
 #: footer.php:26
 #, php-format
-msgid "ParallaxSome by %1$s."
+msgid "LoCoPaS by %1$s."
 msgstr ""
 
 #. Author of the theme
@@ -77,93 +77,93 @@ msgstr ""
 msgid "Top Header Menu"
 msgstr ""
 
-#: inc/parallaxsome-breadcrumbs.php:13
+#: inc/locopas-breadcrumbs.php:13
 msgid "Home"
 msgstr ""
 
-#: inc/parallaxsome-breadcrumbs.php:16
+#: inc/locopas-breadcrumbs.php:16
 #, php-format
 msgid "Search Results for \"%s\" Query"
 msgstr ""
 
-#: inc/parallaxsome-breadcrumbs.php:121
+#: inc/locopas-breadcrumbs.php:121
 msgid "Page"
 msgstr ""
 
-#: inc/parallaxsome-functions.php:92
+#: inc/locopas-functions.php:92
 msgid "Main"
 msgstr ""
 
-#: inc/parallaxsome-functions.php:93
+#: inc/locopas-functions.php:93
 msgid "Top Section"
 msgstr ""
 
-#: inc/parallaxsome-functions.php:96 inc/customizer/homepage-panel.php:153
+#: inc/locopas-functions.php:96 inc/customizer/homepage-panel.php:153
 #: template-parts/sections/section-about.php:16
 msgid "About"
 msgstr ""
 
-#: inc/parallaxsome-functions.php:97
+#: inc/locopas-functions.php:97
 msgid "About Us"
 msgstr ""
 
-#: inc/parallaxsome-functions.php:101 inc/customizer/homepage-panel.php:292
+#: inc/locopas-functions.php:101 inc/customizer/homepage-panel.php:292
 #: template-parts/sections/section-team.php:16
 msgid "Our Team"
 msgstr ""
 
-#: inc/parallaxsome-functions.php:104
+#: inc/locopas-functions.php:104
 msgid "Services"
 msgstr ""
 
-#: inc/parallaxsome-functions.php:105 inc/customizer/homepage-panel.php:453
+#: inc/locopas-functions.php:105 inc/customizer/homepage-panel.php:453
 #: template-parts/sections/section-services.php:16
 msgid "Our Services"
 msgstr ""
 
-#: inc/parallaxsome-functions.php:109
+#: inc/locopas-functions.php:109
 msgid "Client Says"
 msgstr ""
 
-#: inc/parallaxsome-functions.php:113
+#: inc/locopas-functions.php:113
 msgid "Fact Us"
 msgstr ""
 
-#: inc/parallaxsome-functions.php:116 inc/parallaxsome-functions.php:117
+#: inc/locopas-functions.php:116 inc/locopas-functions.php:117
 #: inc/customizer/homepage-panel.php:1034
 #: template-parts/sections/section-portfolio.php:16
 msgid "Portfolio"
 msgstr ""
 
-#: inc/parallaxsome-functions.php:120
+#: inc/locopas-functions.php:120
 msgid "Blog"
 msgstr ""
 
-#: inc/parallaxsome-functions.php:121 inc/customizer/homepage-panel.php:1172
+#: inc/locopas-functions.php:121 inc/customizer/homepage-panel.php:1172
 #: template-parts/sections/section-blog.php:16
 msgid "Our Blog"
 msgstr ""
 
-#: inc/parallaxsome-functions.php:125 inc/customizer/homepage-panel.php:1357
+#: inc/locopas-functions.php:125 inc/customizer/homepage-panel.php:1357
 #: template-parts/sections/section-clients.php:16
 msgid "Our Clients"
 msgstr ""
 
-#: inc/parallaxsome-functions.php:128
+#: inc/locopas-functions.php:128
 msgid "Contact"
 msgstr ""
 
-#: inc/parallaxsome-functions.php:129 inc/customizer/homepage-panel.php:1497
+#: inc/locopas-functions.php:129 inc/customizer/homepage-panel.php:1497
 #: template-parts/sections/section-contact.php:16
 msgid "Contact Us"
 msgstr ""
 
-#: inc/parallaxsome-functions.php:267
+#: inc/locopas-functions.php:267
 #: template-parts/sections/section-services.php:68
 msgid "Learn More"
 msgstr ""
 
-#: inc/parallaxsome-functions.php:315
+#: inc/locopas-functions.php:315
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
@@ -302,13 +302,13 @@ msgstr ""
 
 #: inc/customizer/design-panel.php:72 inc/customizer/design-panel.php:135
 #: inc/customizer/design-panel.php:191 inc/customizer/footer-panel.php:70
-#: inc/widgets/parallaxsome-widget-functions.php:36
+#: inc/widgets/locopas-widget-functions.php:36
 msgid "Left Sidebar"
 msgstr ""
 
 #: inc/customizer/design-panel.php:76 inc/customizer/design-panel.php:139
 #: inc/customizer/design-panel.php:195 inc/customizer/footer-panel.php:74
-#: inc/widgets/parallaxsome-widget-functions.php:21
+#: inc/widgets/locopas-widget-functions.php:21
 msgid "Right Sidebar"
 msgstr ""
 
@@ -359,7 +359,7 @@ msgid "Bottom Footer Settings"
 msgstr ""
 
 #: inc/customizer/footer-panel.php:113
-msgid "2016 ParallaxSome"
+msgid "2016 LoCoPaS"
 msgstr ""
 
 #: inc/customizer/footer-panel.php:122
@@ -398,7 +398,7 @@ msgstr ""
 #: inc/customizer/homepage-panel.php:1156
 #: inc/customizer/homepage-panel.php:1341
 #: inc/customizer/homepage-panel.php:1481
-#: inc/customizer/parallaxsome-sanitize.php:40
+#: inc/customizer/locopas-sanitize.php:40
 msgid "Show"
 msgstr ""
 
@@ -410,7 +410,7 @@ msgstr ""
 #: inc/customizer/homepage-panel.php:1157
 #: inc/customizer/homepage-panel.php:1342
 #: inc/customizer/homepage-panel.php:1482
-#: inc/customizer/parallaxsome-sanitize.php:41
+#: inc/customizer/locopas-sanitize.php:41
 msgid "Hide"
 msgstr ""
 
@@ -435,13 +435,13 @@ msgid "Choose type of Primary Menu."
 msgstr ""
 
 #: inc/customizer/header-panel.php:149
-#: inc/customizer/parallaxsome-sanitize.php:74
+#: inc/customizer/locopas-sanitize.php:74
 msgid "Parallax"
 msgstr ""
 
 #: inc/customizer/header-panel.php:150 inc/customizer/header-panel.php:178
-#: inc/customizer/parallaxsome-sanitize.php:75
-#: inc/customizer/parallaxsome-sanitize.php:91
+#: inc/customizer/locopas-sanitize.php:75
+#: inc/customizer/locopas-sanitize.php:91
 msgid "Default"
 msgstr ""
 
@@ -454,7 +454,7 @@ msgid "Choose type of Parallax Menu."
 msgstr ""
 
 #: inc/customizer/header-panel.php:179
-#: inc/customizer/parallaxsome-sanitize.php:92
+#: inc/customizer/locopas-sanitize.php:92
 msgid "Float Menu"
 msgstr ""
 
@@ -475,12 +475,12 @@ msgid "Enable/disable option for header sticky."
 msgstr ""
 
 #: inc/customizer/header-panel.php:266
-#: inc/customizer/parallaxsome-sanitize.php:57
+#: inc/customizer/locopas-sanitize.php:57
 msgid "Enable"
 msgstr ""
 
 #: inc/customizer/header-panel.php:267
-#: inc/customizer/parallaxsome-sanitize.php:58
+#: inc/customizer/locopas-sanitize.php:58
 msgid "Disable"
 msgstr ""
 
@@ -795,7 +795,7 @@ msgstr ""
 msgid "Map Caption"
 msgstr ""
 
-#: inc/customizer/parallaxsome-customizer-classes.php:76
+#: inc/customizer/locopas-customizer-classes.php:76
 msgid "&mdash; Select Category &mdash;"
 msgstr ""
 
@@ -858,42 +858,42 @@ msgstr ""
 msgid "Post Options"
 msgstr ""
 
-#: inc/widgets/parallaxsome-widget-functions.php:23
+#: inc/widgets/locopas-widget-functions.php:23
 msgid ""
 "Added widgets are display at Right Sidebar section in every "
 "posts/pages/archive."
 msgstr ""
 
-#: inc/widgets/parallaxsome-widget-functions.php:38
+#: inc/widgets/locopas-widget-functions.php:38
 msgid ""
 "Added widgets are display at Left Sidebar section in every "
 "posts/pages/archive."
 msgstr ""
 
-#: inc/widgets/parallaxsome-widget-functions.php:51
+#: inc/widgets/locopas-widget-functions.php:51
 msgid "Contact Map"
 msgstr ""
 
-#: inc/widgets/parallaxsome-widget-functions.php:53
+#: inc/widgets/locopas-widget-functions.php:53
 msgid "Added widgets are display at Contact Us section at homepage."
 msgstr ""
 
-#: inc/widgets/parallaxsome-widget-functions.php:66
+#: inc/widgets/locopas-widget-functions.php:66
 msgid "WooCommerce Sidebar"
 msgstr ""
 
-#: inc/widgets/parallaxsome-widget-functions.php:68
+#: inc/widgets/locopas-widget-functions.php:68
 msgid ""
 "Added widgets are display at Sidebar section only in woocommerce "
 "posts/pages/archives."
 msgstr ""
 
-#: inc/widgets/parallaxsome-widget-functions.php:81
+#: inc/widgets/locopas-widget-functions.php:81
 #, php-format
 msgid "Footer Area %d"
 msgstr ""
 
-#: inc/widgets/parallaxsome-widget-functions.php:83
+#: inc/widgets/locopas-widget-functions.php:83
 msgid "Added widgets are display at Footer Widget Area."
 msgstr ""
 
@@ -906,16 +906,16 @@ msgid "visit us:"
 msgstr ""
 
 #. Name of the theme
-msgid "ParallaxSome"
+msgid "LoCoPaS"
 msgstr ""
 
 #. Description of the theme
 msgid ""
-"ParallaxSome is a beautiful free responsive one page WordPress theme with "
+"LoCoPaS is a beautiful free responsive one page WordPress theme with "
 "awesome parallax scrolling effect. It is a highly customizable and flexible "
 "WP template suitable for multipurpose websites like business, agency, blog, "
 "portfolio, eCommerce etc. It is a fully responsive theme  that fits "
-"perfectly on any device. ParallaxSome theme comes with various homepage "
+"perfectly on any device. LoCoPaS theme comes with various homepage "
 "sections each beautifully designed. Each of the home page sections in your "
 "single page site can be further customized with easy to use customization "
 "options. The theme is based on WordPress Live Customizer that allows you to "
@@ -924,7 +924,7 @@ msgid ""
 msgstr ""
 
 #. URI of the theme
-msgid "https://accesspressthemes.com/wordpress-themes/parallaxsome"
+msgid "https://accesspressthemes.com/wordpress-themes/locopas"
 msgstr ""
 
 #. Author URI of the theme

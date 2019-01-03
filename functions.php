@@ -1,11 +1,11 @@
 <?php
 /**
- * ParallaxSome functions and definitions.
+ * LoCoPaS functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 
@@ -19,7 +19,7 @@ remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
-if ( ! function_exists( 'parallaxsome_setup' ) ) :
+if ( ! function_exists( 'locopas_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -27,14 +27,14 @@ if ( ! function_exists( 'parallaxsome_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function parallaxsome_setup() {
+function locopas_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on ParallaxSome, use a find and replace
-	 * to change 'parallaxsome' to the name of your theme in all the template files.
+	 * If you're building a theme based on LoCoPaS, use a find and replace
+	 * to change 'locopas' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'parallaxsome', trailingslashit( get_template_directory() ) . '/languages' );
+	load_theme_textdomain( 'locopas', trailingslashit( get_template_directory() ) . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	// add_theme_support( 'automatic-feed-links' );
@@ -52,8 +52,8 @@ function parallaxsome_setup() {
 	 *
 	 * @since 1.0.0
 	 */
-	add_image_size( 'parallaxsome-site-logo', 268, 90 );
-	add_theme_support( 'custom-logo', array( 'size' => 'parallaxsome-site-logo' ) );
+	add_image_size( 'locopas-site-logo', 268, 90 );
+	add_theme_support( 'custom-logo', array( 'size' => 'locopas-site-logo' ) );
 
 	// Woocommerce Compatibility
 	// add_theme_support( 'woocommerce' );
@@ -66,9 +66,9 @@ function parallaxsome_setup() {
 	 *
 	 * @since 1.0.0
 	 */
-	add_image_size( 'parallaxsome_project_thumb', 450, 422, true );
-	add_image_size( 'parallaxsome_services_thumb', 393, 384, true );
-	add_image_size( 'parallaxsome_team_thumb', 230, 316, true );
+	add_image_size( 'locopas_project_thumb', 450, 422, true );
+	add_image_size( 'locopas_services_thumb', 393, 384, true );
+	add_image_size( 'locopas_team_thumb', 230, 316, true );
 
 
 	/*
@@ -80,8 +80,8 @@ function parallaxsome_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'parallaxsome_primary_menu' => esc_html__( 'Primary Menu', 'parallaxsome' ),
-		'parallaxsome_top_menu' => esc_html__( 'Top Header Menu', 'parallaxsome' ),
+		'locopas_primary_menu' => esc_html__( 'Primary Menu', 'locopas' ),
+		'locopas_top_menu' => esc_html__( 'Top Header Menu', 'locopas' ),
 	) );
 
 	/*
@@ -97,7 +97,7 @@ function parallaxsome_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	// add_theme_support( 'custom-background', apply_filters( 'parallaxsome_custom_background_args', array(
+	// add_theme_support( 'custom-background', apply_filters( 'locopas_custom_background_args', array(
 	// 	'default-color' => 'ffffff',
 	// 	'default-image' => '',
 	// ) ) );
@@ -109,7 +109,7 @@ function parallaxsome_setup() {
 	// add_editor_style( 'assets/css/editor-style.css' );
 }
 endif;
-add_action( 'after_setup_theme', 'parallaxsome_setup' );
+add_action( 'after_setup_theme', 'locopas_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -118,32 +118,32 @@ add_action( 'after_setup_theme', 'parallaxsome_setup' );
  *
  * @global int $content_width
  */
-function parallaxsome_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'parallaxsome_content_width', 640 );
+function locopas_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'locopas_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'parallaxsome_content_width', 0 );
+add_action( 'after_setup_theme', 'locopas_content_width', 0 );
 
-// function parallaxsome_pingback_header() {
+// function locopas_pingback_header() {
 // 	if ( is_singular() && pings_open() ) {
 // 		printf( '<link rel="pingback" href="%s">' . "\n", esc_url(get_bloginfo( 'pingback_url', 'display' )) );
 // 	}
 // }
-// add_action( 'wp_head', 'parallaxsome_pingback_header' );
+// add_action( 'wp_head', 'locopas_pingback_header' );
 
 /**
- * Load ParallaxSome Custom Functions file
+ * Load LoCoPaS Custom Functions file
  */
-require trailingslashit( get_template_directory() ) . '/inc/parallaxsome-functions.php';
+require trailingslashit( get_template_directory() ) . '/inc/locopas-functions.php';
 
 /**
- * Load ParallaxSome breadcrumbs Functions file
+ * Load LoCoPaS breadcrumbs Functions file
  */
-require trailingslashit( get_template_directory() ) . '/inc/parallaxsome-breadcrumbs.php';
+require trailingslashit( get_template_directory() ) . '/inc/locopas-breadcrumbs.php';
 
 /**
- * Load ParallaxSome Custom Widget Functions file
+ * Load LoCoPaS Custom Widget Functions file
  */
-require trailingslashit( get_template_directory() ) . '/inc/widgets/parallaxsome-widget-functions.php';
+require trailingslashit( get_template_directory() ) . '/inc/widgets/locopas-widget-functions.php';
 
 /**
  * Implement the Custom Header feature.
@@ -175,8 +175,8 @@ require trailingslashit( get_template_directory() ) . '/inc/customizer/footer-pa
 /**
  * Required files for customizer
  */
-require trailingslashit( get_template_directory() ) . '/inc/customizer/parallaxsome-customizer-classes.php';
-require trailingslashit( get_template_directory() ) . '/inc/customizer/parallaxsome-sanitize.php';
+require trailingslashit( get_template_directory() ) . '/inc/customizer/locopas-customizer-classes.php';
+require trailingslashit( get_template_directory() ) . '/inc/customizer/locopas-sanitize.php';
 
 /**
  * Load Jetpack compatibility file.

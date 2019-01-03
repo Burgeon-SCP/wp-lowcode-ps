@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 
@@ -18,7 +18,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'parallaxsome' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'locopas' ),
 				'after'  => '</div>',
 			) );
 		?>

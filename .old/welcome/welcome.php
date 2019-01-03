@@ -29,24 +29,24 @@
 
 					'instant-demo-importer' => array(
 						'slug' => 'instant-demo-importer',
-						'name' => __('Instant Demo Importer', 'parallaxsome'),
+						'name' => __('Instant Demo Importer', 'locopas'),
 						'filename' =>'instant-demo-importer.php',
 						'class' => 'Instant_Demo_Importer',
 						'github_repo' => true,
 						'bundled' => true,
 						'location' => 'https://github.com/WPaccesskeys/instant-demo-importer/archive/master.zip',
-						'info' => __('Instant Demo Importer Plugin adds the feature to Import the Demo Conent with a single click.', 'parallaxsome'),
+						'info' => __('Instant Demo Importer Plugin adds the feature to Import the Demo Conent with a single click.', 'locopas'),
 					),
 
 				);
 
 				/** Define Tabs Sections **/
 				$this->tab_sections = array(
-					'getting_started' => __('Getting Started', 'parallaxsome'),
-					'recommended_plugins' => __('Recommended Plugins', 'parallaxsome'),
-					'support' => __('Support', 'parallaxsome'),
-					'free_vs_pro' => __('Free Vs Pro', 'parallaxsome'),
-					'more_wp_stuff' => __('More WordPress Stuff', 'parallaxsome'),
+					'getting_started' => __('Getting Started', 'locopas'),
+					'recommended_plugins' => __('Recommended Plugins', 'locopas'),
+					'support' => __('Support', 'locopas'),
+					'free_vs_pro' => __('Free Vs Pro', 'locopas'),
+					'more_wp_stuff' => __('More WordPress Stuff', 'locopas'),
 				);
 
 				/** List of Recommended Free Plugins **/
@@ -87,25 +87,25 @@
 				$this->pro_plugins = array();
 
 				/* Theme Activation Notice */
-				add_action( 'load-themes.php', array( $this, 'parallaxsome_activation_admin_notice' ) );
+				add_action( 'load-themes.php', array( $this, 'locopas_activation_admin_notice' ) );
 
 				/* Create a Welcome Page */
-				add_action( 'admin_menu', array( $this, 'parallaxsome_welcome_register_menu' ) );
+				add_action( 'admin_menu', array( $this, 'locopas_welcome_register_menu' ) );
 
 				/* Enqueue Styles & Scripts for Welcome Page */
-				add_action( 'admin_enqueue_scripts', array( $this, 'parallaxsome_welcome_styles_and_scripts' ) );
+				add_action( 'admin_enqueue_scripts', array( $this, 'locopas_welcome_styles_and_scripts' ) );
 
 				/** Plugin Installation Ajax **/
-				add_action( 'wp_ajax_parallaxsome_plugin_installer', array( $this, 'parallaxsome_plugin_installer_callback' ) );
+				add_action( 'wp_ajax_locopas_plugin_installer', array( $this, 'locopas_plugin_installer_callback' ) );
 
 				/** Plugin Installation Ajax **/
-				add_action( 'wp_ajax_parallaxsome_plugin_offline_installer', array( $this, 'parallaxsome_plugin_offline_installer_callback' ) );
+				add_action( 'wp_ajax_locopas_plugin_offline_installer', array( $this, 'locopas_plugin_offline_installer_callback' ) );
 
 				/** Plugin Activation Ajax **/
-				add_action( 'wp_ajax_parallaxsome_plugin_activation', array( $this, 'parallaxsome_plugin_activation_callback' ) );
+				add_action( 'wp_ajax_locopas_plugin_activation', array( $this, 'locopas_plugin_activation_callback' ) );
 
 				/** Plugin Activation Ajax (Offline) **/
-				add_action( 'wp_ajax_parallaxsome_plugin_offline_activation', array( $this, 'parallaxsome_plugin_offline_activation_callback' ) );
+				add_action( 'wp_ajax_locopas_plugin_offline_activation', array( $this, 'locopas_plugin_offline_activation_callback' ) );
 
 				add_action( 'init', array( $this, 'get_required_plugin_notification' ));
 
@@ -115,7 +115,7 @@
 				
 				$req_plugins = $this->companion_plugins;
 				$notif_counter = count($this->req_plugins);
-				$parallaxsome_plugin_installed_notif = get_option('parallaxsome_plugin_installed_notif');
+				$locopas_plugin_installed_notif = get_option('locopas_plugin_installed_notif');
 
 				foreach($req_plugins as $plugin) {
 					$folder_name = $plugin['slug'];
@@ -127,12 +127,12 @@
 						}
 					}
 				}
-				update_option('parallaxsome_plugin_installed_notif', $notif_counter);
+				update_option('locopas_plugin_installed_notif', $notif_counter);
 				return $notif_counter;
 			}
 
 			/** Welcome Message Notification on Theme Activation **/
-			public function parallaxsome_activation_admin_notice() {
+			public function locopas_activation_admin_notice() {
 				global $pagenow;
 
 				if( is_admin() && ('themes.php' == $pagenow) && (isset($_GET['activated'])) ) {
@@ -141,24 +141,24 @@
 						<p>
 							<?php
 								/* translators: %1$s : theme name, %2$s : welcome page link */
-								printf( wp_kses(__( 'Welcome! Thank you for choosing %1$s! Please make sure you visit our <a href="%2$s">Welcome page</a> to get started with %1$s.', 'parallaxsome' ), array( 'a' => array( 'href' => array() ) ) ), esc_html($this->theme_name), esc_url(admin_url( 'themes.php?page=parallaxsome-welcome') )  );
+								printf( wp_kses(__( 'Welcome! Thank you for choosing %1$s! Please make sure you visit our <a href="%2$s">Welcome page</a> to get started with %1$s.', 'locopas' ), array( 'a' => array( 'href' => array() ) ) ), esc_html($this->theme_name), esc_url(admin_url( 'themes.php?page=locopas-welcome') )  );
 							?>
 						</p>
-						<p><a class="button" href="<?php echo esc_url(admin_url( 'themes.php?page=parallaxsome-welcome' )); ?>"><?php esc_html_e( 'Lets Get Started', 'parallaxsome' ); ?></a></p>
+						<p><a class="button" href="<?php echo esc_url(admin_url( 'themes.php?page=locopas-welcome' )); ?>"><?php esc_html_e( 'Lets Get Started', 'locopas' ); ?></a></p>
 					</div>
 					<?php
 				}
 			}
 
 			/** Register Menu for Welcome Page **/
-			public function parallaxsome_welcome_register_menu() {
-				$action_count = get_option('parallaxsome_plugin_installed_notif');
-				$title        = $action_count > 0 ? esc_html__( 'Welcome', 'parallaxsome' ) : esc_html__( 'Welcome', 'parallaxsome' );
-				add_theme_page( 'Welcome', $title , 'edit_theme_options', 'parallaxsome-welcome', array( $this, 'parallaxsome_welcome_screen' ));
+			public function locopas_welcome_register_menu() {
+				$action_count = get_option('locopas_plugin_installed_notif');
+				$title        = $action_count > 0 ? esc_html__( 'Welcome', 'locopas' ) : esc_html__( 'Welcome', 'locopas' );
+				add_theme_page( 'Welcome', $title , 'edit_theme_options', 'locopas-welcome', array( $this, 'locopas_welcome_screen' ));
 			}
 
 			/** Welcome Page **/
-			public function parallaxsome_welcome_screen() {
+			public function locopas_welcome_screen() {
 				$tabs = $this->tab_sections;
 
 				$current_section = isset($_GET['section']) ? sanitize_text_field( wp_unslash( $_GET['section'] ) ) : 'getting_started';
@@ -168,13 +168,13 @@
 					<h1>
 						<?php
 							/* translators: %1$s : theme name, %2$s : theme version */
-							printf( esc_html__( 'Welcome to %1$s - Version %2$s', 'parallaxsome' ), esc_html($this->theme_name), esc_html($this->theme_version) );
+							printf( esc_html__( 'Welcome to %1$s - Version %2$s', 'locopas' ), esc_html($this->theme_name), esc_html($this->theme_version) );
 						?>
 					</h1>
 					<div class="about-text">
 						<?php
 							/* translators: %s : theme name */
-							printf( esc_html__( '%s is a beautiful free responsive one page WordPress theme with awesome parallax scrolling effect. It is a highly customizable and flexible WP template suitable for multipurpose websites like business, agency, blog, portfolio, eCommerce etc. It is a fully responsive theme  that fits perfectly on any device. ParallaxSome theme comes with various homepage sections each beautifully designed.', 'parallaxsome' ), esc_html($this->theme_name) );
+							printf( esc_html__( '%s is a beautiful free responsive one page WordPress theme with awesome parallax scrolling effect. It is a highly customizable and flexible WP template suitable for multipurpose websites like business, agency, blog, portfolio, eCommerce etc. It is a fully responsive theme  that fits perfectly on any device. LoCoPaS theme comes with various homepage sections each beautifully designed.', 'locopas' ), esc_html($this->theme_name) );
 						?>
 					</div>
 
@@ -189,7 +189,7 @@
 								$nav_class .= ' nav-tab-active';
 							}
 						?>
-						<a href="<?php echo esc_url(admin_url('themes.php?page=parallaxsome-welcome&section='.$id)); ?>" class="<?php echo esc_attr($nav_class); ?>" >
+						<a href="<?php echo esc_url(admin_url('themes.php?page=locopas-welcome&section='.$id)); ?>" class="<?php echo esc_attr($nav_class); ?>" >
 							<?php echo esc_html( $label ); ?>
 							<?php if($id == 'demo_import') : $not = $this->get_required_plugin_notification(); ?>
 								<?php if($not) : ?>
@@ -214,24 +214,24 @@
 			}
 
 			/** Enqueue Necessary Styles and Scripts for the Welcome Page **/
-			public function parallaxsome_welcome_styles_and_scripts() {
+			public function locopas_welcome_styles_and_scripts() {
 				wp_enqueue_style( 'accesspress-basic-welcome-screen', get_template_directory_uri() . '/welcome/css/welcome.css' );
 				wp_enqueue_script( 'accesspress-basic-welcome-screen', get_template_directory_uri() . '/welcome/js/welcome.js', array( 'jquery' ) );
 
-				wp_localize_script( 'accesspress-basic-welcome-screen', 'parallaxsomeWelcomeObject', array(
-					'admin_nonce'	=> wp_create_nonce('parallaxsome_plugin_installer_nonce'),
-					'activate_nonce'	=> wp_create_nonce('parallaxsome_plugin_activate_nonce'),
+				wp_localize_script( 'accesspress-basic-welcome-screen', 'locopasWelcomeObject', array(
+					'admin_nonce'	=> wp_create_nonce('locopas_plugin_installer_nonce'),
+					'activate_nonce'	=> wp_create_nonce('locopas_plugin_activate_nonce'),
 					'ajaxurl'		=> esc_url( admin_url( 'admin-ajax.php' ) ),
-					'activate_btn' => __('Activate', 'parallaxsome'),
-					'installed_btn' => __('Activated', 'parallaxsome'),
-					'demo_installing' => __('Installing Demo', 'parallaxsome'),
-					'demo_installed' => __('Demo Installed', 'parallaxsome'),
-					'demo_confirm' => __('Are you sure to import demo content ?', 'parallaxsome'),
+					'activate_btn' => __('Activate', 'locopas'),
+					'installed_btn' => __('Activated', 'locopas'),
+					'demo_installing' => __('Installing Demo', 'locopas'),
+					'demo_installed' => __('Demo Installed', 'locopas'),
+					'demo_confirm' => __('Are you sure to import demo content ?', 'locopas'),
 				) );
 			}
 
 			/** Plugin API **/
-			public function parallaxsome_call_plugin_api( $plugin ) {
+			public function locopas_call_plugin_api( $plugin ) {
 				include_once ABSPATH . 'wp-admin/includes/plugin-install.php';
 
 				$call_api = plugins_api( 'plugin_information', array(
@@ -259,7 +259,7 @@
 			}
 
 			/** Check For Icon **/
-			public function parallaxsome_check_for_icon( $arr ) {
+			public function locopas_check_for_icon( $arr ) {
 				if ( ! empty( $arr['svg'] ) ) {
 					$plugin_icon_url = $arr['svg'];
 				} elseif ( ! empty( $arr['2x'] ) ) {
@@ -274,7 +274,7 @@
 			}
 
 			/** Check if Plugin is active or not **/
-			public function parallaxsome_plugin_active($plugin) {
+			public function locopas_plugin_active($plugin) {
 				$folder_name = $plugin['slug'];
 				$file_name = $plugin['filename'];
 				$status = 'install';
@@ -292,7 +292,7 @@
 			}
 
 			/** Generate Url for the Plugin Button **/
-			public function parallaxsome_plugin_generate_url($status, $plugin) {
+			public function locopas_plugin_generate_url($status, $plugin) {
 				$folder_name = $plugin['slug'];
 				$file_name = $plugin['filename'];
 
@@ -333,18 +333,18 @@
 			}
 
 			/* ========== Plugin Installation Ajax =========== */
-			public function parallaxsome_plugin_installer_callback(){
+			public function locopas_plugin_installer_callback(){
 
 				if ( ! current_user_can('install_plugins') )
-					wp_die( esc_html__( 'Sorry, you are not allowed to install plugins on this site.', 'parallaxsome' ) );
+					wp_die( esc_html__( 'Sorry, you are not allowed to install plugins on this site.', 'locopas' ) );
 
 				$nonce = isset( $_POST["nonce"] ) ? sanitize_text_field( wp_unslash( $_POST["nonce"] ) ) : '';
 				$plugin = isset( $_POST["plugin"] ) ? sanitize_text_field( wp_unslash( $_POST["plugin"] ) ) : '';
 				$plugin_file = isset( $_POST["plugin_file"] ) ? sanitize_text_field( wp_unslash( $_POST["plugin_file"] ) ) : '';
 
 				// Check our nonce, if they don't match then bounce!
-				if (! wp_verify_nonce( $nonce, 'parallaxsome_plugin_installer_nonce' ))
-					wp_die( esc_html__( 'Error - unable to verify nonce, please try again.', 'parallaxsome') );
+				if (! wp_verify_nonce( $nonce, 'locopas_plugin_installer_nonce' ))
+					wp_die( esc_html__( 'Error - unable to verify nonce, please try again.', 'locopas') );
 
 
          		// Include required libs for installation
@@ -353,7 +353,7 @@
 				require_once ABSPATH . 'wp-admin/includes/class-plugin-upgrader.php';
 
 				// Get Plugin Info
-				$api = $this->parallaxsome_call_plugin_api($plugin);
+				$api = $this->locopas_call_plugin_api($plugin);
 
 				$skin     = new WP_Ajax_Upgrader_Skin();
 				$upgrader = new Plugin_Upgrader( $skin );
@@ -375,7 +375,7 @@
 			}
 
 			/** Plugin Offline Installation Ajax **/
-			public function parallaxsome_plugin_offline_installer_callback() {
+			public function locopas_plugin_offline_installer_callback() {
 
 				
 				$file_location = isset( $_POST['file_location'] ) ? sanitize_text_field( wp_unslash( $_POST['file_location'] ) ) : '';
@@ -405,7 +405,7 @@
 			}
 
 			/** Plugin Offline Activation Ajax **/
-			public function parallaxsome_plugin_offline_activation_callback() {
+			public function locopas_plugin_offline_activation_callback() {
 
 				$plugin = isset( $_POST['plugin'] ) ? sanitize_text_field( wp_unslash( $_POST['plugin'] ) ) : '';
 				$plugin_file = ABSPATH . 'wp-content/plugins/'.esc_html($plugin).'/'.esc_html($plugin).'.php';
@@ -421,17 +421,17 @@
 			}
 
 			/** Plugin Activation Ajax **/
-			public function parallaxsome_plugin_activation_callback(){
+			public function locopas_plugin_activation_callback(){
 
 				if ( ! current_user_can('install_plugins') )
-					wp_die( esc_html__( 'Sorry, you are not allowed to activate plugins on this site.', 'parallaxsome' ) );
+					wp_die( esc_html__( 'Sorry, you are not allowed to activate plugins on this site.', 'locopas' ) );
 
 				$nonce = isset( $_POST["nonce"] ) ? sanitize_text_field( wp_unslash( $_POST["nonce"] ) ) : '';
 				$plugin = isset( $_POST["plugin"] ) ? sanitize_text_field( wp_unslash( $_POST["plugin"] ) ) : '';
 
 				// Check our nonce, if they don't match then bounce!
-				if (! wp_verify_nonce( $nonce, 'parallaxsome_plugin_activate_nonce' ))
-					die( esc_html__( 'Error - unable to verify nonce, please try again.', 'parallaxsome' ) );
+				if (! wp_verify_nonce( $nonce, 'locopas_plugin_activate_nonce' ))
+					die( esc_html__( 'Error - unable to verify nonce, please try again.', 'locopas' ) );
 
 
 	         	// Include required libs for activation
@@ -441,7 +441,7 @@
 
 
 				// Get Plugin Info
-				$api = $this->parallaxsome_call_plugin_api(esc_attr($plugin));
+				$api = $this->locopas_call_plugin_api(esc_attr($plugin));
 
 
 				if($api->name){
@@ -453,7 +453,7 @@
 					}
 				} else {
 					$status = 'failed';
-					$msg = esc_html__('There was an error activating $api->name', 'parallaxsome');
+					$msg = esc_html__('There was an error activating $api->name', 'locopas');
 				}
 
 				$json = array(
@@ -510,7 +510,7 @@
 
 	      	public function get_local_dir_path($plugin) {
 
-	      		$url = wp_nonce_url(admin_url('themes.php?page=parallaxsome-welcome&section=import_demo'),'parallaxsome-file-installation');
+	      		$url = wp_nonce_url(admin_url('themes.php?page=locopas-welcome&section=import_demo'),'locopas-file-installation');
 				if (false === ($creds = request_filesystem_credentials($url, '', false, false, null) ) ) {
 					return; // stop processing here
 				}
@@ -541,13 +541,13 @@
 		$demoimporter = new Instant_Demo_Importer();
 
 		$demoimporter->demos = array(
-			'parallaxsome' => array(
-				'title' => __('Parallaxsome Demo', 'parallaxsome'),
-				'name' => 'parallaxsome',
-				'screenshot' => get_template_directory_uri().'/welcome/demos/parallaxsome/screen.png',
+			'locopas' => array(
+				'title' => __('Parallaxsome Demo', 'locopas'),
+				'name' => 'locopas',
+				'screenshot' => get_template_directory_uri().'/welcome/demos/locopas/screen.png',
 				'home_page' => 'home',
 				'menus' => array(
-					'Top Menu' => 'parallaxsome_top_menu'
+					'Top Menu' => 'locopas_top_menu'
 				)
 			),
 		);

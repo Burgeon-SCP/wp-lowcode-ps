@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 ?>
@@ -13,12 +13,12 @@
 <?php
 	$section_option = get_theme_mod( 'homepage_testimonials_option', 'show' );
 	if( $section_option != 'hide' ) {
-		$section_title = get_theme_mod( 'testimonials_section_title', esc_html__( 'Clients Say', 'parallaxsome' ) );
-		$section_sub_title = get_theme_mod( 'testimonials_section_sub_title', esc_html__( 'Group Together', 'parallaxsome' ) );
+		$section_title = get_theme_mod( 'testimonials_section_title', esc_html__( 'Clients Say', 'locopas' ) );
+		$section_sub_title = get_theme_mod( 'testimonials_section_sub_title', esc_html__( 'Group Together', 'locopas' ) );
 ?>
 		<section class="ps-home-section wow fadeInDown" data-wow-duration="1s" id="section-testimonials">
 			<div class="ps-section-container">
-				<?php parallaxsome_section_header( $section_title, $section_sub_title, $section_description = null ); ?>
+				<?php locopas_section_header( $section_title, $section_sub_title, $section_description = null ); ?>
 				<div class="section-content-wrapper">
 					<?php
 						$testimonials_cat_id = get_theme_mod( 'testimonials_cat_id', '0' );

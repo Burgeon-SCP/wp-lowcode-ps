@@ -5,7 +5,7 @@
  * @link https://jetpack.com/
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 
@@ -15,23 +15,23 @@
  * See: https://jetpack.com/support/infinite-scroll/
  * See: https://jetpack.com/support/responsive-videos/
  */
-function parallaxsome_jetpack_setup() {
+function locopas_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'parallaxsome_infinite_scroll_render',
+		'render'    => 'locopas_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
 }
-add_action( 'after_setup_theme', 'parallaxsome_jetpack_setup' );
+add_action( 'after_setup_theme', 'locopas_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function parallaxsome_infinite_scroll_render() {
+function locopas_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

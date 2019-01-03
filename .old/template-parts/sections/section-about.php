@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 ?>
@@ -13,13 +13,13 @@
 <?php
 	$section_option = get_theme_mod( 'homepage_about_option', 'show' );
 	if( $section_option != 'hide' ) {
-		$section_title = get_theme_mod( 'about_section_title', esc_html__( 'About', 'parallaxsome' ) );
-		$section_sub_title = get_theme_mod( 'about_section_sub_title', esc_html__( 'Who We Are', 'parallaxsome' ) );
+		$section_title = get_theme_mod( 'about_section_title', esc_html__( 'About', 'locopas' ) );
+		$section_sub_title = get_theme_mod( 'about_section_sub_title', esc_html__( 'Who We Are', 'locopas' ) );
 		$section_image = get_theme_mod( 'about_section_image', '' );
 ?>
 		<section class="ps-home-section" id="section-about">
 			<div class="ps-section-container">
-				<?php parallaxsome_section_header( $section_title, $section_sub_title, $description = null ); ?>
+				<?php locopas_section_header( $section_title, $section_sub_title, $description = null ); ?>
 				<div class="section-content-wrapper">
 					<?php
 						$section_page_id = get_theme_mod( 'about_page_id', '0' );

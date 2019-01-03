@@ -7,30 +7,30 @@
 
 	if(!empty($pro_plugins)) {
 		?>
-		<h4 class="recomplug-title"><?php echo esc_html__('Pro Plugins', 'parallaxsome'); ?></h4>
-		<p><?php echo esc_html__('Take Advantage of some of our Premium Plugins', 'parallaxsome'); ?></p>
+		<h4 class="recomplug-title"><?php echo esc_html__('Pro Plugins', 'locopas'); ?></h4>
+		<p><?php echo esc_html__('Take Advantage of some of our Premium Plugins', 'locopas'); ?></p>
 		<div class="recomended-plugin-wrap">
 		<?php
 		foreach($pro_plugins as $plugin) {
 
-			$status = $this->parallaxsome_plugin_active($plugin);
+			$status = $this->locopas_plugin_active($plugin);
 			$icon_url = $plugin['screenshot'];
 			switch($status) {
 				case 'install' :
 					$btn_class = 'install-offline button';
-					$label = esc_html__('Install and Activate', 'parallaxsome');
+					$label = esc_html__('Install and Activate', 'locopas');
 					$link = $plugin['location'];
 					break;
 
 				case 'inactive' :
 					$btn_class = 'button';
-					$label = esc_html__('Deactivate', 'parallaxsome');
+					$label = esc_html__('Deactivate', 'locopas');
 					$link = admin_url('plugins.php');
 					break;
 
 				case 'active' :
 					$btn_class = 'activate-offline button button-primary';
-					$label = esc_html__('Activate', 'parallaxsome');
+					$label = esc_html__('Activate', 'locopas');
 					$link = $plugin['location'];
 					break;
 			}
@@ -63,31 +63,31 @@
 
 	if(!empty($free_plugins)) {
 		?>
-		<h4 class="recomplug-title"><?php echo esc_html__('Free Plugins', 'parallaxsome'); ?></h4>
-		<p><?php echo esc_html__('These Free Plugins might be handy for you.', 'parallaxsome'); ?></p>
+		<h4 class="recomplug-title"><?php echo esc_html__('Free Plugins', 'locopas'); ?></h4>
+		<p><?php echo esc_html__('These Free Plugins might be handy for you.', 'locopas'); ?></p>
 		<div class="recomended-plugin-wrap">
 		<?php
 		foreach($free_plugins as $plugin) {
-			$info = $this->parallaxsome_call_plugin_api($plugin['slug']);
+			$info = $this->locopas_call_plugin_api($plugin['slug']);
 
-			$icon_url = $this->parallaxsome_check_for_icon($info->icons);
-			$status = $this->parallaxsome_plugin_active($plugin);
-			$btn_url = $this->parallaxsome_plugin_generate_url($status, $plugin);
+			$icon_url = $this->locopas_check_for_icon($info->icons);
+			$status = $this->locopas_plugin_active($plugin);
+			$btn_url = $this->locopas_plugin_generate_url($status, $plugin);
 
 			switch($status) {
 				case 'install' :
 					$btn_class = 'install button';
-					$label = esc_html__('Install and Activate', 'parallaxsome');
+					$label = esc_html__('Install and Activate', 'locopas');
 					break;
 
 				case 'inactive' :
 					$btn_class = 'button';
-					$label = esc_html__('Deactivate', 'parallaxsome');
+					$label = esc_html__('Deactivate', 'locopas');
 					break;
 
 				case 'active' :
 					$btn_class = 'activate button button-primary';
-					$label = esc_html__('Activate', 'parallaxsome');
+					$label = esc_html__('Activate', 'locopas');
 					break;
 			}
 

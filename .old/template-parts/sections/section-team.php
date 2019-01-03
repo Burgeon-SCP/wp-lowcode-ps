@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 ?>
@@ -13,14 +13,14 @@
 <?php
 	$section_option = get_theme_mod( 'homepage_team_option', 'show' );
 	if( $section_option != 'hide' ) {
-		$section_title = get_theme_mod( 'team_section_title', esc_html__( 'Our Team', 'parallaxsome' ) );
-		$section_sub_title = get_theme_mod( 'team_section_sub_title', esc_html__( 'Group Together', 'parallaxsome' ) );
+		$section_title = get_theme_mod( 'team_section_title', esc_html__( 'Our Team', 'locopas' ) );
+		$section_sub_title = get_theme_mod( 'team_section_sub_title', esc_html__( 'Group Together', 'locopas' ) );
 		$section_description = get_theme_mod( 'team_section_description', '' );
 ?>
 		<section class="ps-home-section wow slideInUp" data-wow-duration="1s" id="section-team">
 			<div class="ps-section-container">
 				<div class="team-title wow fadeInDown" data-wow-duration="0.5s">
-				    <?php parallaxsome_section_header( $section_title, $section_sub_title, $section_description ); ?>
+				    <?php locopas_section_header( $section_title, $section_sub_title, $section_description ); ?>
                 </div>
 				<div class="section-content-wrapper wow fadeInUp" data-wow-duration="1s">
 					<?php 
@@ -39,7 +39,7 @@
 								while( $home_team_query->have_posts() ) {
 									$home_team_query->the_post();
 									$image_id = get_post_thumbnail_id();
-									$image_path = wp_get_attachment_image_src( $image_id, 'parallaxsome_team_thumb', true );
+									$image_path = wp_get_attachment_image_src( $image_id, 'locopas_team_thumb', true );
 									$team_position = get_post( $image_id )->post_excerpt;
 					?>
 									<li class="team-box-item">
@@ -66,7 +66,7 @@
 					?>
 				</div><!-- .section-content-wrapper -->
 				<?php 
-					$team_view_more_text = get_theme_mod( 'team_view_more_txt', esc_html__( 'View All', 'parallaxsome' ) );
+					$team_view_more_text = get_theme_mod( 'team_view_more_txt', esc_html__( 'View All', 'locopas' ) );
 				?>
 				<div class="ps-section-viewall">
 					<a href="<?php echo esc_url( get_category_link( $team_sec_cat_id ) ); ?>"><?php echo esc_html( $team_view_more_text ); ?></a>
