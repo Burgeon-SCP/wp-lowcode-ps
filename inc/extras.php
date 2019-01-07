@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package AccessPress Themes
+ * @package BurgeonEnv Themes
  * @subpackage LoCoPaS
  * @since 1.0.0
  */

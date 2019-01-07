@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  *
- * @package AccessPress Themes
+ * @package BurgeonEnv Themes
  * @subpackage LoCoPaS
  */
 

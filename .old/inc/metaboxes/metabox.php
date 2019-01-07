@@ -2,7 +2,7 @@
 /**
  * Create a metabox to added some custom filed in posts.
  *
- * @package AccessPress Themes
+ * @package BurgeonEnv Themes
  * @subpackage LoCoPaS
  * @since 1.0.0
  */

@@ -6,8 +6,8 @@
 	</div>
 
 	<div class="support-process col">
-		<h3><?php echo esc_html__('AccessPress Themes', 'locopas'); ?></h3>
-		<p><?php echo esc_html__('AccessPress Themes has 50+ beautiful and elegant, fully responsive, multipurpose themes to meet your need for free and commercial basis.', 'locopas') ?></p>
+		<h3><?php echo esc_html__('BurgeonEnv Themes', 'locopas'); ?></h3>
+		<p><?php echo esc_html__('BurgeonEnv Themes has 50+ beautiful and elegant, fully responsive, multipurpose themes to meet your need for free and commercial basis.', 'locopas') ?></p>
 		<a class="button" target="_blank" href="https://accesspressthemes.com/"><?php echo esc_html__('Explore', 'locopas'); ?></a>
 	</div>
 

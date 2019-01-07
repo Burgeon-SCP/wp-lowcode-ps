@@ -7,7 +7,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package AccessPress Themes
+ * @package BurgeonEnv Themes
  * @subpackage LoCoPaS
  * @since 1.0.0
  */

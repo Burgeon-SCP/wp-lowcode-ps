@@ -66,7 +66,7 @@ msgstr ""
 
 #. Author of the theme
 #: footer.php:26
-msgid "AccessPress Themes"
+msgid "BurgeonEnv Themes"
 msgstr ""
 
 #: functions.php:68

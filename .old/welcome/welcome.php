@@ -178,7 +178,7 @@
 						?>
 					</div>
 
-					<a target="_blank" href="http://www.accesspressthemes.com" class="accesspress-badge wp-badge"><span><?php echo esc_html('AccessPressThemes'); ?></span></a>
+					<a target="_blank" href="http://www.accesspressthemes.com" class="accesspress-badge wp-badge"><span><?php echo esc_html('BurgeonEnvThemes'); ?></span></a>
 
 				<div class="nav-tab-wrapper clearfix">
 					<?php foreach($tabs as $id => $label) : ?>

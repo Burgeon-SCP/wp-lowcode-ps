@@ -2,7 +2,7 @@
 /**
  * Define sanitize functions for customizer fields
  *
- * @package AccessPress Themes
+ * @package BurgeonEnv Themes
  * @subpackage LoCoPaS
  * @since 1.0.0
  */

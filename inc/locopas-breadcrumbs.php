@@ -3,7 +3,7 @@
  * Function for breadcrumbs
  * http://dimox.net/wordpress-breadcrumbs-without-a-plugin/
  *
- * @package AccessPress Themes
+ * @package BurgeonEnv Themes
  * @subpackage PrarallaxSome
  * @since 1.0.0
  */

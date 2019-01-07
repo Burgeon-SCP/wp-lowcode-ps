@@ -4,7 +4,7 @@
  *
  * https://codex.wordpress.org/Class_Reference/WP_Customize_Control
  *
- * @package AccessPress Themes
+ * @package BurgeonEnv Themes
  * @subpackage LoCoPaS
  * @since 1.0.0
  */
