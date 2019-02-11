@@ -28,9 +28,9 @@ function locopas_scripts() {
 	global $locopas_theme_version;
 
 	$locopas_font_args = array(
-        'family' => 'Open+Sans:400,600,700,800,300|PT+Sans:400,700|Lato:400,700,300|BenchNine:300|Roboto+Slab:300|Source+Sans+Pro:400,300,600,700|Raleway:400,500,600,700,800,300',
+        'family' => 'Lato:400,700,300|Roboto+Mono:400,700|Nova+Mono',
     );
-    wp_enqueue_style( 'locopas-google-fonts', add_query_arg( $locopas_font_args, "//fonts.googleapis.com/css" ) );
+  wp_enqueue_style( 'locopas-google-fonts', add_query_arg( $locopas_font_args, "//fonts.googleapis.com/css" ) );
 
 	wp_enqueue_style( 'lightslider-style', get_template_directory_uri() . '/assets/library/lightslider/css/lightslider.css', array(), '1.1.3' );
 	wp_enqueue_style( 'bxSlider-style', get_template_directory_uri() . '/assets/library/bxSlider/css/jquery.bxslider.css', array(), '4.1.2' );
@@ -115,14 +115,6 @@ $locopas_single_menu_fields = array(
 		'portfolio' =>  array(
 						'default'=> esc_html__( 'Portfolio', 'locopas' ),
 						'label'=>  esc_html__( 'Portfolio', 'locopas' )
-					),
-		'blog' =>  array(
-						'default'=> esc_html__( 'Blog', 'locopas' ),
-						'label'=>  esc_html__( 'Our Blog', 'locopas' )
-					),
-		'clients' =>  array(
-						'default'=> esc_html( '', 'locopas' ),
-						'label'=>  esc_html__( 'Our Clients', 'locopas' )
 					),
 		'contact' =>  array(
 						'default'=> esc_html__( 'Contact', 'locopas' ),
