@@ -28,13 +28,13 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 		 * @since 1.0.0
 		 */
 		$wp_customize->add_panel(
-	        'locopas_header_settings_panel', 
+	        'locopas_header_settings_panel',
 	        	array(
 	        		'priority'       => 10,
 	            	'capability'     => 'edit_theme_options',
 	            	'theme_supports' => '',
 	            	'title'          => esc_html__( 'Header Settings', 'locopas' ),
-	            ) 
+	            )
 	    );
 /*--------------------------------------------------------------------------------------------------------------*/
 		/**
@@ -65,10 +65,10 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	            )
 	    );
 	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
-	        $wp_customize, 
-	            'top_header_option', 
+	        $wp_customize,
+	            'top_header_option',
 	            array(
-	                'type' 		=> 'switch',	                
+	                'type' 		=> 'switch',
 	                'label' 	=> esc_html__( 'Top Header Option', 'locopas' ),
 	                'description' 	=> esc_html__( 'Show/hide option for Top Header Section.', 'locopas' ),
 	                'section' 	=> 'top_header_section',
@@ -86,30 +86,30 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	     *
 	     * @since 1.0.0
 	     */
-	    $wp_customize->add_setting(
-	        'top_header_social_option',
-	        array(
-	            'default' => 'show',
-	            'transport' => 'postMessage',
-	            'sanitize_callback' => 'locopas_sanitize_switch_option',
-	            )
-	    );
-	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
-	        $wp_customize, 
-	            'top_header_social_option', 
-	            array(
-	                'type' 		=> 'switch',
-	                'label' 	=> esc_html__( 'Social Icons Option', 'locopas' ),
-	                'description' 	=> esc_html__( 'Show/hide option for Top Header Social Icon Section.', 'locopas' ),
-	                'section' 	=> 'top_header_section',
-	                'choices'   => array(
-	                    'show' 	=> esc_html__( 'Show', 'locopas' ),
-	                    'hide' 	=> esc_html__( 'Hide', 'locopas' )
-	                    ),
-	                'priority'  => 10,
-	            )
-	        )
-	    );
+	    // $wp_customize->add_setting(
+	    //     'top_header_social_option',
+	    //     array(
+	    //         'default' => 'show',
+	    //         'transport' => 'postMessage',
+	    //         'sanitize_callback' => 'locopas_sanitize_switch_option',
+	    //         )
+	    // );
+	    // $wp_customize->add_control( new Locopas_Customize_Switch_Control(
+	    //     $wp_customize,
+	    //         'top_header_social_option',
+	    //         array(
+	    //             'type' 		=> 'switch',
+	    //             'label' 	=> esc_html__( 'Social Icons Option', 'locopas' ),
+	    //             'description' 	=> esc_html__( 'Show/hide option for Top Header Social Icon Section.', 'locopas' ),
+	    //             'section' 	=> 'top_header_section',
+	    //             'choices'   => array(
+	    //                 'show' 	=> esc_html__( 'Show', 'locopas' ),
+	    //                 'hide' 	=> esc_html__( 'Hide', 'locopas' )
+	    //                 ),
+	    //             'priority'  => 10,
+	    //         )
+	    //     )
+	    // );
 /*--------------------------------------------------------------------------------------------------------------*/
 		/**
 		 * Menu Settings Section
@@ -138,8 +138,8 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	            )
 	    );
 	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
-	        $wp_customize, 
-	            'primary_menu_type', 
+	        $wp_customize,
+	            'primary_menu_type',
 	            array(
 	                'type' 		=> 'switch',
 	                'label' 	=> esc_html__( 'Primary Menu Type', 'locopas' ),
@@ -167,8 +167,8 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	            )
 	    );
 	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
-	        $wp_customize, 
-	            'parallax_menu_type', 
+	        $wp_customize,
+	            'parallax_menu_type',
 	            array(
 	                'type' 		=> 'switch',
 	                'label' 	=> esc_html__( 'Parallax Menu Type', 'locopas' ),
@@ -189,28 +189,28 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	     *
 	     * @since 1.0.0
 	     */
-	    $count = 10;
-	    foreach ( $locopas_single_menu_fields as $menu_key => $section_value ) {
-	    	$wp_customize->add_setting(
-		        $menu_key.'_menu_title',
-		            array(
-		                'default' => $section_value['default'],
-		                'sanitize_callback' => 'sanitize_text_field',
-		                'transport' => 'postMessage'
-			       )
-		    );    
-		    $wp_customize->add_control(
-		        $menu_key.'_menu_title',
-		            array(
-		            'type' => 'text',
-		            'label' => $section_value['label'],
-		            'section' => 'menu_settings_section',
-		            'priority' => $count,
-		            'active_callback' => 'locopas_primary_menu_type_callback'
-		            )
-		    );
-		    $count++;
-	    }
+	    // $count = 10;
+	    // foreach ( $locopas_single_menu_fields as $menu_key => $section_value ) {
+	    // 	$wp_customize->add_setting(
+		  //       $menu_key.'_menu_title',
+		  //           array(
+		  //               'default' => $section_value['default'],
+		  //               'sanitize_callback' => 'sanitize_text_field',
+		  //               'transport' => 'postMessage'
+			//        )
+		  //   );
+		  //   $wp_customize->add_control(
+		  //       $menu_key.'_menu_title',
+		  //           array(
+		  //           'type' => 'text',
+		  //           'label' => $section_value['label'],
+		  //           'section' => 'menu_settings_section',
+		  //           'priority' => $count,
+		  //           'active_callback' => 'locopas_primary_menu_type_callback'
+		  //           )
+		  //   );
+		  //   $count++;
+	    // }
 
 	    /**
 	     * Switch option for search icon in primary section
@@ -226,8 +226,8 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	            )
 	    );
 	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
-	        $wp_customize, 
-	            'primary_menu_search_option', 
+	        $wp_customize,
+	            'primary_menu_search_option',
 	            array(
 	                'type' 		=> 'switch',
 	                'label' 	=> esc_html__( 'Search Icon', 'locopas' ),
@@ -255,8 +255,8 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	            )
 	    );
 	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
-	        $wp_customize, 
-	            'sticky_header_option', 
+	        $wp_customize,
+	            'sticky_header_option',
 	            array(
 	                'type' 		=> 'switch',
 	                'label' 	=> esc_html__( 'Header Sticky', 'locopas' ),
