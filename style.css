@@ -50,13 +50,13 @@ html {
     font-family: monospace;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:     100%;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     margin: 0;
-    font-family: 'Lato';
+    font-family: 'Lato', monospace;
 }
 
 article,
@@ -164,7 +164,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace, monospace;
+    font-family: 'Roboto Mono', monospace;
     font-size: 1em;
 }
 
@@ -281,10 +281,6 @@ h6 {
 
 p {
     margin-bottom: 15px;
-}
-
-body,
-body p {
     font-family: Lato, monospace;
     font-weight: 400;
     text-decoration: none;
