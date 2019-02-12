@@ -4,7 +4,7 @@
  * http://dimox.net/wordpress-breadcrumbs-without-a-plugin/
  *
  * @package BurgeonEnv Themes
- * @subpackage PrarallaxSome
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 

@@ -50,7 +50,6 @@
     								the_custom_logo();
     							}
                             }
-                            else{
     						?>
         						<div class="site-title-wrapper">
         							<?php

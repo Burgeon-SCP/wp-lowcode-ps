@@ -30,14 +30,12 @@ function locopas_scripts() {
 	$locopas_font_args = array(
         'family' => 'Lato:400,700,300|Roboto+Mono:400,700|Nova+Mono',
     );
-  wp_enqueue_style( 'locopas-google-fonts', add_query_arg( $locopas_font_args, "//fonts.googleapis.com/css" ) );
 
 	wp_enqueue_style( 'lightslider-style', get_template_directory_uri() . '/assets/library/lightslider/css/lightslider.css', array(), '1.1.3' );
 	wp_enqueue_style( 'bxSlider-style', get_template_directory_uri() . '/assets/library/bxSlider/css/jquery.bxslider.css', array(), '4.1.2' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/library/font-awesome/css/font-awesome.min.css', array(), '4.7.0' );
 	wp_enqueue_style( 'jquery-prettyPhoto-style', get_template_directory_uri() . '/assets/library/prettyphoto/css/prettyPhoto.css', array(), '3.1.6' );
 	wp_enqueue_style ( 'animate', get_template_directory_uri() . '/assets/css/animate.css', array(), '3.5.1' );
-	wp_enqueue_style( 'locopas-style', get_stylesheet_uri(), array(), $locopas_theme_version );
 
 	wp_enqueue_script( 'lightslider', get_template_directory_uri() . '/assets/library/lightslider/js/lightslider.min.js', array( 'jquery' ), '1.1.3', true );
 	wp_enqueue_script( 'jquery-bxslider', get_template_directory_uri() . '/assets/library/bxSlider/js/jquery.bxslider.min.js', array( 'jquery' ), '4.1.2', true );
@@ -48,6 +46,9 @@ function locopas_scripts() {
 	wp_enqueue_script( 'jquery-prettyPhoto', get_template_directory_uri() . '/assets/library/prettyphoto/js/jquery.prettyPhoto.js', array( 'jquery' ), '3.1.6', true );
 	wp_enqueue_script( 'parallax', get_template_directory_uri() . '/assets/library/parallax-js/js/parallax.min.js', array( 'jquery' ), '1.4.2', true );
 	wp_enqueue_script( 'wow', get_template_directory_uri() . '/assets/js/wow.min.js', array( 'jquery' ), '1.1.2', true );
+
+	wp_enqueue_style( 'locopas-google-fonts', add_query_arg( $locopas_font_args, "//fonts.googleapis.com/css" ) );
+	wp_enqueue_style( 'locopas-style', get_stylesheet_uri(), array(), $locopas_theme_version );
 	wp_enqueue_script( 'locopas-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js', array( 'jquery' ), $locopas_theme_version, true );
 
 	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

@@ -90,11 +90,19 @@ function locopas_setup() {
 	 */
 	add_theme_support( 'html5', array(
 		'search-form',
-		'comment-form',
-		'comment-list',
 		'gallery',
 		'caption',
 	) );
+	// add_theme_support( 'html5', array(
+	// 	'search-form',
+	// 	'comment-form',
+	// 	'comment-list',
+	// 	'gallery',
+	// 	'caption',
+	// ) );
+
+	// Set up the WordPress core custom background feature.
+	add_theme_support( 'custom-background')
 
 	// Set up the WordPress core custom background feature.
 	// add_theme_support( 'custom-background', apply_filters( 'locopas_custom_background_args', array(
