@@ -293,7 +293,7 @@ body, body p{
     color: #0f0f0f;
 }
 H1{
-    font-family: Roboto Mono;
+    font-family: 'Roboto Mono', monospace;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
@@ -302,7 +302,7 @@ H1{
     color: #666666;
 }
 H2{
-    font-family: Roboto Mono;
+    font-family: 'Roboto Mono', monospace;
     font-weight: 700;
     text-decoration: none;
     text-transform: none;

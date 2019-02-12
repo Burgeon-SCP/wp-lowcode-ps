@@ -194,7 +194,7 @@ require trailingslashit( get_template_directory() ) . '/inc/jetpack.php';
 /**
  * Typography
  */
-require trailingslashit(get_template_directory()).'/inc/typography/typography.php';
+// require trailingslashit(get_template_directory()).'/inc/typography/typography.php';
 
 /**
  * Load metaboxes file
