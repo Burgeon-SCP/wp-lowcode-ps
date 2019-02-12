@@ -47,7 +47,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html {
-    font-family: sans-serif;
+    font-family: monospace;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:     100%;
     margin:0;
@@ -56,7 +56,7 @@ html {
 
 body {
     margin: 0;
-    font-family:'Open Sans, sans-serif';
+    font-family: 'Lato';
 }
 
 article,
@@ -283,8 +283,9 @@ p {
     margin-bottom: 15px;
 }
 
-body, body p {
-    font-family: Lato;
+body,
+body p {
+    font-family: Lato, monospace;
     font-weight: 400;
     text-decoration: none;
     text-transform: none;
@@ -292,6 +293,7 @@ body, body p {
     line-height: 1.5em;
     color: #0f0f0f;
 }
+
 h1 {
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
@@ -301,6 +303,7 @@ h1 {
     line-height: 1em;
     color: #666666;
 }
+
 h2 {
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
@@ -310,8 +313,9 @@ h2 {
     line-height: 1em;
     color: #666666;
 }
+
 h3 {
-    font-family: Lato;
+    font-family: Lato, monospace;
     font-weight: 700;
     text-decoration: none;
     text-transform: none;
@@ -321,7 +325,7 @@ h3 {
 }
 
 .ps-home-section .section-title {
-    font-family: Roboto Mono;
+    font-family: 'Roboto Mono, monospace';
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
@@ -329,8 +333,9 @@ h3 {
     line-height: 1em;
     color: #666666;
 }
+
 .section-sub-title {
-    font-family: Roboto Mono;
+    font-family: 'Roboto Mono, monospace';
     font-weight: 400;
     text-decoration: none;
     text-transform: uppercase;
