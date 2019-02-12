@@ -292,7 +292,7 @@ body, body p{
     line-height: 1.5em;
     color: #0f0f0f;
 }
-H1{
+h1{
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
     text-decoration: none;
@@ -301,7 +301,7 @@ H1{
     line-height: 1em;
     color: #666666;
 }
-H2{
+h2{
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
     text-decoration: none;
@@ -310,7 +310,7 @@ H2{
     line-height: 1em;
     color: #666666;
 }
-H3{
+h3{
     font-family: Lato;
     font-weight: 700;
     text-decoration: none;
