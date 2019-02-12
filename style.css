@@ -283,7 +283,7 @@ p {
     margin-bottom: 15px;
 }
 
-body, body p{
+body, body p {
     font-family: Lato;
     font-weight: 400;
     text-decoration: none;
@@ -292,7 +292,7 @@ body, body p{
     line-height: 1.5em;
     color: #0f0f0f;
 }
-h1{
+h1 {
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
     text-decoration: none;
@@ -301,7 +301,7 @@ h1{
     line-height: 1em;
     color: #666666;
 }
-h2{
+h2 {
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
     text-decoration: none;
@@ -310,7 +310,7 @@ h2{
     line-height: 1em;
     color: #666666;
 }
-h3{
+h3 {
     font-family: Lato;
     font-weight: 700;
     text-decoration: none;
@@ -320,7 +320,7 @@ h3{
     color: #666666;
 }
 
-.ps-home-section .section-title{
+.ps-home-section .section-title {
     font-family: Roboto Mono;
     font-weight: 700;
     text-decoration: none;
@@ -329,7 +329,7 @@ h3{
     line-height: 1em;
     color: #666666;
 }
-.section-sub-title{
+.section-sub-title {
     font-family: Roboto Mono;
     font-weight: 400;
     text-decoration: none;
