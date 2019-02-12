@@ -15,7 +15,8 @@
  * @since 1.0.0
  */
 	$locopas_theme_details = wp_get_theme();
-	$locopas_theme_version = $locopas_theme_details->Version;
+	// $locopas_theme_version = $locopas_theme_details->Version;
+	$locopas_theme_version = echo rand(111,999);
 
 
 /*------------------------------------------------------------------------------------------------------------------*/
@@ -31,7 +32,7 @@ function locopas_scripts() {
         'family' => 'Lato:400,700,300|Roboto+Mono:400,700|Nova+Mono',
     );
 	wp_enqueue_style( 'locopas-google-fonts', add_query_arg( $locopas_font_args, "//fonts.googleapis.com/css" ) );
-  wp_register_style( 'locopas-google-fonts', '//fonts.googleapis.com/css?family='.$locopas_font_args );
+  wp_register_style( 'locopas-google-fonts', '//fonts.googleapis.com/css?family='.$locopas_font_args['family'] );
 	wp_enqueue_style( 'locopas-style', get_stylesheet_uri(), array(), $locopas_theme_version );
 	wp_enqueue_script( 'locopas-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js', array( 'jquery' ), $locopas_theme_version, true );
 
