@@ -30,6 +30,9 @@ function locopas_scripts() {
 	$locopas_font_args = array(
         'family' => 'Lato:400,700,300|Roboto+Mono:400,700|Nova+Mono',
     );
+	wp_enqueue_style( 'locopas-google-fonts', add_query_arg( $locopas_font_args, "//fonts.googleapis.com/css" ) );
+	wp_enqueue_style( 'locopas-style', get_stylesheet_uri(), array(), $locopas_theme_version );
+	wp_enqueue_script( 'locopas-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js', array( 'jquery' ), $locopas_theme_version, true );
 
 	wp_enqueue_style( 'lightslider-style', get_template_directory_uri() . '/assets/library/lightslider/css/lightslider.css', array(), '1.1.3' );
 	wp_enqueue_style( 'bxSlider-style', get_template_directory_uri() . '/assets/library/bxSlider/css/jquery.bxslider.css', array(), '4.1.2' );
@@ -46,14 +49,6 @@ function locopas_scripts() {
 	wp_enqueue_script( 'jquery-prettyPhoto', get_template_directory_uri() . '/assets/library/prettyphoto/js/jquery.prettyPhoto.js', array( 'jquery' ), '3.1.6', true );
 	wp_enqueue_script( 'parallax', get_template_directory_uri() . '/assets/library/parallax-js/js/parallax.min.js', array( 'jquery' ), '1.4.2', true );
 	wp_enqueue_script( 'wow', get_template_directory_uri() . '/assets/js/wow.min.js', array( 'jquery' ), '1.1.2', true );
-
-	wp_enqueue_style( 'locopas-google-fonts', add_query_arg( $locopas_font_args, "//fonts.googleapis.com/css" ) );
-	wp_enqueue_style( 'locopas-style', get_stylesheet_uri(), array(), $locopas_theme_version );
-	wp_enqueue_script( 'locopas-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js', array( 'jquery' ), $locopas_theme_version, true );
-
-	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-	// 	wp_enqueue_script( 'comment-reply' );
-	// }
 
 	$ps_header_sticky_option = get_theme_mod( 'sticky_header_option', 'enable' );
 	if( $ps_header_sticky_option != 'disable' ) {
@@ -81,50 +76,8 @@ endif;
 
 add_action( 'admin_enqueue_scripts', 'locopas_admin_scripts' );
 
-/*------------------------------------------------------------------------------------------------------------------*/
-/**
- * Create a global variable for single page menu
- *
- * @return array
- * @since 1.0.0
- */
-$locopas_single_menu_fields = array(
-		'slider' =>  array(
-						'default'=> esc_html__( 'Main', 'locopas' ),
-						'label'=>  esc_html__( 'Top Section', 'locopas' )
-					),
-		'about' =>  array(
-						'default'=> esc_html__( 'About', 'locopas' ),
-						'label'=>  esc_html__( 'About Us', 'locopas' )
-					),
-		'team' =>  array(
-						'default'=> esc_html( '', 'locopas' ),
-						'label'=>  esc_html__( 'Our Team', 'locopas' )
-					),
-		'services' =>  array(
-						'default'=> esc_html__( 'Services', 'locopas' ),
-						'label'=>  esc_html__( 'Our Services', 'locopas' )
-					),
-		'testimonials' =>  array(
-						'default'=> esc_html( '', 'locopas' ),
-						'label'=>  esc_html__( 'Client Says', 'locopas' )
-					),
-		'fact' =>  array(
-						'default'=> esc_html( '', 'locopas' ),
-						'label'=>  esc_html__( 'Fact Us', 'locopas' )
-					),
-		'portfolio' =>  array(
-						'default'=> esc_html__( 'Portfolio', 'locopas' ),
-						'label'=>  esc_html__( 'Portfolio', 'locopas' )
-					),
-		'contact' =>  array(
-						'default'=> esc_html__( 'Contact', 'locopas' ),
-						'label'=>  esc_html__( 'Contact Us', 'locopas' )
-					)
-	);
 
 /*------------------------------------------------------------------------------------------------------------------*/
-
 if( ! function_exists( 'locopas_parallax_menu_cb' ) ):
 
 	/**
@@ -167,6 +120,8 @@ if( ! function_exists( 'locopas_parallax_menu_cb' ) ):
 endif;
 
 add_action( 'locopas_parallax_menu', 'locopas_parallax_menu_cb', 10 );
+
+
 /*------------------------------------------------------------------------------------------------------------------*/
 /**
  * Primary menu section
@@ -220,6 +175,7 @@ if( ! function_exists( 'locopas_main_menu_hook' ) ) :
 endif;
 
 add_action( 'locopas_main_menu', 'locopas_main_menu_hook', 10, 2 );
+
 /*------------------------------------------------------------------------------------------------------------------*/
 /**
  * Define function for fontawewome icons
@@ -387,25 +343,7 @@ if( ! function_exists( 'locopas_top_social_icons_hook' ) ):
 endif;
 
 add_action( 'locopas_top_social_icons', 'locopas_top_social_icons_hook', 10 );
-/*------------------------------------------------------------------------------------------------------------------*/
-/**
- * Homepage Section header
- *
- * @since 1.0.0
- */
-if( ! function_exists( 'locopas_section_header' ) ) {
-	function locopas_section_header( $title, $sub_title, $description ) {
-?>
-		<header class="section-header">
 
-			<span class="section-sub-title"><?php echo esc_html( $sub_title ); ?></span>
-			<h2 class="section-title"><?php echo esc_html( $title ); ?></h2>
-			<p class="section-description"><?php echo esc_html( $description ); ?></p>
-
-		</header><!-- .entry-header -->
-<?php
-	}
-}
 /*------------------------------------------------------------------------------------------------------------------*/
 /**
  * Get categories
@@ -428,62 +366,6 @@ if( ! function_exists( 'locopas_custom_excerpt_more' ) ):
 	function locopas_custom_excerpt_more( $more ) {
 		return ' ';
 	}
-endif;
-/*------------------------------------------------------------------------------------------------------------------*/
-/**
- * Function define about page/post/archive sidebar
- *
- * @since 1.0.0
- */
-if( ! function_exists( 'locopas_get_sidebar' ) ):
-function locopas_get_sidebar() {
-    global $post;
-
-    if( 'post' === get_post_type() ) {
-        $sidebar_meta_option = get_post_meta( $post->ID, 'ps_post_sidebar_layout', true );
-    }
-
-    if( 'page' === get_post_type() ) {
-    	$sidebar_meta_option = get_post_meta( $post->ID, 'ps_post_sidebar_layout', true );
-    }
-
-    if( is_home() ) {
-        $set_id = get_option( 'page_for_posts' );
-		$sidebar_meta_option = get_post_meta( $set_id, 'ps_post_sidebar_layout', true );
-    }
-
-    if( empty( $sidebar_meta_option ) || is_archive() || is_search() ) {
-        $sidebar_meta_option = 'default_sidebar_layout';
-    }
-
-    $archive_sidebar      = get_theme_mod( 'ps_archive_sidebar_layout', 'right_sidebar' );
-    $post_default_sidebar = get_theme_mod( 'ps_default_post_sidebar', 'right_sidebar' );
-    $page_default_sidebar = get_theme_mod( 'ps_default_page_sidebar', 'right_sidebar' );
-
-    if( $sidebar_meta_option == 'default_sidebar_layout' ) {
-        if( is_single() ) {
-            if( $post_default_sidebar == 'right_sidebar' ) {
-                get_sidebar();
-            } elseif( $post_default_sidebar == 'left_sidebar' ) {
-                get_sidebar( 'left' );
-            }
-        } elseif( is_page() ) {
-            if( $page_default_sidebar == 'right_sidebar' ) {
-                get_sidebar();
-            } elseif( $page_default_sidebar == 'left_sidebar' ) {
-                get_sidebar( 'left' );
-            }
-        } elseif( $archive_sidebar == 'right_sidebar' ) {
-            get_sidebar();
-        } elseif( $archive_sidebar == 'left_sidebar' ) {
-            get_sidebar( 'left' );
-        }
-    } elseif( $sidebar_meta_option == 'right_sidebar' ) {
-        get_sidebar();
-    } elseif( $sidebar_meta_option == 'left_sidebar' ) {
-        get_sidebar( 'left' );
-    }
-}
 endif;
 
 /**

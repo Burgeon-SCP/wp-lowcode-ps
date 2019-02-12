@@ -28,37 +28,6 @@ msgid ""
 "below or a search?"
 msgstr ""
 
-#: comments.php:35
-#, php-format
-msgctxt "comments title"
-msgid "One thought on &ldquo;%s&rdquo;"
-msgstr ""
-
-#. 1: number of comments, 2: post title
-#: comments.php:39
-#, php-format
-msgctxt "comments title"
-msgid "%1$s thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: comments.php:55 comments.php:76
-msgid "Comment navigation"
-msgstr ""
-
-#: comments.php:58 comments.php:79
-msgid "Older Comments"
-msgstr ""
-
-#: comments.php:59 comments.php:80
-msgid "Newer Comments"
-msgstr ""
-
-#: comments.php:93
-msgid "Comments are closed."
-msgstr ""
-
 #: footer.php:26
 #, php-format
 msgid "LoCoPaS by %1$s."

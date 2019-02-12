@@ -283,6 +283,62 @@ p {
     margin-bottom: 15px;
 }
 
+body, body p{
+    font-family: Lato;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 26px;
+    line-height: 1.5em;
+    color: #0f0f0f;
+}
+H1{
+    font-family: Roboto Mono;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 32px;
+    line-height: 1em;
+    color: #666666;
+}
+H2{
+    font-family: Roboto Mono;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 28px;
+    line-height: 1em;
+    color: #666666;
+}
+H3{
+    font-family: Lato;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 24px;
+    line-height: 1em;
+    color: #666666;
+}
+
+.ps-home-section .section-title{
+    font-family: Roboto Mono;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 74px;
+    line-height: 1em;
+    color: #666666;
+}
+.section-sub-title{
+    font-family: Roboto Mono;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1em;
+    color: #666666;
+}
+
 dfn,
 cite,
 em,
