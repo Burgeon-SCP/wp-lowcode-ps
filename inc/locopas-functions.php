@@ -38,21 +38,21 @@ function locopas_scripts() {
 	 * This theme styles several css elements by using separate files inside the theme,
 	 * specifically font, colors, icons, and column width.
 	 */
-	foreach (array_filter(glob(get_template_directory_uri().'/inc/styles/*'), 'is_file') as $file) {
-		// Do something with $file
+	// foreach (array_filter(glob(get_template_directory_uri().'/inc/styles/'), 'is_file') as $file) {
+	// 	// Do something with $file
+	// 	wp_enqueue_style('locopas-'.str_replace('.css', '', $file).'-style',
+	// 									 get_template_directory_uri().'/inc/styles/'.$file,
+	// 									 array('locopas-style-css'),
+	// 									 $locopas_theme_version
+	// 								 );
+ 	// }
 
-		wp_enqueue_style('locopas-'.str_replace('.css', '', $file).'-style',
-										 get_template_directory_uri().'/inc/styles/'.$file,
-										 array('locopas-style-css'),
-										 $locopas_theme_version
-									 );
- 	}
-	// wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri().'/inc/styles/typography.css', array('locopas-style-css'), $locopas_theme_version );
-	// wp_enqueue_style( 'locopas-comments-style', get_template_directory_uri().'/inc/styles/comments.css', array('locopas-style-css'), $locopas_theme_version );
-	// wp_enqueue_style( 'locopas-header-style', get_template_directory_uri().'/inc/styles/header.css', array('locopas-style-css'), $locopas_theme_version );
-	// wp_enqueue_style( 'locopas-contact-style', get_template_directory_uri().'/inc/styles/contact.css', array('locopas-style-css'), $locopas_theme_version );
-	// wp_enqueue_style( 'locopas-widget-style', get_template_directory_uri().'/inc/styles/widget.css', array('locopas-style-css'), $locopas_theme_version );
-	// wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri().'/inc/styles/footer.css', array('locopas-style-css'), $locopas_theme_version );
+	wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri().'/inc/styles/typography.css', array('locopas-style-css'), $locopas_theme_version );
+	wp_enqueue_style( 'locopas-comments-style', get_template_directory_uri().'/inc/styles/comments.css', array('locopas-style-css'), $locopas_theme_version );
+	wp_enqueue_style( 'locopas-header-style', get_template_directory_uri().'/inc/styles/header.css', array('locopas-style-css'), $locopas_theme_version );
+	wp_enqueue_style( 'locopas-contact-style', get_template_directory_uri().'/inc/styles/contact.css', array('locopas-style-css'), $locopas_theme_version );
+	wp_enqueue_style( 'locopas-widget-style', get_template_directory_uri().'/inc/styles/widget.css', array('locopas-style-css'), $locopas_theme_version );
+	wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri().'/inc/styles/footer.css', array('locopas-style-css'), $locopas_theme_version );
 
 	wp_enqueue_script( 'locopas-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js', array( 'jquery' ), $locopas_theme_version, true );
 
