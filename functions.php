@@ -122,6 +122,18 @@ function locopas_setup() {
 	 * specifically font, colors, icons, and column width.
 	 */
 	// add_editor_style( 'assets/css/editor-style.css' );
+
+	/**
+	 * This theme styles several css elements by using separate files inside the theme,
+	 * specifically font, colors, icons, and column width.
+	 */
+	wp_enqueue_style( 'locopas-typography-style', get_stylesheet_uri().'/inc/styles/typography.css', array('locopas-style'), $locopas_theme_version );
+	wp_enqueue_style( 'locopas-comments-style', get_stylesheet__uri().'/inc/styles/comments.css', array('locopas-style'), $locopas_theme_version );
+	wp_enqueue_style( 'locopas-style', get_stylesheet_uri().'/inc/styles/header.css', array('locopas-style'), $locopas_theme_version );
+	// wp_enqueue_style( 'locopas-style', get_stylesheet_uri().'/inc/styles/contact.css', array(), $locopas_theme_version );
+	// wp_enqueue_style( 'locopas-style', get_stylesheet_uri().'/inc/styles/widget.css', array(), $locopas_theme_version );
+	// wp_enqueue_style( 'locopas-style', get_stylesheet_y_uri().'/inc/styles/footer.css', array(), $locopas_theme_version );
+
 }
 endif;
 add_action( 'after_setup_theme', 'locopas_setup' );

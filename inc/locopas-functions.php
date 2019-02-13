@@ -34,16 +34,6 @@ function locopas_scripts() {
 	wp_enqueue_style( 'locopas-google-fonts', add_query_arg( $locopas_font_args, "//fonts.googleapis.com/css" ) );
   wp_register_style( 'locopas-google-fonts', '//fonts.googleapis.com/css?family='.$locopas_font_args['family'] );
 	wp_enqueue_style( 'locopas-style', get_stylesheet_uri(), array(), $locopas_theme_version );
-	/**
-	 * This theme styles several css elements by using separate files inside the theme,
-	 * specifically font, colors, icons, and column width.
-	 */
-	// wp_enqueue_style( 'locopas-typography-style', get_stylesheet_uri().'/inc/styles/typography.css', array('locopas-style'), $locopas_theme_version );
-	// wp_enqueue_style( 'locopas-comments-style', get_stylesheet__uri().'/inc/styles/comments.css', array('locopas-style'), $locopas_theme_version );
-	// wp_enqueue_style( 'locopas-style', get_stylesheet_uri().'/inc/styles/header.css', array('locopas-style'), $locopas_theme_version );
-	// wp_enqueue_style( 'locopas-style', get_stylesheet_uri().'/inc/styles/contact.css', array(), $locopas_theme_version );
-	// wp_enqueue_style( 'locopas-style', get_stylesheet_uri().'/inc/styles/widget.css', array(), $locopas_theme_version );
-	// wp_enqueue_style( 'locopas-style', get_stylesheet_y_uri().'/inc/styles/footer.css', array(), $locopas_theme_version );
 
 	wp_enqueue_script( 'locopas-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js', array( 'jquery' ), $locopas_theme_version, true );
 
