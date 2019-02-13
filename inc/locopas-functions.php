@@ -16,9 +16,9 @@
  */
 	$locopas_theme_details = wp_get_theme();
 	// $locopas_theme_version = $locopas_theme_details->Version;
-	$locopas_theme_version = echo rand(111,999);
+	$locopas_theme_version = rand(111,999);
 
-
+ 
 /*------------------------------------------------------------------------------------------------------------------*/
 /**
  * Enqueue scripts and styles.

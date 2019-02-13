@@ -1,0 +1,157 @@
+/*------------contact-section----------*/
+.ps-home-section#section-contact {
+  padding-bottom: 0;
+  background-color: #ffffff;
+}
+
+#section-contact .ps-contact-form {
+  width: 1170px;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 400;
+  color: #888888;
+  text-transform: capitalize;
+}
+
+#section-contact .ps-contact-form input,
+#section-contact .ps-contact-form textarea {
+  width: 40%;
+}
+
+#section-contact input[type=submit] {
+  background-color: #e23815;
+  color: #ffffff;
+  box-shadow: none;
+  width: 15%;
+  border: 2px solid #e23;
+  border-radius: 0;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#section-contact input[type=submit]:hover {
+  background-color: transparent;
+  color: #e23815;
+}
+
+#section-contact .ps-footer-form p {
+  float: left;
+  width: 23%;
+  margin: 0;
+  margin-left: 2%;
+  text-align: left;
+}
+
+#section-contact .ps-footer-form {
+  margin-left: -2%;
+}
+
+#section-contact .ps-footer-form input,
+#section-contact .ps-footer-form textarea {
+  width: 100%;
+  height: 45px;
+}
+
+#section-contact .ps-footer-form textarea {
+  resize: vertical;
+  line-height: 2;
+}
+
+#section-contact .ps-contant-info .ps-ctn {
+  padding-right: 30px;
+  float: left;
+  text-align: right;
+  width: 50%;
+  font-size: 14px;
+  color: #666666;
+}
+
+#section-contact .ps-contant-info .ps-address {
+  padding-left: 30px;
+  float: right;
+  text-align: left;
+  width: 50%;
+  font-size: 14px;
+  color: #666666;
+}
+
+#section-contact .ps-num-label,
+#section-contact .ps-add-label {
+  font-size: 24px;
+  color: #666666;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 15px;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: bottom;
+}
+
+#section-contact .ps-num-label:before {
+  content: '\f095';
+  font-family: 'FontAwesome';
+  color: #e23815;
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+#section-contact .ps-add-label:before {
+  content: '\f041';
+  font-family: 'FontAwesome';
+  color: #e23815;
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+#section-contact .ps-contant-info {
+  padding: 40px 0;
+  width: 940px;
+  margin: 0 auto;
+}
+
+#section-contact .ps-contant-map {
+  width: 940px;
+  margin: 0 auto;
+  padding: 27px 0;
+  font-size: 20px;
+  color: #666666;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  position: relative;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+
+#section-contact .ps-mag-caption {
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 350ms ease-in-out;
+  -moz-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+#section-contact .ps-mag-caption:after {
+  content: '\f107';
+  position: absolute;
+  font-family: 'FontAwesome';
+  font-size: 16px;
+  top: 50%;
+  margin-top: -8px;
+  margin-left: 12px;
+}
+
+#section-contact .ps-mag-caption:hover {
+  color: #e23815;
+}
+
+#section-contact .footer-social-wrap {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 40px;
+}

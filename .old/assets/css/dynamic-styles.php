@@ -43,7 +43,7 @@
                         .service-tab-content .tab-pane .ps-btn,
                         .ps-home-section#section-fact .ps-fact-icon,
                         #section-portfolio .project-icons a,
-                        .ps-protfolio-wrapper ul#psProjects li:hover .project-info-wrap,
+                        .ps-portfolio-wrapper ul#psProjects li:hover .project-info-wrap,
                         #section-blog .ps-section-viewall a:hover,
                         #section-contact input[type=submit],
                         .footer-social-wrap .ps-social-icons-wrapper a:hover,

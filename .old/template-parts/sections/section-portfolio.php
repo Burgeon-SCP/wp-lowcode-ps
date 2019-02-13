@@ -26,7 +26,7 @@
 					$ps_portfolio_cat_id = get_theme_mod( 'portfolio_cat_id', '0' );
 					if( !empty( $ps_portfolio_cat_id ) ) {
 				?>
-						<div class="ps-protfolio-wrapper">
+						<div class="ps-portfolio-wrapper">
 				<?php
 						$ps_portfolio_args = array( 
 												'cat' => $ps_portfolio_cat_id,
@@ -68,7 +68,7 @@
 						}
 						wp_reset_postdata();
 				?>
-						</div><!-- .ps-protfolio-wrapper -->
+						</div><!-- .ps-portfolio-wrapper -->
 				<?php
 					}
 				?>
