@@ -255,7 +255,7 @@ th {
 }
 
 /*------------Typography----------*/
-@import url("./inc/styles/typography.css");
+/* @import url("./inc/styles/typography.css"); */
 
 /*--------------------------------------------------------------
 # Elements
@@ -589,9 +589,7 @@ a:active {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-/*
-@import url("./inc/styles/comments.css");
-*/
+/* @import url("./inc/styles/comments.css"); */
 
 /*--------------------------------------------------------------
 # Infinite scroll
@@ -701,7 +699,7 @@ object {
 }
 
 /*==========Header============*/
-@import url("./inc/styles/header.css");
+/* @import url("./inc/styles/header.css"); */
 
 /*--------------------------------------------------------------
 ## Menus
@@ -1412,7 +1410,6 @@ object {
 /*------------testimonial-section-----------*/
 /* @import url("./inc/styles/testimonials.css"); */
 
-
 /*--------our-facts-section---------*/
 .ps-home-section#section-fact .ps-section-container,
 .ps-home-section#section-clients .ps-section-container {
@@ -1499,13 +1496,13 @@ object {
 /* @import url("./inc/styles/clients.css"); */
 
 /*------------contact-section----------*/
-@import url("./inc/styles/contact.css");
+/* @import url("./inc/styles/contact.css"); */
 
 /*------------widget-section---------*/
-@import url("./inc/styles/widget.css");
+/* @import url("./inc/styles/widget.css"); */
 
 /*-------footer-section---------*/
-@import url("./inc/styles/footer.css");
+/* @import url("./inc/styles/footer.css"); */
 
 
 #scroll-up {

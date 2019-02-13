@@ -111,6 +111,15 @@ function locopas_setup() {
 	// ) ) );
 
 	/**
+	 * This theme styles several css elements by using separate files inside the theme,
+	 * specifically font, colors, icons, and column width.
+	 */
+	 wp_enqueue_style( 'child-style', get_stylesheet_directory_uri().'/css/main.css', array('twentythirteen-style'), 'YOUR_THEME_VERSION' );
+
+	// add_editor_style( 'assets/css/editor-style.css' );
+
+
+	/**
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, icons, and column width.
 	 */
