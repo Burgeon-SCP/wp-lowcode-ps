@@ -34,9 +34,18 @@ function locopas_scripts() {
 	wp_enqueue_style( 'locopas-google-fonts', add_query_arg( $locopas_font_args, "//fonts.googleapis.com/css" ) );
   wp_register_style( 'locopas-google-fonts', '//fonts.googleapis.com/css?family='.$locopas_font_args['family'] );
 	wp_enqueue_style( 'locopas-style', get_stylesheet_uri(), array(), $locopas_theme_version );
+	/**
+	 * This theme styles several css elements by using separate files inside the theme,
+	 * specifically font, colors, icons, and column width.
+	 */
+	wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri().'/inc/styles/typography.css', array('locopas-style'), $locopas_theme_version );
+	wp_enqueue_style( 'locopas-comments-style', get_template_directory_uri().'/inc/styles/comments.css', array('locopas-style'), $locopas_theme_version );
+	wp_enqueue_style( 'locopas-header-style', get_template_directory_uri().'/inc/styles/header.css', array('locopas-style'), $locopas_theme_version );
+	wp_enqueue_style( 'locopas-contact-style', get_template_directory_uri().'/inc/styles/contact.css', array('locopas-style'), $locopas_theme_version );
+	wp_enqueue_style( 'locopas-widget-style', get_template_directory_uri().'/inc/styles/widget.css', array('locopas-style'), $locopas_theme_version );
+	wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri().'/inc/styles/footer.css', array('locopas-style'), $locopas_theme_version );
 
 	wp_enqueue_script( 'locopas-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js', array( 'jquery' ), $locopas_theme_version, true );
-
 
 	wp_enqueue_style( 'lightslider-style', get_template_directory_uri() . '/assets/library/lightslider/css/lightslider.css', array(), '1.1.3' );
 	wp_enqueue_style( 'bxSlider-style', get_template_directory_uri() . '/assets/library/bxSlider/css/jquery.bxslider.css', array(), '4.1.2' );
@@ -61,6 +70,8 @@ function locopas_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'locopas_scripts' );
+
+
 
 /*------------------------------------------------------------------------------------------------------------------*/
 /**
