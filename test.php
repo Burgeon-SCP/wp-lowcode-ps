@@ -8,7 +8,7 @@ echo "<h2>Hello test<h2><br>";
 // $file=;
 echo '<p>blas</p>';
 
-foreach (array_filter(glob('/home/adria/Documentos/burgeon_app/wp-lowcode-ps/inc/styles/*.css'),'is_file') as $file) {
+foreach (array_filter(glob('/inc/styles/*.css'),'is_file') as $file) {
   // Do something with $file
   echo '<p>path: '.$file.'</p>';
   echo '<p>st: '.str_replace('.css','',basename($file)).'</p>';
