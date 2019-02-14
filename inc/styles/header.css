@@ -333,3 +333,28 @@
 .sticky-wrapper.is-sticky .main-navigation ul li a {
   padding: 10px 5px;
 }
+
+@media (max-width: 480px) {
+  .ps-whole-header #top-site-navigation {
+    display: none;
+  }
+
+  .ps-whole-header .top-social-icons {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .ps-header-wrapper .site-branding {
+    width: 55%;
+  }
+
+  .ps-header-wrapper .site-title-wrapper .site-title a {
+    font-size: 24px;
+  }
+
+  .ps-header-wrapper .site-title-wrapper p.site-description {
+    font-size: 12px;
+  }
+
+}

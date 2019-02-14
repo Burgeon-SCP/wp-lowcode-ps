@@ -94,3 +94,17 @@
   display: inline-block;
   margin-right: 8px;
 }
+
+#secondary .widget_search .search-form label {
+  width: 80%;
+  float: left;
+}
+
+#secondary .widget_search .search-form label input[type=search] {
+  width: 100%;
+}
+
+#secondary .widget_search .search-form input[type="submit"] {
+  width: 20%;
+  padding-left: 10px;
+}

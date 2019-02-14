@@ -155,3 +155,40 @@
   margin: 0 auto;
   padding: 40px;
 }
+
+@media (max-width:992px) {
+  #section-contact .ps-contant-map {
+    width: 90%;
+  }
+
+  #section-contact .ps-contant-info .ps-address {
+    padding-left: 30px;
+  }
+
+  #section-contact .ps-contant-info .ps-ctn {
+    padding-right: 30px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  #section-contact .ps-num-label:before,
+  #section-contact .ps-add-label:before,
+  #section-contact .ps-num-label,
+  #section-contact .ps-add-label {
+    font-size: 20px;
+  }
+
+  #section-contact .ps-footer-form p {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  #section-contact .ps-contant-info, #section-contact .footer-social-wrap {
+    padding: 20px 10px;
+  }
+
+
+}

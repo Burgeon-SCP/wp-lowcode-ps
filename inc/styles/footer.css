@@ -106,3 +106,31 @@ footer.site-footer .site-info a {
 footer.site-footer .site-info a:hover {
   color: rgba(226, 29, 21, 0.78);
 }
+
+@media (max-width: 768px) {
+  .ps-top-footer.footer_column_four .ps-footer-widget {
+    width: 45.67%;
+    margin-bottom: 30px;
+    margin-left: 4.33%;
+  }
+
+  .ps-top-footer.footer_column_four .ps-footer-widget-wrapper {
+    margin-left: -4.33%;
+  }
+
+  .ps-top-footer.footer_column_four .ps-footer-widget:nth-of-type(2n+1) {
+    clear: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .ps-top-footer.footer_column_four .ps-footer-widget {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .ps-top-footer.footer_column_four .ps-footer-widget-wrapper,
+  #section-contact .ps-footer-form {
+    margin-left: 0;
+  }
+}
