@@ -63,5 +63,8 @@ Third Party scripts and styles under public license.
 
 == Changelog ==
 
+= 1.0.1 =
+	* code commented out and moved to .old directory
+
 = 1.0.0 =
 	* Initial version based on ParallaxSome Theme by AccesPress
