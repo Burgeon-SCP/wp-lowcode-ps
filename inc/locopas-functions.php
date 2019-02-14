@@ -31,8 +31,8 @@ function locopas_scripts() {
 	$locopas_font_args = array(
         'family' => 'Lato:400,700,300|Roboto+Mono:400,700|Nova+Mono',
     );
+		// wp_register_style( 'locopas-google-fonts', '//fonts.googleapis.com/css?family='.$locopas_font_args['family'] );
 	wp_enqueue_style( 'locopas-google-fonts', add_query_arg( $locopas_font_args, "//fonts.googleapis.com/css" ) );
-  wp_register_style( 'locopas-google-fonts', '//fonts.googleapis.com/css?family='.$locopas_font_args['family'] );
 	wp_enqueue_style( 'locopas-style', get_stylesheet_uri(), array(), $locopas_theme_version );
 	/**
 	 * This theme styles several css elements by using separate files inside the theme,
@@ -40,11 +40,10 @@ function locopas_scripts() {
 	 */
 	foreach (array_filter(glob(get_template_directory_uri().'/inc/styles/*.css'), 'is_file') as $file) {
 		// Do something with $file
-		wp_enqueue_style('locopas-'.str_replace('.css', '', basename($file)).'-style',
+		wp_enqueue_style( 'locopas-'.str_replace('.css', '', basename($file)).'-style',
 										 $file,
 										 array('locopas-style-css'),
-										 $locopas_theme_version
-									 );
+										 $locopas_theme_version );
  	}
 
 	// wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri().'/inc/styles/typography.css', array('locopas-style-css'), $locopas_theme_version );
