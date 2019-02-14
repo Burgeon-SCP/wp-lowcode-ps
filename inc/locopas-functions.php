@@ -67,8 +67,8 @@ add_action( 'wp_enqueue_scripts', 'locopas_scripts' );
  *
  * @since 1.0.0
  */
-if( ! function_exists( 'locopas_styles' ) ):
-	function locopas_styles() {
+if( ! function_exists( 'locopas_styles_extended' ) ):
+	function locopas_styles_extended() {
 		/**
 		 * This theme styles several css elements by using separate files inside the theme,
 		 * specifically font, colors, icons, and column width.
@@ -89,7 +89,7 @@ if( ! function_exists( 'locopas_styles' ) ):
 		wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css', array( 'locopas-style-css' ), $locopas_theme_version );
 	}
 endif;
-add_action( 'wp_enqueue_scripts', 'locopas_styles' );
+add_action( 'wp_enqueue_scripts', 'locopas_styles_extended', 12 );
 
 
 
