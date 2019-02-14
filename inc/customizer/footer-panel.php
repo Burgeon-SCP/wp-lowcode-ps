@@ -1,9 +1,9 @@
 <?php
 /**
- * ParallaxSome Theme Customizer for Footer Settings Panel.
+ * LoCoPaS Theme Customizer for Footer Settings Panel.
  *
- * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @package BurgeonEnv Themes
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 
@@ -13,8 +13,8 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 
-if( ! function_exists( 'parallaxsome_footer_panel_register' ) ):
-	function parallaxsome_footer_panel_register( $wp_customize ) {
+if( ! function_exists( 'locopas_footer_panel_register' ) ):
+	function locopas_footer_panel_register( $wp_customize ) {
 
 		/**
 		 * Footer Settings Panel on customizer
@@ -22,13 +22,13 @@ if( ! function_exists( 'parallaxsome_footer_panel_register' ) ):
 		 * @since 1.0.0
 		 */
 		$wp_customize->add_panel(
-	        'parallaxsome_footer_settings_panel', 
+	        'locopas_footer_settings_panel',
 	        	array(
 	        		'priority'       => 30,
 	            	'capability'     => 'edit_theme_options',
 	            	'theme_supports' => '',
-	            	'title'          => esc_html__( 'Footer Settings', 'parallaxsome' ),
-	            ) 
+	            	'title'          => esc_html__( 'Footer Settings', 'locopas' ),
+	            )
 	    );
 
 /*--------------------------------------------------------------------------------------------------------------*/
@@ -40,8 +40,8 @@ if( ! function_exists( 'parallaxsome_footer_panel_register' ) ):
 		$wp_customize->add_section(
 	        'footer_widget_section',
 	        array(
-	            'title'		=> esc_html__( 'Footer Widget Settings', 'parallaxsome' ),
-	            'panel'     => 'parallaxsome_footer_settings_panel',
+	            'title'		=> esc_html__( 'Footer Widget Settings', 'locopas' ),
+	            'panel'     => 'locopas_footer_settings_panel',
 	            'priority'  => 5,
 	        )
 	    );
@@ -57,29 +57,29 @@ if( ! function_exists( 'parallaxsome_footer_panel_register' ) ):
 	            'default'           => 'column_three',
 	            'sanitize_callback' => 'sanitize_key',
 	        )
-	    );	    
-	    $wp_customize->add_control( new Parallaxsome_Customize_Control_Radio_Image(
+	    );
+	    $wp_customize->add_control( new Locopas_Customize_Control_Radio_Image(
 	        $wp_customize,
 	        'ps_footer_widget_layout',
 	            array(
-	                'label'    => esc_html__( 'Footer Widget Layout', 'parallaxsome' ),
-	                'description' => esc_html__( 'Choose layout from available layouts', 'parallaxsome' ),
+	                'label'    => esc_html__( 'Footer Widget Layout', 'locopas' ),
+	                'description' => esc_html__( 'Choose layout from available layouts', 'locopas' ),
 	                'section'  => 'footer_widget_section',
 	                'choices'  => array(
 		                    'column_four' => array(
-		                        'label' => esc_html__( 'Left Sidebar', 'parallaxsome' ),
+		                        'label' => esc_html__( 'Left Sidebar', 'locopas' ),
 		                        'url'   => '%s/assets/images/footer-4.png'
 		                    ),
 		                    'column_three' => array(
-		                        'label' => esc_html__( 'Right Sidebar', 'parallaxsome' ),
+		                        'label' => esc_html__( 'Right Sidebar', 'locopas' ),
 		                        'url'   => '%s/assets/images/footer-3.png'
 		                    ),
 		                    'column_two' => array(
-		                        'label' => esc_html__( 'No Sidebar', 'parallaxsome' ),
+		                        'label' => esc_html__( 'No Sidebar', 'locopas' ),
 		                        'url'   => '%s/assets/images/footer-2.png'
 		                    ),
 		                    'column_one' => array(
-		                        'label' => esc_html__( 'No Sidebar Center', 'parallaxsome' ),
+		                        'label' => esc_html__( 'No Sidebar Center', 'locopas' ),
 		                        'url'   => '%s/assets/images/footer-1.png'
 		                    )
 		            ),
@@ -96,8 +96,8 @@ if( ! function_exists( 'parallaxsome_footer_panel_register' ) ):
 		$wp_customize->add_section(
 	        'bottom_footer_section',
 	        array(
-	            'title'		=> esc_html__( 'Bottom Footer Settings', 'parallaxsome' ),
-	            'panel'     => 'parallaxsome_footer_settings_panel',
+	            'title'		=> esc_html__( 'Bottom Footer Settings', 'locopas' ),
+	            'panel'     => 'locopas_footer_settings_panel',
 	            'priority'  => 10,
 	        )
 	    );
@@ -108,9 +108,9 @@ if( ! function_exists( 'parallaxsome_footer_panel_register' ) ):
 	     * @since 1.0.0
 	     */
 	    $wp_customize->add_setting(
-	        'ps_copyright_text', 
+	        'ps_copyright_text',
 	            array(
-	                'default' => esc_html__( '2016 ParallaxSome', 'parallaxsome' ),
+	                'default' => esc_html__( '2018 BurgeonEnv', 'locopas' ),
 	                'sanitize_callback' => 'wp_kses_post',
 	                'transport' => 'postMessage'
 		       	)
@@ -119,13 +119,13 @@ if( ! function_exists( 'parallaxsome_footer_panel_register' ) ):
 	        'ps_copyright_text',
 	            array(
 		            'type' => 'textarea',
-		            'label' => esc_html__( 'Copyright Text', 'parallaxsome' ),
+		            'label' => esc_html__( 'Copyright Text', 'locopas' ),
 		            'section' => 'bottom_footer_section',
 		            'priority' => 5
 	            )
 	    );
 
-	} //close fucntion
+	} //close function
 endif;
 
-add_action( 'customize_register', 'parallaxsome_footer_panel_register' );
+add_action( 'customize_register', 'locopas_footer_panel_register' );

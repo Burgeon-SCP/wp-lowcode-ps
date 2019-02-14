@@ -1,9 +1,9 @@
 <?php
 /**
- * ParallaxSome Theme Customizer for header panel.
+ * LoCoPaS Theme Customizer for header panel.
  *
- * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @package BurgeonEnv Themes
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 
@@ -13,14 +13,14 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 
-if( ! function_exists( 'parallaxsome_header_panel_register' ) ):
-	function parallaxsome_header_panel_register( $wp_customize ) {
+if( ! function_exists( 'locopas_header_panel_register' ) ):
+	function locopas_header_panel_register( $wp_customize ) {
 
-		$wp_customize->get_section( 'header_image' )->panel = 'parallaxsome_header_settings_panel';
-		$wp_customize->get_section( 'header_image' )->title = esc_html__( 'Innerpages Header Image', 'parallaxsome' );
+		$wp_customize->get_section( 'header_image' )->panel = 'locopas_header_settings_panel';
+		$wp_customize->get_section( 'header_image' )->title = esc_html__( 'Innerpages Header Image', 'locopas' );
     	$wp_customize->get_section( 'header_image' )->priority = '25';
 
-    	global $parallaxsome_single_menu_fields;
+    	global $locopas_single_menu_fields;
 
 		/**
 		 * Header Settings Panel on customizer
@@ -28,13 +28,13 @@ if( ! function_exists( 'parallaxsome_header_panel_register' ) ):
 		 * @since 1.0.0
 		 */
 		$wp_customize->add_panel(
-	        'parallaxsome_header_settings_panel', 
+	        'locopas_header_settings_panel',
 	        	array(
 	        		'priority'       => 10,
 	            	'capability'     => 'edit_theme_options',
 	            	'theme_supports' => '',
-	            	'title'          => esc_html__( 'Header Settings', 'parallaxsome' ),
-	            ) 
+	            	'title'          => esc_html__( 'Header Settings', 'locopas' ),
+	            )
 	    );
 /*--------------------------------------------------------------------------------------------------------------*/
 		/**
@@ -45,8 +45,8 @@ if( ! function_exists( 'parallaxsome_header_panel_register' ) ):
 		$wp_customize->add_section(
 	        'top_header_section',
 	        array(
-	            'title'		=> esc_html__( 'Top Header Settings', 'parallaxsome' ),
-	            'panel'     => 'parallaxsome_header_settings_panel',
+	            'title'		=> esc_html__( 'Top Header Settings', 'locopas' ),
+	            'panel'     => 'locopas_header_settings_panel',
 	            'priority'  => 5,
 	        )
 	    );
@@ -61,20 +61,20 @@ if( ! function_exists( 'parallaxsome_header_panel_register' ) ):
 	        array(
 	            'default' => 'show',
 	            'transport' => 'postMessage',
-	            'sanitize_callback' => 'parallaxsome_sanitize_switch_option',
+	            'sanitize_callback' => 'locopas_sanitize_switch_option',
 	            )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
-	        $wp_customize, 
-	            'top_header_option', 
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
+	        $wp_customize,
+	            'top_header_option',
 	            array(
-	                'type' 		=> 'switch',	                
-	                'label' 	=> esc_html__( 'Top Header Option', 'parallaxsome' ),
-	                'description' 	=> esc_html__( 'Show/hide option for Top Header Section.', 'parallaxsome' ),
+	                'type' 		=> 'switch',
+	                'label' 	=> esc_html__( 'Top Header Option', 'locopas' ),
+	                'description' 	=> esc_html__( 'Show/hide option for Top Header Section.', 'locopas' ),
 	                'section' 	=> 'top_header_section',
 	                'choices'   => array(
-	                    'show' 	=> esc_html__( 'Show', 'parallaxsome' ),
-	                    'hide' 	=> esc_html__( 'Hide', 'parallaxsome' )
+	                    'show' 	=> esc_html__( 'Show', 'locopas' ),
+	                    'hide' 	=> esc_html__( 'Hide', 'locopas' )
 	                    ),
 	                'priority'  => 5,
 	            )
@@ -86,30 +86,30 @@ if( ! function_exists( 'parallaxsome_header_panel_register' ) ):
 	     *
 	     * @since 1.0.0
 	     */
-	    $wp_customize->add_setting(
-	        'top_header_social_option',
-	        array(
-	            'default' => 'show',
-	            'transport' => 'postMessage',
-	            'sanitize_callback' => 'parallaxsome_sanitize_switch_option',
-	            )
-	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
-	        $wp_customize, 
-	            'top_header_social_option', 
-	            array(
-	                'type' 		=> 'switch',
-	                'label' 	=> esc_html__( 'Social Icons Option', 'parallaxsome' ),
-	                'description' 	=> esc_html__( 'Show/hide option for Top Header Social Icon Section.', 'parallaxsome' ),
-	                'section' 	=> 'top_header_section',
-	                'choices'   => array(
-	                    'show' 	=> esc_html__( 'Show', 'parallaxsome' ),
-	                    'hide' 	=> esc_html__( 'Hide', 'parallaxsome' )
-	                    ),
-	                'priority'  => 10,
-	            )
-	        )
-	    );
+	    // $wp_customize->add_setting(
+	    //     'top_header_social_option',
+	    //     array(
+	    //         'default' => 'show',
+	    //         'transport' => 'postMessage',
+	    //         'sanitize_callback' => 'locopas_sanitize_switch_option',
+	    //         )
+	    // );
+	    // $wp_customize->add_control( new Locopas_Customize_Switch_Control(
+	    //     $wp_customize,
+	    //         'top_header_social_option',
+	    //         array(
+	    //             'type' 		=> 'switch',
+	    //             'label' 	=> esc_html__( 'Social Icons Option', 'locopas' ),
+	    //             'description' 	=> esc_html__( 'Show/hide option for Top Header Social Icon Section.', 'locopas' ),
+	    //             'section' 	=> 'top_header_section',
+	    //             'choices'   => array(
+	    //                 'show' 	=> esc_html__( 'Show', 'locopas' ),
+	    //                 'hide' 	=> esc_html__( 'Hide', 'locopas' )
+	    //                 ),
+	    //             'priority'  => 10,
+	    //         )
+	    //     )
+	    // );
 /*--------------------------------------------------------------------------------------------------------------*/
 		/**
 		 * Menu Settings Section
@@ -119,8 +119,8 @@ if( ! function_exists( 'parallaxsome_header_panel_register' ) ):
 		$wp_customize->add_section(
 	        'menu_settings_section',
 	        array(
-	            'title'		=> esc_html__( 'Menu Settings', 'parallaxsome' ),
-	            'panel'     => 'parallaxsome_header_settings_panel',
+	            'title'		=> esc_html__( 'Menu Settings', 'locopas' ),
+	            'panel'     => 'locopas_header_settings_panel',
 	            'priority'  => 15,
 	        )
 	    );
@@ -134,20 +134,20 @@ if( ! function_exists( 'parallaxsome_header_panel_register' ) ):
 	        'primary_menu_type',
 	        array(
 	            'default' => 'parallax',
-	            'sanitize_callback' => 'parallaxsome_sanitize_menu_switch_option',
+	            'sanitize_callback' => 'locopas_sanitize_menu_switch_option',
 	            )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
-	        $wp_customize, 
-	            'primary_menu_type', 
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
+	        $wp_customize,
+	            'primary_menu_type',
 	            array(
 	                'type' 		=> 'switch',
-	                'label' 	=> esc_html__( 'Primary Menu Type', 'parallaxsome' ),
-	                'description' 	=> esc_html__( 'Choose type of Primary Menu.', 'parallaxsome' ),
+	                'label' 	=> esc_html__( 'Primary Menu Type', 'locopas' ),
+	                'description' 	=> esc_html__( 'Choose type of Primary Menu.', 'locopas' ),
 	                'section' 	=> 'menu_settings_section',
 	                'choices'   => array(
-	                    'parallax' 	=> esc_html__( 'Parallax', 'parallaxsome' ),
-	                    'default' 	=> esc_html__( 'Default', 'parallaxsome' )
+	                    'parallax' 	=> esc_html__( 'Parallax', 'locopas' ),
+	                    'default' 	=> esc_html__( 'Default', 'locopas' )
 	                    ),
 	                'priority'  => 5,
 	            )
@@ -163,23 +163,23 @@ if( ! function_exists( 'parallaxsome_header_panel_register' ) ):
 	        'parallax_menu_type',
 	        array(
 	            'default' => 'default',
-	            'sanitize_callback' => 'parallaxsome_sanitize_p_menu_type_switch_option',
+	            'sanitize_callback' => 'locopas_sanitize_p_menu_type_switch_option',
 	            )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
-	        $wp_customize, 
-	            'parallax_menu_type', 
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
+	        $wp_customize,
+	            'parallax_menu_type',
 	            array(
 	                'type' 		=> 'switch',
-	                'label' 	=> esc_html__( 'Parallax Menu Type', 'parallaxsome' ),
-	                'description' 	=> esc_html__( 'Choose type of Parallax Menu.', 'parallaxsome' ),
+	                'label' 	=> esc_html__( 'Parallax Menu Type', 'locopas' ),
+	                'description' 	=> esc_html__( 'Choose type of Parallax Menu.', 'locopas' ),
 	                'section' 	=> 'menu_settings_section',
 	                'choices'   => array(
-	                    'default' 	=> esc_html__( 'Default', 'parallaxsome' ),
-	                    'float' 	=> esc_html__( 'Float Menu', 'parallaxsome' )
+	                    'default' 	=> esc_html__( 'Default', 'locopas' ),
+	                    'float' 	=> esc_html__( 'Float Menu', 'locopas' )
 	                    ),
 	                'priority'  => 5,
-	                'active_callback' => 'parallaxsome_primary_menu_type_callback'
+	                'active_callback' => 'locopas_primary_menu_type_callback'
 	            )
 	        )
 	    );
@@ -189,28 +189,28 @@ if( ! function_exists( 'parallaxsome_header_panel_register' ) ):
 	     *
 	     * @since 1.0.0
 	     */
-	    $count = 10;
-	    foreach ( $parallaxsome_single_menu_fields as $menu_key => $section_value ) {
-	    	$wp_customize->add_setting(
-		        $menu_key.'_menu_title',
-		            array(
-		                'default' => $section_value['default'],
-		                'sanitize_callback' => 'sanitize_text_field',
-		                'transport' => 'postMessage'
-			       )
-		    );    
-		    $wp_customize->add_control(
-		        $menu_key.'_menu_title',
-		            array(
-		            'type' => 'text',
-		            'label' => $section_value['label'],
-		            'section' => 'menu_settings_section',
-		            'priority' => $count,
-		            'active_callback' => 'parallaxsome_primary_menu_type_callback'
-		            )
-		    );
-		    $count++;
-	    }
+	    // $count = 10;
+	    // foreach ( $locopas_single_menu_fields as $menu_key => $section_value ) {
+	    // 	$wp_customize->add_setting(
+		  //       $menu_key.'_menu_title',
+		  //           array(
+		  //               'default' => $section_value['default'],
+		  //               'sanitize_callback' => 'sanitize_text_field',
+		  //               'transport' => 'postMessage'
+			//        )
+		  //   );
+		  //   $wp_customize->add_control(
+		  //       $menu_key.'_menu_title',
+		  //           array(
+		  //           'type' => 'text',
+		  //           'label' => $section_value['label'],
+		  //           'section' => 'menu_settings_section',
+		  //           'priority' => $count,
+		  //           'active_callback' => 'locopas_primary_menu_type_callback'
+		  //           )
+		  //   );
+		  //   $count++;
+	    // }
 
 	    /**
 	     * Switch option for search icon in primary section
@@ -222,20 +222,20 @@ if( ! function_exists( 'parallaxsome_header_panel_register' ) ):
 	        array(
 	            'default' => 'show',
 	            'transport' => 'postMessage',
-	            'sanitize_callback' => 'parallaxsome_sanitize_switch_option',
+	            'sanitize_callback' => 'locopas_sanitize_switch_option',
 	            )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
-	        $wp_customize, 
-	            'primary_menu_search_option', 
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
+	        $wp_customize,
+	            'primary_menu_search_option',
 	            array(
 	                'type' 		=> 'switch',
-	                'label' 	=> esc_html__( 'Search Icon', 'parallaxsome' ),
-	                'description' 	=> esc_html__( 'Show/hide search icons on primary menu section.', 'parallaxsome' ),
+	                'label' 	=> esc_html__( 'Search Icon', 'locopas' ),
+	                'description' 	=> esc_html__( 'Show/hide search icons on primary menu section.', 'locopas' ),
 	                'section' 	=> 'menu_settings_section',
 	                'choices'   => array(
-	                    'show' 	=> esc_html__( 'Show', 'parallaxsome' ),
-	                    'hide' 	=> esc_html__( 'Hide', 'parallaxsome' )
+	                    'show' 	=> esc_html__( 'Show', 'locopas' ),
+	                    'hide' 	=> esc_html__( 'Hide', 'locopas' )
 	                    ),
 	                'priority'  => 35,
 	            )
@@ -251,20 +251,20 @@ if( ! function_exists( 'parallaxsome_header_panel_register' ) ):
 	        'sticky_header_option',
 	        array(
 	            'default' => 'enable',
-	            'sanitize_callback' => 'parallaxsome_sanitize_enable_switch_option',
+	            'sanitize_callback' => 'locopas_sanitize_enable_switch_option',
 	            )
 	    );
-	    $wp_customize->add_control( new Parallaxsome_Customize_Switch_Control(
-	        $wp_customize, 
-	            'sticky_header_option', 
+	    $wp_customize->add_control( new Locopas_Customize_Switch_Control(
+	        $wp_customize,
+	            'sticky_header_option',
 	            array(
 	                'type' 		=> 'switch',
-	                'label' 	=> esc_html__( 'Header Sticky', 'parallaxsome' ),
-	                'description' 	=> esc_html__( 'Enable/disable option for header sticky.', 'parallaxsome' ),
+	                'label' 	=> esc_html__( 'Header Sticky', 'locopas' ),
+	                'description' 	=> esc_html__( 'Enable/disable option for header sticky.', 'locopas' ),
 	                'section' 	=> 'menu_settings_section',
 	                'choices'   => array(
-	                    'enable' 	=> esc_html__( 'Enable', 'parallaxsome' ),
-	                    'disable' 	=> esc_html__( 'Disable', 'parallaxsome' )
+	                    'enable' 	=> esc_html__( 'Enable', 'locopas' ),
+	                    'disable' 	=> esc_html__( 'Disable', 'locopas' )
 	                    ),
 	                'priority'  => 40,
 	            )
@@ -274,4 +274,4 @@ if( ! function_exists( 'parallaxsome_header_panel_register' ) ):
 
 	} //close fucntion
 endif;
-add_action( 'customize_register', 'parallaxsome_header_panel_register' );
+add_action( 'customize_register', 'locopas_header_panel_register' );

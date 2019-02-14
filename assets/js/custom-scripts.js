@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
         if( $('body').hasClass('header-sticky') ) {
             var headerHeight = $('.ps-header-wrapper').outerHeight();
         } else {
-            var headerHeight = 5;
+            var headerHeight = 3;
         }
         $('.page-template-template-home .parallax-menu').onePageNav({
             currentClass: 'current',
@@ -167,7 +167,7 @@ jQuery(document).ready(function($) {
         new WOW().init();
     }
 
-    /** 
+    /**
      *Top up arrow
      */
     $("#scroll-up").hide();

@@ -5,7 +5,7 @@
      * @since  1.0.0
      * @access public
      */
-    class Parallaxsome_Typo_Control_Typography extends WP_Customize_Control { 
+    class Locopas_Typo_Control_Typography extends WP_Customize_Control { 
         /**
          * The type of customize control being rendered.
          *
@@ -39,13 +39,13 @@
             $this->l10n = wp_parse_args(
                 $this->l10n,
                 array(
-                    'family'      => esc_html__( 'Font Family', 'parallaxsome' ),
-                    'size'        => esc_html__( 'Font Size',   'parallaxsome' ),
-                    'style'      => esc_html__( 'Font Weight/Style', 'parallaxsome' ),
-                    'line_height' => esc_html__( 'Line Height', 'parallaxsome' ),
-                    'text_decoration' => esc_html__( 'Text Decoration', 'parallaxsome' ),
-                    'text_transform' => esc_html__( 'Text Transform', 'parallaxsome' ),
-                    'typocolor' => esc_html__( 'Font Color label', 'parallaxsome' ),
+                    'family'      => esc_html__( 'Font Family', 'locopas' ),
+                    'size'        => esc_html__( 'Font Size',   'locopas' ),
+                    'style'      => esc_html__( 'Font Weight/Style', 'locopas' ),
+                    'line_height' => esc_html__( 'Line Height', 'locopas' ),
+                    'text_decoration' => esc_html__( 'Text Decoration', 'locopas' ),
+                    'text_transform' => esc_html__( 'Text Transform', 'locopas' ),
+                    'typocolor' => esc_html__( 'Font Color label', 'locopas' ),
                 )
             );
         }
@@ -57,8 +57,8 @@
          * @return void
          */
         public function enqueue() {
-            wp_enqueue_script( 'parallaxsome-customize-controls' );
-            wp_enqueue_style(  'parallaxsome-customize-controls' );
+            wp_enqueue_script( 'locopas-customize-controls' );
+            wp_enqueue_style(  'locopas-customize-controls' );
             wp_enqueue_script( 'wp-color-picker' );
             wp_enqueue_style( 'wp-color-picker' );
         }
@@ -210,7 +210,7 @@
                     <# } #>
 
                     <div class="customize-control-content">
-                        <input class="color-picker-hex" type="text" maxlength="7" placeholder="<?php esc_attr_e( 'Hex Value', 'parallaxsome' ); ?>" {{{ data.typocolor.link }}} value="{{ data.typocolor.value }}"  />
+                        <input class="color-picker-hex" type="text" maxlength="7" placeholder="<?php esc_attr_e( 'Hex Value', 'locopas' ); ?>" {{{ data.typocolor.link }}} value="{{ data.typocolor.value }}"  />
                     </div>
                 </li>
             <# } #>
@@ -241,14 +241,14 @@
         function get_font_families() {
 
             $font_array = $this->get_google_fonts();
-            $parallaxsome_google_font = get_option('parallaxsome_google_font');
+            $locopas_google_font = get_option('locopas_google_font');
 
 
-            if (empty($parallaxsome_google_font)) {
-                update_option('parallaxsome_google_font', $font_array);
-                $parallaxsome_google_font = get_option('parallaxsome_google_font');
+            if (empty($locopas_google_font)) {
+                update_option('locopas_google_font', $font_array);
+                $locopas_google_font = get_option('locopas_google_font');
             }
-            foreach ($parallaxsome_google_font as $key => $value) {
+            foreach ($locopas_google_font as $key => $value) {
                 $ap_fonts[$value['family']] =  $value['family'] ;
             }
             return $ap_fonts;
@@ -270,13 +270,13 @@
          */
         public function get_font_weight_choices() {
             if($this->settings['family']->id){
-                $parallaxsome_font_list = get_option( 'parallaxsome_google_font' );
+                $locopas_font_list = get_option( 'locopas_google_font' );
                 
                 $font_family_id = $this->settings['family']->id;            
                 $default_font_family = $this->settings['family']->default;
                 $get_font_family = get_theme_mod( $font_family_id, $default_font_family );
       
-                $font_array = parallaxsome_search_key( $parallaxsome_font_list, 'family', $get_font_family );
+                $font_array = locopas_search_key( $locopas_font_list, 'family', $get_font_family );
 
                 $variants_array = $font_array['0']['variants'] ;
                 $options_array = "";
@@ -286,8 +286,8 @@
                 return $options_array;
             }else{
             return array(
-                '400' => esc_html__( 'Normal',     'parallaxsome' ),
-                '700' => esc_html__( 'Bold',       'parallaxsome' ),
+                '400' => esc_html__( 'Normal',     'locopas' ),
+                '700' => esc_html__( 'Bold',       'locopas' ),
             );
             }
         }
@@ -300,10 +300,10 @@
          */
         public function get_text_decoration_choices() {
             return array(
-                'none'  => esc_html__( 'None', 'parallaxsome' ),
-                'underline'  => esc_html__( 'Underline', 'parallaxsome' ),
-                'line-through' => esc_html__( 'Line-through', 'parallaxsome' ),
-                'overline' => esc_html__( 'Overline', 'parallaxsome' )
+                'none'  => esc_html__( 'None', 'locopas' ),
+                'underline'  => esc_html__( 'Underline', 'locopas' ),
+                'line-through' => esc_html__( 'Line-through', 'locopas' ),
+                'overline' => esc_html__( 'Overline', 'locopas' )
             );
         }
 
@@ -316,10 +316,10 @@
          */
         public function get_text_transform_choices() {
             return array(
-                'none'  => esc_html__( 'None', 'parallaxsome' ),
-                'uppercase'  => esc_html__( 'Uppercase', 'parallaxsome' ),
-                'lowercase' => esc_html__( 'Lowercase', 'parallaxsome' ),
-                'capitalize' => esc_html__( 'Capitalize', 'parallaxsome' )
+                'none'  => esc_html__( 'None', 'locopas' ),
+                'uppercase'  => esc_html__( 'Uppercase', 'locopas' ),
+                'lowercase' => esc_html__( 'Lowercase', 'locopas' ),
+                'capitalize' => esc_html__( 'Capitalize', 'locopas' )
             );
     } 
  }

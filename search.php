@@ -4,8 +4,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package AccessPress Themes 
- * @subpackage ParallaxSome
+ * @package BurgeonEnv Themes 
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 

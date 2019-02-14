@@ -12,35 +12,35 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @package BurgeonEnv Themes
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses parallaxsome_header_style()
+ * @uses locopas_header_style()
  */
-function parallaxsome_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'parallaxsome_custom_header_args', array(
+function locopas_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'locopas_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1920,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'parallaxsome_header_style',
+		'wp-head-callback'       => 'locopas_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'parallaxsome_custom_header_setup' );
+add_action( 'after_setup_theme', 'locopas_custom_header_setup' );
 
-if ( ! function_exists( 'parallaxsome_header_style' ) ) :
+if ( ! function_exists( 'locopas_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see parallaxsome_custom_header_setup().
+ * @see locopas_custom_header_setup().
  */
-function parallaxsome_header_style() {
+function locopas_header_style() {
     $header_text_color = get_header_textcolor();
 	$header_text_color = ltrim( $header_text_color, '#' );
 	$default_header_text_color = get_theme_support( 'custom-header', 'default-text-color' );

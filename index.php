@@ -9,8 +9,8 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @package BurgeonEnv Themes
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 
@@ -54,5 +54,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-parallaxsome_get_sidebar();
+locopas_get_sidebar();
 get_footer();

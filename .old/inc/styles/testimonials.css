@@ -1,0 +1,89 @@
+
+/*------------testimonial-section-----------*/
+#section-testimonials .bx-wrapper {
+    margin:0 auto;
+}
+#section-testimonials .bx-wrapper .bx-viewport {
+    box-shadow: none;
+}
+#section-testimonials .bx-wrapper .bx-pager {
+    display: none;
+}
+#section-testimonials .single-testi-wrapper {
+    padding:0 190px;
+}
+#section-testimonials .single-testi-wrapper figure {
+    margin:0 auto 20px;
+    display: block;
+    max-width:140px;
+    width:100%;
+}
+#section-testimonials .single-testi-wrapper figure img {
+    display: block;
+    border-radius: 100%;
+    border:4px solid #eeeeee;
+}
+#section-testimonials .single-testi-wrapper .testi-content {
+    font-size: 16px;
+    color:#888888;
+    font-weight: 400;
+    position: relative;
+}
+#section-testimonials .single-testi-wrapper .testi-content p {
+     padding-bottom: 20px;
+}
+#section-testimonials .single-testi-wrapper .testi-content:after {
+    content:'';
+    position:absolute;
+    left: 0;
+    bottom:0;
+    right: 0;
+    margin:0 auto;
+    width:80px;
+    height:1px;
+    background-color:#000000;
+}
+#section-testimonials .single-testi-wrapper .testi-author {
+    color:#000000;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 5px;
+    display: inline-block;
+    position: relative;
+}
+#section-testimonials .single-testi-wrapper .testi-author:after {
+    content:'';
+    position:absolute;
+    top:50%;
+    right:0;
+    width:7px;
+    height:1px;
+    margin-top: 0.5px;
+    margin-right:-10px;
+    background-color:#000000;
+}
+#section-testimonials .single-testi-wrapper .position {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-left:15px;
+}
+#section-testimonials .bx-wrapper .bx-controls-direction a {
+    background:url('assets/images/testimonial-arrow.png') no-repeat;
+    width: 30px;
+    height: 58px;
+    margin-top:-29px;
+    opacity: 0;
+    z-index: 99;
+}
+#section-testimonials .bx-wrapper .bx-controls-direction .bx-prev {
+    background-position: 0 0;
+}
+#section-testimonials .bx-wrapper .bx-controls-direction .bx-next {
+    background-position: -55px 0;
+}
+#section-testimonials .section-content-wrapper .bx-wrapper:hover .bx-controls-direction a{
+    opacity: 1;
+}

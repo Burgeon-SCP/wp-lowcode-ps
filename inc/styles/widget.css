@@ -1,0 +1,110 @@
+/*------------widget-section---------*/
+
+.widget-title {
+  color: #e23815;
+  margin: 0 0 20px;
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.widget-area .widget {
+  margin-bottom: 40px;
+}
+
+.widget_categories ul li,
+.widget_archive ul li {
+  text-align: right;
+}
+
+.widget_categories ul li a,
+.widget_archive ul li a {
+  float: left;
+}
+
+.widget_archive ul li,
+.widget_categories ul li,
+.widget_meta ul li,
+.widget_pages ul li,
+.widget_recent_comments ul li,
+.widget_recent_entries ul li {
+  font-size: 16px;
+  padding: 10px 0;
+  border-bottom: 1px dotted #e5e5e5;
+}
+
+.widget_archive ul li a,
+.widget_calendar a,
+.widget_categories ul li a,
+.widget_meta ul li a,
+.widget_pages ul li a,
+.widget_recent_comments ul li a,
+.widget_recent_entries ul li a {
+  color: #666666;
+}
+
+.widget_recent_comments ul li {
+  color: #aaaaaa;
+}
+
+.widget-area .widget a:hover {
+  color: #e23815;
+}
+
+.widget_categories ul li ul.children li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.widget_search input[type=search],
+.archive #primary input[type=search] {
+  width: 70%;
+  max-height: 35px;
+  padding: 5px;
+  border-radius: 0;
+}
+
+.widget_search input[type=submit],
+.archive #primary .search-submit {
+  width: 29%;
+  padding: 9px 20px;
+  max-height: 35px;
+  background-color: #e23815;
+  border: 2px solid #e23815;
+  color: #ffffff;
+  box-shadow: none;
+  font-size: 14px;
+  line-height: 1;
+  vertical-align: top;
+  border-radius: 0;
+}
+
+.widget_calendar #wp-calendar {
+  text-align: center;
+}
+
+.widget_categories select,
+.widget_archive select {
+  width: 100%;
+  height: 35px;
+}
+
+.widget_tag_cloud .tagcloud a {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+#secondary .widget_search .search-form label {
+  width: 80%;
+  float: left;
+}
+
+#secondary .widget_search .search-form label input[type=search] {
+  width: 100%;
+}
+
+#secondary .widget_search .search-form input[type="submit"] {
+  width: 20%;
+  padding-left: 10px;
+}

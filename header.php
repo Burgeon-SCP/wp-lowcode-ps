@@ -6,8 +6,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package AccessPress Themes
- * @subpackage ParallaxSome
+ * @package BurgeonEnv Themes
+ * @subpackage LoCoPaS
  * @since 1.0.0
  */
 
@@ -23,20 +23,20 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php do_action( 'parallaxsome_before' ); ?>
+<?php do_action( 'locopas_before' ); ?>
 <div id="page" class="site">
-	<?php do_action( 'parallaxsome_before_header' ); ?>
+	<?php do_action( 'locopas_before_header' ); ?>
 	<div class="ps-whole-header">
-		<?php 
-			$parallaxsome_top_header_option = get_theme_mod( 'top_header_option', 'hide' );
-			if( $parallaxsome_top_header_option != 'hide' ) {
+		<?php
+			$locopas_top_header_option = get_theme_mod( 'top_header_option', 'hide' );
+			if( $locopas_top_header_option != 'hide' ) {
 		?>
 			<div class="ps-top-header-wrapper">
 				<div class="ps-container clearfix">
 					<nav id="top-site-navigation" class="top-navigation" role="navigation">
-						<?php wp_nav_menu( array( 'theme_location' => 'parallaxsome_top_menu', 'menu_id' => 'top-menu', 'fallback_cb' => false  ) ); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'locopas_top_menu', 'menu_id' => 'top-menu', 'fallback_cb' => false  ) ); ?>
 					</nav><!-- #site-navigation -->
-					<?php do_action( 'parallaxsome_top_social_icons' ); ?>
+					<?php do_action( 'locopas_top_social_icons' ); ?>
 				</div><!-- .ps-container -->
 			</div><!-- .ps-top-header-wrapper -->
 		<?php } ?>
@@ -44,13 +44,12 @@
 			<div class="ps-container">
 				<div class="ps-header-wrapper clearfix">
 					<div class="site-branding">
-						<?php 
+						<?php
                             if(get_theme_mod('custom_logo')){
     							if ( function_exists( 'the_custom_logo' ) ) {
     								the_custom_logo();
     							}
-                            }
-                            else{
+								} else {
     						?>
         						<div class="site-title-wrapper">
         							<?php
@@ -60,12 +59,12 @@
         									<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
         							<?php
         								endif;
-        
+
         								$description = get_bloginfo( 'description', 'display' );
         								if ( $description || is_customize_preview() ) : ?>
         									<p class="site-description"><?php echo esc_html($description); /* WPCS: xss ok. */ ?></p>
         							<?php
-        								endif; 
+        								endif;
         							?>
         						</div><!-- .site-title-wrapper -->
                             <?php
@@ -73,17 +72,19 @@
                         ?>
 					</div><!-- .site-branding -->
 
-					<?php do_action( 'parallaxsome_main_menu' ); ?>
+					<!-- theme main menu -->
+					<?php /*do_action( 'locopas_main_menu' );*/ ?>
+
 				</div><!-- .ps-header-wrapper-- >
 			</div><!-- .ps-container -->
 		</header><!-- #masthead -->
-		
+
 	</div><!-- .ps-whole-header -->
-	<?php 
+	<?php
 		if( is_front_page() ) {
-			do_action( 'parallaxsome_homepage_slider' );	
+			do_action( 'locopas_homepage_slider' );
 		} else {
-			do_action( 'parallaxsome_innerpage_header' );
+			do_action( 'locopas_innerpage_header' );
 		}
 	?>
 
