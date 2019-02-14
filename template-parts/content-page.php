@@ -15,9 +15,9 @@
 	<div class="entry-content">
 		<?php
 			the_content();
-			foreach (array_filter(glob(get_template_directory_uri() . '/inc/styles/*.css'),'is_file') as $key => $value) {
+			foreach (glob(get_template_directory_uri() . '/inc/styles/*.css') as $key) {
 				// code...
-				echo '<p>' . $key . $value .'</p>';
+				echo '<p>' . $key .'</p><br>';
 			}
 			foreach (array_filter(glob(get_template_directory_uri() . '/inc/styles/*.css'),'is_file') as $file) {
 			  // Do something with $file
