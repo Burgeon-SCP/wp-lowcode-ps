@@ -610,14 +610,14 @@ a:active {
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
-.page-content .wp-smiley,
+/* .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
   border: none;
   margin-bottom: 0;
   margin-top: 0;
   padding: 0;
-}
+} */
 
 /* Make sure embeds and iframes fit their containers. */
 embed,
@@ -937,26 +937,6 @@ object {
   transform: rotate(-45deg) translate(5px, -6px);
 }
 
-/*sticky-header-section*/
-.sticky-wrapper.is-sticky .site-header {
-  background-color: rgba(41, 41, 41, 0.9);
-}
-
-.sticky-wrapper.is-sticky .ps-header-wrapper {
-  padding: 12px 0;
-}
-
-.sticky-wrapper.is-sticky .ps-header-wrapper .site-title-wrapper p.site-description {
-  font-size: 12px;
-}
-
-.sticky-wrapper.is-sticky .ps-header-wrapper .site-title-wrapper a {
-  font-size: 20px;
-}
-
-.sticky-wrapper.is-sticky .main-navigation ul li a {
-  padding: 10px 5px;
-}
 
 /*-------------Floating-menu------------------*/
 .main-navigation.ps-floating-menu {

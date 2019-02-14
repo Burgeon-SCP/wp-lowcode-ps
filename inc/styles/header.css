@@ -312,3 +312,24 @@
   float: left;
   width: 30%;
 }
+
+/*sticky-header-section*/
+.sticky-wrapper.is-sticky .site-header {
+  background-color: rgba(41, 41, 41, 0.9);
+}
+
+.sticky-wrapper.is-sticky .ps-header-wrapper {
+  padding: 12px 0;
+}
+
+.sticky-wrapper.is-sticky .ps-header-wrapper .site-title-wrapper p.site-description {
+  font-size: 12px;
+}
+
+.sticky-wrapper.is-sticky .ps-header-wrapper .site-title-wrapper a {
+  font-size: 20px;
+}
+
+.sticky-wrapper.is-sticky .main-navigation ul li a {
+  padding: 10px 5px;
+}
