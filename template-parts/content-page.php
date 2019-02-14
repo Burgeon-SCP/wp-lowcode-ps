@@ -15,7 +15,7 @@
 	<div class="entry-content">
 		<?php
 			the_content();
-			foreach (scandir(get_template_directory_uri() . '/inc/styles/') as $key) {
+			foreach (glob(get_template_directory_uri() . '/inc/styles/*.css') as $key) {
 				// code...
 				echo '<p>' . $key .'</p><br>';
 			}
