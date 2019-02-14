@@ -43,7 +43,8 @@ function locopas_scripts() {
 		wp_enqueue_style( 'locopas-'.str_replace('.css', '', basename($file)).'-style',
 										 $file,
 										 array('locopas-style-css'),
-										 $locopas_theme_version );
+										 $locopas_theme_version,
+									   'all' );
  	}
 
 	// wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri().'/inc/styles/typography.css', array('locopas-style-css'), $locopas_theme_version );
