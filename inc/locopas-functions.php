@@ -37,6 +37,14 @@ function locopas_scripts() {
 
 	wp_enqueue_script( 'locopas-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js', array( 'jquery' ), $locopas_theme_version, true );
 
+	wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri() . '/inc/styles/typography.css', array( 'locopas-style-css' ) );
+	wp_enqueue_style( 'locopas-typography-style-css' );
+	wp_enqueue_style( 'locopas-header-style', get_template_directory_uri() . '/inc/styles/header.css', array( 'locopas-style-css' ) );
+	wp_enqueue_style( 'locopas-contact-style', get_template_directory_uri() . '/inc/styles/contact.css', array( 'locopas-style-css' ) );
+	wp_enqueue_style( 'locopas-widget-style', get_template_directory_uri() . '/inc/styles/widget.css', array( 'locopas-style-css' ) );
+	wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css', array( 'locopas-style-css' ) );
+
+
 	wp_enqueue_style( 'lightslider-style', get_template_directory_uri() . '/assets/library/lightslider/css/lightslider.css', array(), '1.1.3' );
 	wp_enqueue_style( 'bxSlider-style', get_template_directory_uri() . '/assets/library/bxSlider/css/jquery.bxslider.css', array(), '4.1.2' );
 	// wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/library/font-awesome/css/font-awesome.min.css', array(), '4.7.0' );
@@ -67,20 +75,27 @@ add_action( 'wp_enqueue_scripts', 'locopas_scripts' );
  *
  * @since 1.0.0
  */
-if( ! function_exists( 'locopas_styles_extended' ) ):
+if( ! function_exists( 'locopas_styles_register' ) ):
 	function locopas_styles_extended() {
 		/**
 		 * This theme styles several css elements by using separate files inside the theme,
 		 * specifically font, colors, icons, and column width.
 		 */
 
-		foreach (array_filter(glob(get_template_directory_uri().'/inc/styles/*.css'), 'is_file') as $file) {
-			// Do something with $file
-			wp_register_style( 'locopas-'.str_replace('.css', '', basename($file)).'-style',
-											 $file,
-											 array('locopas-style-css'));
-			wp_enqueue_style('locopas-'.str_replace('.css', '', basename($file)).'-style-css')
-		}
+		// foreach (array_filter(glob(get_template_directory_uri().'/inc/styles/*.css'), 'is_file') as $file) {
+		// 	// Do something with $file
+		// 	wp_register_style( 'locopas-'.str_replace('.css', '', basename($file)).'-style',
+		// 									 $file,
+		// 									 array('locopas-style-css'),
+		// 									 $locopas_theme_version,
+		// 								   'all' );
+		// 	wp_enqueue_style('locopas-'.str_replace('.css', '', basename($file)).'-style-css')
+		// }
+		wp_register_style( 'locopas-typography-style', get_template_directory_uri() . '/inc/styles/typography.css', array( 'locopas-style-css' ) );
+		wp_register_style( 'locopas-header-style', get_template_directory_uri() . '/inc/styles/header.css', array( 'locopas-style-css' ) );
+		wp_register_style( 'locopas-contact-style', get_template_directory_uri() . '/inc/styles/contact.css', array( 'locopas-style-css' ) );
+		wp_register_style( 'locopas-widget-style', get_template_directory_uri() . '/inc/styles/widget.css', array( 'locopas-style-css' ) );
+		wp_register_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css', array( 'locopas-style-css' ) );
 		// wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri() . '/inc/styles/typography.css', array( 'locopas-style-css' ) );
 		// wp_enqueue_style( 'locopas-typography-style-css' );
 		// wp_enqueue_style( 'locopas-header-style', get_template_directory_uri() . '/inc/styles/header.css', array( 'locopas-style-css' ) );
@@ -89,7 +104,7 @@ if( ! function_exists( 'locopas_styles_extended' ) ):
 		// wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css', array( 'locopas-style-css' ) );
 	}
 endif;
-add_action( 'wp_enqueue_scripts', 'locopas_styles_extended', 12 );
+add_action( 'init', 'locopas_styles_register' );
 
 
 
