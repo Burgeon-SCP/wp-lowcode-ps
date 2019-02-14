@@ -81,12 +81,12 @@ if( ! function_exists( 'locopas_styles_extended' ) ):
 		// 									 $locopas_theme_version,
 		// 								   'all' );
 		// }
-		wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri() . '/inc/styles/typography.css', array( 'locopas-style-css' ), $locopas_theme_version );
-		wp_enqueue_style( 'locopas-comments-style', get_template_directory_uri() . '/inc/styles/comments.css', array( 'locopas-style-css' ), $locopas_theme_version );
-		wp_enqueue_style( 'locopas-header-style', get_template_directory_uri() . '/inc/styles/header.css', array( 'locopas-style-css' ), $locopas_theme_version );
-		wp_enqueue_style( 'locopas-contact-style', get_template_directory_uri() . '/inc/styles/contact.css', array( 'locopas-style-css' ), $locopas_theme_version );
-		wp_enqueue_style( 'locopas-widget-style', get_template_directory_uri() . '/inc/styles/widget.css', array( 'locopas-style-css' ), $locopas_theme_version );
-		wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css', array( 'locopas-style-css' ), $locopas_theme_version );
+		wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri() . '/inc/styles/typography.css', array( 'locopas-style-css' ) );
+		wp_enqueue_style( 'locopas-comments-style', get_template_directory_uri() . '/inc/styles/comments.css', array( 'locopas-style-css' ) );
+		wp_enqueue_style( 'locopas-header-style', get_template_directory_uri() . '/inc/styles/header.css', array( 'locopas-style-css' ) );
+		wp_enqueue_style( 'locopas-contact-style', get_template_directory_uri() . '/inc/styles/contact.css', array( 'locopas-style-css' ) );
+		wp_enqueue_style( 'locopas-widget-style', get_template_directory_uri() . '/inc/styles/widget.css', array( 'locopas-style-css' ) );
+		wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css', array( 'locopas-style-css' ) );
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'locopas_styles_extended', 12 );
