@@ -15,8 +15,8 @@
  * @since 1.0.0
  */
 	$locopas_theme_details = wp_get_theme();
-	$locopas_theme_version = $locopas_theme_details->Version;
-	// $locopas_theme_version = rand(111,999); /* used for development */
+	// $locopas_theme_version = $locopas_theme_details->Version;
+	$locopas_theme_version = rand(111,999); /* used for development */
 
 
 /*------------------------------------------------------------------------------------------------------------------*/
