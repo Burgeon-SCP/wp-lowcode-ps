@@ -75,40 +75,18 @@ if( ! function_exists( 'locopas_styles_register' ) ):
 		 * specifically font, colors, icons, and column width.
 		 */
 
-		/* foreach (glob(get_template_directory_uri().'/inc/styles/*.css')) as $file) {
+		/* foreach (glob(get_template_directory_uri().'/inc/styles/*.css') as $file) {
 			Do something with $file
 			wp_enqueue_style( 'locopas-'.str_replace('.css', '', basename($file)).'-style',
 											 $file);
 		} */
-		// wp_register_style( 'locopas-typography-style', get_template_directory_uri() . '/inc/styles/typography.css', array( 'locopas-style-css' ) );
-		// wp_register_style( 'locopas-header-style', get_template_directory_uri() . '/inc/styles/header.css', array( 'locopas-style-css' ) );
-		// wp_register_style( 'locopas-contact-style', get_template_directory_uri() . '/inc/styles/contact.css', array( 'locopas-style-css' ) );
-		// wp_register_style( 'locopas-widget-style', get_template_directory_uri() . '/inc/styles/widget.css', array( 'locopas-style-css' ) );
-		// wp_register_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css', array( 'locopas-style-css' ) );
 
 		wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri() . '/inc/styles/typography.css' );
 		wp_enqueue_style( 'locopas-header-style', get_template_directory_uri() . '/inc/styles/header.css' );
 		wp_enqueue_style( 'locopas-contact-style', get_template_directory_uri() . '/inc/styles/contact.css' );
 		wp_enqueue_style( 'locopas-widget-style', get_template_directory_uri() . '/inc/styles/widget.css' );
 		wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css' );
-		// wp_enqueue_style( 'locopas-typography-style-css' );
-		// wp_enqueue_style( 'locopas-header-style-css' );
-		// wp_enqueue_style( 'locopas-footer-style-css' );
-		// wp_enqueue_style( 'locopas-contact-style-css' );
-		// wp_enqueue_style( 'locopas-widget-style-css' );
-		// wp_enqueue_style( 'locopas-typography-style' );
-		// wp_enqueue_style( 'locopas-header-style' );
-		// wp_enqueue_style( 'locopas-footer-style' );
-		// wp_enqueue_style( 'locopas-contact-style' );
-		// wp_enqueue_style( 'locopas-widget-style' );
-
-
-		// wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri() . '/inc/styles/typography.css', array( 'locopas-style-css' ) );
-		// wp_enqueue_style( 'locopas-typography-style-css' );
-		// wp_enqueue_style( 'locopas-header-style', get_template_directory_uri() . '/inc/styles/header.css', array( 'locopas-style-css' ) );
-		// wp_enqueue_style( 'locopas-contact-style', get_template_directory_uri() . '/inc/styles/contact.css', array( 'locopas-style-css' ) );
-		// wp_enqueue_style( 'locopas-widget-style', get_template_directory_uri() . '/inc/styles/widget.css', array( 'locopas-style-css' ) );
-		// wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css', array( 'locopas-style-css' ) );
+		wp_enqueue_style( 'locopas-menus-style', get_template_directory_uri() . '/inc/styles/menus.css' );
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'locopas_styles_register', 999 );
