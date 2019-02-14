@@ -15,8 +15,11 @@
 	<div class="entry-content">
 		<?php
 			the_content();
-			echo '<p>' . glob(get_template_directory_uri() . '/inc/styles/*.css') .'</p>';
-			foreach(array_filter(glob(get_template_directory_uri() . '/inc/styles/*.css'),'is_file') as $file) {
+			foreach (array_filter(glob(get_template_directory_uri() . '/inc/styles/*.css'),'is_file') as $key => $value) {
+				// code...
+				echo '<p>' . $key . $value .'</p>';
+			}
+			foreach (array_filter(glob(get_template_directory_uri() . '/inc/styles/*.css'),'is_file') as $file) {
 			  // Do something with $file
 			  echo '<p>path: '.$file.'</p>';
 			  echo '<p>st: '.str_replace('.css','',basename($file)).'</p>';
