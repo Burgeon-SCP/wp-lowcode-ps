@@ -330,7 +330,7 @@
   font-size: 20px;
 }
 
-.sticky-wrapper.is-sticky .ps-header-wrapper .site-branding img {
+.sticky-wrapper.is-sticky .ps-header-wrapper .site-branding .custom-logo {
   width: 60%;
 }
 
