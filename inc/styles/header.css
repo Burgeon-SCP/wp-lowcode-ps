@@ -330,9 +330,14 @@
   font-size: 20px;
 }
 
+.sticky-wrapper.is-sticky .ps-header-wrapper .site-branding img {
+  width: 60%;
+}
+
 .sticky-wrapper.is-sticky .main-navigation ul li a {
   padding: 10px 5px;
 }
+
 
 @media (max-width: 480px) {
   .ps-whole-header #top-site-navigation {
