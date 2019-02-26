@@ -32,11 +32,8 @@ p {
   line-height: 1.5em;
   text-align: justify;
   text-decoration: none;
+  text-indent: 5%;
   text-transform: none;
-}
-
-p::first-line {
-  margin-left: 15px;
 }
 
 h1 {

@@ -315,7 +315,7 @@
 
 /*sticky-header-section*/
 .sticky-wrapper.is-sticky .site-header {
-  background-color: rgba(41, 41, 41, 0.9);
+  background-color: rgba(229,235,243,0.78);
 }
 
 .sticky-wrapper.is-sticky .ps-header-wrapper {
@@ -362,4 +362,52 @@
     font-size: 12px;
   }
 
+}
+
+/*===========
+inner-pages
+============*/
+.ps-innerpages-header-wrapper {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  clear: both;
+  background-size: cover;
+  padding: 80px 0 50px;
+}
+
+.ps-innerpages-header-wrapper:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(137, 175, 103, 0.75);
+}
+
+.ps-innerpages-header-wrapper .entry-header {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  word-spacing: 5px;
+}
+
+.ps-innerpages-header-wrapper .entry-header .entry-title {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/*
+.ps-innerpages-header-wrapper #crumbs a {
+  color: #e23815;
+} */
+
+.ps-innerpages-header-wrapper .entry-header .page-title {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 400;
+  margin: 10px 0;
 }
