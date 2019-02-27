@@ -15,8 +15,8 @@
  * @since 1.0.0
  */
 	$locopas_theme_details = wp_get_theme();
-	// $locopas_theme_version = $locopas_theme_details->Version;
-	$locopas_theme_version = rand(111,999); /* used for development */
+	$locopas_theme_version = $locopas_theme_details->Version;
+	// $locopas_theme_version = rand(111,999); /* used for development */
 
 
 /*------------------------------------------------------------------------------------------------------------------*/
@@ -66,7 +66,7 @@ add_action( 'wp_enqueue_scripts', 'locopas_scripts' );
 /**
  * Enqueue styles after locopas_scripts
  *
- * @since 1.0.1
+ * @since 1.0.2
  */
 if( ! function_exists( 'locopas_styles_register' ) ):
 	function locopas_styles_register() {
@@ -87,6 +87,7 @@ if( ! function_exists( 'locopas_styles_register' ) ):
 		wp_enqueue_style( 'locopas-widget-style', get_template_directory_uri() . '/inc/styles/widget.css' );
 		wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css' );
 		wp_enqueue_style( 'locopas-menus-style', get_template_directory_uri() . '/inc/styles/menus.css' );
+		wp_enqueue_style( 'locopas-responsive-style', get_template_directory_uri() . '/inc/styles/responsive.css' );
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'locopas_styles_register', 999 );
@@ -110,6 +111,32 @@ if( ! function_exists( 'locopas_admin_scripts' ) ):
 endif;
 
 add_action( 'admin_enqueue_scripts', 'locopas_admin_scripts' );
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/**
+ * Remove unnecessary menu entries for admin area
+ * extracted from https://codex.wordpress.org/Function_Reference/remove_menu_page
+ *
+ * @since 1.0.2
+ */
+if( ! function_exists( 'locopas_admin_menu' ) ):
+	function locopas_admin_menu() {
+		// remove_menu_page( 'index.php' );                  //Dashboard
+		// remove_menu_page( 'jetpack' );                    //Jetpack*
+		remove_menu_page( 'edit.php' );                   //Posts
+		// remove_menu_page( 'upload.php' );                 //Media
+		// remove_menu_page( 'edit.php?post_type=page' );    //Pages
+		remove_menu_page( 'edit-comments.php' );          //Comments
+		// remove_menu_page( 'themes.php' );                 //Appearance
+		// remove_menu_page( 'plugins.php' );                //Plugins
+		remove_menu_page( 'users.php' );                  //Users
+		// remove_menu_page( 'tools.php' );                  //Tools
+		// remove_menu_page( 'options-general.php' );        //Settings
+	}
+endif;
+
+add_action( 'admin_menu', 'locopas_admin_menu' );
+
 
 
 /*------------------------------------------------------------------------------------------------------------------*/
@@ -395,21 +422,18 @@ foreach ( $locopas_raw_categories  as $categories ) {
  *
  * @since 1.0.0
  */
-add_filter( 'excerpt_more', 'locopas_custom_excerpt_more' );
-
 if( ! function_exists( 'locopas_custom_excerpt_more' ) ):
 	function locopas_custom_excerpt_more( $more ) {
 		return ' ';
 	}
 endif;
+add_filter( 'excerpt_more', 'locopas_custom_excerpt_more' );
 
 /**
  * Remove the title prefix from archive pages
  *
  * @since 1.0.0
  */
-add_filter( 'get_the_archive_title', 'locopas_arch_title' );
-
 if( !function_exists( 'locopas_arch_title' ) ) {
 	function locopas_arch_title($title) {
 	    if ( is_category() ) {
@@ -422,3 +446,32 @@ if( !function_exists( 'locopas_arch_title' ) ) {
 	    return $title;
 	}
 }
+add_filter( 'get_the_archive_title', 'locopas_arch_title' );
+
+/*
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+//  if( !function_exists( 'locopas_content_width' ) ) {
+// 	function locopas_content_width() {
+// 		$GLOBALS['content_width'] = apply_filters( 'locopas_content_width', 640 );
+// 	}
+// }
+// add_action( 'after_setup_theme', 'locopas_content_width', 0 );
+
+
+/*
+ * Define pingback link inside the header.
+ *
+ */
+// if( !function_exists( 'locopas_pingback_header' ) ) {
+// 	function locopas_pingback_header() {
+// 		if ( is_singular() && pings_open() ) {
+// 			printf( '<link rel="pingback" href="%s">' . "\n", esc_url(get_bloginfo( 'pingback_url', 'display' )) );
+// 		}
+// 	}
+// }
+// add_action( 'wp_head', 'locopas_pingback_header' );

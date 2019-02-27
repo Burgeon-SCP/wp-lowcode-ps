@@ -20,17 +20,20 @@ h4,
 h5,
 h6 {
   clear: both;
+  text-align: center;
 }
 
 p {
   margin-bottom: 15px;
   font-family: Lato, monospace;
+  font-size: 20px;
   font-weight: 400;
-  text-decoration: none;
-  text-transform: none;
-  font-size: 26px;
-  line-height: 1.5em;
   color: #0f0f0f;
+  line-height: 1.5em;
+  text-align: justify;
+  text-decoration: none;
+  text-indent: 5%;
+  text-transform: none;
 }
 
 h1 {
@@ -45,7 +48,7 @@ h1 {
 
 h2 {
   font-family: 'Roboto Mono', monospace;
-  font-weight: 700;
+  font-weight: 400;
   text-decoration: none;
   text-transform: none;
   font-size: 28px;
@@ -54,10 +57,10 @@ h2 {
 }
 
 h3 {
-  font-family: Lato, monospace;
+  font-family: 'Roboto Mono', monospace;
   font-weight: 700;
   text-decoration: none;
-  text-transform: none;
+  text-transform: uppercase;
   font-size: 24px;
   line-height: 1em;
   color: #666666;
@@ -100,7 +103,7 @@ address {
 
 pre {
   background: #eee;
-  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-family: monospace;
   font-size: 15px;
   font-size: 0.9375rem;
   line-height: 1.6;
@@ -114,8 +117,8 @@ code,
 kbd,
 tt,
 var {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 15px;
+  font-family: monospace;
+  /* font-size: 15px; */
   font-size: 0.9375rem;
 }
 
@@ -133,4 +136,11 @@ ins {
 
 big {
   font-size: 125%;
+}
+
+span.burgeon {
+  font-family: 'Nova mono';
+  font-weight: bold;
+  color: black;
+  letter-spacing: 1px;
 }

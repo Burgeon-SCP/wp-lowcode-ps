@@ -1,14 +1,18 @@
 == Description ==
 LoCoPaS is a beautiful free responsive one page WordPress theme with awesome parallax scrolling effect.
- It is a highly customizable and flexible WP template suitable for multipurpose websites like business, agency, blog, portfolio, eCommerce etc.
+ It is a performance based WP template suitable for multipurpose websites like business, agency, portfolio, eCommerce etc.
  It is a fully responsive theme that fits perfectly on any device.
  The theme is based on WordPress Live Customizer that allows you to customize the complete theme instantly.
  It is clean, simple, SEO friendly, flexible, multilingual, and feature-rich theme for modern websites.
 
-=== Tags ===
-one-column, featured-images, no-comments, translation-ready, flexible-header, footer-widgets, no-sidebar
+We specially thank the people from AccesPress for delivering ParallaxSome, in which we based our work.
 
-Locopas WordPress Theme, Copyright 2019 Burgeon EnvironMental Solutions
+
+=== Tags ===
+one-column, featured-images, no-comments, no-sidebar, translation-ready, flexible-header, footer-widgets, no-emojis
+
+LoCoPaS WordPress Theme, Copyright 2019 Burgeon EnvironMental Solutions
+LoCoPaS GitHub repository: https://github.com/Burgeon-SCP/wp-lowcode-ps
 LoCoPaS is distributed under the terms of the GNU GPL v3
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -62,6 +66,9 @@ Third Party scripts and styles under public license.
 
 
 == Changelog ==
+
+= 1.0.2 =
+	* Code cleaning and first delivery done
 
 = 1.0.1 =
 	* code commented out and moved to .old directory

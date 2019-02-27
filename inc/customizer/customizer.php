@@ -17,42 +17,6 @@ function locopas_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-	/*------------------------------------------------------------------------------------*/
-		/**
-		 * Upgrade to Uncode Pro
-		*/
-		// Register custom section types.
-		// $wp_customize->register_section_type( 'Locopas_Customize_Section_Pro' );
-
-		/*
-		// Register sections.
-		$wp_customize->add_section(
-		    new Locopas_Customize_Section_Pro(
-		        $wp_customize,
-		        'locopas-pro',
-		        array(
-		            'title1'    => esc_html__( 'Free vs Pro', 'locopas' ),
-		            'pro_text1' => esc_html__( 'Compare','locopas' ),
-		            'pro_url1'  => admin_url('themes.php?page=locopas-welcome&section=free_vs_pro'),
-		            'priority' => 1,
-		        )
-		    )
-		);
-		$wp_customize->add_setting(
-			'locopas_pro_upbuton',
-			array(
-				'section' => 'locopas-pro',
-				'sanitize_callback' => 'esc_attr',
-			)
-		);
-
-		$wp_customize->add_control(
-			'locopas_pro_upbuton',
-			array(
-				'section' => 'locopas-pro'
-			)
-		);
-		*/
 
 		/** Dynamic Color Options **/
 		$wp_customize->add_setting( 'locopas_tpl_color', array( 'default' => '#e23815', 'sanitize_callback' => 'sanitize_hex_color' ));

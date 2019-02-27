@@ -9,15 +9,6 @@
  * @since 1.0.0
  */
 
-/*
-	As extracted from WpFASTER.org
-	https://www.wpfaster.org/code/how-to-remove-emoji-styles-scripts-wordpress
-	Removes emoji creation capability
-*/
-remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-remove_action( 'wp_print_styles', 'print_emoji_styles' );
-remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 if ( ! function_exists( 'locopas_setup' ) ) :
 /**
@@ -127,24 +118,50 @@ function locopas_setup() {
 endif;
 add_action( 'after_setup_theme', 'locopas_setup' );
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function locopas_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'locopas_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'locopas_content_width', 0 );
 
-// function locopas_pingback_header() {
-// 	if ( is_singular() && pings_open() ) {
-// 		printf( '<link rel="pingback" href="%s">' . "\n", esc_url(get_bloginfo( 'pingback_url', 'display' )) );
-// 	}
-// }
-// add_action( 'wp_head', 'locopas_pingback_header' );
+if ( ! function_exists( 'locopas_remove_emojis' ) ) :
+/**
+ * Removes emoji content for higher performance.
+ *
+ * This function is proposed by Christine Cooper at:
+ * https://wordpress.stackexchange.com/questions/185577/disable-emojicons-introduced-with-wp-4-2
+ *
+ * It is also an increased solution of the one proposed at WpFASTER.org
+ * 		https://www.wpfaster.org/code/how-to-remove-emoji-styles-scripts-wordpress
+ *
+ * @since 1.0.2
+ *
+ */
+
+function disable_emojicons_tinymce( $plugins ) {
+  if ( is_array( $plugins ) ) {
+    return array_diff( $plugins, array( 'wpemoji' ) );
+  } else {
+    return array();
+  }
+}
+
+function locopas_remove_emojis() {
+	/* Remove emoji creation capability */
+	// all actions related to emojis
+  remove_action( 'admin_print_styles', 'print_emoji_styles' );
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+	// all filters related to emojis
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+	add_filter( 'emoji_svg_url', '__return_false' );
+
+  // filter to remove TinyMCE emojis with previous function
+  add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+
+}
+endif;
+add_action( 'init', 'locopas_remove_emojis' );
+
 
 /**
  * Load LoCoPaS Custom Functions file
