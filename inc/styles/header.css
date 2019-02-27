@@ -400,10 +400,9 @@ inner-pages
   word-wrap: break-word;
 }
 
-/*
 .ps-innerpages-header-wrapper #crumbs a {
-  color: #e23815;
-} */
+  color: #ffffff;
+}
 
 .ps-innerpages-header-wrapper .entry-header .page-title {
   text-transform: uppercase;
