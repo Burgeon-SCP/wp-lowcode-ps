@@ -422,21 +422,18 @@ foreach ( $locopas_raw_categories  as $categories ) {
  *
  * @since 1.0.0
  */
-add_filter( 'excerpt_more', 'locopas_custom_excerpt_more' );
-
 if( ! function_exists( 'locopas_custom_excerpt_more' ) ):
 	function locopas_custom_excerpt_more( $more ) {
 		return ' ';
 	}
 endif;
+add_filter( 'excerpt_more', 'locopas_custom_excerpt_more' );
 
 /**
  * Remove the title prefix from archive pages
  *
  * @since 1.0.0
  */
-add_filter( 'get_the_archive_title', 'locopas_arch_title' );
-
 if( !function_exists( 'locopas_arch_title' ) ) {
 	function locopas_arch_title($title) {
 	    if ( is_category() ) {
@@ -449,3 +446,32 @@ if( !function_exists( 'locopas_arch_title' ) ) {
 	    return $title;
 	}
 }
+add_filter( 'get_the_archive_title', 'locopas_arch_title' );
+
+/*
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+//  if( !function_exists( 'locopas_content_width' ) ) {
+// 	function locopas_content_width() {
+// 		$GLOBALS['content_width'] = apply_filters( 'locopas_content_width', 640 );
+// 	}
+// }
+// add_action( 'after_setup_theme', 'locopas_content_width', 0 );
+
+
+/*
+ * Define pingback link inside the header.
+ *
+ */
+// if( !function_exists( 'locopas_pingback_header' ) ) {
+// 	function locopas_pingback_header() {
+// 		if ( is_singular() && pings_open() ) {
+// 			printf( '<link rel="pingback" href="%s">' . "\n", esc_url(get_bloginfo( 'pingback_url', 'display' )) );
+// 		}
+// 	}
+// }
+// add_action( 'wp_head', 'locopas_pingback_header' );
