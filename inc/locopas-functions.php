@@ -15,8 +15,8 @@
  * @since 1.0.0
  */
 	$locopas_theme_details = wp_get_theme();
-	// $locopas_theme_version = $locopas_theme_details->Version;
-	$locopas_theme_version = rand(111,999); /* used for development */
+	$locopas_theme_version = $locopas_theme_details->Version;
+	// $locopas_theme_version = rand(111,999); /* used for development */
 
 
 /*------------------------------------------------------------------------------------------------------------------*/
@@ -66,7 +66,7 @@ add_action( 'wp_enqueue_scripts', 'locopas_scripts' );
 /**
  * Enqueue styles after locopas_scripts
  *
- * @since 1.0.1
+ * @since 1.0.2
  */
 if( ! function_exists( 'locopas_styles_register' ) ):
 	function locopas_styles_register() {
@@ -117,7 +117,7 @@ add_action( 'admin_enqueue_scripts', 'locopas_admin_scripts' );
  * Remove unnecessary menu entries for admin area
  * extracted from https://codex.wordpress.org/Function_Reference/remove_menu_page
  *
- * @since 1.0.1
+ * @since 1.0.2
  */
 if( ! function_exists( 'locopas_admin_menu' ) ):
 	function locopas_admin_menu() {

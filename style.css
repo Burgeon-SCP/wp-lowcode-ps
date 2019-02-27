@@ -4,7 +4,7 @@ Theme URI: https://github.com/Burgeon-SCP/wp-lowcode-ps
 Author: Burgeon EnvironMental Solutions
 Author URI: https://burgeon.life/
 Description: LoCoPaS is a free responsive, one page, no-comment WordPress theme with awesome parallax scrolling effect. It is a highly customizable and flexible WP template suitable for multipurpose websites like business, agency, blog, portfolio, eCommerce etc. It is a fully responsive theme that fits perfectly on any device. The theme is based on WordPress Live Customizer that allows you to customize the complete theme instantly. It is clean, simple, SEO friendly, flexible, multilingual, and feature-rich theme for modern websites.
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: locopas
@@ -23,7 +23,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
-# Typography
 # Elements
 # Forms
 # Navigation
@@ -32,14 +31,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Accessibility
 # Alignments
 # Clearings
-# Widgets
 # Content
-	## Posts and pages
-	## Comments
+	## Pages
 # Infinite scroll
 # Media
 	## Captions
 	## Galleries
+
+### More specific stylesheets may be found at inc/styles/
+
+
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -267,9 +268,6 @@ th {
   border: 1px solid #d4d4d4;
   padding: 8px;
 }
-
-/*------------Typography----------*/
-/* @import url("./inc/styles/typography.css"); */
 
 /*--------------------------------------------------------------
 # Elements
@@ -516,8 +514,6 @@ a:active {
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-/* .comment-content:before,
-.comment-content:after, */
 .clearfix:before,
 .clearfix:after,
 .entry-content:before,
@@ -570,17 +566,6 @@ a:active {
   margin: 0 0 1.5em;
 }
 
-/*
-.byline,
-.updated:not(.published) {
-    display: none;
-}
-
-.single .byline,
-.group-blog .byline {
-    display: inline;
-}
-*/
 .page-content,
 .entry-content,
 .entry-summary {
@@ -617,11 +602,6 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
-/* @import url("./inc/styles/comments.css"); */
-
-/*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
@@ -640,15 +620,6 @@ a:active {
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
-/* .page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
-} */
-
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
@@ -728,15 +699,6 @@ object {
   display: block;
 }
 
-/*==========Header============*/
-/* @import url("./inc/styles/header.css"); */
-
-/*==========Menus============*/
-/* @import url("./inc/styles/menus.css"); */
-
-/*==========Sections============*/
-/* @import url(".old/inc/styles/sections.css"); */
-
 .ps-home-section {
   padding: 80px 0;
   text-align: center;
@@ -791,7 +753,6 @@ object {
   background-color: #e23815;
   color: #ffffff;
 }
-
 
 
 #scroll-up {
@@ -1043,3 +1004,16 @@ span.error-code {
   vertical-align: top;
   border-radius: 0;
 }
+
+
+/*========Typography=========*/
+/* @import url("./inc/styles/typography.css"); */
+
+/*==========Header===========*/
+/* @import url("./inc/styles/header.css"); */
+
+/*==========Menus============*/
+/* @import url("./inc/styles/menus.css"); */
+
+/*=========Sections==========*/
+/* @import url(".old/inc/styles/sections.css"); */

@@ -129,6 +129,8 @@ if ( ! function_exists( 'locopas_remove_emojis' ) ) :
  * It is also an increased solution of the one proposed at WpFASTER.org
  * 		https://www.wpfaster.org/code/how-to-remove-emoji-styles-scripts-wordpress
  *
+ * @since 1.0.2
+ *
  */
 
 function disable_emojicons_tinymce( $plugins ) {
