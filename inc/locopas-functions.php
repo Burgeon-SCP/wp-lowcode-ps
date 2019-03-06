@@ -150,7 +150,6 @@ if( ! function_exists( 'locopas_get_visitor_ip' ) ):
 	 * Extracted from:
 	 * https://www.wpbeginner.com/wp-tutorials/how-to-display-a-users-ip-address-in-wordpress/
 	 *
-	 * @return string
 	 * @since 1.0.2
 	 */
 
