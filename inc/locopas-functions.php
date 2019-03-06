@@ -33,17 +33,22 @@ function locopas_scripts() {
     );
 		// wp_register_style( 'locopas-google-fonts', '//fonts.googleapis.com/css?family='.$locopas_font_args['family'] );
 	wp_enqueue_style( 'locopas-google-fonts', add_query_arg( $locopas_font_args, "//fonts.googleapis.com/css" ) );
-	wp_enqueue_style( 'locopas-style', get_stylesheet_uri(), array(), $locopas_theme_version );
 
+	// Bootstrap libraries
+  wp_enqueue_style( 'bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
+  wp_enqueue_script( 'bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
+
+	// Theme stylesheet and custom js
+	wp_enqueue_style( 'locopas-style', get_stylesheet_uri(), array(), $locopas_theme_version );
 	wp_enqueue_script( 'locopas-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js', array( 'jquery' ), $locopas_theme_version, true );
 
-
+  // jQuery libraries
+	// TODO: Some of them could be excluded unless explicitly called
 	wp_enqueue_style( 'lightslider-style', get_template_directory_uri() . '/assets/library/lightslider/css/lightslider.css', array(), '1.1.3' );
 	wp_enqueue_style( 'bxSlider-style', get_template_directory_uri() . '/assets/library/bxSlider/css/jquery.bxslider.css', array(), '4.1.2' );
 	// wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/library/font-awesome/css/font-awesome.min.css', array(), '4.7.0' );
 	wp_enqueue_style( 'jquery-prettyPhoto-style', get_template_directory_uri() . '/assets/library/prettyphoto/css/prettyPhoto.css', array(), '3.1.6' );
 	wp_enqueue_style ( 'animate', get_template_directory_uri() . '/assets/css/animate.css', array(), '3.5.1' );
-
 	wp_enqueue_script( 'lightslider', get_template_directory_uri() . '/assets/library/lightslider/js/lightslider.min.js', array( 'jquery' ), '1.1.3', true );
 	wp_enqueue_script( 'jquery-bxslider', get_template_directory_uri() . '/assets/library/bxSlider/js/jquery.bxslider.min.js', array( 'jquery' ), '4.1.2', true );
 	wp_enqueue_script( 'jquery-counterup', get_template_directory_uri() . '/assets/library/counterup/js/jquery.counterup.min.js', array( 'jquery' ), '1.0', true );
@@ -137,6 +142,34 @@ endif;
 
 add_action( 'admin_menu', 'locopas_admin_menu' );
 
+
+/*------------------------------------------------------------------------------------------------------------------*/
+if( ! function_exists( 'locopas_get_visitor_ip' ) ):
+	/**
+	 * Define the shortcode for visitor ip recovery
+	 * Extracted from:
+	 * https://www.wpbeginner.com/wp-tutorials/how-to-display-a-users-ip-address-in-wordpress/
+	 *
+	 * @return string
+	 * @since 1.0.2
+	 */
+
+	function locopas_get_visitor_ip() {
+		// Display User IP in WordPress
+		if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ) ) {
+			//check ip from share internet
+			$ip = $_SERVER['HTTP_CLIENT_IP'];
+		} elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
+			//to check ip is pass from proxy
+			$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+		} else {
+			$ip = $_SERVER['REMOTE_ADDR'];
+		}
+		return apply_filters( 'wpb_get_ip', $ip );
+	}
+endif;
+
+add_shortcode('show_ip', 'locopas_get_visitor_ip');
 
 
 /*------------------------------------------------------------------------------------------------------------------*/
