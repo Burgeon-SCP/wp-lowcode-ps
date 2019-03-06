@@ -165,7 +165,7 @@ if( ! function_exists( 'locopas_get_visitor_ip' ) ):
 		}
 		// Recover origin (first) ip only
 		$ipa = explode(',', $ip);
-		$ip = reset(array($ipa));
+		$ip = reset($ipa);
 
 		return apply_filters( 'wpb_get_ip', $ip );
 	}
