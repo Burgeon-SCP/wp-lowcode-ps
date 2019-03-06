@@ -265,8 +265,7 @@ table {
 
 td,
 th {
-  border: 1px solid #d4d4d4;
-  padding: 8px;
+  border: none;
 }
 
 /*--------------------------------------------------------------
@@ -337,15 +336,17 @@ dd {
 
 img {
   vertical-align: middle;
-  height: auto;
   /* Make sure images are scaled correctly. */
-  max-width: 100%;
+  height: auto;
   /* Adhere to container width. */
+  max-width: 100%;
 }
 
 table {
   margin: 0 0 15px;
-  width: 100%;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 /*--------------------------------------------------------------
@@ -508,7 +509,7 @@ a:active {
 .aligncenter {
   clear: both;
   display: block;
-  margin: 30px auto;
+  margin: 0px auto;
 }
 
 /*--------------------------------------------------------------

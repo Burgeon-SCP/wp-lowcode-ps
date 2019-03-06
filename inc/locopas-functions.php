@@ -144,15 +144,14 @@ add_action( 'admin_menu', 'locopas_admin_menu' );
 
 
 /*------------------------------------------------------------------------------------------------------------------*/
+/**
+ * Define shortcode for visitor ip recovery
+ * Extracted from:
+ * https://www.wpbeginner.com/wp-tutorials/how-to-display-a-users-ip-address-in-wordpress/
+ *
+ * @since 1.0.2
+ */
 if( ! function_exists( 'locopas_get_visitor_ip' ) ):
-	/**
-	 * Define the shortcode for visitor ip recovery
-	 * Extracted from:
-	 * https://www.wpbeginner.com/wp-tutorials/how-to-display-a-users-ip-address-in-wordpress/
-	 *
-	 * @since 1.0.2
-	 */
-
 	function locopas_get_visitor_ip() {
 		// Display User IP in WordPress
 		if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ) ) {
@@ -164,6 +163,10 @@ if( ! function_exists( 'locopas_get_visitor_ip' ) ):
 		} else {
 			$ip = $_SERVER['REMOTE_ADDR'];
 		}
+		// Recover origin (first) ip only
+		$ipa = explode(',', $ip);
+		$ip = reset(array($ipa));
+
 		return apply_filters( 'wpb_get_ip', $ip );
 	}
 endif;
