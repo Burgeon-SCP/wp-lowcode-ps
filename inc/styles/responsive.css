@@ -8,7 +8,7 @@ responsive-css
   #section-contact .footer-social-wrap,
   #section-contact .ps-contact-form {
     width: 100%;
-    padding: 0 10px;
+    padding: 0px 10px;
   }
 
   .ps-top-header-wrapper {
@@ -44,8 +44,10 @@ responsive-css
   /*inner-pages*/
   #primary {
     float: none;
-    width: 100%;
+    width: 94%;
     margin-bottom: 40px;
+    margin-left: 3%;
+    margin-right: 3%;
   }
 
   .nav-toggle {
@@ -208,8 +210,8 @@ responsive-css
     margin-bottom: 10%;
   }
 
-  h3, p {
-    font-size: 90%;
+  h2, h3, p {
+    font-size: 95%;
   }
 
   table, ul, ol {
