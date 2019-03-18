@@ -41,6 +41,13 @@ responsive-css
 
 
 @media (max-width: 768px) {
+  /*inner-pages*/
+  #primary {
+    float: none;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
   .nav-toggle {
     display: block;
   }
@@ -58,6 +65,7 @@ responsive-css
     overflow-y: scroll;
   }
 
+  /* Main navigation  */
   .main-navigation {
     float: right;
     width: auto;
@@ -149,31 +157,28 @@ responsive-css
     text-align: center;
   }
 
-  /*inner-pages*/
-  #primary {
-    float: none;
-    width: 100%;
-    margin-bottom: 40px;
-  }
-
-  #secondary {
-    float: none;
-    width: 100%;
-  }
-
   .main-navigation ul>li.menu-item-has-children:after {
     display: none;
   }
 }
 
 @media (max-width: 640px) {
+
+  #primary {
+    float: none;
+    width: 90%;
+    margin-bottom: 30px;
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+
   .single-slide-wrap .slider-info .ps-container {
-    max-width: 100%;
-    padding: 0 20px;
+    max-width: 90%;
+    padding: 5% 20px;
   }
 
   .single-slide-wrap .slider-title {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .single-slide-wrap .slider-desc p {
@@ -194,6 +199,18 @@ responsive-css
 }
 
 @media (max-width: 480px) {
+  #primary {
+    float: none;
+    width: 80%;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    margin-left: 10%;
+    margin-bottom: 10%;
+  }
+
+  h3, p {
+    font-size: 90%;
+  }
 
   table, ul, ol {
     width: 100%;
