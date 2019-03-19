@@ -588,11 +588,11 @@ a:active {
   display: none;
 }
 
-.dimmed {
+img.dimmed {
   position: relative;
 }
 
-.dimmed:after {
+img.dimmed:after {
   content: " ";
   z-index: 10;
   display: block;
@@ -657,12 +657,13 @@ object {
 --------------------------------------------------------------*/
 .gallery {
   margin-bottom: 1.5em;
+  clear: both;
 }
 
 .gallery-item {
   display: inline-block;
   text-align: center;
-  vertical-align: top;
+  vertical-align: center;
   width: 100%;
 }
 
@@ -702,6 +703,8 @@ object {
   display: block;
 }
 
+
+/* HOME section */
 .ps-home-section {
   padding: 80px 0;
   text-align: center;
@@ -759,7 +762,7 @@ object {
 
 
 #scroll-up {
-  background-color: #e23815;
+  background-color: #333333;
   width: 40px;
   height: 40px;
   line-height: 35px;
@@ -819,9 +822,9 @@ object {
   float: none;
 }
 
-.left-sidebar #primary {
+/* .left-sidebar #primary {
   float: right;
-}
+} */
 
 /* .left-sidebar #secondary {
   float: left;
