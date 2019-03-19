@@ -34,9 +34,9 @@ function locopas_scripts() {
 		// wp_register_style( 'locopas-google-fonts', '//fonts.googleapis.com/css?family='.$locopas_font_args['family'] );
 	wp_enqueue_style( 'locopas-google-fonts', add_query_arg( $locopas_font_args, "//fonts.googleapis.com/css" ) );
 
-	// Bootstrap libraries
-  wp_enqueue_style( 'bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
-  wp_enqueue_script( 'bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
+	// // Bootstrap libraries
+  // wp_enqueue_style( 'bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
+  // wp_enqueue_script( 'bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
 
 	// Theme stylesheet and custom js
 	wp_enqueue_style( 'locopas-style', get_stylesheet_uri(), array(), $locopas_theme_version );
@@ -77,9 +77,14 @@ if( ! function_exists( 'locopas_styles_register' ) ):
 	function locopas_styles_register() {
 		/**
 		 * This theme styles several css elements by using separate files inside the theme,
-		 * specifically font, colors, icons, and column width.
+		 * among them header,footer, font, colors, icons, and column galleries.
+		 *
+		 * locopas_styles_register is hooked with low priority to ensure css cascading
+		 * NOTE: more specific priorities could be introduced at wp_enqueue_style()
 		 */
 
+
+		 // TODO: NOT WORKING
 		/* foreach (glob(get_template_directory_uri().'/inc/styles/*.css') as $file) {
 			Do something with $file
 			wp_enqueue_style( 'locopas-'.str_replace('.css', '', basename($file)).'-style',
@@ -92,6 +97,7 @@ if( ! function_exists( 'locopas_styles_register' ) ):
 		wp_enqueue_style( 'locopas-widget-style', get_template_directory_uri() . '/inc/styles/widget.css' );
 		wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css' );
 		wp_enqueue_style( 'locopas-menus-style', get_template_directory_uri() . '/inc/styles/menus.css' );
+		wp_enqueue_style( 'locopas-gallery-style', get_template_directory_uri() . '/inc/styles/gallery.css' );
 		wp_enqueue_style( 'locopas-responsive-style', get_template_directory_uri() . '/inc/styles/responsive.css' );
 	}
 endif;
