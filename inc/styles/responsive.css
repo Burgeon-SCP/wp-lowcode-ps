@@ -180,7 +180,7 @@
   .gallery-lg-hide {
     display: inherit;
   }
-  
+
   .gallery-md-hide {
     display: none;
   }
@@ -215,15 +215,19 @@
 @media (max-width: 480px) {
   #primary {
     float: none;
-    width: 80%;
+    width: 90%;
     margin-top: 5px;
     margin-bottom: 25px;
-    margin-left: 10%;
-    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-bottom: 5%;
   }
 
-  h2, h3, p, ul {
+  h2, h3, p {
     font-size: 1.5rem;
+  }
+
+  ul {
+    font-size: 97%;
   }
 
   table, ul, ol {
@@ -234,6 +238,10 @@
     display: none;
   }
 
+  .gallery-img {
+    max-width: 120px;
+  }
+
   .gallery-block-10,
   .gallery-block-20,
   .gallery-block-25,
@@ -242,8 +250,8 @@
   .gallery-block-75,
   .gallery-block-80 {
     max-width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .section-content-wrapper,

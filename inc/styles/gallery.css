@@ -2,10 +2,10 @@
 ## Galleries
 --------------------------------------------------------------*/
 .gallery {
-  background-color: #3338;
-  clear: both;
-  margin-bottom: 1.5em;
+  background-color: #bbb8;
+  margin-bottom: 5em;
   width: 100%;
+  float: left;
 }
 
 .gallery-img {
@@ -17,8 +17,7 @@
 }
 
 .gallery-sm-hide,
-.gallery-md-hide,
-.gallery-no-hide {
+.gallery-md-hide {
   display: inherit;
   vertical-align: middle;
 }
@@ -31,6 +30,11 @@
 .gallery-block-10 {
   float: left;
   max-width: 10%;
+}
+
+.gallery-block-15 {
+  float: left;
+  max-width: 15%;
 }
 
 .gallery-block-20 {
@@ -53,6 +57,11 @@
   max-width: 60%;
 }
 
+.gallery-block-70 {
+  float: left;
+  max-width: 70%;
+}
+
 .gallery-block-75 {
   float: left;
   max-width: 75%;
@@ -67,6 +76,11 @@
 .gallery-block-rtl-10 {
   float: right;
   max-width: 10%;
+}
+
+.gallery-block-rtl-15 {
+  float: right;
+  max-width: 15%;
 }
 
 .gallery-block-rtl-20 {
@@ -87,6 +101,11 @@
 .gallery-block-rtl-60 {
   float: right;
   max-width: 60%;
+}
+
+.gallery-block-rtl-70 {
+  float: right;
+  max-width: 70%;
 }
 
 .gallery-block-rtl-75 {

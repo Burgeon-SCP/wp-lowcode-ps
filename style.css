@@ -206,12 +206,12 @@ input::-moz-focus-inner {
 }
 
 button.topage {
-  background-color: #54b400;
+  background-color: #589225e0;
   clear: both;
-  color: white;
+  color: #eeef;
   font-family: 'Roboto Slab', monospace;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 13px;
+  font-weight: 500;
   margin-bottom: 20px;
   margin-top: 20px;
   margin-left: 20%;
@@ -299,6 +299,10 @@ q {
   quotes: """";
 }
 
+li {
+  margin-bottom: 5px;
+}
+
 hr {
   background-color: #ccc;
   border: 0;
@@ -324,7 +328,7 @@ ol {
 
 li>ul,
 li>ol {
-  margin-bottom: 0;
+  margin-bottom: 3px;
   margin-left: 15px;
 }
 
