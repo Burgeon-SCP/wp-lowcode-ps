@@ -2,49 +2,99 @@
 ## Galleries
 --------------------------------------------------------------*/
 .gallery {
-  margin-bottom: 1.5em;
+  background-color: #3338;
   clear: both;
-}
-
-.gallery-item {
-  display: inline-block;
-  text-align: center;
-  vertical-align: center;
+  margin-bottom: 1.5em;
   width: 100%;
 }
 
-.gallery-columns-2 .gallery-item {
-  max-width: 50%;
+.gallery-img {
+  border-radius: 30%;
 }
 
-.gallery-columns-3 .gallery-item {
-  max-width: 33.33%;
+.gallery-lg-hide {
+  display: none
 }
 
-.gallery-columns-4 .gallery-item {
-  max-width: 25%;
-}
-
-.gallery-columns-5 .gallery-item {
-  max-width: 20%;
-}
-
-.gallery-columns-6 .gallery-item {
-  max-width: 16.66%;
-}
-
-.gallery-columns-7 .gallery-item {
-  max-width: 14.28%;
-}
-
-.gallery-columns-8 .gallery-item {
-  max-width: 12.5%;
-}
-
-.gallery-columns-9 .gallery-item {
-  max-width: 11.11%;
+.gallery-sm-hide,
+.gallery-md-hide,
+.gallery-no-hide {
+  display: inherit;
+  vertical-align: middle;
 }
 
 .gallery-caption {
   display: block;
+}
+
+/* --- gallery blocks ---  */
+.gallery-block-10 {
+  float: left;
+  max-width: 10%;
+}
+
+.gallery-block-20 {
+  float: left;
+  max-width: 20%;
+}
+
+.gallery-block-25 {
+  float: left;
+  max-width: 25%;
+}
+
+.gallery-block-50 {
+  float: left;
+  max-width: 50%;
+}
+
+.gallery-block-60 {
+  float: left;
+  max-width: 60%;
+}
+
+.gallery-block-75 {
+  float: left;
+  max-width: 75%;
+}
+
+.gallery-block-80 {
+  float: left;
+  max-width: 80%;
+}
+
+/* --- gallery blocks rtl ---  */
+.gallery-block-rtl-10 {
+  float: right;
+  max-width: 10%;
+}
+
+.gallery-block-rtl-20 {
+  float: right;
+  max-width: 20%;
+}
+
+.gallery-block-rtl-25 {
+  float: right;
+  max-width: 25%;
+}
+
+.gallery-block-rtl-50 {
+  float: right;
+  max-width: 50%;
+}
+
+.gallery-block-rtl-60 {
+  float: right;
+  max-width: 60%;
+}
+
+.gallery-block-rtl-75 {
+  float: right;
+  max-width: 75%;
+}
+
+.gallery-block-rtl-80 {
+  float: right;
+  max-width: 80%;
 }

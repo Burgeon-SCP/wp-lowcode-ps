@@ -1,6 +1,8 @@
-/*========
-responsive-css
-=======*/
+/*==================================
+----------   responsive-css   ------
+==================================*/
+
+/* ---- desk screens and laptops ---- */
 @media (max-width:1200px) {
 
   .ps-container,
@@ -39,7 +41,7 @@ responsive-css
   }
 }
 
-
+/* ---- small screens --- */
 @media (max-width: 768px) {
   /*inner-pages*/
   #primary {
@@ -87,7 +89,7 @@ responsive-css
 
   .main-navigation ul li a,
   .sticky-wrapper.is-sticky .main-navigation ul li a {
-    padding: 15px 5px;
+    padding: 5px 5px;
   }
 
   .main-navigation ul>li a:after,
@@ -164,6 +166,7 @@ responsive-css
   }
 }
 
+/* --- tablets --- */
 @media (max-width: 640px) {
 
   #primary {
@@ -172,6 +175,14 @@ responsive-css
     margin-bottom: 30px;
     margin-left: 5%;
     margin-bottom: 5%;
+  }
+
+  .gallery-lg-hide {
+    display: inherit;
+  }
+  
+  .gallery-md-hide {
+    display: none;
   }
 
   .single-slide-wrap .slider-info .ps-container {
@@ -200,6 +211,7 @@ responsive-css
   }
 }
 
+/* --- smartphones --- */
 @media (max-width: 480px) {
   #primary {
     float: none;
@@ -210,7 +222,7 @@ responsive-css
     margin-bottom: 10%;
   }
 
-  h2, h3, p {
+  h2, h3, p, ul {
     font-size: 1.5rem;
   }
 
@@ -218,8 +230,20 @@ responsive-css
     width: 100%;
   }
 
-  em {
-    font-size: 70%;
+  .gallery-sm-hide {
+    display: none;
+  }
+
+  .gallery-block-10,
+  .gallery-block-20,
+  .gallery-block-25,
+  .gallery-block-50,
+  .gallery-block-60,
+  .gallery-block-75,
+  .gallery-block-80 {
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .section-content-wrapper,
