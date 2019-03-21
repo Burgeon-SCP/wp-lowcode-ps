@@ -20,6 +20,7 @@ h5,
 h6 {
   clear: both;
   text-align: center;
+  padding: 15px;
 }
 
 p {

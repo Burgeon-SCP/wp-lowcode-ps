@@ -15,10 +15,11 @@
 
 .gallery-img {
   border-radius: 30%;
+  padding: 10px;
 }
 
 .gallery-lg-hide {
-  display: none
+  display: none;
 }
 
 .gallery-sm-hide,
