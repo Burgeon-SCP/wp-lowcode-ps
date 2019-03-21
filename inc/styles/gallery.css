@@ -9,8 +9,8 @@
   padding: 10px;
 }
 
-.gallery-content {
-  display: contents;
+.gallery ul {
+  max-width: 95%
 }
 
 .gallery-img {
@@ -18,18 +18,32 @@
   padding: 10px;
 }
 
-.gallery-lg-hide {
-  display: none;
+.gallery-img-height-120 {
+  width: auto;
+  height: 120px;
 }
 
-.gallery-sm-hide,
-.gallery-md-hide {
-  display: inherit;
+.gallery-img-width-120 {
+  width: 120px;
 }
 
 .gallery-caption {
   display: block;
 }
+
+.gallery-content {
+  display: contents;
+}
+
+.gallery-lg-hide {
+  display: none;
+}
+
+/* .gallery-sm-hide,
+.gallery-md-hide {
+  display: inherit;
+} */
+
 
 /* --- gallery blocks ---  */
 .gallery-block-10 {
