@@ -240,18 +240,17 @@
 
   .gallery-img {
     max-width: 120px;
+    margin: auto;
   }
 
   .gallery-block-10,
   .gallery-block-20,
   .gallery-block-25,
   .gallery-block-50,
-  .gallery-block-60,
-  .gallery-block-75,
-  .gallery-block-80 {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+  .gallery-block-60 {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .section-content-wrapper,
