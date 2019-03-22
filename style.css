@@ -750,17 +750,13 @@ object {
 #content.site-content,
 .plx-home #content.site-content {
   padding: 40px 0 40px 0;
+  min-height: 400px;
 }
 
 #primary {
   width: 80%;
   float: left;
 }
-
-/* #secondary {
-  width: 29%;
-  float: right;
-} */
 
 .no-sidebar-center #primary {
   margin: 0 auto;
