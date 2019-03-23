@@ -24,7 +24,7 @@
 
 <body <?php body_class(); ?>>
 <?php do_action( 'locopas_before' ); ?>
-<div id="page" class="site">
+<div id="page-<?php if (! get_permalink()) { the_ID(); } else { echo basename(get_permalink()); } ?>" class="site">
 	<?php do_action( 'locopas_before_header' ); ?>
 	<div class="ps-whole-header">
 		<?php

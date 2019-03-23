@@ -10,7 +10,7 @@
  */
 
 ?>
-<article id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="page-article-<?php if (! get_permalink()) {the_ID();} else {basename(get_permalink());} ?>" <?php post_class(); ?>>
 
 	<div class="entry-content">
 		<?php
@@ -23,4 +23,4 @@
 	</div><!-- .entry-content -->
 
 
-</article><!-- #post-## -->
+</article><!-- #page-## -->

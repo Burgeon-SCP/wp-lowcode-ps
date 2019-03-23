@@ -102,6 +102,9 @@ i {
 blockquote {
   margin: 0 1.5em;
   max-width: 85%;
+}
+
+blockquote p {
   font-family: 'monospace';
   font-size: 14px;
 }

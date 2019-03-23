@@ -470,10 +470,11 @@ a:visited {
     color: purple;
 }
 */
+
 a:hover,
 a:focus,
 a:active {
-  color: #ccc;
+  color: #373;
 }
 
 a:focus {
