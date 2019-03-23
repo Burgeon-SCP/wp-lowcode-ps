@@ -1,15 +1,15 @@
 == Description ==
-LoCoPaS is a beautiful free responsive one page WordPress theme with awesome parallax scrolling effect.
+LoCoPaS is a beautiful free responsive page-only WordPress theme with awesome parallax scrolling effect.
  It is a performance based WP template suitable for multipurpose websites like business, agency, portfolio, eCommerce etc.
  It is a fully responsive theme that fits perfectly on any device.
- The theme is based on WordPress Live Customizer that allows you to customize the complete theme instantly.
  It is clean, simple, SEO friendly, flexible, multilingual, and feature-rich theme for modern websites.
+ The theme is based on WordPress Live Customizer that allows you to customize the complete theme instantly.
 
 We specially thank the people from AccesPress for delivering ParallaxSome, in which we based our work.
 
 
 === Tags ===
-one-column, featured-images, no-comments, no-sidebar, translation-ready, flexible-header, footer-widgets, no-emojis
+one-column, no-post, no-comments, no-sidebar, translation-ready, flexible-header, footer-widgets, no-emojis, custom-background, custom-logo, featured-images, theme-options
 
 LoCoPaS WordPress Theme, Copyright 2019 Burgeon EnvironMental Solutions
 LoCoPaS GitHub repository: https://github.com/Burgeon-SCP/wp-lowcode-ps
@@ -17,13 +17,15 @@ LoCoPaS is distributed under the terms of the GNU GPL v3
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-A starter theme called LoCoPaS, or underscores.
+A starter theme called LoCoPaS.
 
 == Installation ==
 
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
+1. In your admin panel, go to Pluggins > Add New.
+2. Install and activate WP Pusher plugin.
+2. Obtain GitHub token and save it following WP Pusher instructions.
+3. Add LoCoPaS repository and use branch latest, then click Install Theme.
+4. Go to Appearance > Themes and click Activate on LoCoPaS to use your new theme right away.
 
 == Documentation ==
 1. Create page and assign home page template.
@@ -66,6 +68,9 @@ Third Party scripts and styles under public license.
 
 
 == Changelog ==
+
+= 1.0.3 =
+	* Updated elements and classes to better responsiveness
 
 = 1.0.2 =
 	* Code cleaning and first delivery done

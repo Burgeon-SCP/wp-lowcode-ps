@@ -3,12 +3,12 @@ Theme Name: LoCoPaS
 Theme URI: https://github.com/Burgeon-SCP/wp-lowcode-ps
 Author: Burgeon EnvironMental Solutions
 Author URI: https://burgeon.life/
-Description: LoCoPaS is a free responsive, one page, no-comment WordPress theme with awesome parallax scrolling effect. It is concieved as a easy-to-edit-css code template, suitable for multipurpose websites like business, agency, portfolio, eCommerce etc. It is a fully responsive theme that fits perfectly on any device. The theme is based on WordPress Live Customizer that allows you to set common features. It is clean, simple, SEO friendly, flexible, multilingual, and feature-rich theme for modern websites.
-Version: 1.0.2
+Description: LoCoPaS is a beautiful free responsive page-only WordPress theme with awesome parallax scrolling effect. It is a performance based WP template suitable for multipurpose websites like business, agency, portfolio, eCommerce etc. It is a fully responsive theme that fits perfectly on any device. It is clean, simple, SEO friendly, flexible, multilingual, and feature-rich theme for modern websites.
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: locopas
-Tags: one-column, no-post, no-comments, translation-ready, flexible-header, stiky-header, footer-widgets, no-sidebar, custom-background, custom-colors, custom-logo, featured-images, css-edit-oriented
+Tags: one-column, no-post, no-comments, translation-ready, flexible-header, footer-widgets, no-sidebar, custom-background, custom-logo, featured-images, theme-options
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -47,7 +47,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 html {
   font-family: monospace;
-  font-size: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   margin: 0;
@@ -206,6 +205,20 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
+button.topage {
+  background-color: #54b400;
+  clear: both;
+  color: white;
+  font-family: 'Roboto Slab', monospace;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 20%;
+  margin-right: 20%;
+  width: 60%;
+}
+
 input {
   line-height: normal;
 }
@@ -252,7 +265,8 @@ table {
 
 td,
 th {
-  border: none;
+  border: 1px solid #d4d4d4;
+  padding: 8px;
 }
 
 /*--------------------------------------------------------------
@@ -286,10 +300,6 @@ q {
   quotes: """";
 }
 
-li {
-  margin-bottom: 5px;
-}
-
 hr {
   background-color: #ccc;
   border: 0;
@@ -299,23 +309,21 @@ hr {
 
 ul,
 ol {
-  text-indent: -10%;
-  padding-left: 15%;
-  max-width: 75%;
   margin: 0;
+  padding: 0;
 }
 
 ul {
-  list-style: inside;
+  list-style: none;
 }
 
 ol {
-  list-style: decimal inside;
+  list-style: decimal;
 }
 
 li>ul,
 li>ol {
-  margin-bottom: 3px;
+  margin-bottom: 0;
   margin-left: 15px;
 }
 
@@ -329,20 +337,16 @@ dd {
 
 img {
   vertical-align: middle;
-  /* Make sure images are scaled correctly. */
   height: auto;
-  /* Adhere to container width. */
+  /* Make sure images are scaled correctly. */
   max-width: 100%;
+  /* Adhere to container width. */
 }
 
 table {
   margin: 0 0 15px;
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 100%;
 }
-
-
 
 /*--------------------------------------------------------------
 # Forms
@@ -443,20 +447,6 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-button.topage {
-  background-color: #589225e0;
-  clear: both;
-  color: #eeef;
-  font-family: 'Roboto Slab', monospace;
-  font-size: 13px;
-  font-weight: 500;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  margin-left: 30%;
-  margin-right: 30%;
-  width: 40%;
-}
-
 a {
   text-decoration: none;
   color: #000000;
@@ -470,11 +460,10 @@ a:visited {
     color: purple;
 }
 */
-
 a:hover,
 a:focus,
 a:active {
-  color: #373;
+  color: #e23815;
 }
 
 a:focus {
@@ -519,7 +508,7 @@ a:active {
 .aligncenter {
   clear: both;
   display: block;
-  margin: 0px auto;
+  margin: 30px auto;
 }
 
 /*--------------------------------------------------------------
@@ -581,7 +570,6 @@ a:active {
 .entry-content,
 .entry-summary {
   margin: 0;
-  min-height: 75vh;
 }
 
 .page-links {
@@ -597,20 +585,20 @@ a:active {
   display: none;
 }
 
-img.dimmed {
+.dimmed {
   position: relative;
 }
 
-img.dimmed:after {
+.dimmed:after {
   content: " ";
-  z-index: 1000;
+  z-index: 10;
   display: block;
   position: absolute;
   height: 100%;
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(180, 200, 150, 0.5);
+  background: rgba(230, 200, 0, 0.5);
 }
 
 /*--------------------------------------------------------------
@@ -661,16 +649,64 @@ object {
   text-align: center;
 }
 
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+  margin-bottom: 1.5em;
+}
 
-/* HOME section */
-.lc-home-section {
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%;
+}
+
+.gallery-caption {
+  display: block;
+}
+
+.ps-home-section {
   padding: 80px 0;
   text-align: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-.lc-home-section .section-sub-title {
+.ps-home-section .section-sub-title {
   color: #666666;
   font-size: 20px;
   font-weight: 300;
@@ -678,7 +714,7 @@ object {
   line-height: 1;
 }
 
-.lc-home-section .section-title {
+.ps-home-section .section-title {
   color: #666666;
   font-size: 74px;
   font-weight: 300;
@@ -701,11 +737,11 @@ object {
   margin: 0 0 50px;
 }
 
-.lc-section-viewall {
+.ps-section-viewall {
   margin-top: 50px;
 }
 
-.lc-section-viewall a {
+.ps-section-viewall a {
   display: inline-block;
   border: 2px solid #e23815;
   padding: 12px 25px;
@@ -713,14 +749,14 @@ object {
   line-height: 1;
 }
 
-.lc-section-viewall a:hover {
+.ps-section-viewall a:hover {
   background-color: #e23815;
   color: #ffffff;
 }
 
 
 #scroll-up {
-  background-color: #333333;
+  background-color: #e23815;
   width: 40px;
   height: 40px;
   line-height: 35px;
@@ -739,13 +775,13 @@ object {
   opacity: 1;
 }
 
-.without-slider .lc-whole-header {
+.without-slider .ps-whole-header {
   position: relative;
   background-color: rgba(137, 175, 103, 0.75);
   margin-bottom: 40px;
 }
 
-.home.blog.without-slider .lc-whole-header {
+.home.blog.without-slider .ps-whole-header {
   margin-bottom: 0px;
 }
 
@@ -753,13 +789,21 @@ object {
 .archive #content.site-content,
 #content.site-content,
 .plx-home #content.site-content {
-  padding: 40px 0 40px 0;
-  min-height: 75vh;
+  padding: 60px 0 80px 0;
+}
+
+.page-template-templatestemplate-home-php #content.site-content {
+  padding: 0px;
 }
 
 #primary {
-  width: 80%;
+  width: 66.33%;
   float: left;
+}
+
+#secondary {
+  width: 29%;
+  float: right;
 }
 
 .no-sidebar-center #primary {
@@ -772,17 +816,38 @@ object {
   float: none;
 }
 
-/* .left-sidebar #primary {
+.left-sidebar #primary {
   float: right;
-} */
+}
 
-/* .left-sidebar #secondary {
+.left-sidebar #secondary {
   float: left;
-} */
+}
 
 /*inner-blog-page */
-/* #primary article.post {
+#primary article.post {
   margin-bottom: 50px;
+}
+
+#primary .blog-image-wrap img,
+.archive article.post img {
+  display: block;
+}
+
+#primary .blog-content-wrap,
+.article-content-wrapper {
+  padding: 25px;
+  background-color: #f7f7f7;
+}
+
+#primary .blog-content-wrap .cat-links a {
+  color: #e23815;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  display: inline-block;
+  margin-bottom: 15px;
 }
 
 #primary .entry-title {
@@ -802,7 +867,21 @@ object {
 
 #primary article.post .entry-meta a:hover {
   color: #e23815;
-} */
+}
+
+.comments-area .form-submit input[type=submit] {
+  background-color: #e23815;
+  border: 2px solid #e23815;
+  color: #ffffff;
+  padding: 10px 20px;
+  box-shadow: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
 
 .tags-links {
   color: #333333;
@@ -818,7 +897,7 @@ object {
   text-transform: capitalize;
   margin-left: 5px;
 }
-/*
+
 .edit-link a {
   display: inline-block;
   font-size: 13px;
@@ -868,7 +947,7 @@ object {
 .arcitle-more-btn a:hover,
 .arcitle-more-btn a:hover:after {
   color: #e23815;
-} */
+}
 
 /*----PAGINATIONS---*/
 .navigation.pagination {
@@ -925,3 +1004,16 @@ span.error-code {
   vertical-align: top;
   border-radius: 0;
 }
+
+
+/*========Typography=========*/
+/* @import url("./inc/styles/typography.css"); */
+
+/*==========Header===========*/
+/* @import url("./inc/styles/header.css"); */
+
+/*==========Menus============*/
+/* @import url("./inc/styles/menus.css"); */
+
+/*=========Sections==========*/
+/* @import url(".old/inc/styles/sections.css"); */
