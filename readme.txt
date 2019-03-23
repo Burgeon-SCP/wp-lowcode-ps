@@ -24,7 +24,7 @@ A starter theme called LoCoPaS.
 1. In your admin panel, go to Pluggins > Add New.
 2. Install and activate WP Pusher plugin.
 2. Obtain GitHub token and save it following WP Pusher instructions.
-3. Add LoCoPaS repository and use branch latest, then click Install Theme.
+3. Add LoCoPaS repository and use branch v1.0.3, then click Install Theme.
 4. Go to Appearance > Themes and click Activate on LoCoPaS to use your new theme right away.
 
 == Documentation ==
