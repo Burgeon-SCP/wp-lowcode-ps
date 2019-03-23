@@ -663,14 +663,14 @@ object {
 
 
 /* HOME section */
-.ps-home-section {
+.lc-home-section {
   padding: 80px 0;
   text-align: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-.ps-home-section .section-sub-title {
+.lc-home-section .section-sub-title {
   color: #666666;
   font-size: 20px;
   font-weight: 300;
@@ -678,7 +678,7 @@ object {
   line-height: 1;
 }
 
-.ps-home-section .section-title {
+.lc-home-section .section-title {
   color: #666666;
   font-size: 74px;
   font-weight: 300;
@@ -701,11 +701,11 @@ object {
   margin: 0 0 50px;
 }
 
-.ps-section-viewall {
+.lc-section-viewall {
   margin-top: 50px;
 }
 
-.ps-section-viewall a {
+.lc-section-viewall a {
   display: inline-block;
   border: 2px solid #e23815;
   padding: 12px 25px;
@@ -713,7 +713,7 @@ object {
   line-height: 1;
 }
 
-.ps-section-viewall a:hover {
+.lc-section-viewall a:hover {
   background-color: #e23815;
   color: #ffffff;
 }
@@ -739,13 +739,13 @@ object {
   opacity: 1;
 }
 
-.without-slider .ps-whole-header {
+.without-slider .lc-whole-header {
   position: relative;
   background-color: rgba(137, 175, 103, 0.75);
   margin-bottom: 40px;
 }
 
-.home.blog.without-slider .ps-whole-header {
+.home.blog.without-slider .lc-whole-header {
   margin-bottom: 0px;
 }
 

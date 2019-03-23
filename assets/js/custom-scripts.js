@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
      */
     $(window).load(function(){
         if( $('body').hasClass('header-sticky') ) {
-            var headerHeight = $('.ps-header-wrapper').outerHeight();
+            var headerHeight = $('.lc-header-wrapper').outerHeight();
         } else {
             var headerHeight = 3;
         }
@@ -22,9 +22,9 @@ jQuery(document).ready(function($) {
     /**
      * Search icon at primary menu
      */
-    $('.ps-search-icon').click(function() {
-        $('.ps-head-search').find('.search-form').toggleClass('active-form');
-        $('.ps-head-search').find('.search-form').fadeToggle();
+    $('.lc-search-icon').click(function() {
+        $('.lc-head-search').find('.search-form').toggleClass('active-form');
+        $('.lc-head-search').find('.search-form').fadeToggle();
     });
 
     /**
@@ -47,10 +47,10 @@ jQuery(document).ready(function($) {
         if( $('#wpadminbar').length ) {
           reduceHeight = 92;
         }*/
-        if( $('.ps-front-slider-wrapper').length ) {
+        if( $('.lc-front-slider-wrapper').length ) {
             $(window).resize(function() {
                 var wHeight = ( $(window).height() );
-                $('.ps-front-slider-wrapper').find( '.bx-viewport' ).height(wHeight);
+                $('.lc-front-slider-wrapper').find( '.bx-viewport' ).height(wHeight);
                 $('.single-slide-wrap').height(wHeight);
             }).resize();
         }
@@ -83,7 +83,7 @@ jQuery(document).ready(function($) {
 	/**
 	 * Fact Counter
 	 */
-    $('.ps-fact-number').counterUp({
+    $('.lc-fact-number').counterUp({
         delay: 20,
         time: 2000
     });
@@ -124,10 +124,10 @@ jQuery(document).ready(function($) {
     /**
      * Map section
      */
-    $('.ps-mag-caption').on('click', function(){
+    $('.lc-mag-caption').on('click', function(){
         $(this).toggleClass('active');
-        $('.ps-map-frame').toggleClass('active');
-        $('.ps-map-frame').fadeToggle();
+        $('.lc-map-frame').toggleClass('active');
+        $('.lc-map-frame').fadeToggle();
     });
 
     /**

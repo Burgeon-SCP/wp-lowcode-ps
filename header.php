@@ -26,23 +26,23 @@
 <?php do_action( 'locopas_before' ); ?>
 <div id="page-<?php if (! get_permalink()) { the_ID(); } else { echo basename(get_permalink()); } ?>" class="site">
 	<?php do_action( 'locopas_before_header' ); ?>
-	<div class="ps-whole-header">
+	<div class="lc-whole-header">
 		<?php
 			$locopas_top_header_option = get_theme_mod( 'top_header_option', 'hide' );
 			if( $locopas_top_header_option != 'hide' ) {
 		?>
-			<div class="ps-top-header-wrapper">
-				<div class="ps-container clearfix">
+			<div class="lc-top-header-wrapper">
+				<div class="lc-container clearfix">
 					<nav id="top-site-navigation" class="top-navigation" role="navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'locopas_top_menu', 'menu_id' => 'top-menu', 'fallback_cb' => false  ) ); ?>
 					</nav><!-- #site-navigation -->
 					<?php do_action( 'locopas_top_social_icons' ); ?>
-				</div><!-- .ps-container -->
-			</div><!-- .ps-top-header-wrapper -->
+				</div><!-- .lc-container -->
+			</div><!-- .lc-top-header-wrapper -->
 		<?php } ?>
 		<header id="masthead" class="site-header" role="banner">
-			<div class="ps-container">
-				<div class="ps-header-wrapper clearfix">
+			<div class="lc-container">
+				<div class="lc-header-wrapper clearfix">
 					<div class="site-branding">
 						<?php
                             if(get_theme_mod('custom_logo')){
@@ -75,11 +75,11 @@
 					<!-- theme main menu -->
 					<?php /*do_action( 'locopas_main_menu' );*/ ?>
 
-				</div><!-- .ps-header-wrapper-- >
-			</div><!-- .ps-container -->
+				</div><!-- .lc-header-wrapper-- >
+			</div><!-- .lc-container -->
 		</header><!-- #masthead -->
 
-	</div><!-- .ps-whole-header -->
+	</div><!-- .lc-whole-header -->
 	<?php
 		if( is_front_page() ) {
 			do_action( 'locopas_homepage_slider' );
@@ -89,4 +89,4 @@
 	?>
 
 	<div id="content" class="site-content">
-		<div class="ps-container">
+		<div class="lc-container">

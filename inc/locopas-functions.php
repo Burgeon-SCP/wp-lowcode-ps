@@ -200,7 +200,7 @@ if( ! function_exists( 'locopas_parallax_menu_cb' ) ):
 			$locopas_menu_title = get_theme_mod( $locopas_menu_mod_id, $locopas_menu_mod_default );
 			if( !empty( $locopas_menu_title ) ) {
 				?>
-                <li class="ps-menu-tab">
+                <li class="lc-menu-tab">
             	<?php
                 if( $parallax_menu_type == 'float' ) {
                 	?>
@@ -236,13 +236,13 @@ if( ! function_exists( 'locopas_main_menu_hook' ) ) :
 		$parallax_menu_type = get_theme_mod( 'parallax_menu_type', 'default' );
 		if($locopas_menu_style == 'parallax')  {
 			if( $parallax_menu_type == 'float' ) {
-				$nav_class = 'ps-floating-menu';
+				$nav_class = 'lc-floating-menu';
 			} else {
-				$nav_class = 'ps-parallax-menu';
+				$nav_class = 'lc-parallax-menu';
 			}
 		}
 ?>
-		<nav id="site-navigation" class="main-navigation ps-nav <?php echo esc_attr( $nav_class ); ?>" role="navigation">
+		<nav id="site-navigation" class="main-navigation lc-nav <?php echo esc_attr( $nav_class ); ?>" role="navigation">
 			<div class="nav-wrapper">
 				<div class="nav-toggle hide">
 		            <span class="one"> </span>
@@ -264,15 +264,15 @@ if( ! function_exists( 'locopas_main_menu_hook' ) ) :
                 } ?>
 			</div><!-- .nav-wrapper -->
 		</nav><!-- #site-navigation -->
-		<div class="ps-head-search">
+		<div class="lc-head-search">
 			<?php
 				$ps_search_option = get_theme_mod( 'primary_menu_search_option', 'show' );
 				if( $ps_search_option != 'hide' ) {
 			?>
-					<span class="ps-search-icon"></span>
+					<span class="lc-search-icon"></span>
 					<div class="search-form"><?php get_search_form(); ?></div>
 			<?php } ?>
-		</div><!-- .ps-head-search -->
+		</div><!-- .lc-head-search -->
 <?php
 	}
 endif;
@@ -306,7 +306,7 @@ function locopas_homepage_slider_hook() {
 	$ps_slider_cat_id = get_theme_mod( 'slider_cat_id', '0' );
 	if( $ps_slider_option != 'hide' && !empty( $ps_slider_cat_id ) ) {
 ?>
-		<div id="section-slider" class="ps-front-slider-wrapper">
+		<div id="section-slider" class="lc-front-slider-wrapper">
 			<?php
 				$ps_slider_args = array(
 									'category__in' => $ps_slider_cat_id,
@@ -324,7 +324,7 @@ function locopas_homepage_slider_hook() {
 		?>
 						<div class="single-slide-wrap" style="background-image: url('<?php echo esc_url( $image_path[0] ); ?>');">
 							<div class="slider-info">
-								<div class="ps-container">
+								<div class="lc-container">
 									<h2 class="slider-title"><?php the_title(); ?></h2>
 									<div class="slider-desc"><?php the_excerpt(); ?></div>
 									<span class="slide-button">
@@ -341,7 +341,7 @@ function locopas_homepage_slider_hook() {
                 wp_reset_postdata();
 			?>
 
-		</div><!-- .ps-front-slider-wrapper -->
+		</div><!-- .lc-front-slider-wrapper -->
 <?php
 	}
 }
@@ -360,8 +360,8 @@ if( ! function_exists( 'locopas_innerpage_header_hook' ) ):
 	function locopas_innerpage_header_hook() {
 
 ?>
- 	<div class="ps-innerpages-header-wrapper" style="background-image: url(<?php header_image(); ?>);">
- 		<div class="ps-container">
+ 	<div class="lc-innerpages-header-wrapper" style="background-image: url(<?php header_image(); ?>);">
+ 		<div class="lc-container">
 	 		<header class="entry-header">
 				<?php
 					if( is_archive() ) {
@@ -389,8 +389,8 @@ if( ! function_exists( 'locopas_innerpage_header_hook' ) ):
 					locopas_breadcrumbs();
 				?>
 			</header><!-- .entry-header -->
-		</div><!-- .ps-container -->
- 	</div><!-- .ps-innerpages-header-wrapper -->
+		</div><!-- .lc-container -->
+ 	</div><!-- .lc-innerpages-header-wrapper -->
 <?php
 	}
 endif;
@@ -411,20 +411,20 @@ if( !function_exists( 'locopas_social_icons' ) ):
 		$gp_link = get_theme_mod( 'gp_link', '' );
 		$yt_link = get_theme_mod( 'yt_link', '' );
 ?>
-		<div class="ps-social-icons-wrapper">
+		<div class="lc-social-icons-wrapper">
 			<?php if( !empty ( $fb_link ) ) { ?> <a href="<?php echo esc_url( $fb_link ); ?>" target="_
-			blank"> <span class="ps-social-icon fa fa-facebook"></span></a> <?php } ?>
+			blank"> <span class="lc-social-icon fa fa-facebook"></span></a> <?php } ?>
 			<?php if( !empty ( $tw_link ) ) { ?> <a href="<?php echo esc_url( $tw_link ); ?>" target="_
-			blank"> <span class="ps-social-icon fa fa-twitter"></span></a> <?php } ?>
+			blank"> <span class="lc-social-icon fa fa-twitter"></span></a> <?php } ?>
 			<?php if( !empty ( $ln_link ) ) { ?> <a href="<?php echo esc_url( $ln_link ); ?>" target="_
-			blank"> <span class="ps-social-icon fa fa-linkedin"></span></a> <?php } ?>
+			blank"> <span class="lc-social-icon fa fa-linkedin"></span></a> <?php } ?>
 			<?php if( !empty ( $pin_link ) ) { ?> <a href="<?php echo esc_url( $pin_link ); ?>" target="_
-			blank"> <span class="ps-social-icon fa fa-pinterest"></span></a> <?php } ?>
+			blank"> <span class="lc-social-icon fa fa-pinterest"></span></a> <?php } ?>
 			<?php if( !empty ( $gp_link ) ) { ?> <a href="<?php echo esc_url( $gp_link ); ?>" target="_
-			blank"> <span class="ps-social-icon fa fa-google-plus"></span></a> <?php } ?>
+			blank"> <span class="lc-social-icon fa fa-google-plus"></span></a> <?php } ?>
 			<?php if( !empty ( $yt_link ) ) { ?> <a href="<?php echo esc_url( $yt_link ); ?>" target="_
-			blank"> <span class="ps-social-icon fa fa-youtube"></span></a> <?php } ?>
-		</div><!-- .ps-social-icons-wrapper -->
+			blank"> <span class="lc-social-icon fa fa-youtube"></span></a> <?php } ?>
+		</div><!-- .lc-social-icons-wrapper -->
 <?php
 	}
 endif;
@@ -482,7 +482,7 @@ if( !function_exists( 'locopas_arch_title' ) ) {
 	        } elseif ( is_tag() ) {
 	            $title = single_tag_title( '', false );
 	        } elseif ( is_author() ) {
-	            $title = '<span class="vcard ps-admin">' . get_the_author() . '</span>' ;
+	            $title = '<span class="vcard lc-admin">' . get_the_author() . '</span>' ;
 	        }
 	    return $title;
 	}
