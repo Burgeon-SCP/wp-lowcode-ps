@@ -1,10 +1,10 @@
 /*------------contact-section----------*/
-.ps-home-section#section-contact {
+.lc-home-section#section-contact {
   padding-bottom: 0;
   background-color: #ffffff;
 }
 
-#section-contact .ps-contact-form {
+#section-contact .lc-contact-form {
   width: 1170px;
   margin: 0 auto;
   font-size: 14px;
@@ -13,8 +13,8 @@
   text-transform: capitalize;
 }
 
-#section-contact .ps-contact-form input,
-#section-contact .ps-contact-form textarea {
+#section-contact .lc-contact-form input,
+#section-contact .lc-contact-form textarea {
   width: 40%;
 }
 
@@ -39,7 +39,7 @@
   color: #e23815;
 }
 
-#section-contact .ps-footer-form p {
+#section-contact .lc-footer-form p {
   float: left;
   width: 23%;
   margin: 0;
@@ -47,22 +47,22 @@
   text-align: left;
 }
 
-#section-contact .ps-footer-form {
+#section-contact .lc-footer-form {
   margin-left: -2%;
 }
 
-#section-contact .ps-footer-form input,
-#section-contact .ps-footer-form textarea {
+#section-contact .lc-footer-form input,
+#section-contact .lc-footer-form textarea {
   width: 100%;
   height: 45px;
 }
 
-#section-contact .ps-footer-form textarea {
+#section-contact .lc-footer-form textarea {
   resize: vertical;
   line-height: 2;
 }
 
-#section-contact .ps-contant-info .ps-ctn {
+#section-contact .lc-contant-info .lc-ctn {
   padding-right: 30px;
   float: left;
   text-align: right;
@@ -71,7 +71,7 @@
   color: #666666;
 }
 
-#section-contact .ps-contant-info .ps-address {
+#section-contact .lc-contant-info .lc-address {
   padding-left: 30px;
   float: right;
   text-align: left;
@@ -80,8 +80,8 @@
   color: #666666;
 }
 
-#section-contact .ps-num-label,
-#section-contact .ps-add-label {
+#section-contact .lc-num-label,
+#section-contact .lc-add-label {
   font-size: 24px;
   color: #666666;
   font-weight: 600;
@@ -92,7 +92,7 @@
   vertical-align: bottom;
 }
 
-#section-contact .ps-num-label:before {
+#section-contact .lc-num-label:before {
   content: '\f095';
   font-family: 'FontAwesome';
   color: #e23815;
@@ -100,7 +100,7 @@
   margin-right: 12px;
 }
 
-#section-contact .ps-add-label:before {
+#section-contact .lc-add-label:before {
   content: '\f041';
   font-family: 'FontAwesome';
   color: #e23815;
@@ -108,13 +108,13 @@
   margin-right: 12px;
 }
 
-#section-contact .ps-contant-info {
+#section-contact .lc-contant-info {
   padding: 40px 0;
   width: 940px;
   margin: 0 auto;
 }
 
-#section-contact .ps-contant-map {
+#section-contact .lc-contant-map {
   width: 940px;
   margin: 0 auto;
   padding: 27px 0;
@@ -128,7 +128,7 @@
   border-bottom: 1px solid #dddddd;
 }
 
-#section-contact .ps-mag-caption {
+#section-contact .lc-mag-caption {
   position: relative;
   cursor: pointer;
   -webkit-transition: all 350ms ease-in-out;
@@ -136,7 +136,7 @@
   transition: all 350ms ease-in-out;
 }
 
-#section-contact .ps-mag-caption:after {
+#section-contact .lc-mag-caption:after {
   content: '\f107';
   position: absolute;
   font-family: 'FontAwesome';
@@ -146,7 +146,7 @@
   margin-left: 12px;
 }
 
-#section-contact .ps-mag-caption:hover {
+#section-contact .lc-mag-caption:hover {
   color: #e23815;
 }
 
@@ -157,36 +157,36 @@
 }
 
 @media (max-width:992px) {
-  #section-contact .ps-contant-map {
+  #section-contact .lc-contant-map {
     width: 90%;
   }
 
-  #section-contact .ps-contant-info .ps-address {
+  #section-contact .lc-contant-info .lc-address {
     padding-left: 30px;
   }
 
-  #section-contact .ps-contant-info .ps-ctn {
+  #section-contact .lc-contant-info .lc-ctn {
     padding-right: 30px;
   }
 
 }
 
 @media (max-width: 480px) {
-  #section-contact .ps-num-label:before,
-  #section-contact .ps-add-label:before,
-  #section-contact .ps-num-label,
-  #section-contact .ps-add-label {
+  #section-contact .lc-num-label:before,
+  #section-contact .lc-add-label:before,
+  #section-contact .lc-num-label,
+  #section-contact .lc-add-label {
     font-size: 20px;
   }
 
-  #section-contact .ps-footer-form p {
+  #section-contact .lc-footer-form p {
     float: none;
     width: 100%;
     margin-left: 0;
     margin-bottom: 10px;
   }
 
-  #section-contact .ps-contant-info, #section-contact .footer-social-wrap {
+  #section-contact .lc-contant-info, #section-contact .footer-social-wrap {
     padding: 20px 10px;
   }
 

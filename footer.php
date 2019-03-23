@@ -12,19 +12,19 @@
  */
 ?>
 
-		</div><!-- .ps-container -->
+		</div><!-- .lc-container -->
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<?php get_sidebar( 'footer' ); ?>
 		<div class="site-info">
-			<div class="ps-section-container">
+			<div class="lc-section-container">
 				<?php echo wp_kses_post(
 					 get_theme_mod( 'ps_copyright_text',
 					  							__('&copy; 2019 LoCoPaS', 'locopas')
 												)
 											);?>
-			</div><!-- ps-section-container -->
+			</div><!-- lc-section-container -->
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 	<a href="#masthead" id="scroll-up"><i class="fa fa-angle-up"></i></a>

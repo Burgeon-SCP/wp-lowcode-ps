@@ -46,9 +46,9 @@
 	wp.customize( 'top_header_option', function( value ) {
 		value.bind( function( to ) {
 			if( to === 'show' ) {
-				$('.ps-top-header-wrapper').fadeIn();
+				$('.lc-top-header-wrapper').fadeIn();
 			} else {
-				$('.ps-top-header-wrapper').fadeOut();
+				$('.lc-top-header-wrapper').fadeOut();
 			}
 		} );
 	} );
@@ -66,9 +66,9 @@
 	wp.customize( 'primary_menu_search_option', function( value ) {
 		value.bind( function( to ) {
 			if( to === 'show' ) {
-				$('.ps-head-search').fadeIn();
+				$('.lc-head-search').fadeIn();
 			} else {
-				$('.ps-head-search').fadeOut();
+				$('.lc-head-search').fadeOut();
 			}
 		} );
 	} );
@@ -227,13 +227,13 @@
 
 	wp.customize( 'fact_counter_title_0', function( value ) {
 		value.bind( function( to ) {
-			$( '#single-fact-0 .ps-fact-title' ).text( to );
+			$( '#single-fact-0 .lc-fact-title' ).text( to );
 		} );
 	} );
 
 	wp.customize( 'fact_counter_number_0', function( value ) {
 		value.bind( function( to ) {
-			$( '#single-fact-0 .ps-fact-number' ).text( to );
+			$( '#single-fact-0 .lc-fact-number' ).text( to );
 		} );
 	} );
 
@@ -246,13 +246,13 @@
 
 	wp.customize( 'fact_counter_title_1', function( value ) {
 		value.bind( function( to ) {
-			$( '#single-fact-1 .ps-fact-title' ).text( to );
+			$( '#single-fact-1 .lc-fact-title' ).text( to );
 		} );
 	} );
 
 	wp.customize( 'fact_counter_number_1', function( value ) {
 		value.bind( function( to ) {
-			$( '#single-fact-1 .ps-fact-number' ).text( to );
+			$( '#single-fact-1 .lc-fact-number' ).text( to );
 		} );
 	} );
 
@@ -265,13 +265,13 @@
 
 	wp.customize( 'fact_counter_title_2', function( value ) {
 		value.bind( function( to ) {
-			$( '#single-fact-2 .ps-fact-title' ).text( to );
+			$( '#single-fact-2 .lc-fact-title' ).text( to );
 		} );
 	} );
 
 	wp.customize( 'fact_counter_number_2', function( value ) {
 		value.bind( function( to ) {
-			$( '#single-fact-2 .ps-fact-number' ).text( to );
+			$( '#single-fact-2 .lc-fact-number' ).text( to );
 		} );
 	} );
 
@@ -284,13 +284,13 @@
 
 	wp.customize( 'fact_counter_title_3', function( value ) {
 		value.bind( function( to ) {
-			$( '#single-fact-3 .ps-fact-title' ).text( to );
+			$( '#single-fact-3 .lc-fact-title' ).text( to );
 		} );
 	} );
 
 	wp.customize( 'fact_counter_number_3', function( value ) {
 		value.bind( function( to ) {
-			$( '#single-fact-3 .ps-fact-number' ).text( to );
+			$( '#single-fact-3 .lc-fact-number' ).text( to );
 		} );
 	} );
 
@@ -401,23 +401,23 @@
 	} );
 	wp.customize( 'team_view_more_txt', function( value ) {
 		value.bind( function( to ) {
-			$( '#section-team .ps-section-viewall a' ).html( to );
+			$( '#section-team .lc-section-viewall a' ).html( to );
 		} );
 	} );
     wp.customize( 'blog_section_read_button', function( value ) {
 		value.bind( function( to ) {
-			$( '#section-blog .ps-more-button' ).html( to );
+			$( '#section-blog .lc-more-button' ).html( to );
 		} );
 	} );
     wp.customize( 'blog_section_view_all_txt', function( value ) {
 		value.bind( function( to ) {
-			$( '#section-blog .ps-section-viewall a' ).html( to );
+			$( '#section-blog .lc-section-viewall a' ).html( to );
 		} );
 	} );
     
     wp.customize( 'contact_section_phone', function( value ) {
 		value.bind( function( to ) {
-			$( '#section-contact .ps-ctn span a' ).html( to );
+			$( '#section-contact .lc-ctn span a' ).html( to );
 		} );
 	} );
     wp.customize( 'contact_section_address', function( value ) {
@@ -427,7 +427,7 @@
 	} );
     wp.customize( 'contact_map_caption', function( value ) {
 		value.bind( function( to ) {
-			$( '#section-contact .ps-mag-caption' ).html( to );
+			$( '#section-contact .lc-mag-caption' ).html( to );
 		} );
 	} );
 

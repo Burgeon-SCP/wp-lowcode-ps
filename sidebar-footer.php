@@ -20,36 +20,36 @@ if ( !is_active_sidebar( 'locopas_footer_sidebar' ) &&
 $locopas_footer_layout = get_theme_mod( 'ps_footer_widget_layout', 'column_three' );
 
 ?>
-<div class="ps-top-footer footer_<?php echo esc_attr( $locopas_footer_layout ); ?> clearfix">
-	<div class="ps-section-container clearfix">
-		<div class="ps-footer-widget-wrapper">
-			<div class="ps-footer-widget column-first">
+<div class="lc-top-footer footer_<?php echo esc_attr( $locopas_footer_layout ); ?> clearfix">
+	<div class="lc-section-container clearfix">
+		<div class="lc-footer-widget-wrapper">
+			<div class="lc-footer-widget column-first">
 				<?php if( is_active_sidebar( 'locopas_footer_sidebar' ) ):
 					dynamic_sidebar( 'locopas_footer_sidebar' );
 				endif;
 				?>
 			</div>
 
-			<div class="ps-footer-widget column-second" style="display: <?php if( $locopas_footer_layout == 'column_one' ){ echo 'none'; } else { echo 'block'; }?>;">
+			<div class="lc-footer-widget column-second" style="display: <?php if( $locopas_footer_layout == 'column_one' ){ echo 'none'; } else { echo 'block'; }?>;">
 				<?php if( is_active_sidebar( 'locopas_footer_sidebar-2' ) ):
 					dynamic_sidebar( 'locopas_footer_sidebar-2' );
 				endif;
 				?>
 			</div>
 
-			<div class="ps-footer-widget column-third" style="display: <?php if( $locopas_footer_layout == 'column_one' || $locopas_footer_layout == 'column_two'){ echo 'none'; } else { echo 'block'; }?>;">
+			<div class="lc-footer-widget column-third" style="display: <?php if( $locopas_footer_layout == 'column_one' || $locopas_footer_layout == 'column_two'){ echo 'none'; } else { echo 'block'; }?>;">
 				<?php if( is_active_sidebar( 'locopas_footer_sidebar-3' ) ):
 					dynamic_sidebar( 'locopas_footer_sidebar-3' );
 				endif;
 				?>
 			</div>
 
-			<div class="ps-footer-widget column-forth" style="display: <?php if( $locopas_footer_layout != 'column_four' ){ echo 'none'; } else { echo 'block'; }?>;">
+			<div class="lc-footer-widget column-forth" style="display: <?php if( $locopas_footer_layout != 'column_four' ){ echo 'none'; } else { echo 'block'; }?>;">
 				<?php if( is_active_sidebar( 'locopas_footer_sidebar-4' ) ):
 					dynamic_sidebar( 'locopas_footer_sidebar-4' );
 				endif;
 				?>
 			</div>
-		</div><!-- .ps-footer-widget-wrapper -->
-	</div><!-- ps-section-container -->
-</div><!-- .ps-top-footer -->
+		</div><!-- .lc-footer-widget-wrapper -->
+	</div><!-- lc-section-container -->
+</div><!-- .lc-top-footer -->
