@@ -2,12 +2,13 @@
 ## Galleries
 --------------------------------------------------------------*/
 .gallery {
-  background-color: #bbb8;
-  display: inline-block;
-  margin-bottom: 5em;
-  border-radius: 3%;
-  padding: 10px;
-  width: 100%;
+  background-color: #bbc3bba8;
+￼  display: inline-block;
+￼  margin-bottom: 5em;
+￼  border-radius: 15px;
+￼  padding: 10px;
+￼  width: 100%;
+￼  box-shadow: -3px 7px 10px 5px #565;
 }
 
 .gallery ul {
@@ -40,12 +41,6 @@
 .gallery-lg-hide {
   display: none;
 }
-
-/* .gallery-sm-hide,
-.gallery-md-hide {
-  display: inherit;
-} */
-
 
 /* --- gallery blocks ---  */
 .gallery-block-10 {

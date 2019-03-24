@@ -3,16 +3,19 @@ LoCoPaS is a beautiful free responsive page-only WordPress theme with awesome pa
  It is a performance based WP template suitable for multipurpose websites like business, agency, portfolio, eCommerce etc.
  It is a fully responsive theme that fits perfectly on any device.
  It is clean, simple, SEO friendly, flexible, multilingual, and feature-rich theme for modern websites.
- The theme is based on WordPress Live Customizer that allows you to customize the complete theme instantly.
+ The theme is based on WordPress Live Customizer that allows you to customize basic wp_core configurations.
+ Concieved for creators and mantainers capables of css-editing and classes incorporation.
+ Post and Comments sections will be removed from dashboard.
 
-We specially thank the people from AccesPress for delivering ParallaxSome, in which we based our work.
+We specially thank the people from AccessPress for delivering ParallaxSome,
+ in which we based our work. (https://accesspressthemes.com/wordpress-themes/parallaxsome/)
 
 
 === Tags ===
 one-column, no-post, no-comments, no-sidebar, translation-ready, flexible-header, footer-widgets, no-emojis, custom-background, custom-logo, featured-images, theme-options
 
 LoCoPaS WordPress Theme, Copyright 2019 Burgeon EnvironMental Solutions
-LoCoPaS GitHub repository: https://github.com/Burgeon-SCP/wp-lowcode-ps
+LoCoPaS GitHub repository: https://github.com/burgeon-env/wp-lowcode-ps
 LoCoPaS is distributed under the terms of the GNU GPL v3
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -21,11 +24,15 @@ A starter theme called LoCoPaS.
 
 == Installation ==
 
+-- If you do not have WP Pusher:
 1. In your admin panel, go to Pluggins > Add New.
 2. Install and activate WP Pusher plugin.
-2. Obtain GitHub token and save it following WP Pusher instructions.
-3. Add LoCoPaS repository and use branch v1.0.3, then click Install Theme.
-4. Go to Appearance > Themes and click Activate on LoCoPaS to use your new theme right away.
+3. Obtain GitHub token and save it following WP Pusher instructions.
+
+-- With WP Pusher and a GitHub token
+1. Go to WP Pusher > Install Theme
+2. Add LoCoPaS repository burgeon-env/wp-lowcode-ps and use branch v1.0.3, then click Install Theme.
+3. Go to Appearance > Themes and click Activate on LoCoPaS to use your new theme right away.
 
 == Documentation ==
 1. Create page and assign home page template.
