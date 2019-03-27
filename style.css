@@ -304,6 +304,7 @@ ol {
   padding-left: 15%;
   max-width: 75%;
   margin: 0;
+  margin-left: 10%;
 }
 
 ul {
@@ -744,7 +745,7 @@ object {
   color: #ffffff;
   position: fixed;
   right: 30px;
-  bottom: 60px;
+  bottom: 75px;
   border-radius: 100%;
   opacity: 0.5;
   z-index: 999999;

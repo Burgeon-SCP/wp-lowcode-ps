@@ -3,7 +3,7 @@
 footer.site-footer {
   text-align: center;
   font-size: 14px;
-  color: #dddddd;
+  color: #ccc;
   letter-spacing: 1px;
 }
 
@@ -17,7 +17,7 @@ footer.site-footer {
 }
 
 .lc-top-footer {
-  background-color: rgba(137, 175, 103, 0.75);
+  background-color: #89af67bf;
   padding: 60px 0;
 }
 
@@ -95,7 +95,7 @@ footer.site-footer {
 }
 
 footer.site-footer .site-info {
-  background-color: rgba(27, 43, 20, 0.92);
+  background-color: #1b2b14eb;
   padding: 10px 0;
 }
 
@@ -132,5 +132,9 @@ footer.site-footer .site-info a:hover {
   .lc-top-footer.footer_column_four .lc-footer-widget-wrapper,
   #section-contact .lc-footer-form {
     margin-left: 0;
+  }
+
+  footer.site-footer .site-info {
+    padding: 10px 15%;
   }
 }

@@ -12,22 +12,24 @@
 }
 
 .gallery ul {
+  margin-top: 13px;
   max-width: 95%;
-  margin-top: 10px;
 }
 
 .gallery-img {
   border-radius: 30%;
   padding: 10px;
+  max-width: 200px;
 }
 
-.gallery-img-height-120 {
+.gallery-img-height-150 {
   width: auto;
-  height: 120px;
+  height: 150px;
 }
 
-.gallery-img-width-120 {
-  width: 120px;
+.gallery-img-height-200 {
+  width: auto;
+  height: 200px;
 }
 
 .gallery-caption {
