@@ -346,10 +346,13 @@ div.background-slide {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-left: -5vw;
-  min-height: 35vh;
-  padding: 3vh;
-  width: 110vw;
+  box-shadow: 10px 5px 20px 18px #566356a6;
+  margin-bottom: 10vh;
+  margin-left: -10vw;
+  margin-top: 10vh;
+  min-height: 65vh;
+  padding: 5vh;
+  width: 120vw;
 }
 
 
