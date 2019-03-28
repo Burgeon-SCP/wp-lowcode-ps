@@ -217,16 +217,6 @@ require trailingslashit( get_template_directory() ) . '/inc/customizer/locopas-s
 require trailingslashit( get_template_directory() ) . '/inc/jetpack.php';
 
 /**
- * Typography
- */
-// require trailingslashit(get_template_directory()).'/inc/typography/typography.php';
-
-/**
  * Load metaboxes file
  */
 // require trailingslashit( get_template_directory() ) . '/inc/metaboxes/metabox.php';
-
-/**
- * Load Welcome Page
- */
-#require trailingslashit( get_template_directory() ) . '/welcome/welcome.php';
