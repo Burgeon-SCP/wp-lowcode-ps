@@ -1,3 +1,45 @@
+/*------Backgrounds for pages--------*/
+div#page-team {
+  background-image: url("https://burgeon.life/wp-content/uploads/2019/03/fons_blocs_pedra-e1553888813532.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+}
+
+/*--------Social icons-------*/
+/* Must be wrapped inside link to be active
+ */
+a > img[class^=soc-ico-] {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 3px;
+  width: 32px;
+}
+
+img.soc-ico-gh {
+  content: url('https://github.githubassets.com/pinned-octocat.svg')
+}
+
+
+img.soc-ico-gs {
+  content: url('https://scholar.google.com/favicon.ico')
+}
+
+
+img.soc-ico-li {
+  content: url('https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca');
+}
+
+img.soc-ico-rg {
+  content: url('https://c5.rgstatic.net/m/41542880220916/images/favicon/favicon-32x32.png');
+}
+
+img.soc-ico-so {
+  content: url('https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png');
+}
+
 /*------------contact-section----------*/
 .lc-home-section#section-contact {
   padding-bottom: 0;

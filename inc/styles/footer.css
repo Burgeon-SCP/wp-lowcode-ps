@@ -3,7 +3,7 @@
 footer.site-footer {
   text-align: center;
   font-size: 14px;
-  color: #ccc;
+  color: #dddddd;
   letter-spacing: 1px;
 }
 
@@ -17,7 +17,7 @@ footer.site-footer {
 }
 
 .lc-top-footer {
-  background-color: #89af67bf;
+  background-color: rgba(137, 175, 103, 0.75);
   padding: 60px 0;
 }
 
@@ -95,7 +95,7 @@ footer.site-footer {
 }
 
 footer.site-footer .site-info {
-  background-color: #1b2b14eb;
+  background-color: rgba(27, 43, 20, 0.92);
   padding: 10px 0;
 }
 

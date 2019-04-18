@@ -91,7 +91,6 @@ if( ! function_exists( 'locopas_styles_register' ) ):
 											 $file);
 		} */
 
-		// wp_enqueue_style( 'locopas-<STYLE-TYPE>-style', get_template_directory_uri() . '/inc/styles/<STYLE-FILE>.css' );
 		wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri() . '/inc/styles/typography.css' );
 		wp_enqueue_style( 'locopas-header-style', get_template_directory_uri() . '/inc/styles/header.css' );
 		wp_enqueue_style( 'locopas-contact-style', get_template_directory_uri() . '/inc/styles/contact.css' );
