@@ -38,6 +38,8 @@ img.soc-ico-rg {
 
 img.soc-ico-so {
   content: url('https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png');
+  background-color: grey;
+  border-radius: 3px;
 }
 
 /*------------contact-section----------*/

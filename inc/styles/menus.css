@@ -6,8 +6,6 @@
 }
 
 .main-navigation {
-  float: left;
-  width: 60%;
   text-align: center;
   line-height: 1;
 }
@@ -137,6 +135,13 @@
   width: 100%;
 }
 
+#top-menu {
+	max-width: 100%;
+	margin: 0;
+	float: right;
+}
+
+/*--------SEARCH-MENU----------*/
 .lc-head-search {
   float: right;
   position: relative;
