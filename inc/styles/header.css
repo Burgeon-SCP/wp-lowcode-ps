@@ -188,17 +188,14 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.23);
 }
 
-.lc-header-wrapper #top-site-navigation {
-  float: left;
-}
-
 .lc-header-wrapper #top-site-navigation ul li {
   display: inline-block;
-  font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
+  margin: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-indent: 0;
   text-transform: uppercase;
-  position: relative;
-  padding: 0 15px;
 }
 
 .lc-header-wrapper #top-site-navigation ul li a {
@@ -222,7 +219,7 @@
 
 .lc-header-wrapper #top-site-navigation ul li a:hover,
 .lc-whole-header .top-social-icons a:hover {
-  color: #ddffdd;
+  color: green;
 }
 
 .lc-header-wrapper #top-site-navigation ul ul {
@@ -328,10 +325,8 @@
 
 .sticky-wrapper.is-sticky .lc-header-wrapper #top-site-navigation {
   display: inline-block;
+  float: right;
   min-width: 40vw;
-  margin: 0;
-  padding: 0;
-  padding-top: 3px;
 }
 
 .sticky-wrapper.is-sticky .lc-whole-header #top-site-navigation ul li {
