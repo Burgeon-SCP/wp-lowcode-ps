@@ -185,8 +185,13 @@
 
 .lc-top-header-wrapper {
   padding: 15px 0;
+}
+
+/*
+.lc-top-header-wrapper {
   border-bottom: 1px solid rgba(255, 255, 255, 0.23);
 }
+ */
 
 .lc-header-wrapper #top-site-navigation ul li {
   display: inline-block;
@@ -301,18 +306,21 @@
 }
 
 .lc-header-wrapper {
-  padding: 25px 0;
+  margin-top: -10px;
+  padding-bottom: 25px;
   position: relative;
 }
 
 .lc-header-wrapper .site-branding {
   float: left;
   width: 30%;
+  max-width: 300px;
 }
 
 .lc-header-wrapper #top-site-navigation {
   display: none;
 }
+
 
 /*sticky-header-section*/
 .sticky-wrapper.is-sticky .site-header {
@@ -320,7 +328,7 @@
 }
 
 .sticky-wrapper.is-sticky .lc-header-wrapper {
-  padding: 12px 0;
+  padding: 18px 0;
 }
 
 .sticky-wrapper.is-sticky .lc-header-wrapper #top-site-navigation {
