@@ -1,9 +1,28 @@
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+  /*margin: 0 0 1.5em;*/
+  margin: 0;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+  max-width: 100%;
+}
+
+
 /*------------widget-section---------*/
+
+.widget_text p {
+  font-size: 16px;
+  text-align: center;
+}
 
 .widget-title {
   color: #e23815;
-  margin: 0 0 20px;
-  font-size: 24px;
+  margin: 0 0 15px;
+  font-size: 20px;
   text-transform: uppercase;
   line-height: 1;
   font-weight: 600;
@@ -44,9 +63,9 @@
   color: #666666;
 }
 
-.widget_recent_comments ul li {
+/* .widget_recent_comments ul li {
   color: #aaaaaa;
-}
+} */
 
 .widget-area .widget a:hover {
   color: #e23815;
@@ -67,17 +86,17 @@
 
 .widget_search input[type=submit],
 .archive #primary .search-submit {
-  width: 29%;
-  padding: 9px 20px;
-  max-height: 35px;
   background-color: #e23815;
   border: 2px solid #e23815;
-  color: #ffffff;
+  border-radius: 0;
   box-shadow: none;
+  color: #ffffff;
   font-size: 14px;
   line-height: 1;
+  max-height: 35px;
+  min-width: 100px;
   vertical-align: top;
-  border-radius: 0;
+  width: 29%;
 }
 
 .widget_calendar #wp-calendar {
