@@ -33,8 +33,13 @@
 		?>
 			<div class="lc-top-header-wrapper">
 				<div class="lc-container clearfix">
-					<nav id="top-site-navigation" class="top-navigation" role="navigation">
-						<?php wp_nav_menu( array( 'theme_location' => 'locopas_top_menu', 'menu_id' => 'top-menu', 'fallback_cb' => false  ) ); ?>
+					<nav class="main-navigation" role="navigation">
+						<!-- TODO: Lacks check for active plugin -->
+						<?php echo qtranxf_generateLanguageSelectCode('image'); ?> <!-- #language chooser -->
+						<?php wp_nav_menu( array( 'theme_location' => 'locopas_top_menu',
+												 'menu_id' => 'top-menu',
+												 'fallback_cb' => false
+												) ); ?>
 					</nav><!-- #site-navigation -->
 					<?php do_action( 'locopas_top_social_icons' ); ?>
 				</div><!-- .lc-container -->
@@ -73,7 +78,10 @@
 					</div><!-- .site-branding -->
 
 					<!-- theme main menu -->
-					<?php /*do_action( 'locopas_main_menu' );*/ ?>
+					<nav id="top-site-navigation" role="navigation">
+                       <?php wp_nav_menu( array( 'theme_location' => 'locopas_top_menu', 'menu_id' => 'top-menu', 'fallback_cb' => false  ) ); ?>
+                    </nav><!-- #site-navigation -->
+                    <?php /* do_action( 'locopas_main_menu' ); */ ?>
 
 				</div><!-- .lc-header-wrapper-- >
 			</div><!-- .lc-container -->

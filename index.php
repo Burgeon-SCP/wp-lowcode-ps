@@ -54,5 +54,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-locopas_get_sidebar();
+// locopas_get_sidebar();
 get_footer();

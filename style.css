@@ -1,6 +1,6 @@
 /*
 Theme Name: LoCoPaS
-Theme URI: https://github.com/Burgeon-SCP/wp-lowcode-ps
+Theme URI: https://github.com/burgeon-env/wp-lowcode-ps
 Author: Burgeon EnvironMental Solutions
 Author URI: https://burgeon.life/
 Description: LoCoPaS is a beautiful free responsive page-only WordPress theme with awesome parallax scrolling effect. It is a performance based WP template suitable for multipurpose websites like business, agency, portfolio, eCommerce etc. It is a fully responsive theme that fits perfectly on any device. It is clean, simple, SEO friendly, flexible, multilingual, and feature-rich theme for modern websites.
@@ -14,7 +14,7 @@ Tags: one-column, no-post, no-comments, no-sidebar, translation-ready, flexible-
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-LoCoPaS is based on ParallaxSome https://accesspressthemes.com/wordpress-themes/parallaxsome (C) BurgeonEnv Themes 2016, which is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+LoCoPaS is based on ParallaxSome https://accesspressthemes.com/wordpress-themes/parallaxsome (C) 2016 AccessPress Themes, which is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 ParallaxSome and Underscores are distributed under the terms of the GNU GPL v3 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -271,8 +271,15 @@ html {
 }
 
 body {
-  background: #fff;
   /* Fallback for when there is no custom background color defined. */
+  background: #fff;
+  /* Prevent background-slide from expanding horizontaly --> moved to .site */
+  /*
+  overflow-x: hidden !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  */
 }
 
 blockquote:before,
@@ -304,6 +311,7 @@ ol {
   padding-left: 15%;
   max-width: 75%;
   margin: 0;
+  margin-left: 10%;
 }
 
 ul {
@@ -345,13 +353,44 @@ div.background-slide {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-left: -5vw;
-  min-height: 35vh;
-  padding: 3vh;
-  width: 110vw;
+  box-shadow: 10px 5px 20px 18px #566356a6;
+  margin-bottom: 10vh;
+  margin-left: -10vw;
+  margin-top: 10vh;
+  min-height: 65vh;
+  overflow-x: hidden !important;
+  padding: 5vh;
+  width: 120vw;
 }
 
+div.bkg-img {
+  /* customize each element with style="background-image: url();" */
+  background-color: #ccc8;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: outset 8px #cadfcadf;
+}
 
+div.bkg-img p {
+  color: #dcdcdc;
+  font-weight: bold;
+  margin-top: 30vh;
+  background-color: #55a922dc;
+  padding: 3%;
+  border-radius: 5px;
+  text-align: right;
+}
+
+div.bkg-img h3 {
+  background-color: #cdcd;
+}
+
+div.bkg-img img.gallery-img {
+	max-height: 100px;
+	max-width: 30%;
+	border-radius: 0;
+}
 
 /*--------------------------------------------------------------
 # Forms
@@ -455,17 +494,22 @@ textarea {
 
 button.topage {
   background-color: #589225e0;
-  clear: both;
   color: #eeef;
   font-family: 'Roboto Slab', monospace;
   font-size: 16px;
   font-weight: 500;
-  max-width: 200px;
-  margin-bottom: 20px;
+  max-width: 300px;
+  margin: 3px 35%;
+/*  margin-bottom: 20px;
   margin-top: 20px;
-  margin-left: 40%;
-  margin-right: 40%;
-  width: 20%;
+  margin-left: 35%;
+  margin-right: 35%; */
+  width: 30%;
+}
+
+div.background-slide button.topage {
+  margin: 3px 45vw;
+  width: 30vw;
 }
 
 a {
@@ -536,6 +580,8 @@ a:active {
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
+div.background-slide:before,
+div.background-slide:after,
 .clearfix:before,
 .clearfix:after,
 .entry-content:before,
@@ -555,6 +601,7 @@ a:active {
   clear: both;
 }
 
+div.background-slide:after,
 .clearfix:after,
 .entry-content:after,
 .comment-content:after,
@@ -564,22 +611,16 @@ a:active {
   clear: both;
 }
 
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-.widget {
-  /*margin: 0 0 1.5em;*/
-  margin: 0;
-}
-
-/* Make sure select elements fit in widgets. */
-.widget select {
-  max-width: 100%;
-}
 
 /*--------------------------------------------------------------
 ## Pages
 --------------------------------------------------------------*/
+.site {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
 .sticky {
   display: block;
 }
@@ -744,7 +785,7 @@ object {
   color: #ffffff;
   position: fixed;
   right: 30px;
-  bottom: 60px;
+  bottom: 75px;
   border-radius: 100%;
   opacity: 0.5;
   z-index: 999999;
@@ -777,10 +818,11 @@ object {
 }
 
 #primary {
-  width: 80%;
-  float: left;
+  width: 100%;
+  float: none;
 }
 
+/*
 .no-sidebar-center #primary {
   margin: 0 auto;
   float: none;
@@ -790,6 +832,7 @@ object {
   width: 100%;
   float: none;
 }
+*/
 
 /*inner-blog-page */
 #primary article.post {

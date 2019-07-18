@@ -47,10 +47,10 @@ function locopas_setup() {
 	add_theme_support( 'custom-logo', array( 'size' => 'locopas-site-logo' ) );
 
 	// Woocommerce Compatibility
-	// add_theme_support( 'woocommerce' );
-	// add_theme_support( 'wc-product-gallery-zoom' );
-	// add_theme_support( 'wc-product-gallery-lightbox' );
-	// add_theme_support( 'wc-product-gallery-slider' );
+	add_theme_support( 'woocommerce' );
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
 
 	/**
 	 * Define custom thumbnail size

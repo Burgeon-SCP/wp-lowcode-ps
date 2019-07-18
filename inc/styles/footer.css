@@ -7,18 +7,18 @@ footer.site-footer {
   letter-spacing: 1px;
 }
 
+.lc-top-footer {
+  background-color: rgba(137, 175, 103, 0.75);
+  padding: 30px 0;
+}
+
 .lc-top-footer .lc-footer-widget {
   float: left;
   margin-left: 2.33%;
-  text-align: left;
-  font-size: 14px;
+  text-align: center;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.5px;
-}
-
-.lc-top-footer {
-  background-color: rgba(137, 175, 103, 0.75);
-  padding: 60px 0;
 }
 
 .lc-footer-widget-wrapper {
@@ -42,23 +42,25 @@ footer.site-footer {
 }
 
 .lc-top-footer .widget-title {
-  font-size: 21px;
-  font-weight: 600;
-  text-transform: uppercase;
   color: #ffffff;
-  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-left: 15px;
   padding-bottom: 10px;
-  margin-bottom: 40px;
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .lc-top-footer .widget-title:after {
   content: '';
-  width: 30px;
+  width: 25%;
   height: 3px;
   background-color: #e23815;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 5%;
 }
 
 .lc-top-footer .lc-footer-widget a {
@@ -132,5 +134,9 @@ footer.site-footer .site-info a:hover {
   .lc-top-footer.footer_column_four .lc-footer-widget-wrapper,
   #section-contact .lc-footer-form {
     margin-left: 0;
+  }
+
+  footer.site-footer .site-info {
+    padding: 10px 15%;
   }
 }
