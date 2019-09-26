@@ -53,7 +53,7 @@
   }
 
   h2, h3 {
-    font-size: 15px;
+    font-size: 18px;
   }
 	
   .gallery-img {
@@ -64,6 +64,11 @@
 
   div.bkg-img img.gallery-img {
     max-width: 40%;
+  }
+
+  div.bkg-img p {
+    font-size: 14px;
+    text-align: center;
   }
 
   .gallery-smsc-hide {
@@ -98,8 +103,12 @@
     margin-left: 20px;
   }
 
-  .main-menu-container {
+  #top-menu {
     display: none;
+  }
+  
+  .is-sticky #top-menu {
+    display: block;
   }
 
   .main-navigation ul li {
@@ -204,8 +213,8 @@
 
   p {
     font-size: 1.3rem;
-	margin-left: 5%;
-	margin-right: 5;
+	margin-left: 5px;
+	margin-right: 5px;
 	text-align: left;
   }
 
@@ -219,12 +228,16 @@
   }
 
   button.topage {
-      font-size: 13px;
+    font-size: 13px;
+  }
+
+  div.background-slide button.topage {
+    margin: 3px 30vw;
   }
 
   .gallery-img {
     margin: 0 7%;
-	max-width: 160px;
+	max-width: 120px;
   }
 
   div.bkg-img img.gallery-img {
@@ -247,7 +260,6 @@
   .single-slide-wrap .slider-desc p {
     margin: 0;
   }
-
 
   .lc-top-footer.footer_column_three .lc-footer-widget {
     width: 100%;
@@ -286,6 +298,16 @@
   div.bkg-img {
     margin: 5px 0;
     width: 100%;
+  }
+
+  .site-branding {
+	position: fixed;
+	top: 30px;
+  }
+
+  .is-sticky .site-branding {
+	position: relative;
+    top: 0px;
   }
 
   .gallery-sm-hide {
@@ -329,7 +351,6 @@
     font-size: 16px;
   }
 
-
   .single-slide-wrap .slider-title {
     font-size: 28px;
   }
@@ -346,11 +367,9 @@
     font-size: 16px;
   }
 
-
   .service-nav-tab li:last-child .tab-bullet:after {
     display: none;
   }
-
 
   .section-content-wrapper ul li:nth-of-type(2n) {
     margin: 0 auto 30px;

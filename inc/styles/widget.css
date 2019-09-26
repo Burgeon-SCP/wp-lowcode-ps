@@ -11,6 +11,10 @@
   max-width: 100%;
 }
 
+.widget_nav_menu ul {
+  list-style: none;
+}
+
 
 /*------------widget-section---------*/
 
