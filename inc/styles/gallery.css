@@ -155,3 +155,8 @@
   float: right;
   width: 80%;
 }
+
+/* --- gallery-block grouped class attributes ---  */
+[class^="gallery-block"] img {
+  margin-bottom: 10px;
+}
