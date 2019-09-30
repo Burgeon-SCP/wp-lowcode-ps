@@ -1,0 +1,64 @@
+/*--------------------------------------------------------------
+## Background Slides
+--------------------------------------------------------------*/
+/* --- Full width slides --- */
+div.background-slide {
+    /* customize each element with style="background-image: url();" */
+    background-color: #ccc8;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 10px 5px 20px 18px #566356a6;
+    margin-bottom: 10vh;
+    margin-left: -10vw;
+    margin-top: 10vh;
+    min-height: 65vh;
+    overflow-x: hidden !important;
+    padding: 5vh;
+    width: 120vw;
+}
+
+div.background-slide button.topage {
+    margin: 3px 45vw;
+    width: 30vw;
+}
+
+div.background-slide>p {
+    background-color: #bbbb;
+    border-radius: 15px;
+    color: #333;
+    /* font-family: Lato; */
+    font-size: 24px;
+    line-height: 1.3em;
+    padding: 1.3% 5%;
+}
+
+/* --- User-defined width slides --- */
+div.bkg-img {
+    /* customize each element with style="background-image: url();" */
+    background-color: #ccc8;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: outset 8px #cadfcadf;
+}
+
+div.bkg-img p {
+    color: #dcdcdc;
+    font-weight: bold;
+    margin-top: 30vh;
+    background-color: #55a922dc;
+    padding: 3%;
+    border-radius: 5px;
+    text-align: right;
+}
+
+div.bkg-img h3 {
+    background-color: #cdcd;
+}
+
+div.bkg-img img.gallery-img {
+    max-height: 100px;
+    max-width: 30%;
+    border-radius: 0;
+}

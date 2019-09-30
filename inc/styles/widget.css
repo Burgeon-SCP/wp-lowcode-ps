@@ -2,48 +2,46 @@
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-  /*margin: 0 0 1.5em;*/
-  margin: 0;
+    /*margin: 0 0 1.5em;*/
+    margin: 0;
 }
 
 /* Make sure select elements fit in widgets. */
 .widget select {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 .widget_nav_menu ul {
-  list-style: none;
+    list-style: none;
 }
 
-
 /*------------widget-section---------*/
-
 .widget_text p {
-  font-size: 16px;
-  text-align: center;
+    font-size: 16px;
+    text-align: center;
 }
 
 .widget-title {
-  color: #e23815;
-  margin: 0 0 15px;
-  font-size: 20px;
-  text-transform: uppercase;
-  line-height: 1;
-  font-weight: 600;
+    color: #e23815;
+    margin: 0 0 15px;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 600;
 }
 
 .widget-area .widget {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .widget_categories ul li,
 .widget_archive ul li {
-  text-align: right;
+    text-align: right;
 }
 
 .widget_categories ul li a,
 .widget_archive ul li a {
-  float: left;
+    float: left;
 }
 
 .widget_archive ul li,
@@ -52,9 +50,9 @@
 .widget_pages ul li,
 .widget_recent_comments ul li,
 .widget_recent_entries ul li {
-  font-size: 16px;
-  padding: 10px 0;
-  border-bottom: 1px dotted #e5e5e5;
+    font-size: 16px;
+    padding: 10px 0;
+    border-bottom: 1px dotted #e5e5e5;
 }
 
 .widget_archive ul li a,
@@ -64,70 +62,69 @@
 .widget_pages ul li a,
 .widget_recent_comments ul li a,
 .widget_recent_entries ul li a {
-  color: #666666;
+    color: #666666;
 }
 
 /* .widget_recent_comments ul li {
   color: #aaaaaa;
 } */
-
 .widget-area .widget a:hover {
-  color: #e23815;
+    color: #e23815;
 }
 
 .widget_categories ul li ul.children li:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
 }
 
 .widget_search input[type=search],
 .archive #primary input[type=search] {
-  width: 70%;
-  max-height: 35px;
-  padding: 5px;
-  border-radius: 0;
+    width: 70%;
+    max-height: 35px;
+    padding: 5px;
+    border-radius: 0;
 }
 
 .widget_search input[type=submit],
 .archive #primary .search-submit {
-  background-color: #e23815;
-  border: 2px solid #e23815;
-  border-radius: 0;
-  box-shadow: none;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 1;
-  max-height: 35px;
-  min-width: 100px;
-  vertical-align: top;
-  width: 29%;
+    background-color: #e23815;
+    border: 2px solid #e23815;
+    border-radius: 0;
+    box-shadow: none;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1;
+    max-height: 35px;
+    min-width: 100px;
+    vertical-align: top;
+    width: 29%;
 }
 
 .widget_calendar #wp-calendar {
-  text-align: center;
+    text-align: center;
 }
 
 .widget_categories select,
 .widget_archive select {
-  width: 100%;
-  height: 35px;
+    width: 100%;
+    height: 35px;
 }
 
 .widget_tag_cloud .tagcloud a {
-  display: inline-block;
-  margin-right: 8px;
+    display: inline-block;
+    margin-right: 8px;
 }
 
 #secondary .widget_search .search-form label {
-  width: 80%;
-  float: left;
+    width: 80%;
+    float: left;
 }
 
 #secondary .widget_search .search-form label input[type=search] {
-  width: 100%;
+    width: 100%;
 }
 
 #secondary .widget_search .search-form input[type="submit"] {
-  width: 20%;
-  padding-left: 10px;
+    width: 20%;
+    padding-left: 10px;
 }

@@ -1,0 +1,8 @@
+/*------Backgrounds for pages--------*/
+div#page-team {
+    background-image: url("https://burgeon.life/wp-content/uploads/2019/03/fons_blocs_pedra-498x1024.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+}
