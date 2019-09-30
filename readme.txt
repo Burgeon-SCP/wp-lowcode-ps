@@ -46,7 +46,7 @@ A css-editor-oriented theme called LoCoPaS (Low Code ParallaxSome).
 3.1. SizeCode: xl (extralarge) > 1801px > lg (large) > 1400px > lp (laptop) > 940px > md (medium) > 640px > tb (tablets) > 480px > sm (smartphones)
 4. All pages can be referenced using id #page-<NameOfThePage> at inc>styles>pages.css
 5. Best way to alter appeareance is by editing css structure files from inc > styles.
-6. If you create new style files add new lines with path/to/your/file at inc > locopas-functions.php lines 94 to 102.
+6. If you create new style files add new lines with adapted id and path/to/your/file at inc/locopas-functions.php lines 94 to 102.
 7. If you want to keep track of future updates email us at webmaster@burgeon.life with the subject 'LoCoPas news'.
 8. Future theme versions will be oriented to:
 8.1. Reduce code abundance specially at styles.css
