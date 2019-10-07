@@ -52,7 +52,7 @@ h2 {
     font-family: 'Roboto Mono', monospace;
     font-size: 28px;
     font-weight: 400;
-    line-height: 1em;
+    line-height: 1.5;
     margin-bottom: 40px;
     padding-left: 5%;
     padding-right: 5%;
@@ -65,7 +65,7 @@ h3 {
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
     font-size: 24px;
-    line-height: 1em;
+    line-height: 1.5;
     margin-bottom: 20px;
     margin-top: 10px;
     padding: 5%;
@@ -140,6 +140,7 @@ acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 } */
+
 mark,
 ins {
     background: transparent;
@@ -157,3 +158,25 @@ span.burgeon {
     letter-spacing: -1px;
     text-transform: none;
 }
+
+p.code,
+div.background-slide p.code,
+div.bkg-img p.code {
+    background-color: black;
+    color: #7b9c42;
+    font-family: 'Roboto Mono',monospace;
+    font-size: 20px;
+    padding: 5px;
+    padding-left: 10%;
+    margin: 0;
+    text-indent: 0;
+    width: 100%;
+}
+
+/* p.code br:before {
+    content: '_> '
+}
+
+p.code:before {
+    content: '_> '
+} */

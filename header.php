@@ -20,6 +20,7 @@
 
 
 <?php wp_head(); ?>
+<script>AOS.init();</script>
 </head>
 
 <body <?php body_class(); ?>>

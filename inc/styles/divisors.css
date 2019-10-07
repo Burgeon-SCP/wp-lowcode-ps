@@ -19,12 +19,13 @@ div.background-slide {
 }
 
 div.background-slide button.topage {
-    margin: 3px 45vw;
+    margin: 5px 45vw;
     width: 30vw;
 }
 
 div.background-slide>p {
-    background-color: #bbbb;
+    background-color: #b5b5b5;
+    background-color: #bbbd;
     border-radius: 15px;
     color: #333;
     /* font-family: Lato; */

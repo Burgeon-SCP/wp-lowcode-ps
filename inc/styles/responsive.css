@@ -14,11 +14,33 @@
     .gallery-xl-cont {
         display: contents;
     }
+	
+	.blockquote {
+		margin-left: 15%;
+		max-width: 65%;
+	}
+	
+	.blockquote p {
+		font-size: 20px;
+	}
+	
+	.hd-right {
+		float: right;
+	}
+	
+	.hd-left {
+		float: left;
+	}
 }
 
 /* ---- large screens ---- */
 @media (max-width:1800px) {
-    .gallery-lg-hide {
+
+	.blockquote p {
+		font-size: 18px;
+	}
+
+	.gallery-lg-hide {
         display: none;
     }
 
@@ -33,6 +55,14 @@
     .gallery-lg-cont {
         display: contents;
     }
+	
+	.lg-right {
+		float: right;
+	}
+	
+	.lg-left {
+		float: left;
+	}
 }
 
 /* ---- desk screens and laptops ---- */
@@ -93,9 +123,17 @@
         margin-left: 3%;
         margin-right: 3%;
     }
+	
+	#top-menu {
+        display: none;
+    }
+
+    .is-sticky #top-menu {
+        display: block;
+    }
 
     h2, h3 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .gallery-img {
@@ -129,13 +167,6 @@
         display: contents;
     }
 
-    #top-menu {
-        display: none;
-    }
-
-    .is-sticky #top-menu {
-        display: block;
-    }
 }
 
 /* --- tablets --- */
@@ -147,10 +178,14 @@
         margin-bottom: 5%;
     }
 
+    h2, h3 {
+        font-size: 18px;
+    }
+
     p {
         font-size: 1.3rem;
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: 20px;
+        margin-right: 10px;
         text-align: left;
     }
 
@@ -163,14 +198,31 @@
         margin-left: 20%;
     }
 
+	.blockquote p {
+		font-size: 16px;
+	}
+
     button.topage {
         font-size: 13px;
     }
 
     div.background-slide button.topage {
-        margin: 3px 30vw;
+        margin: 5px 30vw;
     }
 
+    p.code,
+    div.background-slide p.code,
+    div.bkg-img p.code {
+        font-size: 15px;
+    }
+    
+    div.background-slide p.code {
+        margin: 3px -10%;
+        padding-left: 10%;
+        padding-right: 20%;
+        width: 120%;
+    }
+	
     .gallery-img {
         margin: 0 7%;
         max-width: 120px;
@@ -241,6 +293,21 @@
         margin-left: 7%;
         padding-left: 5%;
         text-indent: -5%;
+    }
+
+    div.background-slide {
+        min-height: 40vh;
+    }
+
+		
+    div.background-slide > h2,
+	div.background-slide > p.code {
+        margin-left: -50px;
+    }
+	
+    div.background-slide button.topage {
+        margin: 5px 20vw;
+		min-width: 110px;
     }
 
     div.bkg-img {
