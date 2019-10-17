@@ -2,12 +2,14 @@
 ## Galleries
 --------------------------------------------------------------*/
 .gallery {
+    background-color: #bbc3bb;
     background-color: #bbc3bba8;
     display: inline-block;
-    /* margin-bottom: 5em; */
+    margin-bottom: 60px;
     border-radius: 15px;
     padding: 10px;
     width: 100%;
+    box-shadow: 10px 5px 20px 18px #566356;
     box-shadow: 10px 5px 20px 18px #566356a6;
 }
 

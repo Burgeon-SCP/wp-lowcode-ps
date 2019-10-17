@@ -9,9 +9,9 @@ div.background-slide {
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 10px 5px 20px 18px #566356a6;
-    margin-bottom: 10vh;
+    margin-bottom: 7vh;
     margin-left: -10vw;
-    margin-top: 10vh;
+    margin-top: 7vh;
     min-height: 65vh;
     overflow-x: hidden !important;
     padding: 5vh;
@@ -42,6 +42,7 @@ div.bkg-img {
     background-repeat: no-repeat;
     background-size: cover;
     border: outset 8px #cadfcadf;
+    box-shadow: 9px 9px 10px 0px #566356;
 }
 
 div.bkg-img p {
