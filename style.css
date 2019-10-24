@@ -746,8 +746,10 @@ object {
 
 .without-slider .lc-whole-header {
     position: relative;
-    background-color: rgba(137, 175, 103, 0.75);
+    background-color: #9faf5c;
+    background-color: rgba(159, 175, 92, 0.75);
     margin-bottom: 40px;
+	box-shadow: 0 3px 10px 1px grey;
 }
 
 .home.blog.without-slider .lc-whole-header {

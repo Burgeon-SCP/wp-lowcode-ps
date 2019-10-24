@@ -44,10 +44,10 @@ A css-editor-oriented theme called LoCoPaS (Low Code ParallaxSome).
 2. Distribution of elements inside pages can be achieved by using gallery classes.
 3. Responsive alteration of displayed elements can be achieved using gallery-<SizeCode>-[hide|show|flex|cont] classes.
 3.1. SizeCode: xl (extralarge) > 1801px > lg (large) > 1400px > lp (laptop) > 940px > md (medium) > 640px > tb (tablets) > 480px > sm (smartphones)
-4. All pages can be referenced using id #page-<NameOfThePage> at inc>styles>pages.css
+4. All pages can be referenced using id #page-<NameOfThePage> at inc/styles/pages.css
 5. Best way to alter appeareance is by editing css structure files from inc > styles.
 6. If you create new style files add new lines with adapted id and path/to/your/file at inc/locopas-functions.php lines 94 to 102.
-7. If you want to keep track of future updates email us at webmaster@burgeon.life with the subject 'LoCoPas news'.
+7. If you want to keep track of future updates email us at webmaster@burgeon.life with the subject 'LoCoPaS news'.
 8. Future theme versions will be oriented to:
 8.1. Reduce code abundance specially at styles.css
 8.2. Create a minimized Customizer to easily and low-code-friendly alter basic appearance of pages.

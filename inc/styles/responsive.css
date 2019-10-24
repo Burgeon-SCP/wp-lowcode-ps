@@ -299,7 +299,6 @@
         min-height: 40vh;
     }
 
-		
     div.background-slide > h2,
 	div.background-slide > p.code {
         margin-left: -50px;
@@ -307,7 +306,7 @@
 	
     div.background-slide button.topage {
         margin: 5px 20vw;
-		min-width: 110px;
+		min-width: 130px;
     }
 
     div.bkg-img {
