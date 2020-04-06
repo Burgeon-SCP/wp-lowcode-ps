@@ -2,7 +2,7 @@
 /**
  * Register customizer panels, sections, settings, and controls.
  *
- * @since  1.0.0
+ * @since  0.1.0
  * @access public
  * @param  object  $wp_customize
  * @return void
@@ -345,7 +345,7 @@ if (!function_exists('locopas_search_key')) {
 /**
  * Register control scripts/styles.
  *
- * @since  1.0.0
+ * @since  0.1.0
  * @access public
  * @return void
  */
@@ -364,7 +364,7 @@ function locopas_pro_customize_controls_register_scripts() {
 /*
  * Load preview scripts/styles.
  *
- * @since  1.0.0
+ * @since  0.1.0
  * @access public
  * @return void
  */
@@ -377,7 +377,7 @@ function locopas_pro_customize_controls_register_scripts() {
 /*
  * Add custom body class to give some more weight to our styles.
  *
- * @since  1.0.0
+ * @since  0.1.0
  * @access public
  * @param  array  $classes
  * @return array

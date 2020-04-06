@@ -6,7 +6,7 @@
  *
  * @package BurgeonEnv Themes
  * @subpackage LoCoPaS
- * @since 1.0.0
+ * @since 0.1.0
  */
 
 /**
@@ -14,7 +14,7 @@
  *
  * @param array $classes Classes for the body element.
  * @return array
- * @since 1.0.0
+ * @since 0.1.0
  */
 function locopas_body_classes( $classes ) {
 

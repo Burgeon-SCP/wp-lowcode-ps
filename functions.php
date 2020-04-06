@@ -6,7 +6,7 @@
  *
  * @package BurgeonEnv Themes
  * @subpackage LoCoPaS
- * @since 1.0.0
+ * @since 0.1.0
  */
 
 
@@ -41,7 +41,7 @@ function locopas_setup() {
 	/**
 	 * Enable support for custom logo.
 	 *
-	 * @since 1.0.0
+	 * @since 0.1.0
 	 */
 	add_image_size( 'locopas-site-logo', 268, 90 );
 	add_theme_support( 'custom-logo', array( 'size' => 'locopas-site-logo' ) );
@@ -55,7 +55,7 @@ function locopas_setup() {
 	/**
 	 * Define custom thumbnail size
 	 *
-	 * @since 1.0.0
+	 * @since 0.1.0
 	 */
 	add_image_size( 'locopas_project_thumb', 450, 422, true );
 	add_image_size( 'locopas_services_thumb', 393, 384, true );
@@ -129,7 +129,7 @@ if ( ! function_exists( 'locopas_remove_emojis' ) ) :
  * It is also an increased solution of the one proposed at WpFASTER.org
  * 		https://www.wpfaster.org/code/how-to-remove-emoji-styles-scripts-wordpress
  *
- * @since 1.0.2
+ * @since 0.1.2
  *
  */
 

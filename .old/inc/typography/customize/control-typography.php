@@ -2,14 +2,14 @@
     /**
      * Typography control class.
      *
-     * @since  1.0.0
+     * @since  0.1.0
      * @access public
      */
     class Locopas_Typo_Control_Typography extends WP_Customize_Control { 
         /**
          * The type of customize control being rendered.
          *
-         * @since  1.0.0
+         * @since  0.1.0
          * @access public
          * @var    string
          */
@@ -17,7 +17,7 @@
         /**
          * Array 
          *
-         * @since  1.0.0
+         * @since  0.1.0
          * @access public
          * @var    string
          */
@@ -25,7 +25,7 @@
         /**
          * Set up our control.
          *
-         * @since  1.0.0
+         * @since  0.1.0
          * @access public
          * @param  object  $manager
          * @param  string  $id
@@ -52,7 +52,7 @@
         /**
          * Enqueue scripts/styles.
          *
-         * @since  1.0.0
+         * @since  0.1.0
          * @access public
          * @return void
          */
@@ -65,7 +65,7 @@
         /**
          * Add custom parameters to pass to the JS via JSON.
          *
-         * @since  1.0.0
+         * @since  0.1.0
          * @access public
          * @return void
          */
@@ -95,7 +95,7 @@
         /**
          * Underscore JS template to handle the control's output.
          *
-         * @since  1.0.0
+         * @since  0.1.0
          * @access public
          * @return void
          */
@@ -223,7 +223,7 @@
          *
          * @todo Integrate with Google fonts.
          *
-         * @since  1.0.0
+         * @since  0.1.0
          * @access public
          * @return array
          */
@@ -234,7 +234,7 @@
          *
          * @todo Pull families from `get_fonts()`.
          *
-         * @since  1.0.0
+         * @since  0.1.0
          * @access public
          * @return array
          */
@@ -264,7 +264,7 @@
         /**
          * Returns the available font weights.
          *
-         * @since  1.0.0
+         * @since  0.1.0
          * @access public
          * @return array
          */
@@ -294,7 +294,7 @@
         /**
          * Returns the available font text decoration.
          *
-         * @since  1.0.0
+         * @since  0.1.0
          * @access public
          * @return array
          */
@@ -310,7 +310,7 @@
         /**
          * Returns the available font text transform.
          *
-         * @since  1.0.0
+         * @since  0.1.0
          * @access public
          * @return array
          */

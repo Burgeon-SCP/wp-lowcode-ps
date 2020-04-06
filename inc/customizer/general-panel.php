@@ -4,7 +4,7 @@
  *
  * @package BurgeonEnv Themes
  * @subpackage LoCoPaS
- * @since 1.0.0
+ * @since 0.1.0
  */
 
 /**
@@ -28,7 +28,7 @@ if( ! function_exists( 'locopas_general_panel_register' ) ):
 		/**
 		 * General Settings Panel on customizer
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_panel(
 	        'locopas_general_settings_panel', 

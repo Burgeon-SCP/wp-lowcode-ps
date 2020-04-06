@@ -6,7 +6,7 @@
  *
  * @package BurgeonEnvs Themes
  * @subpackage LoCoPaS
- * @since 1.0.0
+ * @since 0.1.0
  */
 
 /*----------------------------------------------------------------------------------------------------------------*/
@@ -53,7 +53,7 @@ endif;
 /**
  * Posted_on function for only archive pages
  *
- * @since 1.0.0
+ * @since 0.1.0
  */
 if ( ! function_exists( 'locopas_archive_posted_on' ) ) :
 /**
@@ -98,7 +98,7 @@ endif;
 /**
  * Posted_on function for only homepage post
  *
- * @since 1.0.0
+ * @since 0.1.0
  */
 if ( ! function_exists( 'locopas_home_posted_on' ) ) :
 /**

@@ -4,7 +4,7 @@
  *
  * @package BurgeonEnv Themes
  * @subpackage LoCoPaS
- * @since 1.0.0
+ * @since 0.1.0
  */
 
 /**
@@ -25,7 +25,7 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 		/**
 		 * Header Settings Panel on customizer
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_panel(
 	        'locopas_header_settings_panel',
@@ -40,7 +40,7 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 		/**
 		 * Top Header Section
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_section(
 	        'top_header_section',
@@ -54,7 +54,7 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	    /**
 	     * Switch option for Top Header Section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'top_header_option',
@@ -84,7 +84,7 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	    /**
 	     * Switch option for social icons at top header section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    // $wp_customize->add_setting(
 	    //     'top_header_social_option',
@@ -114,7 +114,7 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 		/**
 		 * Menu Settings Section
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_section(
 	        'menu_settings_section',
@@ -128,7 +128,7 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	    /**
 	     * Switch option for primary menu
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'primary_menu_type',
@@ -157,7 +157,7 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	    /**
 	     * Switch option for parallax menu layout
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'parallax_menu_type',
@@ -187,7 +187,7 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	    /**
 	     * Field for parallax Menu
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    // $count = 10;
 	    // foreach ( $locopas_single_menu_fields as $menu_key => $section_value ) {
@@ -215,7 +215,7 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	    /**
 	     * Switch option for search icon in primary section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'primary_menu_search_option',
@@ -245,7 +245,7 @@ if( ! function_exists( 'locopas_header_panel_register' ) ):
 	    /**
 	     * Switch option for sticky menu
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'sticky_header_option',

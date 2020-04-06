@@ -6,7 +6,7 @@
  *
  * @package BurgeonEnv Themes
  * @subpackage LoCoPaS
- * @since 1.0.0
+ * @since 0.1.0
  */
 
 if ( class_exists( 'WP_Customize_Control' ) ) {
@@ -14,7 +14,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	/**
      * Switch button customize control.
      *
-     * @since 1.0.0
+     * @since 0.1.0
      * @access public
      */
     class Locopas_Customize_Switch_Control extends WP_Customize_Control {
@@ -22,7 +22,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
     	/**
 	     * The type of customize control being rendered.
 	     *
-	     * @since  1.0.0
+	     * @since  0.1.0
 	     * @access public
 	     * @var    string
 	     */
@@ -31,7 +31,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 	     * Displays the control content.
 	     *
-	     * @since  1.0.0
+	     * @since  0.1.0
 	     * @access public
 	     * @return void
 	     */
@@ -57,7 +57,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	/**
 	 * A class to create a dropdown for all categories in your wordpress site
 	 *
-	 * @since 1.0.0
+	 * @since 0.1.0
 	 * @access public
 	 */
 	class Locopas_Customize_Category_Control extends WP_Customize_Control {
@@ -66,7 +66,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Render the control's content.
 		 *
 		 * @return HTML
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		public function render_content() {
 			$dropdown = wp_dropdown_categories(
@@ -94,7 +94,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	/**
 	 * A class to create a list of icons in customizer field
 	 *
-	 * @since 1.0.0
+	 * @since 0.1.0
 	 * @access public
 	 */
 	class Locopas_Customize_Icons_Control extends WP_Customize_Control {
@@ -102,7 +102,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 	     * The type of customize control being rendered.
 	     *
-	     * @since  1.0.0
+	     * @since  0.1.0
 	     * @access public
 	     * @var    string
 	     */
@@ -111,7 +111,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 	     * Displays the control content.
 	     *
-	     * @since  1.0.0
+	     * @since  0.1.0
 	     * @access public
 	     * @return void
 	     */
@@ -147,13 +147,13 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	/**
 	 * A class to create a option separator in customizer section
 	 *
-	 *@since 1.0.0
+	 *@since 0.1.0
 	 */
 	class Locopas_Customize_Section_Separator extends WP_Customize_Control {
 		/**
 	     * The type of customize control being rendered.
 	     *
-	     * @since  1.0.0
+	     * @since  0.1.0
 	     * @access public
 	     * @var    string
 	     */
@@ -162,7 +162,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 	     * Displays the control content.
 	     *
-	     * @since  1.0.0
+	     * @since  0.1.0
 	     * @access public
 	     * @return void
 	     */
@@ -180,7 +180,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	/**
 	 * Multiple checkbox customize control class.
 	 *
-	 * @since  1.0.0
+	 * @since  0.1.0
 	 * @access public
 	 */
 	class Locopas_Customize_Control_Checkbox_Multiple extends WP_Customize_Control {
@@ -188,7 +188,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	    /**
 	     * The type of customize control being rendered.
 	     *
-	     * @since  1.0.0
+	     * @since  0.1.0
 	     * @access public
 	     * @var    string
 	     */
@@ -197,7 +197,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	    /**
 	     * Displays the control content.
 	     *
-	     * @since  1.0.0
+	     * @since  0.1.0
 	     * @access public
 	     * @return void
 	     */
@@ -237,13 +237,13 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * Class to create a custom editor field in customizer section
 	 *
 	 * @access public
-	 * @since 1.0.0
+	 * @since 0.1.0
 	 */
 	class Locopas_Text_Editor_Custom_Control extends WP_Customize_Control {
 	    /**
 	     * The type of customize control being rendered.
 	     *
-	     * @since  1.0.0
+	     * @since  0.1.0
 	     * @access public
 	     * @var    string
 	     */
@@ -252,7 +252,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 	     * Displays the control content.
 	     *
-	     * @since  1.0.0
+	     * @since  0.1.0
 	     * @access public
 	     * @return void
 	     */
@@ -279,14 +279,14 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	/**
 	 * Radio image customize control.
 	 *
-	 * @since  1.0.0
+	 * @since  0.1.0
 	 * @access public
 	 */
 	class Locopas_Customize_Control_Radio_Image extends WP_Customize_Control {
 	    /**
 	     * The type of customize control being rendered.
 	     *
-	     * @since  1.0.0
+	     * @since  0.1.0
 	     * @access public
 	     * @var    string
 	     */
@@ -295,7 +295,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	    /**
 	     * Loads the jQuery UI Button script and custom scripts/styles.
 	     *
-	     * @since  1.0.0
+	     * @since  0.1.0
 	     * @access public
 	     * @return void
 	     */
@@ -306,7 +306,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	    /**
 	     * Add custom JSON parameters to use in the JS template.
 	     *
-	     * @since  1.0.0
+	     * @since  0.1.0
 	     * @access public
 	     * @return void
 	     */
@@ -327,7 +327,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	    /**
 	     * Underscore JS template to handle the control's output.
 	     *
-	     * @since  1.0.0
+	     * @since  0.1.0
 	     * @access public
 	     * @return void
 	     */
@@ -364,7 +364,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
     	/**
          * Custom text to output.
          *
-         * @since  1.0.0
+         * @since  0.1.0
          * @access public
          * @var    string
          */
@@ -380,7 +380,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
     /**
      * Pro customizer section.
      *
-     * @since  1.0.0
+     * @since  0.1.0
      * @access public
      */
     class Locopas_Customize_Section_Pro extends WP_Customize_Section {
@@ -388,7 +388,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
         /**
          * The type of customize section being rendered.
          *
-         * @since  1.0.0
+         * @since  0.1.0
          * @access public
          * @var    string
          */
@@ -397,7 +397,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
         /**
          * Custom button text to output.
          *
-         * @since  1.0.0
+         * @since  0.1.0
          * @access public
          * @var    string
          */
@@ -406,7 +406,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
         /**
          * Custom pro button URL.
          *
-         * @since  1.0.0
+         * @since  0.1.0
          * @access public
          * @var    string
          */
@@ -417,7 +417,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
         /**
          * Add custom parameters to pass to the JS via JSON.
          *
-         * @since  1.0.0
+         * @since  0.1.0
          * @access public
          * @return void
          */
@@ -432,7 +432,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
         /**
          * Outputs the Underscore.js template.
          *
-         * @since  1.0.0
+         * @since  0.1.0
          * @access public
          * @return void
          */

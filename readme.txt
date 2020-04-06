@@ -32,7 +32,7 @@ A css-editor-oriented theme called LoCoPaS (Low Code ParallaxSome).
 
 -- With WP Pusher and a GitHub token
 1. Go to WP Pusher > Install Theme
-2. Add LoCoPaS repository burgeon-env/wp-lowcode-ps and use branch v1.0.4, then click Install Theme.
+2. Add LoCoPaS repository burgeon-env/wp-lowcode-ps and use branch v0.1.4, then click Install Theme.
 3. Go to Appearance > Themes and click Activate on LoCoPaS to use your new theme right away.
 4. (Optional) You can fork burgeon-env/wp-lowcode-ps repository to edit it with your favourite IDE.
 5. (Optional) Push your modifications and repeat steps 2 and 3 to install your own LoCoPaS repository.
@@ -70,7 +70,7 @@ A css-editor-oriented theme called LoCoPaS (Low Code ParallaxSome).
 	jQuery ScrollTo v2.1.1 by Ariel Flesler under MIT License
 	https://github.com/flesler/jquery.scrollTo
 
-	jQuery Sticky Plugin v1.0.2 by Anthony Garand under GPL License
+	jQuery Sticky Plugin v0.1.2 by Anthony Garand under GPL License
 	https://github.com/garand/sticky/
 	https://github.com/garand/sticky/blob/master/LICENSE.md
 
@@ -89,17 +89,17 @@ A css-editor-oriented theme called LoCoPaS (Low Code ParallaxSome).
 
 == Changelog ==
 
-= 1.0.4 =
+= 0.1.4 =
 	* Improved responsiveness and better styling files distribution
 
-= 1.0.3 =
+= 0.1.3 =
 	* Updated elements and classes to better responsiveness
 
-= 1.0.2 =
+= 0.1.2 =
 	* Code cleaning and first delivery done
 
-= 1.0.1 =
+= 0.1.1 =
 	* code commented out and moved to .old directory
 
-= 1.0.0 =
+= 0.1.0 =
 	* Initial version based on ParallaxSome Theme by AccesPress

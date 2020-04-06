@@ -15,7 +15,7 @@ function locopas_widgets_init() {
 	/**
 	 * Register Home Contact Map widget area
 	 *
-	 * @since 1.0.0
+	 * @since 0.1.0
 	 */
 	register_sidebar( array(
 		'name'          => esc_html__( 'Contact Map', 'locopas' ),
@@ -30,7 +30,7 @@ function locopas_widgets_init() {
 	/**
 	 * Register WooCommerce Sidebar
 	 *
-	 * @since 1.0.0
+	 * @since 0.1.0
 	 */
 	register_sidebar( array(
 		'name'          => esc_html__( 'WooCommerce Sidebar', 'locopas' ),
@@ -45,7 +45,7 @@ function locopas_widgets_init() {
 	/**
 	 * Register 4 different Footer Area
 	 *
-	 * @since 1.0.0
+	 * @since 0.1.0
 	 */
 	register_sidebars( 4 , array(
 		/* translators: %d : sidebar identifier */

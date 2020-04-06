@@ -4,7 +4,7 @@
  *
  * @package BurgeonEnv Themes
  * @subpackage LoCoPaS
- * @since 1.0.0
+ * @since 0.1.0
  */
 
 /**
@@ -22,7 +22,7 @@ if( ! function_exists( 'locopas_design_panel_register' ) ):
 		/**
 		 * Design Settings Panel on customizer
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_panel(
 	        'locopas_design_settings_panel',
@@ -37,7 +37,7 @@ if( ! function_exists( 'locopas_design_panel_register' ) ):
 		/**
 		 * Archive Settings
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_section(
 	        'archive_settings_section',
@@ -51,7 +51,7 @@ if( ! function_exists( 'locopas_design_panel_register' ) ):
 	    /**
 	     * Field for Image Radio
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'ps_archive_sidebar_layout',
@@ -95,14 +95,14 @@ if( ! function_exists( 'locopas_design_panel_register' ) ):
 	    /**
 	     * Field for Archive read more button text
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 
 /*--------------------------------------------------------------------------------------------------------------*/
 		/**
 		 * Page Settings
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_section(
 	        'page_settings_section',
@@ -116,7 +116,7 @@ if( ! function_exists( 'locopas_design_panel_register' ) ):
 	    /**
 	     * Field for sidebar Image Radio
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'ps_default_page_sidebar',
@@ -161,7 +161,7 @@ if( ! function_exists( 'locopas_design_panel_register' ) ):
 		/*
 		 * Post Settings
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		 /*
 		$wp_customize->add_section(
@@ -177,7 +177,7 @@ if( ! function_exists( 'locopas_design_panel_register' ) ):
 			/*
 	     * Field for sidebar Image Radio
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 			 /*
 	    $wp_customize->add_setting(

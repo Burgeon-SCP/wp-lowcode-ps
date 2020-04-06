@@ -4,7 +4,7 @@
  *
  * @package BurgeonEnv Themes
  * @subpackage LoCoPaS
- * @since 1.0.0
+ * @since 0.1.0
  */
 
 /**
@@ -18,7 +18,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		/**
 		 * HomePage Settings Panel on customizer
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_panel(
 	        'locopas_homepage_settings_panel', 
@@ -33,7 +33,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		/**
 		 * Slider Section
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_section(
 	        'locopas_slider_section',
@@ -47,7 +47,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Switch option for Homepage Slider Section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'homepage_slider_option',
@@ -76,7 +76,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Dropdown available category for homepage slider
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'slider_cat_id',
@@ -101,7 +101,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Add Option Upgrade Notice
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'slider_upgrade_info',
@@ -126,7 +126,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		/**
 		 * About Section
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_section(
 	        'locopas_about_section',
@@ -140,7 +140,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Switch option for Homepage About Section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'homepage_about_option',
@@ -170,7 +170,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'about_section_title', 
@@ -193,7 +193,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section sub title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'about_section_sub_title', 
@@ -216,7 +216,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Dropdown available pages for homepage about section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'about_page_id',
@@ -240,7 +240,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Upload image control for section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'about_section_image',
@@ -266,7 +266,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		/**
 		 * Our Team Section
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_section(
 	        'locopas_team_section',
@@ -280,7 +280,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Switch option for Homepage Our Team Section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'homepage_team_option',
@@ -310,7 +310,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'team_section_title', 
@@ -333,7 +333,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section sub title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'team_section_sub_title', 
@@ -356,7 +356,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section description
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'team_section_description', 
@@ -379,7 +379,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Dropdown available category for homepage our team
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'team_cat_id',
@@ -404,7 +404,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for view all button text
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'team_view_more_txt', 
@@ -447,7 +447,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		/**
 		 * Our Services Section
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_section(
 	        'locopas_services_section',
@@ -461,7 +461,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Switch option for Homepage Service Section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'homepage_service_option',
@@ -491,7 +491,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'services_section_title', 
@@ -514,7 +514,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section sub title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'services_section_sub_title', 
@@ -537,7 +537,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section description
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'services_section_description', 
@@ -560,7 +560,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Upload image control for section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'service_bg_image',
@@ -591,7 +591,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Section separator
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'service_icon_sec_separator_'.$icon_key,
@@ -616,7 +616,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Icon list for service tab
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'service_icon_'.$icon_key,
@@ -641,7 +641,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Dropdown available pages for homepage about section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'service_page_id_'.$icon_key,
@@ -669,7 +669,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		/**
 		 * Testimonials Section
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_section(
 	        'locopas_testimonials_section',
@@ -683,7 +683,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Switch option for Homepage Testimonials Section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'homepage_testimonials_option',
@@ -713,7 +713,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'testimonials_section_title', 
@@ -736,7 +736,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section sub title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'testimonials_section_sub_title', 
@@ -759,7 +759,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Dropdown available category for homepage Testimonials
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'testimonials_cat_id',
@@ -784,7 +784,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		/**
 		 * Our Fact Section
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_section(
 	        'locopas_fact_section',
@@ -798,7 +798,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Switch option for Homepage Our Fact Section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'homepage_fact_option',
@@ -828,7 +828,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'fact_section_title', 
@@ -851,7 +851,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section sub-title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'fact_section_sub_title', 
@@ -874,7 +874,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section description
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'fact_section_description', 
@@ -897,7 +897,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Upload image control for section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'fact_bg_image',
@@ -930,7 +930,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Section separator
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'fact_icon_sec_separator_'.$icon_key,
@@ -956,7 +956,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Icon list for fact counter
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'fact_icon_'.$icon_key,
@@ -982,7 +982,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for counter title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'fact_counter_title_'.$icon_key, 
@@ -1005,7 +1005,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for counter number
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'fact_counter_number_'.$icon_key, 
@@ -1030,7 +1030,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		/**
 		 * Our Portfolio Section
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_section(
 	        'locopas_portfolio_section',
@@ -1044,7 +1044,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Switch option for Homepage Portfolio Section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'homepage_portfolio_option',
@@ -1074,7 +1074,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'portfolio_section_title', 
@@ -1097,7 +1097,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section sub-title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'portfolio_section_sub_title', 
@@ -1120,7 +1120,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section description
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'portfolio_section_description', 
@@ -1143,7 +1143,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Dropdown available category for homepage Testimonials
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'portfolio_cat_id',
@@ -1168,7 +1168,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		/**
 		 * Our Blog Section
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_section(
 	        'locopas_blog_section',
@@ -1182,7 +1182,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Switch option for Homepage Portfolio Section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'homepage_blog_option',
@@ -1212,7 +1212,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'blog_section_title', 
@@ -1235,7 +1235,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section sub-title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'blog_section_sub_title', 
@@ -1258,7 +1258,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Mulitple checkboxes for category
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    global $locopas_categories;
 	    $wp_customize->add_setting(
@@ -1284,7 +1284,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for Read more button
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'blog_section_read_button', 
@@ -1307,7 +1307,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for View more button
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'blog_section_view_all_txt', 
@@ -1330,7 +1330,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for View more button link
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'blog_section_view_all_link', 
@@ -1353,7 +1353,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		/**
 		 * Our Clients Section
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_section(
 	        'locopas_client_section',
@@ -1367,7 +1367,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Switch option for Homepage Portfolio Section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'homepage_clients_option',
@@ -1397,7 +1397,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'clients_section_title', 
@@ -1420,7 +1420,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section sub-title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'clients_section_sub_title', 
@@ -1443,7 +1443,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Dropdown available category for homepage clients
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'clients_cat_id',
@@ -1468,7 +1468,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Upload image control for section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'clients_bg_image',
@@ -1493,7 +1493,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 		/**
 		 * Contact Us Section
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_section(
 	        'locopas_contact_section',
@@ -1507,7 +1507,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Switch option for Homepage Contact us Section
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'homepage_contact_option',
@@ -1537,7 +1537,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'contact_section_title', 
@@ -1560,7 +1560,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section sub-title
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'contact_section_sub_title', 
@@ -1583,7 +1583,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for Text editor
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 		
         $wp_customize->add_setting( 'contact_section_form_page', array(
@@ -1601,7 +1601,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section contact number
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'contact_section_phone', 
@@ -1624,7 +1624,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for section contact address
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'contact_section_address',
@@ -1647,7 +1647,7 @@ if( ! function_exists( 'locopas_homepage_panel_register' ) ):
 	    /**
 	     * Field for contact map caption
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'contact_map_caption', 

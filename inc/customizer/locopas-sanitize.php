@@ -4,13 +4,13 @@
  *
  * @package BurgeonEnv Themes
  * @subpackage LoCoPaS
- * @since 1.0.0
+ * @since 0.1.0
  */
 
 /**
  * Sanitize number field
  *
- * @since 1.0.0
+ * @since 0.1.0
  */
 function locopas_sanitize_number( $input ) {
     $output = intval($input);
@@ -20,7 +20,7 @@ function locopas_sanitize_number( $input ) {
 /**
  * Sanitize checkbox field
  *
- * @since 1.0.0
+ * @since 0.1.0
  */
 function locopas_sanitize_checkbox( $input ) {
     if ( $input == 1 ) {
@@ -33,7 +33,7 @@ function locopas_sanitize_checkbox( $input ) {
 /**
  * Sanitize switch button
  *
- * @since 1.0.0
+ * @since 0.1.0
  */
 function locopas_sanitize_switch_option( $input ) {
     $valid_keys = array(
@@ -50,7 +50,7 @@ function locopas_sanitize_switch_option( $input ) {
 /**
  * Sanitize switch button ( Enable/Disable )
  *
- * @since 1.0.0
+ * @since 0.1.0
  */
 function locopas_sanitize_enable_switch_option( $input ) {
     $valid_keys = array(
@@ -67,7 +67,7 @@ function locopas_sanitize_enable_switch_option( $input ) {
 /**
  * Sanitize switch button for menu
  *
- * @since 1.0.0
+ * @since 0.1.0
  */
 function locopas_sanitize_menu_switch_option( $input ) {
     $valid_keys = array(
@@ -84,7 +84,7 @@ function locopas_sanitize_menu_switch_option( $input ) {
 /**
  * Sanitize switch button for parallax menu type
  *
- * @since 1.0.0
+ * @since 0.1.0
  */
 function locopas_sanitize_p_menu_type_switch_option( $input ) {
     $valid_keys = array(
@@ -101,7 +101,7 @@ function locopas_sanitize_p_menu_type_switch_option( $input ) {
 /**
  * Sanitize multiple categories for blog
  *
- * @since 1.0.0
+ * @since 0.1.0
  */
 function locopas_multiple_categories_sanitize( $values ) {
 

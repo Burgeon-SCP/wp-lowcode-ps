@@ -4,7 +4,7 @@
  *
  * @package BurgeonEnv Themes
  * @subpackage LoCoPaS
- * @since 1.0.0
+ * @since 0.1.0
  */
 
 /**
@@ -19,7 +19,7 @@ if( ! function_exists( 'locopas_footer_panel_register' ) ):
 		/**
 		 * Footer Settings Panel on customizer
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_panel(
 	        'locopas_footer_settings_panel',
@@ -35,7 +35,7 @@ if( ! function_exists( 'locopas_footer_panel_register' ) ):
 		/**
 		 * Footer Widget Settings
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_section(
 	        'footer_widget_section',
@@ -49,7 +49,7 @@ if( ! function_exists( 'locopas_footer_panel_register' ) ):
 	    /**
 	     * Field for Image Radio
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'ps_footer_widget_layout',
@@ -91,7 +91,7 @@ if( ! function_exists( 'locopas_footer_panel_register' ) ):
 		/**
 		 * Footer Settings
 		 *
-		 * @since 1.0.0
+		 * @since 0.1.0
 		 */
 		$wp_customize->add_section(
 	        'bottom_footer_section',
@@ -105,7 +105,7 @@ if( ! function_exists( 'locopas_footer_panel_register' ) ):
 	    /**
 	     * Field for Archive read more button text
 	     *
-	     * @since 1.0.0
+	     * @since 0.1.0
 	     */
 	    $wp_customize->add_setting(
 	        'ps_copyright_text',
