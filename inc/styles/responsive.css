@@ -15,6 +15,14 @@
         display: contents;
     }
 	
+	.xl-right {
+		float: right;
+	}
+	
+	.xl-left {
+		float: left;
+	}
+	
 	.blockquote {
 		margin-left: 15%;
 		max-width: 65%;
@@ -22,14 +30,6 @@
 	
 	.blockquote p {
 		font-size: 20px;
-	}
-	
-	.hd-right {
-		float: right;
-	}
-	
-	.hd-left {
-		float: left;
 	}
 }
 
@@ -135,11 +135,16 @@
     h2, h3 {
         font-size: 20px;
     }
+	
+	blockquote {
+		margin: 0 10%;
+		max-width: 80%;
+	}
 
     .gallery-img {
         border-width: 10px;
         margin: 0 1%;
-        max-width: 180px;
+        max-width: 160px;
     }
 
     div.bkg-img img.gallery-img {
@@ -199,7 +204,7 @@
     }
 
 	.blockquote p {
-		font-size: 16px;
+		font-size: 15px;
 	}
 
     button.topage {

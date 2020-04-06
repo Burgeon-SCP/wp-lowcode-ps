@@ -38,7 +38,7 @@ p {
 }
 
 h1 {
-    color: #666666;
+    color: beige;
     font-family: 'Roboto Mono', monospace;
     font-size: 32px;
     font-weight: 700;
@@ -100,16 +100,6 @@ i {
     font-style: italic;
 }
 
-blockquote {
-    margin: 0 1.5em;
-    max-width: 85%;
-}
-
-blockquote p {
-    font-family: 'monospace';
-    font-size: 14px;
-}
-
 address {
     margin: 0 0 1.5em;
 }
@@ -153,7 +143,7 @@ big {
 
 span.burgeon {
     font-family: 'Nova mono';
-    font-weight: bold;
+    font-weight: normal;
     color: black;
     letter-spacing: -1px;
     text-transform: none;
@@ -180,3 +170,13 @@ div.bkg-img p.code {
 p.code:before {
     content: '_> '
 } */
+
+blockquote {
+    margin: 0 15%;
+    max-width: 65%;
+}
+
+blockquote p {
+    font-family: 'monospace';
+    font-size: 17px;
+}

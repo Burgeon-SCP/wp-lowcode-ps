@@ -383,6 +383,7 @@
 inner-pages
 ============*/
 .lc-innerpages-header-wrapper {
+	background-color: beige;
     position: relative;
     margin: 0;
     overflow: hidden;
