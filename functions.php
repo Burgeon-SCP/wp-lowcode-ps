@@ -161,6 +161,46 @@ endif;
 add_action( 'init', 'locopas_remove_emojis' );
 
 
+add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
+
+function my_deregister_styles()    {
+   //wp_deregister_style( 'amethyst-dashicons-style' );
+   wp_deregister_style( 'dashicons' );
+}
+
+
+// ADDITIONAL CODE TO BE IMPLEMENTED
+
+// Preload first files
+// <head>
+//   <link rel="preload" as="style" href="style.css">
+//   <link rel="preload" as="image" href="reflex-pano.jp2">
+//   <link rel="preload" as="script" href="jquery.js">
+// </head>
+//
+
+// Lazy load images as later elements
+// <script src="lazysizes.min.js" async></script>
+// <img data-src="flower.jpg" class="lazyload" alt="">
+
+// Async load based on editable url
+// Async load
+// Now you can enqueue your scripts as normal,
+// and simply add the #asyncload string to any script you want to async.
+// from: https://ikreativ.com/async-with-wordpress-enqueue/
+function ikreativ_async_scripts($url)
+{
+    if ( strpos( $url, '#asyncload') === false )
+        return $url;
+    else if ( is_admin() )
+        return str_replace( '#asyncload', '', $url );
+    else
+	return str_replace( '#asyncload', '', $url )."' async='async";
+    }
+add_filter( 'clean_url', 'ikreativ_async_scripts', 11, 1 );
+
+
+
 /**
  * Load LoCoPaS Custom Functions file
  */
@@ -178,13 +218,15 @@ require trailingslashit( get_template_directory() ) . '/inc/widgets/locopas-widg
 
 /**
  * Implement the Custom Header feature.
+ *
+ * removed 0.5.0
  */
-require trailingslashit( get_template_directory() ) . '/inc/custom-header.php';
+// require trailingslashit( get_template_directory() ) . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
  *
- * @removed 0.4.0
+ * @removed 0.5.0
  */
 // require trailingslashit( get_template_directory() ) . '/inc/template-tags.php';
 

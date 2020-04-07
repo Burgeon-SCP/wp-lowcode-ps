@@ -893,9 +893,9 @@ msgid ""
 msgstr ""
 
 #. URI of the theme
-msgid "https://accesspressthemes.com/wordpress-themes/locopas"
+msgid "https://github.com/burgeon-env/wp-lowcode-ps"
 msgstr ""
 
 #. Author URI of the theme
-msgid "https://accesspressthemes.com/"
+msgid "https://burgeon.life/"
 msgstr ""
