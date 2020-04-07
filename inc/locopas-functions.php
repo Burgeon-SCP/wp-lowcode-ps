@@ -107,7 +107,7 @@ if( ! function_exists( 'locopas_styles_register' ) ):
 		wp_enqueue_style( 'locopas-responsive-style', get_template_directory_uri() . '/inc/styles/responsive.css' );
 	}
 endif;
-add_action( 'wp_footer', 'locopas_styles_register', 999 );
+add_action( 'wp_enqueue_scripts', 'locopas_styles_register', 999 );
 
 
 
