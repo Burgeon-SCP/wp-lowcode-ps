@@ -56,12 +56,11 @@ function locopas_setup() {
 	 * Define custom thumbnail size
 	 *
 	 * @since 0.1.0
+     * @removed 0.4.0
 	 */
-	add_image_size( 'locopas_project_thumb', 450, 422, true );
-	add_image_size( 'locopas_services_thumb', 393, 384, true );
-	add_image_size( 'locopas_team_thumb', 230, 316, true );
-
-
+	// add_image_size( 'locopas_project_thumb', 450, 422, true );
+	// add_image_size( 'locopas_services_thumb', 393, 384, true );
+	// add_image_size( 'locopas_team_thumb', 230, 316, true );
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
@@ -144,20 +143,19 @@ function disable_emojicons_tinymce( $plugins ) {
 function locopas_remove_emojis() {
 	/* Remove emoji creation capability */
 	// all actions related to emojis
-  remove_action( 'admin_print_styles', 'print_emoji_styles' );
-  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+    remove_action( 'admin_print_styles', 'print_emoji_styles' );
+    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+    remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+    remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
 	// all filters related to emojis
 	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+    remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+    remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 	add_filter( 'emoji_svg_url', '__return_false' );
 
-  // filter to remove TinyMCE emojis with previous function
-  add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
-
+    // filter to remove TinyMCE emojis with previous function
+    add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
 }
 endif;
 add_action( 'init', 'locopas_remove_emojis' );
@@ -185,8 +183,10 @@ require trailingslashit( get_template_directory() ) . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
+ *
+ * @removed 0.4.0
  */
-require trailingslashit( get_template_directory() ) . '/inc/template-tags.php';
+// require trailingslashit( get_template_directory() ) . '/inc/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
