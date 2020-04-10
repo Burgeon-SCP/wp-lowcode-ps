@@ -3,15 +3,15 @@
 ==================================*/
 /* ---- high definition screens ---- */
 @media (min-width:1801px) {
-    .gallery-xl-show {
+    .xl-show {
         display: block
     }
     
-    .gallery-xl-flex {
+    .xl-flex {
         display: inline-flex;
     }
     
-    .gallery-xl-cont {
+    .xl-cont {
         display: contents;
     }
 	
@@ -40,19 +40,19 @@
 		font-size: 18px;
 	}
 
-	.gallery-lg-hide {
+	.lg-hide {
         display: none;
     }
 
-    .gallery-lg-show {
+    .lg-show {
         display: block
     }
 
-    .gallery-lg-flex {
+    .lg-flex {
         display: inline-flex;
     }
     
-    .gallery-lg-cont {
+    .lg-cont {
         display: contents;
     }
 	
@@ -83,19 +83,19 @@
         width: 100%;
     }
 
-    .gallery-lp-hide {
+    .lp-hide {
         display: none;
     }
 
-    .gallery-lp-show {
+    .lp-show {
         display: block
     }
     
-    .gallery-lp-flex {
+    .lp-flex {
         display: inline-flex;
     }
     
-    .gallery-lp-cont {
+    .lp-cont {
         display: contents;
     }
 
@@ -156,19 +156,19 @@
         text-align: center;
     }
 
-    .gallery-md-hide {
+    .md-hide {
         display: none;
     }
 
-    .gallery-md-show {
+    .md-show {
         display: block;
     }
 
-    .gallery-md-flex {
+    .md-flex {
         display: inline-flex;
     }
         
-    .gallery-md-cont {
+    .md-cont {
         display: contents;
     }
 
@@ -229,27 +229,27 @@
     }
 	
     .gallery-img {
-        margin: 0 7%;
-        max-width: 120px;
+        margin: 0 5%;
+        max-width: 150px;
     }
 
     div.bkg-img img.gallery-img {
         max-width: 45%;
     }
     
-    .gallery-tb-hide {
+    .tb-hide {
         display: none;
     }
     
-    .gallery-tb-show {
+    .tb-show {
         display: block;
     }
     
-    .gallery-tb-flex {
+    .tb-flex {
         display: inline-flex;
     }
     
-    .gallery-tb-cont {
+    .tb-cont {
         display: contents;
     }
 
@@ -329,25 +329,25 @@
         top: 0px;
     }
 
-    .gallery-sm-hide {
+    .sm-hide {
         display: none;
     }
 
-    .gallery-sm-show {
+    .sm-show {
         display: block;
     }
 
-    .gallery-sm-flex {
+    .sm-flex {
         display: inline-flex;
     }
     
-    .gallery-sm-cont {
+    .sm-cont {
         display: contents;
     }
 
     .gallery-img {
-        margin: 0 10%;
-        max-width: 140px;
+        margin: 0;
+        max-width: 200px;
     }
 
     .gallery-block-10,

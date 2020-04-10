@@ -64,21 +64,21 @@ function locopas_breadcrumbs(){
 			echo $before . get_the_time('F') . $after;
 		} elseif ( is_year() ) {
 			echo $before . get_the_time('Y') . $after;
-		// } elseif ( is_single() && !is_attachment() ) {
-		// 	if ( get_post_type() != 'post' ) {
-		// 		$post_type = get_post_type_object(get_post_type());
-		// 		$slug = $post_type->rewrite;
-		// 		printf($link, $homeLink . '/' . $slug['slug'] . '/', $post_type->labels->singular_name);
-		// 		if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
-		// 	} else {
-		// 		$cat = get_the_category(); $cat = $cat[0];
-		// 		$cats = get_category_parents($cat, TRUE, $delimiter);
-		// 		if ($showCurrent == 0) $cats = preg_replace("#^(.+)$delimiter$#", "$1", $cats);
-		// 		$cats = str_replace('<a', $linkBefore . '<a' . $linkAttr, $cats);
-		// 		$cats = str_replace('</a>', '</a>' . $linkAfter, $cats);
-		// 		echo $cats;
-		// 		if ($showCurrent == 1) echo $before . get_the_title() . $after;
-		// 	}
+		} elseif ( is_single() && !is_attachment() ) {
+		 	if ( get_post_type() != 'post' ) {
+				$post_type = get_post_type_object(get_post_type());
+				$slug = $post_type->rewrite;
+				printf($link, $homeLink . '/' . $slug['slug'] . '/', $post_type->labels->singular_name);
+				if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
+			} else {
+				$cat = get_the_category(); $cat = $cat[0];
+				$cats = get_category_parents($cat, TRUE, $delimiter);
+				if ($showCurrent == 0) $cats = preg_replace("#^(.+)$delimiter$#", "$1", $cats);
+				$cats = str_replace('<a', $linkBefore . '<a' . $linkAttr, $cats);
+				$cats = str_replace('</a>', '</a>' . $linkAfter, $cats);
+				echo $cats;
+				if ($showCurrent == 1) echo $before . get_the_title() . $after;
+			}
 		} elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
 			$post_type = get_post_type_object(get_post_type());
 			echo $before . $post_type->labels->singular_name . $after;
@@ -93,20 +93,20 @@ function locopas_breadcrumbs(){
 			if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
 		} elseif ( is_page() && !$post->post_parent ) {
 			if ($showCurrent == 1) echo $before . get_the_title() . $after;
-		// } elseif ( is_page() && $post->post_parent ) {
-		// 	$parent_id  = $post->post_parent;
-		// 	$breadcrumbs = array();
-		// 	while ($parent_id) {
-		// 		$page = get_posts($parent_id);
-		// 		$breadcrumbs[] = sprintf($link, get_permalink($page->ID), get_the_title($page->ID));
-		// 		$parent_id  = $page->post_parent;
-		// 	}
-		// 	$breadcrumbs = array_reverse($breadcrumbs);
-		// 	for ($i = 0; $i < count($breadcrumbs); $i++) {
-		// 		echo $breadcrumbs[$i];
-		// 		if ($i != count($breadcrumbs)-1) echo $delimiter;
-		// 	}
-		// 	if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
+		} elseif ( is_page() && $post->post_parent ) {
+			$parent_id  = $post->post_parent;
+			$breadcrumbs = array();
+			while ($parent_id) {
+				$page = get_posts($parent_id);
+				$breadcrumbs[] = sprintf($link, get_permalink($page->ID), get_the_title($page->ID));
+				$parent_id  = $page->post_parent;
+			}
+			$breadcrumbs = array_reverse($breadcrumbs);
+			for ($i = 0; $i < count($breadcrumbs); $i++) {
+				echo $breadcrumbs[$i];
+				if ($i != count($breadcrumbs)-1) echo $delimiter;
+			}
+			if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
 		} elseif ( is_tag() ) {
 			echo $before . sprintf($text['tag'], single_tag_title('', false)) . $after;
 		} elseif ( is_author() ) {

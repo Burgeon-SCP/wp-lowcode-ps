@@ -65,8 +65,8 @@ function locopas_scripts() {
 
 	$ps_header_sticky_option = get_theme_mod( 'sticky_header_option', 'enable' );
 	if( $ps_header_sticky_option != 'disable' ) {
-		wp_enqueue_script( 'jquery-sticky', get_template_directory_uri() . '/assets/library/jquery-sticky/js/jquery.sticky.js', array( 'jquery' ), '0.1.2', true );
-		wp_enqueue_script( 'locopas-sticky-setting', get_template_directory_uri() . '/assets/library/jquery-sticky/js/sticky-setting.js', array( 'jquery-sticky' ), '0.1.0', true );
+		wp_enqueue_script( 'jquery-sticky', get_template_directory_uri() . '/assets/library/jquery-sticky/js/jquery.sticky.js', array( 'jquery' ), '1.0.2', true );
+		wp_enqueue_script( 'locopas-sticky-setting', get_template_directory_uri() . '/assets/library/jquery-sticky/js/sticky-setting.js', array( 'jquery-sticky' ), '1.0.0', true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'locopas_scripts' );

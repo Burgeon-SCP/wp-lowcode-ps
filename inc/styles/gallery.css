@@ -34,15 +34,15 @@
     height: 200px;
 }
 
-.gallery-caption {
+.in-show {
     display: block;
 }
 
-.gallery-content {
+.in-cont {
     display: contents;
 }
 
-.gallery-hide {
+.in-hide {
     display: none;
 }
 

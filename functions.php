@@ -161,15 +161,16 @@ endif;
 add_action( 'init', 'locopas_remove_emojis' );
 
 
-add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
-
-function my_deregister_styles()    {
-   //wp_deregister_style( 'amethyst-dashicons-style' );
-   wp_deregister_style( 'dashicons' );
-}
-
-
 // ADDITIONAL CODE TO BE IMPLEMENTED
+
+// Deregister and postpone
+// add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
+//
+// function my_deregister_styles()    {
+//    //wp_deregister_style( 'amethyst-dashicons-style' );
+//    wp_deregister_style( 'dashicons' );
+// }
+//
 
 // Preload first files
 // <head>
@@ -218,17 +219,13 @@ require trailingslashit( get_template_directory() ) . '/inc/widgets/locopas-widg
 
 /**
  * Implement the Custom Header feature.
- *
- * removed 0.5.0
  */
-// require trailingslashit( get_template_directory() ) . '/inc/custom-header.php';
+require trailingslashit( get_template_directory() ) . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
- *
- * @removed 0.5.0
  */
-// require trailingslashit( get_template_directory() ) . '/inc/template-tags.php';
+require trailingslashit( get_template_directory() ) . '/inc/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
