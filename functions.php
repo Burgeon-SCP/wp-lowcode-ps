@@ -184,20 +184,22 @@ add_action( 'init', 'locopas_remove_emojis' );
 // <script src="lazysizes.min.js" async></script>
 // <img data-src="flower.jpg" class="lazyload" alt="">
 
-if ( ! function_exists( 'url_async_tagging' ) ) :
+if ( ! function_exists( 'url_async_script_tagging' ) ) :
 /**
- * Async load based on editable url.
+ * Async | Defer load based on editable url.
  *
  * Now you can enqueue your scripts as normal,
- * and simply add the #asyncload string to any script you want to async.
+ * and simply add the #asyncload or #deferload string to any script you want to async | defer.
  *
- * This filter is proposed by Scott from ikreativ at:
+ * This filter was proposed for async tag by Scott from ikreativ at:
  * https://ikreativ.com/async-with-wordpress-enqueue/
+ *
  *
  * @since 0.5.0
  *
  */
-function url_async_tagging($url)
+
+function url_async_script_tagging($url)
 {
     if ( strpos( $url, '#asyncload') === false )
         return $url;
@@ -207,7 +209,21 @@ function url_async_tagging($url)
 	return str_replace( '#asyncload', '', $url )."' async='async";
     }
 endif;
-add_filter( 'clean_url', 'url_async_tagging', 11, 1 );
+add_filter( 'clean_url', 'url_async_script_tagging', 11, 1 );
+
+
+if ( ! function_exists( 'url_defer_script_tagging' ) ) :
+function url_defer_script_tagging($url)
+{
+    if ( strpos( $url, '#deferload') === false )
+        return $url;
+    else if ( is_admin() )
+        return str_replace( '#deferload', '', $url );
+    else
+	return str_replace( '#deferload', '', $url )."' defer='defer";
+    }
+endif;
+add_filter( 'clean_url', 'url_defer_script_tagging', 11, 1 );
 
 
 

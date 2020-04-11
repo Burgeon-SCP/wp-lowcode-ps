@@ -32,15 +32,15 @@ function locopas_scripts() {
         'family' => 'Lato:400,700,300|Roboto+Mono:400,700|Nova+Mono',
     );
 		// wp_register_style( 'locopas-google-fonts', '//fonts.googleapis.com/css?family='.$locopas_font_args['family'] );
-	wp_enqueue_style( 'locopas-google-fonts', add_query_arg( $locopas_font_args, "//fonts.googleapis.com/css" ) );
+	wp_enqueue_style( 'locopas-google-fonts', add_query_arg( $locopas_font_args, "//fonts.googleapis.com/css" ) . '#asyncload' );
 
 	// // Bootstrap libraries
   // wp_enqueue_style( 'bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
   // wp_enqueue_script( 'bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
 
 	// Theme stylesheet and custom js
-	wp_enqueue_style( 'locopas-style', get_stylesheet_uri(), array(), $locopas_theme_version );
-	wp_enqueue_script( 'locopas-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js', array( 'jquery' ), $locopas_theme_version, true );
+	wp_enqueue_style( 'locopas-style', get_stylesheet_uri() . '#asyncload', array(), $locopas_theme_version );
+	wp_enqueue_script( 'locopas-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js#deferload', array( 'jquery' ), $locopas_theme_version, true );
 
   // jQuery libraries
 	// TODO: Some of them could be excluded unless explicitly called
@@ -48,20 +48,20 @@ function locopas_scripts() {
 	// wp_enqueue_style( 'lightslider-style', get_template_directory_uri() . '/assets/library/lightslider/css/lightslider.css', array(), '1.1.3' );
     // wp_enqueue_script( 'jquery-bxslider', get_template_directory_uri() . '/assets/library/bxSlider/js/jquery.bxslider.min.js', array( 'jquery' ), '4.1.2', true );
 	// wp_enqueue_style( 'bxSlider-style', get_template_directory_uri() . '/assets/library/bxSlider/css/jquery.bxslider.css', array(), '4.1.2' );
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/library/font-awesome/css/font-awesome.min.css', array(), '4.7.0', true );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/library/font-awesome/css/font-awesome.min.css#deferload', array(), '4.7.0', true );
 	wp_enqueue_style( 'jquery-prettyPhoto-style', get_template_directory_uri() . '/assets/library/prettyphoto/css/prettyPhoto.css', array(), '3.1.6', true );
 	wp_enqueue_style ( 'animate', get_template_directory_uri() . '/assets/css/animate.css', array(), '3.5.1' , true);
-	wp_enqueue_script( 'jquery-counterup', get_template_directory_uri() . '/assets/library/counterup/js/jquery.counterup.min.js', array( 'jquery' ), '1.0', true );
-	wp_enqueue_script( 'jquery-waypoints', get_template_directory_uri() . '/assets/library/waypoints/js/jquery.waypoints.min.js', array( 'jquery' ), '2.0.5', true );
-	wp_enqueue_script( 'jquery-nav', get_template_directory_uri() . '/assets/library/jquery-nav/js/jquery.nav.js', array( 'jquery' ), '2.2.0', true );
-	wp_enqueue_script( 'jquery-scrollTo', get_template_directory_uri() . '/assets/library/jquery-scrollTo/js/jquery.scrollTo.js', array( 'jquery' ), '2.1.1', true );
-	wp_enqueue_script( 'jquery-prettyPhoto', get_template_directory_uri() . '/assets/library/prettyphoto/js/jquery.prettyPhoto.js', array( 'jquery' ), '3.1.6', true );
-	wp_enqueue_script( 'parallax', get_template_directory_uri() . '/assets/library/parallax-js/js/parallax.min.js', array( 'jquery' ), '1.4.2', true );
-    wp_enqueue_style ( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css', array(), '2.3.1' );
-    wp_enqueue_script( 'aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js', false, null, true );
+	wp_enqueue_script( 'jquery-counterup', get_template_directory_uri() . '/assets/library/counterup/js/jquery.counterup.min.js#deferload', array( 'jquery' ), '1.0', true );
+	wp_enqueue_script( 'jquery-waypoints', get_template_directory_uri() . '/assets/library/waypoints/js/jquery.waypoints.min.js#deferload', array( 'jquery' ), '2.0.5', true );
+	wp_enqueue_script( 'jquery-nav', get_template_directory_uri() . '/assets/library/jquery-nav/js/jquery.nav.js#deferload', array( 'jquery' ), '2.2.0', true );
+	wp_enqueue_script( 'jquery-scrollTo', get_template_directory_uri() . '/assets/library/jquery-scrollTo/js/jquery.scrollTo.js#deferload', array( 'jquery' ), '2.1.1', true );
+	wp_enqueue_script( 'jquery-prettyPhoto', get_template_directory_uri() . '/assets/library/prettyphoto/js/jquery.prettyPhoto.js#deferload', array( 'jquery' ), '3.1.6', true );
+	wp_enqueue_script( 'parallax', get_template_directory_uri() . '/assets/library/parallax-js/js/parallax.min.js#deferload', array( 'jquery' ), '1.4.2', true );
+    wp_enqueue_style ( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css#asyncload', array(), '2.3.1' );
+    wp_enqueue_script( 'aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js#asyncload', false, null, true );
 	// wp_enqueue_script( 'wow', get_template_directory_uri() . '/assets/js/wow.min.js', array( 'jquery' ), '1.1.2', true );
     
-    wp_enqueue_script('aos-init-js',get_template_directory_uri() . '/assets/library/aos/js/init.js', ['aos-js'], null, true);
+    wp_enqueue_script('aos-init-js',get_template_directory_uri() . '/assets/library/aos/js/init.js#asyncload', ['aos-js'], null, true);
 
 	$ps_header_sticky_option = get_theme_mod( 'sticky_header_option', 'enable' );
 	if( $ps_header_sticky_option != 'disable' ) {
@@ -94,17 +94,17 @@ if( ! function_exists( 'locopas_styles_register' ) ):
 			wp_enqueue_style( 'locopas-'.str_replace('.css', '', basename($file)).'-style',
 											 $file);
 		} */
+        // wp_enqueue_style( 'locopas-pages-style', get_template_directory_uri() . '/inc/styles/pages.css' );
 
-		wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri() . '/inc/styles/typography.css' );
+        wp_enqueue_style( 'locopas-divisors-style', get_template_directory_uri() . '/inc/styles/divisors.css#asyncload' );
 		wp_enqueue_style( 'locopas-header-style', get_template_directory_uri() . '/inc/styles/header.css' );
-		wp_enqueue_style( 'locopas-pages-style', get_template_directory_uri() . '/inc/styles/pages.css' );
-		wp_enqueue_style( 'locopas-widget-style', get_template_directory_uri() . '/inc/styles/widget.css' );
-		wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css' );
+		wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css#deferload' );
 		wp_enqueue_style( 'locopas-menus-style', get_template_directory_uri() . '/inc/styles/menus.css' );
-		wp_enqueue_style( 'locopas-social-style', get_template_directory_uri() . '/inc/styles/social.css' );
-		wp_enqueue_style( 'locopas-gallery-style', get_template_directory_uri() . '/inc/styles/gallery.css#asyncload' );
-		wp_enqueue_style( 'locopas-divisors-style', get_template_directory_uri() . '/inc/styles/divisors.css#asyncload' );
+        wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri() . '/inc/styles/typography.css' );
+        wp_enqueue_style( 'locopas-gallery-style', get_template_directory_uri() . '/inc/styles/gallery.css#asyncload' );
 		wp_enqueue_style( 'locopas-responsive-style', get_template_directory_uri() . '/inc/styles/responsive.css#asyncload' );
+        wp_enqueue_style( 'locopas-social-style', get_template_directory_uri() . '/inc/styles/social.css#deferload' );
+        wp_enqueue_style( 'locopas-widget-style', get_template_directory_uri() . '/inc/styles/widget.css#deferload' );
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'locopas_styles_register', 999 );
