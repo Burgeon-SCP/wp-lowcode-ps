@@ -184,12 +184,20 @@ add_action( 'init', 'locopas_remove_emojis' );
 // <script src="lazysizes.min.js" async></script>
 // <img data-src="flower.jpg" class="lazyload" alt="">
 
-// Async load based on editable url
-// Async load
-// Now you can enqueue your scripts as normal,
-// and simply add the #asyncload string to any script you want to async.
-// from: https://ikreativ.com/async-with-wordpress-enqueue/
-function ikreativ_async_scripts($url)
+if ( ! function_exists( 'url_async_tagging' ) ) :
+/**
+ * Async load based on editable url.
+ *
+ * Now you can enqueue your scripts as normal,
+ * and simply add the #asyncload string to any script you want to async.
+ *
+ * This filter is proposed by Scott from ikreativ at:
+ * https://ikreativ.com/async-with-wordpress-enqueue/
+ *
+ * @since 0.5.0
+ *
+ */
+function url_async_tagging($url)
 {
     if ( strpos( $url, '#asyncload') === false )
         return $url;
@@ -198,7 +206,8 @@ function ikreativ_async_scripts($url)
     else
 	return str_replace( '#asyncload', '', $url )."' async='async";
     }
-add_filter( 'clean_url', 'ikreativ_async_scripts', 11, 1 );
+endif;
+add_filter( 'clean_url', 'url_async_tagging', 11, 1 );
 
 
 
