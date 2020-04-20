@@ -50,13 +50,13 @@ function locopas_scripts() {
 	// wp_enqueue_style( 'bxSlider-style', get_template_directory_uri() . '/assets/library/bxSlider/css/jquery.bxslider.css', array(), '4.1.2' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/library/font-awesome/css/font-awesome.min.css#deferload', array(), '4.7.0', true );
 	wp_enqueue_style( 'jquery-prettyPhoto-style', get_template_directory_uri() . '/assets/library/prettyphoto/css/prettyPhoto.css', array(), '3.1.6', true );
-	wp_enqueue_style ( 'animate', get_template_directory_uri() . '/assets/css/animate.css', array(), '3.5.1' , true);
+	// wp_enqueue_style ( 'animate', get_template_directory_uri() . '/assets/css/animate.css', array(), '3.5.1' , true);
 	wp_enqueue_script( 'jquery-counterup', get_template_directory_uri() . '/assets/library/counterup/js/jquery.counterup.min.js#deferload', array( 'jquery' ), '1.0', true );
 	wp_enqueue_script( 'jquery-waypoints', get_template_directory_uri() . '/assets/library/waypoints/js/jquery.waypoints.min.js#deferload', array( 'jquery' ), '2.0.5', true );
 	wp_enqueue_script( 'jquery-nav', get_template_directory_uri() . '/assets/library/jquery-nav/js/jquery.nav.js#deferload', array( 'jquery' ), '2.2.0', true );
 	wp_enqueue_script( 'jquery-scrollTo', get_template_directory_uri() . '/assets/library/jquery-scrollTo/js/jquery.scrollTo.js#deferload', array( 'jquery' ), '2.1.1', true );
 	wp_enqueue_script( 'jquery-prettyPhoto', get_template_directory_uri() . '/assets/library/prettyphoto/js/jquery.prettyPhoto.js#deferload', array( 'jquery' ), '3.1.6', true );
-	wp_enqueue_script( 'parallax', get_template_directory_uri() . '/assets/library/parallax-js/js/parallax.min.js#deferload', array( 'jquery' ), '1.4.2', true );
+	wp_enqueue_script( 'parallax', get_template_directory_uri() . '/assets/library/parallax-js/js/parallax.min.js#asyncload', array( 'jquery' ), '1.4.2', true );
     wp_enqueue_style ( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css#asyncload', array(), '2.3.1' );
     wp_enqueue_script( 'aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js#asyncload', false, null, true );
 	// wp_enqueue_script( 'wow', get_template_directory_uri() . '/assets/js/wow.min.js', array( 'jquery' ), '1.1.2', true );
@@ -94,17 +94,17 @@ if( ! function_exists( 'locopas_styles_register' ) ):
 			wp_enqueue_style( 'locopas-'.str_replace('.css', '', basename($file)).'-style',
 											 $file);
 		} */
-        // wp_enqueue_style( 'locopas-pages-style', get_template_directory_uri() . '/inc/styles/pages.css' );
+        wp_enqueue_style( 'locopas-pages-style', get_template_directory_uri() . '/inc/styles/pages.css' );
 
-        wp_enqueue_style( 'locopas-divisors-style', get_template_directory_uri() . '/inc/styles/divisors.css#asyncload' );
+        wp_enqueue_style( 'locopas-divisors-style', get_template_directory_uri() . '/inc/styles/divisors.css' );
 		wp_enqueue_style( 'locopas-header-style', get_template_directory_uri() . '/inc/styles/header.css' );
-		wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css#deferload' );
+		wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css' );
 		wp_enqueue_style( 'locopas-menus-style', get_template_directory_uri() . '/inc/styles/menus.css' );
         wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri() . '/inc/styles/typography.css' );
-        wp_enqueue_style( 'locopas-gallery-style', get_template_directory_uri() . '/inc/styles/gallery.css#asyncload' );
-		wp_enqueue_style( 'locopas-responsive-style', get_template_directory_uri() . '/inc/styles/responsive.css#asyncload' );
-        wp_enqueue_style( 'locopas-social-style', get_template_directory_uri() . '/inc/styles/social.css#deferload' );
-        wp_enqueue_style( 'locopas-widget-style', get_template_directory_uri() . '/inc/styles/widget.css#deferload' );
+        wp_enqueue_style( 'locopas-gallery-style', get_template_directory_uri() . '/inc/styles/gallery.css' );
+		wp_enqueue_style( 'locopas-responsive-style', get_template_directory_uri() . '/inc/styles/responsive.css' );
+        wp_enqueue_style( 'locopas-social-style', get_template_directory_uri() . '/inc/styles/social.css' );
+        wp_enqueue_style( 'locopas-widget-style', get_template_directory_uri() . '/inc/styles/widget.css' );
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'locopas_styles_register', 999 );
@@ -113,46 +113,50 @@ add_action( 'wp_enqueue_scripts', 'locopas_styles_register', 999 );
 
 /*------------------------------------------------------------------------------------------------------------------*/
 /**
- * Enqueue scripts/styles for admin area
- *
- * @since 0.1.0
- */
-if( ! function_exists( 'locopas_admin_scripts' ) ):
-	function locopas_admin_scripts() {
-		wp_enqueue_style( 'locopas-admin-style', get_template_directory_uri() . '/assets/css/admin-styles.css' );
+  * Check if user needs dashboard
+  *
+  * @since 0.5
+  */
+if (is_user_loggeg_in());
+    /**
+     * Enqueue scripts/styles for admin area
+     *
+     * @since 0.1.0
+     */
+    if( ! function_exists( 'locopas_admin_scripts' ) ):
+    	function locopas_admin_scripts() {
+    		wp_enqueue_style( 'locopas-admin-style', get_template_directory_uri() . '/assets/css/admin-styles.css' );
+    		wp_enqueue_script( 'jquery-ui-button' );
+    		wp_enqueue_script( 'locopas-admin-scripts', get_template_directory_uri() . '/assets/js/admin-scripts.js', array( 'jquery', 'jquery-ui-button' ), true );
+    	}
+    endif;
+    add_action( 'admin_enqueue_scripts', 'locopas_admin_scripts' );
+    
 
-		wp_enqueue_script( 'jquery-ui-button' );
-
-		wp_enqueue_script( 'locopas-admin-scripts', get_template_directory_uri() . '/assets/js/admin-scripts.js', array( 'jquery', 'jquery-ui-button' ), true );
-	}
+    /**
+    * Remove unnecessary menu entries for admin area
+    * extracted from https://codex.wordpress.org/Function_Reference/remove_menu_page
+    *
+    * @since 0.1.2
+    */
+    if( ! function_exists( 'locopas_admin_menu' ) ):
+        function locopas_admin_menu() {
+            // remove_menu_page( 'index.php' );                  //Dashboard
+            // remove_menu_page( 'jetpack' );                    //Jetpack*
+            remove_menu_page( 'edit.php' );                   //Posts
+            // remove_menu_page( 'upload.php' );                 //Media
+            // remove_menu_page( 'edit.php?post_type=page' );    //Pages
+            remove_menu_page( 'edit-comments.php' );          //Comments
+            // remove_menu_page( 'themes.php' );                 //Appearance
+            // remove_menu_page( 'plugins.php' );                //Plugins
+            remove_menu_page( 'users.php' );                  //Users
+            // remove_menu_page( 'tools.php' );                  //Tools
+            // remove_menu_page( 'options-general.php' );        //Settings
+        }
+    endif;
+    
+    add_action( 'admin_menu', 'locopas_admin_menu' );
 endif;
-
-add_action( 'admin_enqueue_scripts', 'locopas_admin_scripts' );
-
-/*------------------------------------------------------------------------------------------------------------------*/
-/**
- * Remove unnecessary menu entries for admin area
- * extracted from https://codex.wordpress.org/Function_Reference/remove_menu_page
- *
- * @since 0.1.2
- */
-if( ! function_exists( 'locopas_admin_menu' ) ):
-	function locopas_admin_menu() {
-		// remove_menu_page( 'index.php' );                  //Dashboard
-		// remove_menu_page( 'jetpack' );                    //Jetpack*
-		remove_menu_page( 'edit.php' );                   //Posts
-		// remove_menu_page( 'upload.php' );                 //Media
-		// remove_menu_page( 'edit.php?post_type=page' );    //Pages
-		remove_menu_page( 'edit-comments.php' );          //Comments
-		// remove_menu_page( 'themes.php' );                 //Appearance
-		// remove_menu_page( 'plugins.php' );                //Plugins
-		remove_menu_page( 'users.php' );                  //Users
-		// remove_menu_page( 'tools.php' );                  //Tools
-		// remove_menu_page( 'options-general.php' );        //Settings
-	}
-endif;
-
-add_action( 'admin_menu', 'locopas_admin_menu' );
 
 
 /*------------------------------------------------------------------------------------------------------------------*/
