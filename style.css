@@ -603,6 +603,18 @@ div.background-slide:after,
     display: none;
 }
 
+.in-show {
+    display: block;
+}
+
+.in-cont {
+    display: contents;
+}
+
+.in-hide {
+    display: none;
+}
+
 .dimmed {
     position: relative;
 }

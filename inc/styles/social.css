@@ -9,6 +9,10 @@ a>img[class^=soc-ico-] {
     width: 32px;
 }
 
+img.soc-ico-dh {
+    content: url('https://www.pikpng.com/pngl/b/430-4307964_docker-and-kubernetes-logos-point-of-sales-icon.png')
+}
+
 img.soc-ico-gh {
     content: url('https://github.githubassets.com/pinned-octocat.svg')
 }
