@@ -1,126 +1,128 @@
 <?php
 /**
  * Function for breadcrumbs
- * http://dimox.net/wordpress-breadcrumbs-without-a-plugin/
+ * Based on wp-custom-breadcrumbs.php from Sharifur
+ * https://gist.github.com/Sharifur/a09008b9f88622d38c948d941bf2bede
  *
  * @package BurgeonEnv Themes
  * @subpackage LoCoPaS
- * @since 0.1.0
+ * @since 0.5.0
  */
 
-function locopas_breadcrumbs(){
-  /* === OPTIONS === */
-	$text['home']     = esc_html__( 'Home', 'locopas' ); // text for the 'Home' link
-	$text['category'] = '%s'; // text for a category page
-	$text['tax'] 	  = '%s'; // text for a taxonomy page
-	$text['search']   = esc_html__( 'Search Results for "%s" Query', 'locopas' ); // text for a search results page
-	$text['tag']      = '%s'; // text for a tag page
-	$text['author']   = '%s'; // text for an author page
-	$text['404']      = '404'; // text for the 404 page
-	$showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
-	$showOnHome  = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
-	$delimiter   = ' &sol; '; // delimiter between crumbs
-	$before      = '<span class="current">'; // tag before the current crumb
-	$after       = '</span>'; // tag after the current crumb
-	/* === END OF OPTIONS === */
-	global $post;
-	$homeLink = esc_url(home_url() . '/');
-	$linkBefore = '<span typeof="v:Breadcrumb">';
-	$linkAfter = '</span>';
-	$linkAttr = ' rel="v:url" property="v:title"';
-	$link = $linkBefore . '<a' . $linkAttr . ' href="%1$s">%2$s</a>' . $linkAfter;
-	if (is_home() || is_front_page()) {
-		if ($showOnHome == 1) echo '<div id="crumbs"><a href="' . $homeLink . '">' . $text['home'] . '</a></div>';
-	} else {
-		echo '<div id="crumbs" xmlns:v="http://rdf.data-vocabulary.org/#">' . sprintf($link, $homeLink, $text['home']) . $delimiter;
+if (!function_exists('locopas_breadcrumbs')) {
+    function locopas_breadcrumbs() {
+        
+        // Set variables for later use
+        // $        = __( 'You are currently here!' );
+        $home_link        = home_url('/');
+        $home_text        = esc_html__( 'Home','locopas' );
+        $link_before      = '<li typeof="v:Breadcrumb">';
+        $link_after       = '</li>';
+        $link_attr        = ' rel="v:url" property="v:title"';
+        $link             = $link_before . '<a' . $link_attr . ' href="%1$s">%2$s</a>' . $link_after;
+        $delimiter        = ' / ';                     // Delimiter between crumbs
+        $before           = '<li class="breadcrumb">'; // Tag before the current crumb
+        $after            = '</li>';                   // Tag after the current crumb
+        // $page_addon       = '';                        // Adds the page number if the query is paged
+        $breadcrumb_trail = '';
+        $category_links   = '';
+        
+        if ( is_search() ) {
+            // Handle the search page
+            $breadcrumb_trail = esc_html__( 'Search query for: ','locopas' ) . $before . get_search_query() . $after;
+        
+        } elseif ( is_404() ) {
+            // Handle 404's
+            $breadcrumb_trail = $before . esc_html__( 'Error 404','locopas' ) . $after;
+        
+        // } elseif ( !is_home() || !is_front_page() ) { // only used on inner pages
+        //    // Skip breadcrumbs at front page
+        } else {
+            /**
+             * Set our own $wp_the_query variable. Do not use the global variable version due to
+             * reliability
+             */
+            $wp_the_query   = $GLOBALS['wp_the_query'];
+            $queried_object = $wp_the_query->get_queried_object();
+            $post_object = sanitize_post( $queried_object );
 
-		if ( is_category() ) {
-			$thisCat = get_category(get_query_var('cat'), false);
-			if ($thisCat->parent != 0) {
-				$cats = get_category_parents($thisCat->parent, TRUE, $delimiter);
-				$cats = str_replace('<a', $linkBefore . '<a' . $linkAttr, $cats);
-				$cats = str_replace('</a>', '</a>' . $linkAfter, $cats);
-				echo $cats;
-			}
-			echo $before . sprintf($text['category'], single_cat_title('', false)) . $after;
-		} elseif( is_tax() ){
-			$thisCat = get_category(get_query_var('cat'), false);
-			if ($thisCat->parent != 0) {
-				$cats = get_category_parents($thisCat->parent, TRUE, $delimiter);
-				$cats = str_replace('<a', $linkBefore . '<a' . $linkAttr, $cats);
-				$cats = str_replace('</a>', '</a>' . $linkAfter, $cats);
-				echo $cats;
-			}
-			echo $before . sprintf($text['tax'], single_cat_title('', false)) . $after;
+            $title          = apply_filters( 'the_title', $post_object->post_title );
+            $parent         = $post_object->post_parent;
+            $post_type      = $post_object->post_type;
+            $post_id        = $post_object->ID;
+            $post_link      = $before . $title . $after;
+            $parent_string  = '';
+            $post_type_link = '';
 
-		} elseif ( is_search() ) {
-			echo $before . sprintf($text['search'], get_search_query()) . $after;
-		} elseif ( is_day() ) {
-			echo sprintf($link, get_year_link(get_the_time('Y')), get_the_time('Y')) . $delimiter;
-			echo sprintf($link, get_month_link(get_the_time('Y'),get_the_time('m')), get_the_time('F')) . $delimiter;
-			echo $before . get_the_time('d') . $after;
-		} elseif ( is_month() ) {
-			echo sprintf($link, get_year_link(get_the_time('Y')), get_the_time('Y')) . $delimiter;
-			echo $before . get_the_time('F') . $after;
-		} elseif ( is_year() ) {
-			echo $before . get_the_time('Y') . $after;
-		} elseif ( is_single() && !is_attachment() ) {
-		 	if ( get_post_type() != 'post' ) {
-				$post_type = get_post_type_object(get_post_type());
-				$slug = $post_type->rewrite;
-				printf($link, $homeLink . '/' . $slug['slug'] . '/', $post_type->labels->singular_name);
-				if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
-			} else {
-				$cat = get_the_category(); $cat = $cat[0];
-				$cats = get_category_parents($cat, TRUE, $delimiter);
-				if ($showCurrent == 0) $cats = preg_replace("#^(.+)$delimiter$#", "$1", $cats);
-				$cats = str_replace('<a', $linkBefore . '<a' . $linkAttr, $cats);
-				$cats = str_replace('</a>', '</a>' . $linkAfter, $cats);
-				echo $cats;
-				if ($showCurrent == 1) echo $before . get_the_title() . $after;
-			}
-		} elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
-			$post_type = get_post_type_object(get_post_type());
-			echo $before . $post_type->labels->singular_name . $after;
-		} elseif ( is_attachment() ) {
-			$parent = get_post($post->post_parent);
-			$cat = get_the_category($parent->ID); $cat = $cat[0];
-			$cats = get_category_parents($cat, TRUE, $delimiter);
-			$cats = str_replace('<a', $linkBefore . '<a' . $linkAttr, $cats);
-			$cats = str_replace('</a>', '</a>' . $linkAfter, $cats);
-			echo $cats;
-			printf($link, get_permalink($parent), $parent->post_title);
-			if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
-		} elseif ( is_page() && !$post->post_parent ) {
-			if ($showCurrent == 1) echo $before . get_the_title() . $after;
-		} elseif ( is_page() && $post->post_parent ) {
-			$parent_id  = $post->post_parent;
-			$breadcrumbs = array();
-			while ($parent_id) {
-				$page = get_posts($parent_id);
-				$breadcrumbs[] = sprintf($link, get_permalink($page->ID), get_the_title($page->ID));
-				$parent_id  = $page->post_parent;
-			}
-			$breadcrumbs = array_reverse($breadcrumbs);
-			for ($i = 0; $i < count($breadcrumbs); $i++) {
-				echo $breadcrumbs[$i];
-				if ($i != count($breadcrumbs)-1) echo $delimiter;
-			}
-			if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
-		} elseif ( is_tag() ) {
-			echo $before . sprintf($text['tag'], single_tag_title('', false)) . $after;
-		} elseif ( is_author() ) {
-	 		global $author;
-			$userdata = get_userdata($author);
-			echo $before . sprintf($text['author'], $userdata->display_name) . $after;
-		} elseif ( is_404() ) {
-			echo $before . $text['404'] . $after;
-		}
-		if ( get_query_var('paged') ) {
-			if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
-			echo esc_html__( 'Page', 'locopas' ) . ' ' . get_query_var('paged');
-			if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
-		}
-		echo '</div>';
-	}
+            // Page-only theme
+            // if ( 'post' === $post_type )
+            // {
+            //     // Get the post categories
+            //     $categories = get_the_category( $post_id );
+            //     if ( $categories ) {
+            //         // Lets grab the first category
+            //         $category  = $categories[0];
+            //
+            //         $category_links = get_category_parents( $category, true, $delimiter );
+            //         $category_links = str_replace( '<a',   $link_before . '<a' . $link_attr, $category_links );
+            //         $category_links = str_replace( '</a>', '</a>' . $link_after,             $category_links );
+            //     }
+            // }
+
+            // Get post parents if $parent !== 0
+            if ( 0 !== $parent ) {
+                $parent_links = [];
+                while ( $parent ) {
+                    $post_parent = get_post( $parent );
+
+                    $parent_links[] = sprintf( $link, esc_url( get_permalink( $post_parent->ID ) ), get_the_title( $post_parent->ID ) );
+
+                    $parent = $post_parent->post_parent;
+                }
+
+                $parent_links = array_reverse( $parent_links );
+                $parent_string = implode( $delimiter, $parent_links );
+            }
+
+            // Build the breadcrumb trail
+            if ( $parent_string ) {
+                $breadcrumb_trail = $parent_string . $delimiter . $post_link;
+            } else {
+                $breadcrumb_trail = $post_link;
+            }
+        }
+        
+        // Unused types
+        // if ( $post_type_link )
+        //     $breadcrumb_trail = $post_type_link . $delimiter . $breadcrumb_trail;
+        //
+        // if ( $category_links )
+        //     $breadcrumb_trail = $category_links . $breadcrumb_trail;
+        // }
+        // Handle paged pages
+        // if ( is_paged() ) {
+        //     $current_page = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : get_query_var( 'page' );
+        //     $page_addon   = $before . sprintf( esc_html__( ' ( Page %s )' ,'locopas'), number_format_i18n( $current_page ) ) . $after;
+        // }
+
+        // Build breadcrumb object
+        $breadcrumb_output_link  = '';
+        $breadcrumb_output_link .= '<div> <ul class="crumbs">';
+        // Do not show breadcrumbs on page one of home and frontpage
+        // if ( is_paged() ) {
+        //     // $breadcrumb_output_link .= $here_text . $delimiter;
+        //     $breadcrumb_output_link .= '<li><a href="' . $home_link . '">' . $home_text . '</a></li>';
+        //     $breadcrumb_output_link .= $page_addon;
+        // }
+
+        // $breadcrumb_output_link .= $here_text . $delimiter;
+        $breadcrumb_output_link .= '<li><a href="' . $home_link . '" rel="v:url" property="v:title">' . $home_text . '</a></li>';
+        $breadcrumb_output_link .= $delimiter;
+        $breadcrumb_output_link .= $breadcrumb_trail;
+        // $breadcrumb_output_link .= $page_addon;
+        $breadcrumb_output_link .= '</ul></div><!-- locopas-breadcrumbs -->';
+
+        echo $breadcrumb_output_link;
+
+     }
 } // end locopas_breadcrumbs()

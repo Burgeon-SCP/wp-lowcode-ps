@@ -164,12 +164,12 @@ add_action( 'init', 'locopas_remove_emojis' );
 // ADDITIONAL CODE TO BE IMPLEMENTED
 
 // Deregister and postpone
-// add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
 //
 // function my_deregister_styles()    {
 //    //wp_deregister_style( 'amethyst-dashicons-style' );
 //    wp_deregister_style( 'dashicons' );
 // }
+// add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
 //
 
 // Preload first files
