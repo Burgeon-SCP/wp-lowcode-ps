@@ -1,12 +1,12 @@
 /*
 Theme Name: LoCoPaS
-Theme URI: https://github.com/burgeon-env/wp-lowcode-ps
+Theme URI: https://github.com/burgeon-env/wp-locopas
 Author: Burgeon EnvironMental Solutions
 Author URI: https://burgeon.life/
 Description: LoCoPaS is a beautiful free responsive page-only WordPress theme with awesome parallax scrolling effect. It is a performance based WP template suitable for multipurpose websites like business, agency, portfolio, eCommerce etc. It is a fully responsive theme that fits perfectly on any device. It is clean, simple, SEO friendly, flexible, multilingual, and feature-rich theme for modern websites.
 modern websites.
-Version: 0.5.0
-License: GNU General Public License v2 or later
+Version: 0.5.0-pre
+License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: locopas
 Tags: one-column, no-post, no-comments, no-sidebar, translation-ready, flexible-header, footer-widgets, custom-background, custom-logo, featured-images, theme-options
@@ -270,8 +270,9 @@ html {
 
 body {
     /* Fallback for when there is no custom background color defined. */
-    background: #fff;
-    /* Prevent background-slide from expanding horizontaly --> moved to .site */
+    background: #dddddd;
+    background: linear-gradient(116deg, #88af67 30%, #494d50 60%);
+	/* Prevent background-slide from expanding horizontaly --> moved to .site */
     /*
   overflow-x: hidden !important;
   -webkit-box-sizing: border-box;
@@ -389,6 +390,7 @@ button.topage > a {
     background-color: #589225;
 	background-color: #589225e0;
 	border-radius: 15px;
+	box-shadow: 3px 3px 6px 1px #333;
     color: #eee;
     font-family: 'Roboto Slab', monospace;
     font-size: 16px;
@@ -603,18 +605,6 @@ div.background-slide:after,
     display: none;
 }
 
-.in-show {
-    display: block;
-}
-
-.in-cont {
-    display: contents;
-}
-
-.in-hide {
-    display: none;
-}
-
 .dimmed {
     position: relative;
 }
@@ -739,18 +729,22 @@ object {
 /* ---- scrolling ---- */
 #scroll-up {
     background-color: #333;
-    width: 40px;
-    height: 40px;
-    line-height: 35px;
-    text-align: center;
-    font-size: 24px;
+    border-radius: 100%;
+    bottom: 75px;
     color: #ffffff;
+    font-size: 50px;
+    height: 40px;
+    line-height: 60px;
+    opacity: 0.6;
     position: fixed;
     right: 30px;
-    bottom: 75px;
-    border-radius: 100%;
-    opacity: 0.5;
+    text-align: center;
+    width: 40px;
     z-index: 999999;
+}
+
+#scroll-up:before {
+    content: "^";
 }
 
 #scroll-up:hover {
@@ -775,7 +769,7 @@ object {
 .archive #content.site-content,
 #content.site-content,
 .plx-home #content.site-content {
-    padding: 40px 0 40px 0;
+    padding: 0 0 40px 0;
     min-height: 75vh;
 }
 

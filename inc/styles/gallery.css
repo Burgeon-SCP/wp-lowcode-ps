@@ -14,15 +14,17 @@
 }
 
 .gallery ul {
-    max-width: 95%;
+	font-size: larger;
+    max-width: 75%;
     margin-top: 20px;
-    padding-top: 5%;
+	margin-left: 60px;
+	padding-top: 5%;
 }
 
 .gallery-img {
     border-radius: 30px;
     padding: 10px;
-    max-width: 250px;
+    max-width: 200px;
 }
 
 .gallery-img-height-150 {
@@ -33,6 +35,18 @@
 .gallery-img-height-200 {
     width: auto;
     height: 200px;
+}
+
+.in-show {
+    display: block;
+}
+
+.in-cont {
+    display: contents;
+}
+
+.in-hide {
+    display: none;
 }
 
 /* --- gallery blocks ---  */

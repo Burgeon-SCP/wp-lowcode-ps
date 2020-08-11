@@ -228,6 +228,10 @@
         width: 120%;
     }
 	
+	.gallery ul {
+		font-size: medium;
+	}
+	
     .gallery-img {
         margin: 0 5%;
         max-width: 150px;
