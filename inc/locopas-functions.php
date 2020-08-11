@@ -113,11 +113,24 @@ add_action( 'wp_enqueue_scripts', 'locopas_styles_register', 999 );
 
 /*------------------------------------------------------------------------------------------------------------------*/
 /**
+  * Check for a logged user
+  *
+  * @since 0.5
+  */
+if( ! function_exists( 'is_user_loggeg_in' ) ):
+    function is_user_loggeg_in() {
+        $user = _wp_get_current_user();
+        return $user->exists();
+    }
+endif;
+
+
+/**
   * Check if user needs dashboard
   *
   * @since 0.5
   */
-if (is_user_loggeg_in());
+if (is_user_loggeg_in()):
     /**
      * Enqueue scripts/styles for admin area
      *
@@ -154,7 +167,6 @@ if (is_user_loggeg_in());
             // remove_menu_page( 'options-general.php' );        //Settings
         }
     endif;
-    
     add_action( 'admin_menu', 'locopas_admin_menu' );
 endif;
 

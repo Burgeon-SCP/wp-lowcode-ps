@@ -12,8 +12,8 @@ div.background-slide {
     margin-bottom: 20vh;
     margin-left: -10vw;
     margin-top: 100px;
-    min-height: 65vh;
-    overflow-x: hidden !important;
+    min-height: 85vh;
+    /* overflow-x: hidden; */
     padding: 5vh;
     width: 120vw;
 }
