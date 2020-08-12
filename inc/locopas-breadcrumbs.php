@@ -14,16 +14,16 @@ if (!function_exists('locopas_breadcrumbs')) {
         
         // Set variables for later use
         // $        = __( 'You are currently here!' );
-        $home_link        = home_url('/');
+        $home_link        = esc_url(home_url('/'));
         $home_text        = esc_html__( 'Home','locopas' );
         $link_before      = '<li typeof="v:Breadcrumb">';
         $link_after       = '</li>';
         $link_attr        = ' rel="v:url" property="v:title"';
         $link             = $link_before . '<a' . $link_attr . ' href="%1$s">%2$s</a>' . $link_after;
-        $delimiter        = ' / ';                     // Delimiter between crumbs
-        $before           = '<li class="breadcrumb">'; // Tag before the current crumb
-        $after            = '</li>';                   // Tag after the current crumb
-        // $page_addon       = '';                        // Adds the page number if the query is paged
+        $delimiter        = '>';          // Delimiter between crumbs
+        $before           = '<li>';       // Tag before the current crumb
+        $after            = '</li>';      // Tag after the current crumb
+        // $page_addon       = '';        // Adds the page number if the query is paged
         $breadcrumb_trail = '';
         $category_links   = '';
         
@@ -107,7 +107,7 @@ if (!function_exists('locopas_breadcrumbs')) {
 
         // Build breadcrumb object
         $breadcrumb_output_link  = '';
-        $breadcrumb_output_link .= '<div> <ul class="crumbs">';
+        $breadcrumb_output_link .= '<div> <ul id="crumbs">';
         // Do not show breadcrumbs on page one of home and frontpage
         // if ( is_paged() ) {
         //     // $breadcrumb_output_link .= $here_text . $delimiter;

@@ -9,7 +9,7 @@
  * @since 0.1.0
  */
 
-if ( ! exists('locopas_icons_array')) {
+if ( ! function_exists('locopas_icons_array')) {
     /**
      * Define function for fontawewome icons
      *

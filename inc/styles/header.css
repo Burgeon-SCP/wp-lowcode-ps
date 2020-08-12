@@ -416,8 +416,24 @@ inner-pages
     word-wrap: break-word;
 }
 
-.lc-innerpages-header-wrapper #crumbs a {
-    color: #ffffff;
+ul#crumbs {
+    display: inline-flex;
+    text-indent: 0;
+}
+
+ul#crumbs li {
+    margin: 0 5px;
+}
+
+ul#crumbs a {
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+}
+
+ul#crumbs a:hover {
+    color: #373;
 }
 
 .lc-innerpages-header-wrapper .entry-header .page-title {

@@ -488,17 +488,12 @@ a:hover,
 a:focus,
 a:active {
     color: #373;
+    outline: 0;
 }
 
 a:focus {
-    outline: 0;
     border: 0;
     box-shadow: 0;
-}
-
-a:hover,
-a:active {
-    outline: 0;
 }
 
 /*--------------------------------------------------------------
