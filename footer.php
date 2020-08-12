@@ -29,8 +29,6 @@
 	</footer><!-- #colophon -->
 	<a href="#masthead" id="scroll-up"></a>
 </div><!-- #page -->
-
 <?php wp_footer(); ?>
-<!-- <script>AOS.init();</script> -->
 </body>
 </html>

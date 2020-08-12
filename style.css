@@ -5,7 +5,7 @@ Author: Burgeon EnvironMental Solutions
 Author URI: https://burgeon.life/
 Description: LoCoPaS is a beautiful free responsive page-only WordPress theme with awesome parallax scrolling effect. It is a performance based WP template suitable for multipurpose websites like business, agency, portfolio, eCommerce etc. It is a fully responsive theme that fits perfectly on any device. It is clean, simple, SEO friendly, flexible, multilingual, and feature-rich theme for modern websites.
 modern websites.
-Version: 0.5.0-pre
+Version: 0.5.0
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: locopas
@@ -272,25 +272,8 @@ body {
     /* Fallback for when there is no custom background color defined. */
     background: #dddddd;
     background: linear-gradient(116deg, #88af67 30%, #494d50 60%);
-	/* Prevent background-slide from expanding horizontaly --> moved to .site */
-    /*
-  overflow-x: hidden !important;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  */
 }
 
-/* blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-} */
-/* blockquote,
-q {
-  quotes: "''''";
-} */
 li {
     margin-bottom: 5px;
 }
@@ -773,17 +756,6 @@ object {
     float: none;
 }
 
-/*
-.no-sidebar-center #primary {
-  margin: 0 auto;
-  float: none;
-}
-
-.no-sidebar #primary {
-  width: 100%;
-  float: none;
-}
-*/
 /*inner-blog-page */
 #primary article.post {
     margin-bottom: 50px;

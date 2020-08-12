@@ -8,15 +8,177 @@
  * @subpackage LoCoPaS
  * @since 0.1.0
  */
+
 /*------------------------------------------------------------------------------------------------------------------*/
 /**
  * Define variable for theme version
  *
  * @since 0.1.0
  */
-	$locopas_theme_details = wp_get_theme();
-	$locopas_theme_version = $locopas_theme_details->Version;
-	// $locopas_theme_version = rand(111,999); /* used for development */
+$locopas_theme_details = wp_get_theme();
+$locopas_theme_version = $locopas_theme_details->Version;
+// $locopas_theme_version = rand(111,999); /* used for development */
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/**
+ * Define performance functions
+ *
+ * @since 0.5.0
+ */
+
+if ( ! function_exists( 'url_async_script_tagging' ) ) :
+    /**
+    * Asynchronous load based on editable url.
+    *
+    * Now you can enqueue your scripts as normal,
+    * and simply add the #asyncload string at the end of any url.
+    *
+    * This filter was proposed by Scott from ikreativ at:
+    * https://ikreativ.com/async-with-wordpress-enqueue/
+    *
+    *
+    * @since 0.5.0
+    *
+    */
+    function url_async_script_tagging($url) {
+        if ( strpos( $url, '#asyncload') === false )
+            return $url;
+        else if ( is_admin() )
+            return str_replace( '#asyncload', '', $url );
+        else
+            return str_replace( '#asyncload', '', $url )."' async='async";
+    }
+endif;
+add_filter( 'clean_url', 'url_async_script_tagging', 11, 1 );
+
+if ( ! function_exists( 'url_defer_script_tagging' ) ) :
+    /**
+    * Defered load based on editable url.
+    *
+    * Now you can enqueue your scripts as normal,
+    * and simply add #deferload string at the end of any url.
+    *
+    * This filter was proposed for async tag by Scott from ikreativ at:
+    * https://ikreativ.com/async-with-wordpress-enqueue/
+    *
+    *
+    * @since 0.5.0
+    *
+    */
+    function url_defer_script_tagging($url) {
+         if ( strpos( $url, '#deferload') === false )
+             return $url;
+         else if ( is_admin() )
+             return str_replace( '#deferload', '', $url );
+         else
+        	return str_replace( '#deferload', '', $url )."' defer='defer";
+    }
+endif;
+add_filter( 'clean_url', 'url_defer_script_tagging', 11, 1 );
+
+if( ! function_exists( 'is_user_loggeg_in' ) ):
+    /**
+    * Check for a logged user
+    *
+    * @since 0.5
+    */
+    function is_user_loggeg_in() {
+        $user = _wp_get_current_user();
+        return $user->exists();
+    }
+endif;
+
+// TODO: Create preload and lazyload functions
+
+// Preload first files
+// <head>
+//   <link rel="preload" as="style" href="style.css">
+//   <link rel="preload" as="image" href="reflex-pano.jp2">
+//   <link rel="preload" as="script" href="jquery.js">
+// </head>
+
+// Lazy load images as later elements
+// <script src="lazysizes.min.js" async></script>
+// <img data-src="flower.jpg" class="lazyload" alt="">
+
+
+if ( ! function_exists( 'locopas_remove_emojis' ) ) :
+    
+    /**
+     * Removes emoji content for higher performance.
+     *
+     * This function is proposed by Christine Cooper at:
+     * https://wordpress.stackexchange.com/questions/185577/disable-emojicons-introduced-with-wp-4-2
+     *
+     * It is also an increased solution of the one proposed at WpFASTER.org
+     * 		https://www.wpfaster.org/code/how-to-remove-emoji-styles-scripts-wordpress
+     *
+     * @since 0.1.2
+     *
+     */
+
+    function disable_emojicons_tinymce( $plugins ) {
+        if ( is_array( $plugins ) ) {
+            return array_diff( $plugins, array( 'wpemoji' ) );
+        } else {
+            return array();
+        }
+    }
+
+    function locopas_remove_emojis() {
+    	/* Remove emoji creation capability */
+    	// all actions related to emojis
+        remove_action( 'admin_print_styles', 'print_emoji_styles' );
+        remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+        remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+        remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+    	// all filters related to emojis
+    	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+        remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+        remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+    	add_filter( 'emoji_svg_url', '__return_false' );
+
+        // filter to remove TinyMCE emojis with previous function
+        add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+    }
+endif;
+add_action( 'init', 'locopas_remove_emojis' );
+
+if ( ! function_exists( 'disable_pingback' ) ) :
+    function disable_pingback( &$links ) {
+        foreach ( $links as $l => $link )
+            if ( 0 === strpos( $link, get_option( 'home' ) ) )
+                unset($links[$l]);
+    }
+endif;
+add_action( 'pre_ping', 'disable_pingback' );
+
+// Exclude unnecessary elements from loading
+if ( ! function_exists( 'locopas_unload' ) ) :
+    // Exclude loading of unnecessary files
+    function locopas_unload() {
+        wp_dequeue_style( 'wp-block-library' ); // Guttenberg blocks
+        remove_action( 'wp_head', 'rsd_link' ); // Really Simply Discovery
+        remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 ); // header wp_shortlink --> SEO canonical
+        remove_action( 'wp_head', 'wlwmanifest_link' ); // Windows Live writer
+        add_filter( 'xmlrpc_enabled', '__return_false'); // Wordpress API - prevent DDoS & BF
+        add_filter( 'wpcf7_load_js', '__return_false' ); // Contact Form 7 --> Everest Forms
+        add_filter( 'wpcf7_load_css', '__return_false' ); // Contact Form 7 --> Everest Forms
+        // Not-logged visitors
+        if ( ! is_user_loggeg_in() ) {
+            //wp_deregister_style( 'amethyst-dashicons-style' );
+            wp_deregister_script( 'jquery' );
+            wp_deregister_style( 'dashicons' ); // Dashicons
+        }
+        // Pages without external form
+        if ( ! is_page( 'contact' ) ) {
+            wp_dequeue_style( 'everest-forms-general-css' ); // Everest Forms
+        }
+    }
+endif;
+add_action( 'wp_enqueue_scripts', 'locopas_unregister', 100 );
+
 
 
 /*------------------------------------------------------------------------------------------------------------------*/
@@ -31,37 +193,24 @@ function locopas_scripts() {
 	$locopas_font_args = array(
         'family' => 'Lato:400,700,300|Roboto+Mono:400,700|Nova+Mono',
     );
-		// wp_register_style( 'locopas-google-fonts', '//fonts.googleapis.com/css?family='.$locopas_font_args['family'] );
+	// wp_register_style( 'locopas-google-fonts', '//fonts.googleapis.com/css?family='.$locopas_font_args['family'] );
 	wp_enqueue_style( 'locopas-google-fonts', add_query_arg( $locopas_font_args, "//fonts.googleapis.com/css" ) . '#asyncload' );
 
 	// // Bootstrap libraries
-  // wp_enqueue_style( 'bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
-  // wp_enqueue_script( 'bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
+    // wp_enqueue_style( 'bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
+    // wp_enqueue_script( 'bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
 
 	// Theme stylesheet and custom js
 	wp_enqueue_style( 'locopas-style', get_stylesheet_uri() . '#asyncload', array(), $locopas_theme_version );
 	wp_enqueue_script( 'locopas-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js#deferload', array( 'jquery' ), $locopas_theme_version, true );
 
-  // jQuery libraries
-	// TODO: Some of them could be excluded unless explicitly called
-    // wp_enqueue_script( 'lightslider', get_template_directory_uri() . '/assets/library/lightslider/js/lightslider.min.js', array( 'jquery' ), '1.1.3', true );
-	// wp_enqueue_style( 'lightslider-style', get_template_directory_uri() . '/assets/library/lightslider/css/lightslider.css', array(), '1.1.3' );
-    // wp_enqueue_script( 'jquery-bxslider', get_template_directory_uri() . '/assets/library/bxSlider/js/jquery.bxslider.min.js', array( 'jquery' ), '4.1.2', true );
-	// wp_enqueue_style( 'bxSlider-style', get_template_directory_uri() . '/assets/library/bxSlider/css/jquery.bxslider.css', array(), '4.1.2' );
-	// wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/library/font-awesome/css/font-awesome.min.css#deferload', array(), '4.7.0', true );
-	wp_enqueue_style( 'jquery-prettyPhoto-style', get_template_directory_uri() . '/assets/library/prettyphoto/css/prettyPhoto.css', array(), '3.1.6', true );
-	// wp_enqueue_style ( 'animate', get_template_directory_uri() . '/assets/css/animate.css', array(), '3.5.1' , true);
-	wp_enqueue_script( 'jquery-counterup', get_template_directory_uri() . '/assets/library/counterup/js/jquery.counterup.min.js#deferload', array( 'jquery' ), '1.0', true );
-	wp_enqueue_script( 'jquery-waypoints', get_template_directory_uri() . '/assets/library/waypoints/js/jquery.waypoints.min.js#deferload', array( 'jquery' ), '2.0.5', true );
+    // jQuery libraries
 	wp_enqueue_script( 'jquery-nav', get_template_directory_uri() . '/assets/library/jquery-nav/js/jquery.nav.js#deferload', array( 'jquery' ), '2.2.0', true );
 	wp_enqueue_script( 'jquery-scrollTo', get_template_directory_uri() . '/assets/library/jquery-scrollTo/js/jquery.scrollTo.js#deferload', array( 'jquery' ), '2.1.1', true );
-	wp_enqueue_script( 'jquery-prettyPhoto', get_template_directory_uri() . '/assets/library/prettyphoto/js/jquery.prettyPhoto.js#deferload', array( 'jquery' ), '3.1.6', true );
 	wp_enqueue_script( 'parallax', get_template_directory_uri() . '/assets/library/parallax-js/js/parallax.min.js#asyncload', array( 'jquery' ), '1.4.2', true );
     wp_enqueue_style ( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css#asyncload', array(), '2.3.1' );
     wp_enqueue_script( 'aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js#asyncload', false, null, true );
-	// wp_enqueue_script( 'wow', get_template_directory_uri() . '/assets/js/wow.min.js', array( 'jquery' ), '1.1.2', true );
-    
-    wp_enqueue_script('aos-init-js',get_template_directory_uri() . '/assets/library/aos/js/init.js#asyncload', ['aos-js'], null, true);
+    wp_enqueue_script( 'aos-init-js', get_template_directory_uri() . '/assets/library/aos/js/init.js#asyncload', ['aos-js'], null, true );
 
 	$ps_header_sticky_option = get_theme_mod( 'sticky_header_option', 'enable' );
 	if( $ps_header_sticky_option != 'disable' ) {
@@ -85,15 +234,17 @@ if( ! function_exists( 'locopas_styles_register' ) ):
 		 *
 		 * locopas_styles_register is hooked with low priority to ensure css cascading
 		 * NOTE: more specific priorities could be introduced at wp_enqueue_style()
+         * TODO: Check for minimized version and use it if present
 		 */
 
 
-		 // TODO: NOT WORKING
+		 // WIP: NOT WORKING
 		/* foreach (glob(get_template_directory_uri().'/inc/styles/*.css') as $file) {
 			// Do something with $file
 			wp_enqueue_style( 'locopas-'.str_replace('.css', '', basename($file)).'-style',
 											 $file);
 		} */
+        
         wp_enqueue_style( 'locopas-pages-style', get_template_directory_uri() . '/inc/styles/pages.css' );
 
         wp_enqueue_style( 'locopas-divisors-style', get_template_directory_uri() . '/inc/styles/divisors.css' );
@@ -108,21 +259,6 @@ if( ! function_exists( 'locopas_styles_register' ) ):
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'locopas_styles_register', 999 );
-
-
-
-/*------------------------------------------------------------------------------------------------------------------*/
-/**
-  * Check for a logged user
-  *
-  * @since 0.5
-  */
-if( ! function_exists( 'is_user_loggeg_in' ) ):
-    function is_user_loggeg_in() {
-        $user = _wp_get_current_user();
-        return $user->exists();
-    }
-endif;
 
 
 /**
@@ -170,16 +306,17 @@ if (is_user_loggeg_in()):
     add_action( 'admin_menu', 'locopas_admin_menu' );
 endif;
 
-
 /*------------------------------------------------------------------------------------------------------------------*/
-/**
- * Define shortcode for visitor ip recovery
- * Extracted from:
- * https://www.wpbeginner.com/wp-tutorials/how-to-display-a-users-ip-address-in-wordpress/
- *
- * @since 0.1.2
- */
+/* Complementary functions */
+
 if( ! function_exists( 'locopas_get_visitor_ip' ) ):
+    /**
+     * Define shortcode for visitor ip recovery
+     * Extracted from:
+     * https://www.wpbeginner.com/wp-tutorials/how-to-display-a-users-ip-address-in-wordpress/
+     *
+     * @since 0.1.2
+     */
 	function locopas_get_visitor_ip() {
 		// Display User IP in WordPress
 		if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ) ) {
@@ -392,31 +529,3 @@ if( !function_exists( 'locopas_arch_title' ) ) {
 	}
 }
 add_filter( 'get_the_archive_title', 'locopas_arch_title' );
-
-/*
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-//  if( !function_exists( 'locopas_content_width' ) ) {
-// 	function locopas_content_width() {
-// 		$GLOBALS['content_width'] = apply_filters( 'locopas_content_width', 640 );
-// 	}
-// }
-// add_action( 'after_setup_theme', 'locopas_content_width', 0 );
-
-
-/*
- * Define pingback link inside the header.
- *
- */
-// if( !function_exists( 'locopas_pingback_header' ) ) {
-// 	function locopas_pingback_header() {
-// 		if ( is_singular() && pings_open() ) {
-// 			printf( '<link rel="pingback" href="%s">' . "\n", esc_url(get_bloginfo( 'pingback_url', 'display' )) );
-// 		}
-// 	}
-// }
-// add_action( 'wp_head', 'locopas_pingback_header' );

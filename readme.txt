@@ -54,15 +54,18 @@ A css-editor-oriented theme called LoCoPaS (Low Code ParallaxSome).
 8.2. Create a minimized Customizer to easily and low-code-friendly alter basic appearance of pages.
 
 == Third Party scripts and styles under public license ==
+
+= i.e.-> !: no longer used | *: non-upgradable version ==
+
 = Styles =
-	Font Awesome v4.6.3 under (Font: SIL OFL 1.1, CSS: MIT License)
+	!: Font Awesome v4.6.3 under (Font: SIL OFL 1.1, CSS: MIT License)
 	http://fontawesome.io
 
 = Scripts =
-	BxSlider v4.1.2 by Steven Wanderski under MIT License
+	!: BxSlider v4.1.2 by Steven Wanderski under MIT License
 	http://bxslider.com
 
-	jQuery counterup v1.0.2 by Benjamin Intal under GPL v2 License
+	!: jQuery counterup v1.0.2 by Benjamin Intal under GPL v2 License
 	https://github.com/bfintal/Counter-Up
 
 	jQuery One Page Nav Plugin v2.2.0 by Trevor Davis under MIT and GPL licenses
@@ -75,23 +78,25 @@ A css-editor-oriented theme called LoCoPaS (Low Code ParallaxSome).
 	https://github.com/garand/sticky/
 	https://github.com/garand/sticky/blob/master/LICENSE.md
 
-	lightslider v1.1.3 by Sachin N under MIT License
+	!: lightslider v1.1.3 by Sachin N under MIT License
 	https://github.com/sachinchoolur/lightslider
 
 	parallax.js v1.4.2 by PixelCog Inc under MIT License
 	https://github.com/pixelcog/parallax.js
 
-	jQuery PrettyPhoto v3.1.6 by Stephane Caron under GPLv2 License
+	!: jQuery PrettyPhoto v3.1.6 by Stephane Caron under GPLv2 License
 	http://www.no-margin-for-errors.com/projects/prettyPhoto-jquery-lightbox-clone/
 
-	jQuery Waypoints v2.0.5 by Caleb Troughton under MIT License
+	!: jQuery Waypoints v2.0.5 by Caleb Troughton under MIT License
 	https://github.com/imakewebthings/waypoints
 
 
 == Changelog ==
 
 = 0.5 =
-	* Uses locopas.min.(css|js). Better performance on page loading due to cue improvement.
+	* Better performance on page loading due to cue improvement.
+    * Lacks creation of locopas.min.(css|js).
+    * Improved styling.
     
 = 0.4 =
 	* Improved responsiveness and better styling files distribution

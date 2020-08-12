@@ -1,4 +1,4 @@
-
+<?php
 /*------------------------------------------------------------------------------------------------------------------*/
  /**
   * Define function for homepage slider
@@ -106,3 +106,33 @@ if( ! function_exists( 'locopas_top_social_icons_hook' ) ):
 endif;
 
 add_action( 'locopas_top_social_icons', 'locopas_top_social_icons_hook', 10 );
+
+
+
+/*
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+//  if( !function_exists( 'locopas_content_width' ) ) {
+// 	function locopas_content_width() {
+// 		$GLOBALS['content_width'] = apply_filters( 'locopas_content_width', 640 );
+// 	}
+// }
+// add_action( 'after_setup_theme', 'locopas_content_width', 0 );
+
+
+/*
+ * Define pingback link inside the header.
+ *
+ */
+// if( !function_exists( 'locopas_pingback_header' ) ) {
+// 	function locopas_pingback_header() {
+// 		if ( is_singular() && pings_open() ) {
+// 			printf( '<link rel="pingback" href="%s">' . "\n", esc_url(get_bloginfo( 'pingback_url', 'display' )) );
+// 		}
+// 	}
+// }
+// add_action( 'wp_head', 'locopas_pingback_header' );
