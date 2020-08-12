@@ -177,7 +177,7 @@ if ( ! function_exists( 'locopas_unload' ) ) :
         }
     }
 endif;
-add_action( 'wp_enqueue_scripts', 'locopas_unregister', 100 );
+add_action( 'wp_enqueue_scripts', 'locopas_unload', 100 );
 
 
 
