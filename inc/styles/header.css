@@ -419,6 +419,8 @@ inner-pages
 ul#crumbs {
     display: inline-flex;
     text-indent: 0;
+    padding: 0;
+    margin: 0;
 }
 
 ul#crumbs li {
