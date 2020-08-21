@@ -172,7 +172,7 @@ if ( ! function_exists( 'locopas_unload' ) ) :
             wp_deregister_style( 'dashicons' ); // Dashicons
         }
         // Pages without external form
-        if ( ! is_page( 'contact' ) ) {
+        if ( get_page_by_path('contact', '', 'post')->ID != get_the_id() ) {
             wp_dequeue_style( 'everest-forms-general-css' ); // Everest Forms
         }
     }
@@ -201,14 +201,13 @@ function locopas_scripts() {
     // wp_enqueue_script( 'bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
 
 	// Theme stylesheet and custom js
-	wp_enqueue_style( 'locopas-style', get_stylesheet_uri() . '#asyncload', array(), $locopas_theme_version );
 	wp_enqueue_script( 'locopas-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js#deferload', array( 'jquery' ), $locopas_theme_version, true );
 
     // jQuery libraries
 	wp_enqueue_script( 'jquery-nav', get_template_directory_uri() . '/assets/library/jquery-nav/js/jquery.nav.js#deferload', array( 'jquery' ), '2.2.0', true );
 	wp_enqueue_script( 'jquery-scrollTo', get_template_directory_uri() . '/assets/library/jquery-scrollTo/js/jquery.scrollTo.js#deferload', array( 'jquery' ), '2.1.1', true );
 	wp_enqueue_script( 'parallax', get_template_directory_uri() . '/assets/library/parallax-js/js/parallax.min.js#asyncload', array( 'jquery' ), '1.4.2', true );
-    wp_enqueue_style ( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css#asyncload', array(), '2.3.1' );
+    wp_enqueue_style ( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css#deferload', array(), '2.3.1' );
     wp_enqueue_script( 'aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js#asyncload', false, null, true );
     wp_enqueue_script( 'aos-init-js', get_template_directory_uri() . '/assets/library/aos/js/init.js#asyncload', ['aos-js'], null, true );
 
@@ -234,28 +233,34 @@ if( ! function_exists( 'locopas_styles_register' ) ):
 		 *
 		 * locopas_styles_register is hooked with low priority to ensure css cascading
 		 * NOTE: more specific priorities could be introduced at wp_enqueue_style()
-         * TODO: Check for minimized version and use it if present
 		 */
-
-
-		 // WIP: NOT WORKING
-		/* foreach (glob(get_template_directory_uri().'/inc/styles/*.css') as $file) {
-			// Do something with $file
-			wp_enqueue_style( 'locopas-'.str_replace('.css', '', basename($file)).'-style',
-											 $file);
-		} */
         
-        wp_enqueue_style( 'locopas-pages-style', get_template_directory_uri() . '/inc/styles/pages.css' );
-
-        wp_enqueue_style( 'locopas-divisors-style', get_template_directory_uri() . '/inc/styles/divisors.css' );
-		wp_enqueue_style( 'locopas-header-style', get_template_directory_uri() . '/inc/styles/header.css' );
-		wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css' );
-		wp_enqueue_style( 'locopas-menus-style', get_template_directory_uri() . '/inc/styles/menus.css' );
-        wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri() . '/inc/styles/typography.css' );
-        wp_enqueue_style( 'locopas-gallery-style', get_template_directory_uri() . '/inc/styles/gallery.css' );
-		wp_enqueue_style( 'locopas-responsive-style', get_template_directory_uri() . '/inc/styles/responsive.css' );
-        wp_enqueue_style( 'locopas-social-style', get_template_directory_uri() . '/inc/styles/social.css' );
-        wp_enqueue_style( 'locopas-widget-style', get_template_directory_uri() . '/inc/styles/widget.css' );
+        /* Check if minimized version exists */
+        if ( in_array( 'locopas-min.css', list_files( get_template_directory_uri(), 0 ), true ) ) {
+            wp_enqueue_style( 'locopas-style', get_template_directory_uri() . 'locopas-min.css#deferload' );
+        } else {
+            wp_enqueue_style( 'locopas-style', get_stylesheet_uri() . '#deferload', array(), $locopas_theme_version );
+            wp_enqueue_style( 'locopas-pages-style', get_template_directory_uri() . '/inc/styles/pages.css#deferload' );
+            wp_enqueue_style( 'locopas-divisors-style', get_template_directory_uri() . '/inc/styles/divisors.css#deferload' );
+            wp_enqueue_style( 'locopas-header-style', get_template_directory_uri() . '/inc/styles/header.css#deferload' );
+            wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css#deferload' );
+            wp_enqueue_style( 'locopas-menus-style', get_template_directory_uri() . '/inc/styles/menus.css#deferload' );
+            wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri() . '/inc/styles/typography.css#deferload' );
+            wp_enqueue_style( 'locopas-gallery-style', get_template_directory_uri() . '/inc/styles/gallery.css#deferload' );
+            wp_enqueue_style( 'locopas-responsive-style', get_template_directory_uri() . '/inc/styles/responsive.css#deferload' );
+            wp_enqueue_style( 'locopas-social-style', get_template_directory_uri() . '/inc/styles/social.css#deferload' );
+            wp_enqueue_style( 'locopas-widget-style', get_template_directory_uri() . '/inc/styles/widget.css#deferload' );
+            
+            
+            
+    		// WIP: NOT WORKING
+    		/* foreach (glob(get_template_directory_uri().'/inc/styles/*.css') as $file) {
+    			// Do something with $file
+    			wp_enqueue_style( 'locopas-'.str_replace('.css', '', basename($file)).'-style',
+    											 $file);
+    		} */
+        }
+        
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'locopas_styles_register', 999 );
