@@ -9,15 +9,6 @@
  * @since 0.1.0
  */
 
-/*------------------------------------------------------------------------------------------------------------------*/
-/**
- * Define variable for theme version
- *
- * @since 0.1.0
- */
-$locopas_theme_details = wp_get_theme();
-$locopas_theme_version = $locopas_theme_details->Version;
-// $locopas_theme_version = rand(111,999); /* used for development */
 
 /*------------------------------------------------------------------------------------------------------------------*/
 /**
@@ -172,9 +163,9 @@ if ( ! function_exists( 'locopas_unload' ) ) :
             wp_deregister_style( 'dashicons' ); // Dashicons
         }
         // Pages without external form
-        if ( get_page_by_path('contact', '', 'post')->ID != get_the_id() ) {
-            wp_dequeue_style( 'everest-forms-general-css' ); // Everest Forms
-        }
+        // if ( get_page_by_path('contact', '', 'post')->ID != get_the_id() ) {
+        //     wp_dequeue_style( 'everest-forms-general-css' ); // Everest Forms
+        // }
     }
 endif;
 add_action( 'wp_enqueue_scripts', 'locopas_unload', 100 );
@@ -234,9 +225,18 @@ if( ! function_exists( 'locopas_styles_register' ) ):
 		 * locopas_styles_register is hooked with low priority to ensure css cascading
 		 * NOTE: more specific priorities could be introduced at wp_enqueue_style()
 		 */
-        
+         /*------------------------------------------------------------------------------------------------------------------*/
+         /**
+          * Define variable for theme version
+          *
+          * @since 0.1.0
+          */
+         $locopas_theme_details = wp_get_theme();
+         $locopas_theme_version = $locopas_theme_details->Version;
+         
+         // $locopas_theme_version = rand(111,999); /* used for development */
         /* Check if minimized version exists */
-        if ( in_array( 'locopas-min.css', list_files( get_template_directory_uri(), 0 ), true ) ) {
+        if ( in_array( 'locopas-min.css', glob( get_template_directory() . '/*' ), true ) ) {
             wp_enqueue_style( 'locopas-style', get_template_directory_uri() . 'locopas-min.css#deferload' );
         } else {
             wp_enqueue_style( 'locopas-style', get_stylesheet_uri() . '#deferload', array(), $locopas_theme_version );
