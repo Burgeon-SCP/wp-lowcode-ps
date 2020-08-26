@@ -17,9 +17,9 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
       run: |
         mkdir -p /tmp/loco-min/pre
-        echo $(ls .)
         echo $(ls ../)
-        cp $(find ./inc/styles | grep -v responsive) /tmp/loco-min/pre/
+        cd ../wp-locopas
+        cp $(find inc/styles | grep -v responsive) /tmp/loco-min/pre/
         minify --recursive --output /tmp/loco-min/1-locopas-min.css /tmp/loco-min/pre/
         rm -r /tmp/loco-min/pre
         cp ./style.css /tmp/loco-min/0-style.css
