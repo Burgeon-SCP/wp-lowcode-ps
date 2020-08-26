@@ -10,9 +10,9 @@ jobs:
   minify_locopas:
     name: Minify wp-locopas theme styles
     runs-on: ubuntu-latest
+    container: thekevjames/minify:2.5.2
     steps:
     - name: Minify and push
-      uses: docker://thekevjames/minify:2.5.2
       env:
         GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
       run: |
