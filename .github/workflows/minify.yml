@@ -15,9 +15,7 @@ jobs:
       - name: Add dependencies
         run: |
           apk add git
-          echo $(which git)
           echo $(git --version)
-          echo $PATH
           
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -38,8 +36,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
         run: |
-          echo $(git status)
-          echo $(git diff)
+          git config user.email "actions@github.com"
+          git config user.name "GithubActions"
           git add .
           git commit -m 'Update minify from action'
           git push
