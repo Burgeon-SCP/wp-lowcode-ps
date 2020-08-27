@@ -200,7 +200,8 @@
     line-height: 1;
 }
 .admin-pro-feature-list li:before{
-     content: "\f345";
+    content: "-> ";
+    /* content: "\f345"; */
     font: 400 20px/1 dashicons;
     display: inline-block;
     font-size: 14px;

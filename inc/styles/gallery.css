@@ -14,8 +14,11 @@
 }
 
 .gallery ul {
-    max-width: 95%;
-    margin-top: 13px;
+	font-size: larger;
+    max-width: 75%;
+    margin-top: 20px;
+	margin-left: 60px;
+	padding-top: 5%;
 }
 
 .gallery-img {

@@ -27,10 +27,8 @@
 			</div><!-- lc-section-container -->
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-	<a href="#masthead" id="scroll-up"><i class="fa fa-angle-up"></i></a>
+	<a href="#masthead" id="scroll-up"></a>
 </div><!-- #page -->
-
 <?php wp_footer(); ?>
-<script>AOS.init();</script>
 </body>
 </html>

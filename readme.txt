@@ -50,19 +50,22 @@ A css-editor-oriented theme called LoCoPaS (Low Code ParallaxSome).
 6. If you create new style files, add new lines with adapted id and path/to/your/file at inc/locopas-functions.php lines 94 to 102.
 7. If you want to keep track of future updates, email us at webmaster@burgeon.life with the subject 'LoCoPaS news'.
 8. Future theme versions will be oriented to:
-8.1. Reduce code abundance specially at styles.css
-8.2. Create a minimized Customizer to easily and low-code-friendly alter basic appearance of pages.
+8.1. Improve rendering and time-to-active, specially at js | jQuery level.
+8.2. Adapt theme js scripts to be reduced and minimized.
 
 == Third Party scripts and styles under public license ==
+
+= i.e.-> !: no longer used | *: non-upgradable version ==
+
 = Styles =
-	Font Awesome v4.6.3 under (Font: SIL OFL 1.1, CSS: MIT License)
+	!: Font Awesome v4.6.3 under (Font: SIL OFL 1.1, CSS: MIT License)
 	http://fontawesome.io
 
 = Scripts =
-	BxSlider v4.1.2 by Steven Wanderski under MIT License
+	!: BxSlider v4.1.2 by Steven Wanderski under MIT License
 	http://bxslider.com
 
-	jQuery counterup v1.0.2 by Benjamin Intal under GPL v2 License
+	!: jQuery counterup v1.0.2 by Benjamin Intal under GPL v2 License
 	https://github.com/bfintal/Counter-Up
 
 	jQuery One Page Nav Plugin v2.2.0 by Trevor Davis under MIT and GPL licenses
@@ -75,35 +78,37 @@ A css-editor-oriented theme called LoCoPaS (Low Code ParallaxSome).
 	https://github.com/garand/sticky/
 	https://github.com/garand/sticky/blob/master/LICENSE.md
 
-	lightslider v1.1.3 by Sachin N under MIT License
+	!: lightslider v1.1.3 by Sachin N under MIT License
 	https://github.com/sachinchoolur/lightslider
 
 	parallax.js v1.4.2 by PixelCog Inc under MIT License
 	https://github.com/pixelcog/parallax.js
 
-	jQuery PrettyPhoto v3.1.6 by Stephane Caron under GPLv2 License
+	!: jQuery PrettyPhoto v3.1.6 by Stephane Caron under GPLv2 License
 	http://www.no-margin-for-errors.com/projects/prettyPhoto-jquery-lightbox-clone/
 
-	jQuery Waypoints v2.0.5 by Caleb Troughton under MIT License
+	!: jQuery Waypoints v2.0.5 by Caleb Troughton under MIT License
 	https://github.com/imakewebthings/waypoints
 
 
 == Changelog ==
 
-= 0.5 =
-	* Uses locopas.min.(css|js). Better performance on page loading due to cue improvement.
+= 0.5.0 =
+	* Better performance on page loading due to cue improvement.
+    * Creation of locopas-min.css
+    * Improved styling.
     
-= 0.4 =
+= 0.4.0 =
 	* Improved responsiveness and better styling files distribution
 
-= 0.3 =
+= 0.3.0 =
 	* Updated elements and classes to better responsiveness
 
-= 0.2 =
+= 0.2.0 =
 	* Code cleaning and first delivery done
 
-= 0.1 =
+= 0.1.1 =
 	* code commented out and moved to .old directory
 
-= 0.1 =
+= 0.1.0 =
 	* Initial version based on ParallaxSome Theme by AccesPress

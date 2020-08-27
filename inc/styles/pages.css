@@ -2,6 +2,11 @@ body {
     background: linear-gradient(116deg, #88af67 30%, #494d50 60%)
 }
 
+div#page-services div.gallery-block-30 p {
+    color: #f5d7a9;
+    text-align: center;
+}
+
 /*------Backgrounds for pages--------*/
 /* div#page-wellcome {
     background-image: url('https://burgeon.life/wp-content/uploads/photos/fons_blocs_pedra-584x969.jp2');
