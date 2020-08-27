@@ -165,8 +165,8 @@ if ( ! function_exists( 'locopas_unload' ) ) :
         add_filter( 'wpcf7_load_css', '__return_false' ); // Contact Form 7 --> Everest Forms
         // Not-logged visitors
         if ( ! is_user_loggeg_in() ) {
-            //wp_deregister_style( 'amethyst-dashicons-style' );
-            wp_deregister_script( 'jquery' );
+            // wp_deregister_style( 'amethyst-dashicons-style' );
+            // wp_deregister_script( 'jquery' );
             wp_deregister_style( 'dashicons' ); // Dashicons
         }
         // Pages without external form

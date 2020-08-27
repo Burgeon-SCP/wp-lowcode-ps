@@ -56,15 +56,18 @@ function locopas_setup() {
 	 * Define custom thumbnail size
 	 *
 	 * @since 0.1.0
-     * @removed 0.4.0
+     * @deprecated 0.4.0
 	 */
 	// add_image_size( 'locopas_project_thumb', 450, 422, true );
 	// add_image_size( 'locopas_services_thumb', 393, 384, true );
 	// add_image_size( 'locopas_team_thumb', 230, 316, true );
-	/*
+	
+    /**
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+     * @deprecated 0.5.0
+     *
 	 */
 	// add_theme_support( 'post-thumbnails' );
 

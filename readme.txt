@@ -50,8 +50,8 @@ A css-editor-oriented theme called LoCoPaS (Low Code ParallaxSome).
 6. If you create new style files, add new lines with adapted id and path/to/your/file at inc/locopas-functions.php lines 94 to 102.
 7. If you want to keep track of future updates, email us at webmaster@burgeon.life with the subject 'LoCoPaS news'.
 8. Future theme versions will be oriented to:
-8.1. Reduce code abundance specially at styles.css
-8.2. Create a minimized Customizer to easily and low-code-friendly alter basic appearance of pages.
+8.1. Improve rendering and time-to-active, specially at js | jQuery level.
+8.2. Adapt theme js scripts to be reduced and minimized.
 
 == Third Party scripts and styles under public license ==
 
@@ -93,22 +93,22 @@ A css-editor-oriented theme called LoCoPaS (Low Code ParallaxSome).
 
 == Changelog ==
 
-= 0.5 =
+= 0.5.0 =
 	* Better performance on page loading due to cue improvement.
-    * Lacks creation of locopas.min.(css|js).
+    * Creation of locopas-min.css
     * Improved styling.
     
-= 0.4 =
+= 0.4.0 =
 	* Improved responsiveness and better styling files distribution
 
-= 0.3 =
+= 0.3.0 =
 	* Updated elements and classes to better responsiveness
 
-= 0.2 =
+= 0.2.0 =
 	* Code cleaning and first delivery done
 
-= 0.1 =
+= 0.1.1 =
 	* code commented out and moved to .old directory
 
-= 0.1 =
+= 0.1.0 =
 	* Initial version based on ParallaxSome Theme by AccesPress
