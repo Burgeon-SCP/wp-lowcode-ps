@@ -15,17 +15,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         
-      - name: Minify and push
-        env:
-          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+      - name: Minify styles
         run: |
           mkdir -p /tmp/loco-min/pre
-          cp $(find inc/styles | grep -v responsive) /tmp/loco-min/pre/
+          cp $(find inc/styles | grep -v '^inc/styles$' | grep -v responsive) /tmp/loco-min/pre/
           minify --recursive --output /tmp/loco-min/1-locopas-min.css /tmp/loco-min/pre/
           rm -r /tmp/loco-min/pre
           cp style.css /tmp/loco-min/0-style.css
           cp inc/styles/responsive.css /tmp/loco-min/2-responsive.css
           minify --recursive --output locopas-min.css /tmp/loco-min/
+          echo $(stat locopas-min.css)
+        
+      - name: Push diffs
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+        run: |
+          echo $(git status)
+          echo $(git diff)
           git add .
           git commit -m 'Update minify'
           git push --follow-tags
