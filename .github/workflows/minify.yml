@@ -31,7 +31,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
         run: |
-          apt install -y git
+          apk add git
           echo $(git status)
           echo $(git diff)
           git add .
