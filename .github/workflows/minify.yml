@@ -12,6 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     container: thekevjames/minify:2.5.2
     steps:
+      - name: Add dependencies
+        run: |
+          apk add git
+          echo $(which git)
+          echo $(git --version)
+          echo $PATH
+          
       - name: Checkout repository
         uses: actions/checkout@v2
         
@@ -31,9 +38,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
         run: |
-          apk add git
           echo $(git status)
           echo $(git diff)
           git add .
-          git commit -m 'Update minify'
-          git push --follow-tags
+          git commit -m 'Update minify from action'
+          git push
