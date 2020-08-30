@@ -252,7 +252,7 @@ if( ! function_exists( 'locopas_styles_register' ) ):
 	}
 		
         if ( $locopas_min_exists ) {
-            wp_enqueue_style( 'locopas-style', get_template_directory_uri() . 'locopas-min.css#asyncload' );
+            wp_enqueue_style( 'locopas-style', get_template_directory_uri() . '/locopas-min.css#asyncload' );
         } else {
             wp_enqueue_style( 'locopas-style', get_stylesheet_uri() . '#deferload', array(), $locopas_theme_version );
             wp_enqueue_style( 'locopas-pages-style', get_template_directory_uri() . '/inc/styles/pages.css#deferload' );
