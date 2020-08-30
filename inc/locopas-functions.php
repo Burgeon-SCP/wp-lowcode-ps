@@ -240,11 +240,19 @@ if( ! function_exists( 'locopas_styles_register' ) ):
           */
          $locopas_theme_details = wp_get_theme();
          $locopas_theme_version = $locopas_theme_details->Version;
-         
+	 $locopas_min_file = get_template_directory() . '/locopas-min.css';
+	 $locopas_min_exists = false;
          // $locopas_theme_version = rand(111,999); /* used for development */
-        /* Check if minimized version exists */
-        if ( in_array( 'locopas-min.css', glob( get_template_directory() . '/*' ), true ) ) {
-            wp_enqueue_style( 'locopas-style', get_template_directory_uri() . 'locopas-min.css#deferload' );
+        
+	/* Check if minimized version exists */
+	foreach (glob( get_template_directory() . '/*' ) as $dirfile) {
+	  if ($dirfile == $locopas_min_file) {
+	    $locopas_min_exists = true;
+	  }
+	}
+		
+        if ( $locopas_min_exists ) {
+            wp_enqueue_style( 'locopas-style', get_template_directory_uri() . 'locopas-min.css#asyncload' );
         } else {
             wp_enqueue_style( 'locopas-style', get_stylesheet_uri() . '#deferload', array(), $locopas_theme_version );
             wp_enqueue_style( 'locopas-pages-style', get_template_directory_uri() . '/inc/styles/pages.css#deferload' );
