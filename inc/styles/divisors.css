@@ -48,8 +48,8 @@ div.bkg-img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: outset 8px #cadfcadf;
-    box-shadow: 9px 9px 10px 0px #566356;
+    /* border: outset 8px #cadfcadf; */
+    box-shadow: 2px 1px 15px 3px #566356;
 }
 
 div.bkg-img p {

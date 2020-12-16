@@ -205,6 +205,9 @@ function locopas_scripts() {
 	wp_enqueue_script( 'jquery-nav', get_template_directory_uri() . '/assets/library/jquery-nav/js/jquery.nav.js#asyncload', array( 'jquery' ), '2.2.0', true );
 	wp_enqueue_script( 'jquery-scrollTo', get_template_directory_uri() . '/assets/library/jquery-scrollTo/js/jquery.scrollTo.js#asyncload', array( 'jquery' ), '2.1.1', true );
 	wp_enqueue_script( 'parallax', get_template_directory_uri() . '/assets/library/parallax-js/js/parallax.min.js#asyncload', array( 'jquery' ), '1.4.2', true );
+	wp_enqueue_script( 'jquery-migrate', 'https://code.jquery.com/jquery-migrate-1.2.1.min.js#asyncload', array( 'jquery' ), '1.2.1', true );
+    wp_enqueue_style ( 'slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css#deferload', array(), '1.8.1' );
+	wp_enqueue_script( 'slick-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js#asyncload', array( 'jquery-migrate' ), '1.8.1', true );
     wp_enqueue_style ( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css#deferload', array(), '2.3.1' );
     wp_enqueue_script( 'aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js#asyncload', false, null, true );
     wp_enqueue_script( 'aos-init-js', get_template_directory_uri() . '/assets/library/aos/js/init.js#asyncload', ['aos-js'], null, true );
@@ -255,7 +258,6 @@ if( ! function_exists( 'locopas_styles_register' ) ):
             wp_enqueue_style( 'locopas-style', get_template_directory_uri() . '/locopas-min.css#asyncload' );
         } else {
             wp_enqueue_style( 'locopas-style', get_stylesheet_uri() . '#deferload', array(), $locopas_theme_version );
-            wp_enqueue_style( 'locopas-pages-style', get_template_directory_uri() . '/inc/styles/pages.css#deferload' );
             wp_enqueue_style( 'locopas-divisors-style', get_template_directory_uri() . '/inc/styles/divisors.css#deferload' );
             wp_enqueue_style( 'locopas-header-style', get_template_directory_uri() . '/inc/styles/header.css#deferload' );
             wp_enqueue_style( 'locopas-footer-style', get_template_directory_uri() . '/inc/styles/footer.css#deferload' );

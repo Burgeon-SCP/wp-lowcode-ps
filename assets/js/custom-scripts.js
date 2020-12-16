@@ -1,11 +1,11 @@
 jQuery(document).ready(function($) {
-	'use strict';
+    'use strict';
 
-	/**
+    /**
      * Parallax menu
      */
-    $(window).load(function(){
-        if( $('body').hasClass('header-sticky') ) {
+    $(window).load(function() {
+        if ($('body').hasClass('header-sticky')) {
             var headerHeight = $('.lc-header-wrapper').outerHeight();
         } else {
             var headerHeight = 3;
@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
     /**
      * Map section
      */
-    $('.lc-mag-caption').on('click', function(){
+    $('.lc-mag-caption').on('click', function() {
         $(this).toggleClass('active');
         $('.lc-map-frame').toggleClass('active');
         $('.lc-map-frame').fadeToggle();
@@ -62,15 +62,15 @@ jQuery(document).ready(function($) {
      *Top up arrow
      */
     $("#scroll-up").hide();
-    $(function () {
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 1000) {
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 800) {
                 $('#scroll-up').fadeIn();
             } else {
                 $('#scroll-up').fadeOut();
             }
         });
-        $('a#scroll-up').click(function () {
+        $('a#scroll-up').click(function() {
             $('body,html').animate({
                 scrollTop: 0
             }, 800);
@@ -78,5 +78,45 @@ jQuery(document).ready(function($) {
         });
     });
 
-
+    /**
+     *  Slider class
+     */
+    $(function() {
+        // Configuration copied from responsive example class
+        // https://kenwheeler.github.io/slick/
+        $('.lc-slider').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    });
 });
