@@ -199,7 +199,7 @@ function locopas_scripts() {
     // wp_enqueue_script( 'bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
 
 	// Theme stylesheet and custom js
-	wp_enqueue_script( 'locopas-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js#asyncload', array( 'jquery' ), $locopas_theme_version, true );
+	wp_enqueue_script( 'locopas-ready-scripts', get_template_directory_uri() . '/assets/js/ready-scripts.js#asyncload', array( 'jquery' ), $locopas_theme_version, true );
 
     // jQuery libraries
 	wp_enqueue_script( 'jquery-nav', get_template_directory_uri() . '/assets/library/jquery-nav/js/jquery.nav.js#asyncload', array( 'jquery' ), '2.2.0', true );
