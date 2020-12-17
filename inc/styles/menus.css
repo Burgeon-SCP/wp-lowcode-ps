@@ -112,11 +112,9 @@
 }
 
 .main-navigation ul ul :hover>a,
-.main-navigation ul ul .focus>a {}
-
+.main-navigation ul ul .focus>a,
 .main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {}
-
+.main-navigation ul ul a.focus,
 .main-navigation ul li:hover>ul.sub-menu,
 .main-navigation ul li.focus>ul.sub-menu,
 .main-navigation ul li:hover>ul.children,

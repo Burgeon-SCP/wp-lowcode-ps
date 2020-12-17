@@ -85,29 +85,28 @@ jQuery(document).ready(function($) {
         // Configuration copied from responsive example class
         // https://kenwheeler.github.io/slick/
         $('.lc-slider').slick({
-            dots: true,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            // dots: false,
+            centerMode: true,
+            centerPadding: 10%,
             infinite: false,
+            nextArrow: '<button type="button" class="slick-prev">>></button>',
+            prevArrow: '<button type="button" class="slick-prev"><<</button>',
             speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 4,
+            slidesToShow: 3,
+            slidesToScroll: 3,
             responsive: [{
                     breakpoint: 1024,
                     settings: {
                         slidesToShow: 3,
-                        slidesToScroll: 3,
+                        slidesToScroll: 1,
                         infinite: true,
                         dots: true
                     }
                 },
                 {
                     breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 480,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1

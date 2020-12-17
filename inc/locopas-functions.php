@@ -241,18 +241,18 @@ if( ! function_exists( 'locopas_styles_register' ) ):
           *
           * @since 0.1.0
           */
-         $locopas_theme_details = wp_get_theme();
-         $locopas_theme_version = $locopas_theme_details->Version;
-	 $locopas_min_file = get_template_directory() . '/locopas-min.css';
-	 $locopas_min_exists = false;
-         // $locopas_theme_version = rand(111,999); /* used for development */
+        $locopas_theme_details = wp_get_theme();
+        $locopas_theme_version = $locopas_theme_details->Version;
+    	$locopas_min_file = get_template_directory() . '/locopas-min.css';
+    	$locopas_min_exists = false;
+        // $locopas_theme_version = rand(111,999); /* used for development */
         
-	/* Check if minimized version exists */
-	foreach (glob( get_template_directory() . '/*' ) as $dirfile) {
-	  if ($dirfile == $locopas_min_file) {
-	    $locopas_min_exists = true;
-	  }
-	}
+    	/* Check if minimized version exists */
+    	foreach (glob( get_template_directory() . '/*' ) as $dirfile) {
+    	  if ($dirfile == $locopas_min_file) {
+    	    $locopas_min_exists = true;
+    	  }
+    	}
 		
         if ( $locopas_min_exists ) {
             wp_enqueue_style( 'locopas-style', get_template_directory_uri() . '/locopas-min.css#asyncload' );
@@ -264,18 +264,10 @@ if( ! function_exists( 'locopas_styles_register' ) ):
             wp_enqueue_style( 'locopas-menus-style', get_template_directory_uri() . '/inc/styles/menus.css#deferload' );
             wp_enqueue_style( 'locopas-typography-style', get_template_directory_uri() . '/inc/styles/typography.css#deferload' );
             wp_enqueue_style( 'locopas-gallery-style', get_template_directory_uri() . '/inc/styles/gallery.css#deferload' );
+            wp_enqueue_style( 'locopas-slick-style', get_template_directory_uri() . '/inc/styles/slick-theme.css#deferload' );
             wp_enqueue_style( 'locopas-responsive-style', get_template_directory_uri() . '/inc/styles/responsive.css#deferload' );
             wp_enqueue_style( 'locopas-social-style', get_template_directory_uri() . '/inc/styles/social.css#deferload' );
             wp_enqueue_style( 'locopas-widget-style', get_template_directory_uri() . '/inc/styles/widget.css#deferload' );
-            
-            
-            
-    		// WIP: NOT WORKING
-    		/* foreach (glob(get_template_directory_uri().'/inc/styles/*.css') as $file) {
-    			// Do something with $file
-    			wp_enqueue_style( 'locopas-'.str_replace('.css', '', basename($file)).'-style',
-    											 $file);
-    		} */
         }
         
 	}
@@ -312,17 +304,17 @@ if (is_user_loggeg_in()):
     */
     if( ! function_exists( 'locopas_admin_menu' ) ):
         function locopas_admin_menu() {
-            // remove_menu_page( 'index.php' );                  //Dashboard
-            // remove_menu_page( 'jetpack' );                    //Jetpack*
-            remove_menu_page( 'edit.php' );                   //Posts
-            // remove_menu_page( 'upload.php' );                 //Media
-            // remove_menu_page( 'edit.php?post_type=page' );    //Pages
-            remove_menu_page( 'edit-comments.php' );          //Comments
-            // remove_menu_page( 'themes.php' );                 //Appearance
-            // remove_menu_page( 'plugins.php' );                //Plugins
-            remove_menu_page( 'users.php' );                  //Users
-            // remove_menu_page( 'tools.php' );                  //Tools
-            // remove_menu_page( 'options-general.php' );        //Settings
+            remove_menu_page( 'edit.php' );                   // Posts
+            // remove_menu_page( 'edit.php?post_type=page' ); // Pages
+            remove_menu_page( 'edit-comments.php' );          // Comments
+            // remove_menu_page( 'index.php' );               // Dashboard
+            // remove_menu_page( 'jetpack' );                 // Jetpack*
+            // remove_menu_page( 'options-general.php' );     // Settings
+            // remove_menu_page( 'plugins.php' );             // Plugins
+            // remove_menu_page( 'themes.php' );              // Appearance
+            // remove_menu_page( 'tools.php' );               // Tools
+            // remove_menu_page( 'upload.php' );              // Media
+            remove_menu_page( 'users.php' );                  // Users
         }
     endif;
     add_action( 'admin_menu', 'locopas_admin_menu' );
@@ -357,13 +349,11 @@ if( ! function_exists( 'locopas_get_visitor_ip' ) ):
 		return apply_filters( 'wpb_get_ip', $ip );
 	}
 endif;
-
 add_shortcode('show_ip', 'locopas_get_visitor_ip');
 
 
 /*------------------------------------------------------------------------------------------------------------------*/
 if( ! function_exists( 'locopas_parallax_menu_cb' ) ):
-
 	/**
 	 * Define the Parallax Menu Tab
 	 *
@@ -402,7 +392,6 @@ if( ! function_exists( 'locopas_parallax_menu_cb' ) ):
 		}
 	}
 endif;
-
 add_action( 'locopas_parallax_menu', 'locopas_parallax_menu_cb', 10 );
 
 
