@@ -226,17 +226,18 @@
 }
 
 .lc-header-wrapper #top-site-navigation ul ul {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
     background-color: #f5f5f5;
     min-width: 100px;
+    opacity: 0;
+    padding-left: 35px;
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+    /* left: 0; */
     z-index: 99;
-    -moz-transition: all 350ms ease-in-out;
-    -webkit-transition: all 350ms ease-in-out;
-    transition: all 350ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
 }
 
 .lc-header-wrapper #top-site-navigation ul ul li {
