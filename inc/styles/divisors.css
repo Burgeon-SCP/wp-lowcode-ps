@@ -24,7 +24,14 @@ div.background-slide button.topage {
     width: 30vw;
 }
 
-div.background-slide > p {
+div.background-slide h2 {
+	background-color: #245f20;
+	background-color: #245f20f2;
+	margin-top: 50px;
+	margin-bottom: 120px;
+}
+
+div.background-slide p {
     background-color: #b5b5b5;
     background-color: #bbbd;
     border-radius: 15px;
@@ -66,4 +73,21 @@ div.bkg-img img.gallery-img {
     max-height: 100px;
     max-width: 30%;
     border-radius: 0;
+}
+
+/* Easy-style classes */
+div.no-shadow {
+	box-shadow: 0 0 0 0 #000;
+}
+
+div.light-shadow {
+	box-shadow: 1 1 2 1 #888;
+}
+
+div.white-back {
+	background-color: #fffcff;
+}
+
+div.black-back {
+	background-color: #000300;
 }

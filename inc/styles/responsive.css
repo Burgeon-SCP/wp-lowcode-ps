@@ -1,6 +1,21 @@
 /*==================================
 ----------   responsive-css   ------
 ==================================*/
+
+/* Last stage css */
+:not(.home) .lc-header-wrapper  .site-branding {
+	display:none;
+}
+
+body.home .lc-header-wrapper  .site-branding {
+	display:block;
+}
+
+.is-sticky .lc-header-wrapper  .site-branding {
+	display: block;
+}
+
+
 /* ---- high definition screens ---- */
 @media (min-width:1801px) {
     .xl-show {

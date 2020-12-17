@@ -89,7 +89,7 @@ jQuery(document).ready(function($) {
             autoplaySpeed: 1500,
             // dots: false,
             centerMode: true,
-            centerPadding: 10%,
+            centerPadding: '10%',
             infinite: false,
             nextArrow: '<button type="button" class="slick-prev">>></button>',
             prevArrow: '<button type="button" class="slick-prev"><<</button>',
