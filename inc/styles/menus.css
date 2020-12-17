@@ -71,15 +71,15 @@
 .main-navigation ul ul {
     opacity: 0;
     visibility: hidden;
-    background-color: #ffffff;
+    background-color: #fdfdfd;
     min-width: 180px;
     position: absolute;
     top: 100%;
     left: 0;
     margin: 30px 0 0;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
 }
 
 .main-navigation ul>li.menu-item-has-children li.menu-item-has-children:after {
