@@ -209,7 +209,8 @@ function locopas_scripts() {
     wp_enqueue_style ( 'slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css#deferload', array(), '1.8.1' );
 	wp_enqueue_script( 'slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js#asyncload', array( 'jquery-migrate' ), '1.8.1', true );
     wp_enqueue_style ( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css#deferload', array(), null );
-    wp_enqueue_script( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js#asyncload', false, '2.3.1', true );
+    // wp_enqueue_script( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js#asyncload', false, '2.3.1', true );
+    wp_enqueue_script( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', false, '2.3.1', true );
     // wp_enqueue_script( 'aos-init', get_template_directory_uri() . '/assets/library/aos/js/init.js#asyncload', [ 'aos-js' ], null, true );
 
 	$ps_header_sticky_option = get_theme_mod( 'sticky_header_option', 'enable' );

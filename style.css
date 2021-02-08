@@ -376,12 +376,12 @@ button.topage > a {
 	box-shadow: 3px 3px 6px 1px #333;
     color: #eee;
     font-family: 'Roboto Slab', monospace;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
 	min-height: 60px;
     min-width: 150px;
-    max-width: 300px;
-    margin: 5px 35%;
+    max-width: 450px;
+    margin: 15px 20%;
     /*  margin-bottom: 20px;
   margin-top: 20px;
   margin-left: 35%;
